@@ -1,0 +1,1628 @@
+{
+  "source": "Cisco DevNet · Client Delete Reasons",
+  "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+  "captured": "2026-11-10",
+  "note": "公开文档表格结构化提炼：Log Identifier / Severity / Explanation / Action",
+  "records": [
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_PMKID",
+      "severity": "Possible defect or config error",
+      "explanation": "Controller could not validate PMKID provided by client. This may have different triggers",
+      "action": "Update client to latest, if issue persists, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_WRONG_PSK",
+      "severity": "Possible defect or config error",
+      "explanation": "Client excluded due to wrong PSK password",
+      "action": "Check PSK configuration on client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_DENIED_RATES",
+      "severity": "Possible defect or config error",
+      "explanation": "Client sent invalid data rates during association request",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_IE",
+      "severity": "Possible defect or config error",
+      "explanation": "Client sent invalid Information Element",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_GROUP_CIPHER_INVALID",
+      "severity": "Possible defect or config error",
+      "explanation": "Client requested invalid Group cipher during association",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_UNICAST_CIPHER_INVALID",
+      "severity": "Possible defect or config error",
+      "explanation": "Client requested invalid Unicast cipher during association",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_AKMP_INVALID",
+      "severity": "Possible defect or config error",
+      "explanation": "Client requested invalid Authentication Key Management during association",
+      "action": "Possible client side defect or configuration. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_UNSUPPORTED_RSN_VERSION",
+      "severity": "Possible defect or config error",
+      "explanation": "Client invalid RSN version during association",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_RSN_IE_CAPABILITIES",
+      "severity": "Possible defect or config error",
+      "explanation": "Client provided invalid RSN capabilities during association",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_INVALID_PMK_LEN",
+      "severity": "Possible defect or config error",
+      "explanation": "Controller received PMK with invalid length",
+      "action": "Possible Radius server issue. Collect RA traces to confirm and check server side"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_FRAME",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. malformed EAP frame",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Unexpected install bit",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Key Error bit set",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_ACK_BIT",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Key ACK bit set",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_KEY",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Invalid key type",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_SECURE_BIT",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Unexpected secure bit set",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_KEY_DESC_VER",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Key version mismatch",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_NO_MIC_BIT",
+      "severity": "Possible defect or config error",
+      "explanation": "Invalid EAPoL message received from client. Key MIC bit was not set",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ANCHOR_NO_MEMORY",
+      "severity": "Possible defect or config error",
+      "explanation": "Internal error, could not allocate data structures to handle  client for anchored WLAN",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NO_DOT1X_AUTH_CONFIG",
+      "severity": "Possible defect or config error",
+      "explanation": "Authentication configuration is missing. Applies to 802.1x or MAB",
+      "action": "Check authentication lists in WLAN and AAA config in policy profile"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NACK_IFID_EXISTS",
+      "severity": "Possible defect or config error",
+      "explanation": "Controller internal error while creating client interface",
+      "action": "Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_QOS_PARAMETER",
+      "severity": "Possible defect or config error",
+      "explanation": "Client sent invalid TSPEC during roaming",
+      "action": "Possible client defect or invalid configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CIPHER_SUITE_REJECTED",
+      "severity": "Possible defect or config error",
+      "explanation": "During RSN Information element processing, the group key provided by client is invalid",
+      "action": "This is probable client side issue. Check RA traces, and contact client manufacturer"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_FAIL",
+      "severity": "Possible defect or config error",
+      "explanation": "Radius server sent an invalid PSK attribute",
+      "action": "Check Radius server logs and configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_MODE_FAIL",
+      "severity": "Possible defect or config error",
+      "explanation": "Radius server sent an invalid PSK mode attribute",
+      "action": "Check Radius server logs and configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_BSSID_MISMATCH",
+      "severity": "Possible defect or config error",
+      "explanation": "AP deleted client, as it sent managemnt frame with wrong BSSID address",
+      "action": "This is potential defect. It may need RA traces, AP logs and OTA to isolate trigger"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_NO_MEMORY",
+      "severity": "Possible defect or config error",
+      "explanation": "AP was not able to allocate memory to handle client in WCP component. Possible defect or capacity problem",
+      "action": "Collect AP show tech, check AP load, and possibly contact TAC for further memory analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_PARENT_WGB",
+      "severity": "Possible defect or config error",
+      "explanation": "AP deleted client as it received add request marked as WGB client for non-existing WGB entry. Possible defect",
+      "action": "Collect RA traces, AP debug"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_NO_OVERLAP_LEGACY_RATES",
+      "severity": "Possible defect or config error",
+      "explanation": "Client legacy rates requested do not match association response rate. Possible defect (client side and network as it should have rejected)",
+      "action": "Collect OTA and RA traces for client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MAX_VHT_STREAMS",
+      "severity": "Possible defect or config error",
+      "explanation": "Number of VHT streams requested for client is higher than 8. Possible defect",
+      "action": "Collect OTA and RA traces, AP debugs for client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_WRONG_REPLAY_COUNTER",
+      "severity": "May need validation",
+      "explanation": "Invalid replay counter received during EAPoL negotiation. Client should recover on new attempt",
+      "action": "Possible client side issue. If issue persists, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_GROUP_KEY_UPDATE_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Client did not complete Broadcast key rotation. This may happen if client was sleeping or out of coverage",
+      "action": "None required, as it may happen on normal scenarios. If issue persists, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_FTIE",
+      "severity": "May need validation",
+      "explanation": "Failure during FT processing for client. This may have different triggers",
+      "action": "RA trace needed to isolate fault"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_AAA_SERVER_UNAVAILABLE",
+      "severity": "May need validation",
+      "explanation": "Radius server was not reachable",
+      "action": "Check WLC and Radius server logs for possible triggers. Confirm server is reachable and up"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_RADIO_DOWN",
+      "severity": "May need validation",
+      "explanation": "AP sent radio down event, leading to client delete",
+      "action": "There are valid reasons for this to happen, if this is frequent even, check AP logs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_UNSPECIFIED_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Association response creation fail, possible due to client malformed request",
+      "action": "if issue persists, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NOOP",
+      "severity": "May need validation",
+      "explanation": "Default code when no other reason is known, it should have been replaced with corresponding delete trigger, internal error. Client will recover after a new session",
+      "action": "Collect RA trace for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NONE",
+      "severity": "May need validation",
+      "explanation": "Default code when no other reason is known, it should have been replaced with corresponding delete trigger, related to SISF/Guest anchor component. Client will recover after a new session",
+      "action": "Collect RA trace for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SANET",
+      "severity": "May need validation",
+      "explanation": "Error handling the security session of the client. Triggers could be FT roam, PMK error during iPSK, client orchestration",
+      "action": "If this happens frequently, collect RA trace for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CONNECT_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Client associated to Flex AP, and did not complete onboarding process, may be triggered if client was on low RF, or did not do local authentication",
+      "action": "None required, if this happens frequently, collect RA and AP side debugs for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DPATH_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Internal error processing operation for Client in dataplane",
+      "action": "If the issue persists, collect RA traces and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Client removed after inter-WNCD roaming",
+      "action": "Validate tag and policy configuration. If this happens frequently, collect RA trace for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_BLACKLIST",
+      "severity": "May need validation",
+      "explanation": "Default client exclusion reason, when something more precise was not found",
+      "action": "If this happens frequently, collect RA trace for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SERVICE_UNAVAILABLE",
+      "severity": "May need validation",
+      "explanation": "Session was disconnected, may be triggered by radio down",
+      "action": "None required, if this happens frequently, collect RA and AP side debugs for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SAE_AUTH_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Client failed SAE authentication",
+      "action": "Check configuration and configured password"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_FAILURE_IGNORE_REQ",
+      "severity": "May need validation",
+      "explanation": "SAE authentication protocol error. May be triggered by client side defect, or replay attack",
+      "action": "None required, if this happens frequently, collect RA and over the air capture for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_INVALID_MDIE",
+      "severity": "May need validation",
+      "explanation": "802.11r(FT) client sent invalid mobility domain",
+      "action": "Possible client side defect. Collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_AID_ALLOC_CONFLICT_REQ",
+      "severity": "May need validation",
+      "explanation": "AP-COS in Flex mode with central association. This is not supported scenario. Not applicable to releases 17.6 and higher",
+      "action": "Change the configuration on the policy profile."
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_MIC_VALIDATION",
+      "severity": "May need validation",
+      "explanation": "if WLAN is PSK, possible invalid password. For 802.1x, this is client side supplicant issue",
+      "action": "For PSK, check password on WLAN and client side. For 802.1x, contact client manufacturer"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_THEFT",
+      "severity": "May need validation",
+      "explanation": "Client was deleted due to suspected mac theft, MAC was seen on different anchor or vlan in case of wired guest",
+      "action": "Check topology, and confirm if mac movement is possible, this is spoofing, or false positive"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_IP_THEFT",
+      "severity": "May need validation",
+      "explanation": "Client tried to reuse IP registered to another device. High probability, it is client side issue",
+      "action": "Check client side logs, and confirm DHCP server configuration. Update client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_BIND_FAIL",
+      "severity": "May need validation",
+      "explanation": "This is related to iPSK scenarios: AAA override returned password is not proper length or format, PSK is not configured properly for AAA override,",
+      "action": "Check Radius server returned attributes"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_ASSOC_FAIL",
+      "severity": "May need validation",
+      "explanation": "Client deleted during association processing, or MAB error",
+      "action": "Check radius logs for client address. if no issues found, collect RA and over the air traces"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DB_POPULATE_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error, Client handling failure during guest access or anchored WLAN",
+      "action": "Collect RA traces and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ANCHOR_CREATE_REQ_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error, Client Mobility error on anchored WLAN",
+      "action": "Collect RA traces and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ANCHOR_INVALID_MBSSID",
+      "severity": "May need validation",
+      "explanation": "Internal error, could not map client to WLAN/Policy profile table (MBSSID)",
+      "action": "Collect RA traces, show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ANCHOR_THROTTLED",
+      "severity": "May need validation",
+      "explanation": "Internal error, controller detected congestion while creating WLAN anchor request for client",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_REAUTH_FAILURE",
+      "severity": "May need validation",
+      "explanation": "AAA reauthentication failure. This should not be applicable to  wireless clients",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_MGMT_PTK_COMPUTATION",
+      "severity": "May need validation",
+      "explanation": "Invalid EAPoL message received from client",
+      "action": "Possible client side defect, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_AND_IP_THEFT",
+      "severity": "May need validation",
+      "explanation": "Traffic for client arrived at different interface from the currently associated one. Possible race condition",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_FAIL",
+      "severity": "May need validation",
+      "explanation": "QoS policies for client could not be applied",
+      "action": "Validate QoS config at WLAN, if no problems found, collect RA traces and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_SEND_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error. Controller could not send QoS update for client to AP or mobility",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_BIND_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error. AP  could not apply QoS update for client",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_UNBIND_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error. AP  could not apply QoS update for client",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_VLAN_FAIL",
+      "severity": "May need validation",
+      "explanation": "Failure to apply authorization, possible VLAN not existing",
+      "action": "Check VLAN in use, and attributes returned by Radius server if using AAA override"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_ACL_FAIL",
+      "severity": "May need validation",
+      "explanation": "Failure to apply authorization, possible ACL not existing",
+      "action": "Check ACL in use, and attributes returned by Radius server if using AAA override"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_PUNT_ACL_FAIL",
+      "severity": "May need validation",
+      "explanation": "Failure to apply authorization, possible URL redirect ACL not existing",
+      "action": "Check URL redirect ACL in use, and attributes returned by Radius server if using AAA override"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_ACCOUNTING_FAIL",
+      "severity": "May need validation",
+      "explanation": "Client deleted during accounting of authorization process",
+      "action": "Check RA traces for details"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_CTS_FAIL",
+      "severity": "May need validation",
+      "explanation": "Registration of Trustsec CTS functions for client failed",
+      "action": "Check RA traces for details"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_NO_DEF_FAIL",
+      "severity": "May need validation",
+      "explanation": "Client deleted as URL filter does not exist",
+      "action": "Check WLAN/Flex profile configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_POSTAUTH_MISMATCH_FAIL",
+      "severity": "May need validation",
+      "explanation": "Post authentication filter type received for client, is invalid",
+      "action": "Check configuration in WLAN profile"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_ZERO_GID_FAIL",
+      "severity": "May need validation",
+      "explanation": "For 17.3/17.6 this may indicate client did ARP flood",
+      "action": "Check client for applications doing network scan, in some scenarios it may need client driver updates"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_MISC_FAIL",
+      "severity": "May need validation",
+      "explanation": "Default reason for policy error, when no more detailed information is available",
+      "action": "Check Radius server returned attributed. Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_REAUTH_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Registration for internal reauth  for client failed",
+      "action": "Check RA traces for details"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Unknown failure for EPM component for client policies",
+      "action": "Check RA traces for details"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_AAA_NOT_READY",
+      "severity": "May need validation",
+      "explanation": "AAA subsystem not ready",
+      "action": "Confirm radius server is reachable, then collect RA traces for client, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ASSOC_CONNECT_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Client association processing was not completed in time, could be load issue",
+      "action": "Collect RA traces for further analysis, include AP logs if Flexmode"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MOBILITY_CONNECT_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Client mobility processing was not completed in time, could be load issue",
+      "action": "Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_S_IP_ANCHOR_CONNECT_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Client IP static check on mobility  was not completed in time, could be load issue",
+      "action": "Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SM_SESSION_CONNECT_TIMEOUT",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Client connection data creation in DB did not complete in time",
+      "action": "Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_GUEST_LAN_INVALID_MBSSID",
+      "severity": "May need validation",
+      "explanation": "Internal controller error. It was not possible to find valid guest LAN and policy profile for client",
+      "action": "Collect RA traces and contact Cisco support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_GUEST_LAN_NO_MEMORY",
+      "severity": "May need validation",
+      "explanation": "Internal error, could not allocate data structures to handle  client for wired guest LAN",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_GUEST_LAN_CREATE_REQ_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal error, could not send client creation event for wired guest LAN",
+      "action": "Collect RA traces,  show tech wireless, and contact Cisco Support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_JOIN_FAIL",
+      "severity": "May need validation",
+      "explanation": "EoGRE Tunnel join failed",
+      "action": "Check controller and gateway configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NACK_IFID_MISMATCH",
+      "severity": "May need validation",
+      "explanation": "Controller internal error while updating client interface",
+      "action": "Collect RA traces for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_VLAN",
+      "severity": "May need validation",
+      "explanation": "Invalid VLAN for EoGRE client",
+      "action": "Check configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_EMPTY_DOMAIN",
+      "severity": "May need validation",
+      "explanation": "No domain provided for EoGRE client",
+      "action": "Check authentication logs and configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_DOMAIN",
+      "severity": "May need validation",
+      "explanation": "Unknown domain provided for EoGRE client",
+      "action": "Check authentication logs and configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_DOMAIN_SHUT",
+      "severity": "May need validation",
+      "explanation": "Tunnel for domain is shut down",
+      "action": "Check authentication logs and configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_GW",
+      "severity": "May need validation",
+      "explanation": "Destination GW for EoGRE client is invalid",
+      "action": "Check configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_GW_DOWN",
+      "severity": "May need validation",
+      "explanation": "All destination GWs for EoGRE client are down",
+      "action": "Check configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_FLEX_NO_ACTIVE_GW",
+      "severity": "May need validation",
+      "explanation": "EoGRE Flex LS AP reported no active GW",
+      "action": "Check AP logs and profile configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RULE_MATCH",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Rule matching for EoGRE client failed",
+      "action": "Collect RA traces and check with Cisco support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Application of AAA attributes for EoGRE client failed",
+      "action": "Collect RA traces and check with Cisco support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Creation of  EoGRE client failed",
+      "action": "Collect RA traces and check with Cisco support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_HANDOFF_ERROR",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. Mobility handling of  EoGRE client failed",
+      "action": "Collect RA traces and check with Cisco support"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_QOS_FAILURE",
+      "severity": "May need validation",
+      "explanation": "QOS module operation failed for the client",
+      "action": "If the issue persists, collect RA trace for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_ASSOC_DENIED_UNSPEC",
+      "severity": "May need validation",
+      "explanation": "Used when WGB tries association to webauth WLAN",
+      "action": "Correct WGB configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CCX_INSUFFICIENT_BANDWIDTH",
+      "severity": "May need validation",
+      "explanation": "CAC TSPEC error due to insufficient bandwidth on AP radio",
+      "action": "Check CAC configuration, and collect RA trace"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ABORT_RECEIVED",
+      "severity": "May need validation",
+      "explanation": "Internal controller error. Client connection abort received during state processing",
+      "action": "Collect RA traces for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_M1_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. It was not possible to send EAPoL M1 to AP",
+      "action": "Collect RA traces for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_M3_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Controller internal error. It was not possible to send EAPoL M3 to AP",
+      "action": "Collect RA traces for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WLAN_ID_ATTR_MISMATCH",
+      "severity": "May need validation",
+      "explanation": "Radius server returned a WLAN ID attribute, not matching client policy",
+      "action": "Check if this is expected, and confirm Radius server configuration vs controller WLANs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_SUPPLICANT_NAME_FAIL",
+      "severity": "May need validation",
+      "explanation": "Policy validation error of the supplicant name",
+      "action": ""
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_USER_NAME_FAIL",
+      "severity": "May need validation",
+      "explanation": "Error handling username attribute",
+      "action": "Collect RA traces"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_SERVICE_SET_ID_FAIL",
+      "severity": "May need validation",
+      "explanation": "Invalid SSID name received from AAA server",
+      "action": "Check Radius server configuration and collect RA traces for more info"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_ANCHOR_VLAN_ID_FAIL",
+      "severity": "May need validation",
+      "explanation": "Error handling Anchor VLAN ID attribute",
+      "action": "Check Radius server configuration and collect RA traces for more info"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_INTERIM_INTERVAL_FAIL",
+      "severity": "May need validation",
+      "explanation": "Internal controller error while handling Accounting Interim interval settings",
+      "action": "Collect RA traces for more info"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_LINKLOCAL_BRIDGE_VLAN_FAIL",
+      "severity": "May need validation",
+      "explanation": "Invalid Local-link bridging VLAN assigned to client",
+      "action": "Check configuration and RA traces"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MBSSID_DOWN",
+      "severity": "May need validation",
+      "explanation": "Client removed due to mobility tunnel going down",
+      "action": "Check mobility peer status"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_L3AUTH_FAIL",
+      "severity": "May need validation",
+      "explanation": "Security processing for a L3 Auth failed (Webauth/guest)",
+      "action": "Confirm username/password and if required, collect RA trace"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CAPWAP_DOWN",
+      "severity": "May need validation",
+      "explanation": "Client was deleted due to CAPWAP tunnel failure",
+      "action": "Confirm if there are any network connectivity issues, if none found, check AP logs for any crash"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WGB_CLIENT_DIRECT_ASSOC",
+      "severity": "May need validation",
+      "explanation": "Mac address was seen as wired WGB client, has now associated as wireless client",
+      "action": "This is unusual scenario. Check if this is intentional"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_CLASS3_RECV",
+      "severity": "May need validation",
+      "explanation": "AP triggered delete, as client sent class 3 frame (data, power save, some management) from non-authenticated client, may happen occasionally on connection recovery",
+      "action": "Nothing required, unless this is happening frequently. This may need RA trace and OTA capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_AUTH_RESP_REJECT",
+      "severity": "May need validation",
+      "explanation": "AP deleted client, as Auth request was FT or SAE, and these are not enabled in the SSID",
+      "action": "Possible client side defect, may need OTA and config to validate"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_WITH_FAILURE_STATUS",
+      "severity": "May need validation",
+      "explanation": "AP rejected association request. This could be due to invalid rates, or other incorrect information element",
+      "action": "If this happens frequently, it may need AP side logs + OTA"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_CLIENT_ACL_MISMATCH",
+      "severity": "May need validation",
+      "explanation": "AP deleted client during Facebook Express wifi feature, due to missing ACL",
+      "action": "Possible configuration error. Check assigned postauth ACL"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_AUTH_STOP",
+      "severity": "May need validation",
+      "explanation": "AP deleted client during association phase. This may  have different triggers, from internal AP process errors, normal delete on RLANs, etc",
+      "action": "If seen frequently or observing connection problems, collect AP logs and OTA for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_4WAY_HANDSHAKE_FAILED",
+      "severity": "May need validation",
+      "explanation": "EAPoL 4WAY exchange failed at AP side, no specific trigger",
+      "action": "Collect AP logs/client debug for further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_BAD_AID",
+      "severity": "May need validation",
+      "explanation": "Association ID assigned by controller is already in use",
+      "action": "This may need further investigation for possible defect on either controller or AP. RA traces and AP logs will be needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_ALL_ON_SLOT",
+      "severity": "May need validation",
+      "explanation": "AP received request to delete all clients in the interface. Could be due to config change, or recovery from radio event",
+      "action": "This could be due to config request. If none was performed, check AP logs for possible radio recovery/reset that needs to be investigated"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_STOP_REASSOC",
+      "severity": "May need validation",
+      "explanation": "AP triggered delete, may be due to AP staggered upgrade in process, or client sent more than 3 continuous requests, or during some scenarios of inter-radio roaming",
+      "action": "Some triggers are normal during operation. If this happens frequently, collect AP debug client logs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_TX_DISASSOC",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver sent a client delete, or other component sent a downstream dissasociation request",
+      "action": "This should not be seen,  may need additional investigation to confirm if it is valid trigger. Collect RA + AP debugs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_4WAY_HANDSHAKE_FAILED",
+      "severity": "May need validation",
+      "explanation": "AP side report of different failure points on EAPoL 4way. May be triggered by wrong PSK, or possible defects on client or infrastructure side",
+      "action": "If using PSK, check it, otherwise, collect RA trace and AP debugs, and either EPC or OTA capture."
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_TUNNEL_DOWN",
+      "severity": "May need validation",
+      "explanation": "AP reports EoGRE tunnel down",
+      "action": "This is specific to EoGRE tunnel from AP. Check network connectivity and EoGRE configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLAN_CENTRAL_SWITCH",
+      "severity": "May need validation",
+      "explanation": "Client on RLAN with Central Switching, and AP lost CAPWAP tunnel (moved to standalone)",
+      "action": "Check AP network connectivity to controller"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DP_ADD_FAIL",
+      "severity": "May need validation",
+      "explanation": "It was not possible to add RLAN client to AP dataplane, possible defect or load related issue",
+      "action": "Get AP logs and client debugs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLAN_MAB_FAILURE",
+      "severity": "May need validation",
+      "explanation": "Mac address bypass failed for RLAN client. Either not authorized client, invalid config, or radius server issue",
+      "action": "Check Radius configuration, and mac address entry in server"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_ACL",
+      "severity": "May need validation",
+      "explanation": "AP deleted client, as ACL name provided, was not present in AP",
+      "action": "Check ACL configuration, collect RA traces, AP logs, AP show tech"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_KEY_PLUMB_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP radio driver could not configure client encryption keys. Possible defect",
+      "action": "Collect AP debugs for client, this may need further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_MESH_KEY_PLUMB_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP radio driver could not configure mesh AP encryption keys. Possible defect",
+      "action": "Collect AP debugs for mesh AP, this may need further analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DP_ADD_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP could not add client entry to data path during association processing. Possible defect",
+      "action": "Collect AP show tech, and debug client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_AUTH_RESP_SEND_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP could not send Auth response to client, default delete reason for auth failures. Possible defect",
+      "action": "Collect AP show tech, OTA  and debug client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_SEND_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP could not send Association response to client, default delete reason for association failures. Possible defect",
+      "action": "Collect AP show tech, OTA  and debug client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DEAUTH_DISASSOC_SEND_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP could not send deauth or dissasociate to client. Possible defect",
+      "action": "Collect AP show tech, OTA  and debug client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_PSP_WHEN_UNAUTH",
+      "severity": "May need validation",
+      "explanation": "A device sent Power Saving Poll without being associated to AP. May be client side state problem",
+      "action": "If this happens frequently, collect OTA, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_IOCTL_ERROR",
+      "severity": "May need validation",
+      "explanation": "Driver could not obtain statistics for client, leading to client delete request",
+      "action": "If this happens frequently, collect OTA, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_FLEX_FT_FAILURE",
+      "severity": "May need validation",
+      "explanation": "FT (802.11w) roaming failed for client, with AP in Flex mode. May be client side issue",
+      "action": "If this happens frequently, collect OTA, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DRIVER_ADD_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP could not add client entry to radio driver. Possible defect",
+      "action": "Collect OTA, ap show tech, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CLIENT_NOT_FOUND",
+      "severity": "May need validation",
+      "explanation": "AP could not add client entry to radio driver. Possible defect",
+      "action": "Collect OTA, ap show tech, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MGMT_PKT_ALLOC_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP radio driver could not allocate memory to handle the client add. Possible defect",
+      "action": "Collect OTA, ap show tech, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_CIPHER",
+      "severity": "May need validation",
+      "explanation": "AP driver deleted client, as requested crypto cipher is invalid or Unknown. Possible defect",
+      "action": "Collect OTA, ap show tech, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_AID",
+      "severity": "May need validation",
+      "explanation": "AP driver reported invalid Association ID received for client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY",
+      "severity": "May need validation",
+      "explanation": "AP driver reported they key type sent for client is invalid type (direction, mode, etc). Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_FW_KEY_SET_FAILED",
+      "severity": "May need validation",
+      "explanation": "AP driver could not program the client key into radio firmware. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_HT_VHT_RATES",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver received association response add with invalid HT/VHT rates or legacy rates with invalid size",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_LEGACY_RATES",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver received association response add with invalid legacy rates, or no rates at all",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_AID_INUSE",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver reports that association ID set for Client is already in use. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CIPHER_ATTACH_FAIL",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver reports that it was not possible to link the cipher type to the key when adding the client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ALGORITHM_MISMATCH",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver reports mismatch between multicast/unicast cipher when trying to set key for client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEYLENGTH",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver reports mismatch invalid key length while adding  client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY_INDEX",
+      "severity": "May need validation",
+      "explanation": "AP Radio driver reports mismatch invalid key index while adding  client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_STADB_INIT_FAILED",
+      "severity": "May need validation",
+      "explanation": "AP driver creation of IO control block for client failed. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_FAILED",
+      "severity": "May need validation",
+      "explanation": "AP driver reports that IO control block for client could not be found. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_IN_FIRMWARE_FAILED",
+      "severity": "May need validation",
+      "explanation": "AP driver reports that radio firmware could not add client. Possible defect",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_REASON_AP_MAX",
+      "severity": "May need validation",
+      "explanation": "Default driver client delete reason, if no other trigger was found",
+      "action": "Collect OTA, ap show tech, controller show tech wireless, and client debug bundle"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_KEY_XCHNG_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "This can happen during normal scenarios. Client deleted due to EAPoL M1 retries. Possible client side issue, or it roamed during auth phase",
+      "action": "If issue persists, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SESSION_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client removed after reaching session timeout. Normal scenario",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_IPLEARN_CONNECT_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Controller did not learn client IP address in the allowed time",
+      "action": "Check DHCP server and client IP configuration. Validate if DHCP required is set and client is performing DHCP negotiation. If all is correct, collect RA traces and EPC"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_BSSID_DOWN",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Triggered by configuration changes, for example WLAN or Policy profile modifications",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MAX_SAQUERIES",
+      "severity": "Normal, in most scenarios",
+      "explanation": "For PMF clients, triggered when client did not reply to SA queries and reached max retries. Could be triggered on failed roams, or client spoofing attacks",
+      "action": "None required, as it may happen on normal scenarios. If issue persists, collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_RESTART_PURGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client was roaming during HA failure, or Association ID conflict was detected after failover",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_SUCCESS",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client roamed across WNCD instances. This is normal scenario for default tag, or roaming across tags",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_INTER_CTRL_ROAM_SUCCESS",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Successful inter controller client roam",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MOBILITY_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client delete, either due to roaming while on IP learning state, or due to policy configuration mismatch",
+      "action": "Check logging details for client. In case of mismatch, correct configuration. Delete by IP learning will happen on normal scenarios"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_NAS_ERROR",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Default AAA disconnect reason",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_80211V_SMART_ROAM_FAILED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Failure while sending 802.11v Transition request frame. Causes could be 11v not supported by client, or BSS transition is not enabled on the radio",
+      "action": "Check configuration. If this happens frequently, collect RA trace"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11V_ASSOC_FAILED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Not in use",
+      "action": "None, this should not be triggered"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_FT_AUTH_RESPONSE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client failed pre-authentication during FT roaming",
+      "action": "None required, if this happens frequently, collect RA and AP side debugs for the client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_AVC_REANCHORING",
+      "severity": "Normal, in most scenarios",
+      "explanation": "WLAN Reanchor feature is enabled, and client was not using voice/video",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_EAP_ID_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not reply to EAP requests in the specified retries/time",
+      "action": "Check client supplicant/user configuration. If persistent, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_DOT1X_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not reply to 802.1x requests in the specified retries/time",
+      "action": "Check client supplicant/user configuration and AAA server logs. If persistent, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_WEB_AUTH_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client failed webauth, most probably wrong username or password",
+      "action": "Check client credentials"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_AUTH_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client provided wrong username or password during 802.1x authentication",
+      "action": "Check client credentials and supplicant configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not reply to 802.1x request. Not currently used",
+      "action": "Check client supplicant configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_DOT11_AUTH_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Failure during 802.11 auth request. Not currently used",
+      "action": "None required."
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_CONFIG",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client was manually excluded by administrator",
+      "action": "Check controller configuration, if this was not intentional"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_SUPPLICANT_RESTART",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Not in use",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_PORT_ADMIN_DISABLED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "802.1x or MAB has been disabled on the client interface. This should not be applicable to  wireless clients",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_LOST_CARRIER",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AAA lost carrier failure. This should not be applicable to wireless clients",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUDE_STATIC_IP_ANCHOR_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Policy profile has static IP mobility enabled, and controller could not find valid anchor for client IP",
+      "action": "Check controllers configuration and IP address used by client. Could be client was using IP not valid in any controller in mobility group"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MACAUTH_CONNECT_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Controller internal error. Client mac authentication was not completed in time, could be load issue or radius server",
+      "action": "Check radius server, then collect RA traces for further analysis, include AP logs if Flexmode"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_L2AUTH_CONNECT_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not complete L2 auth like PSK or 802.1x,  in time. Could be normal if client roamed or went out of coverage",
+      "action": "If it is not expected, collect RA traces for further analysis, include AP logs if Flexmode"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_L3AUTH_CONNECT_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not complete webauth in time. Could be normal if client roamed or went out of coverage",
+      "action": "If it is not expected, collect RA traces for further analysis, include AP logs if Flexmode"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RESET",
+      "severity": "Normal, in most scenarios",
+      "explanation": "EoGRE tunnel was reset",
+      "action": "Check network status"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RECONCILIATION",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Unknown client deleted after HA failover",
+      "action": "None Required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WIRED_IDLE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Wired client was deleted on idle timeout, normal scenario",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_IP_UPDATE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Anchor informed of client IP timeout",
+      "action": "Anchored client did not complete IP negotiation in time. Check client config, DHCP server"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_AP_DELETE_MN",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP-side triggered client delete, may be normal during operation",
+      "action": "None required. If this happens frequently collect RA trace and AP side debugs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CAPS_UNSUPPORTED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Invalid client capabilities during 802.11 frame parsing. Should not be seen",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CCX_INVALID_QOS_PARAMETER",
+      "severity": "Normal, in most scenarios",
+      "explanation": "CCX QoS error, not in use",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CCX_NON_OPTIMAL_ASSOCIATION_CHOICE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client is trying to join to an non-optimal Access point when assisted roaming is enabled",
+      "action": "This can be intentional, depending on your configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WIRED_WGB_DELETE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "WGB removal triggered delete of its child clients",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_REMOTE_MOBILITY_DELETE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Mobility requested client to be deleted, could have different triggers, like tunnel down",
+      "action": "Check RA traces"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_IP_DOWN_NO_IP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client sent a DHCP release IP address",
+      "action": "This can be normal scenario depending on client behavior"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_CCX_QOS_POLICY",
+      "severity": "Normal, in most scenarios",
+      "explanation": "CCX QoS policy error. Not in use",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ROAM_ACROSS_POLICY_PROFILE_DENY",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client roamed across policy profiles",
+      "action": "Check configuration. This can be intentional on some scenarios, but policy usage should be optimised for best roaming experience"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_EXCLUSION_POLICY_TEMPLATE_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Error applying service template provided by AAA server",
+      "action": "Collect RA traces and Radius logs for further investigation"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_AP_UPGRADE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted as AP is performing an upgrade",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MAB_FAILED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client failed Mac Authentication Bypass",
+      "action": "Check if MAB configuration is correct"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WLAN_CHANGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client changed WLANs/SSID",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_VLAN_CHANGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "On client reassociation or roaming, a new VLAN was assigned. This would be caused by AAA override, different policy profiles, etc",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_ADMIN_RESET",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Administrator removed the client, or in some scenarios, AAA server requested client delete",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_IDLE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted due to inactivity. Normal scenario",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_IDLE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted by AP, due to inactivity. Normal scenario",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_USER_REQUEST",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted due to supplicant sending EAP Logoff. This may happen during machine authentication",
+      "action": "None required. If this is not intentional, do RA trace and check on client side logs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MM_TUNNEL_DOWN",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client was deleted as Mobility tunnel to peer went down",
+      "action": "Check network connectivity, and remote mobility peer status"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11V_TIMER_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not perform roaming on 802.11v transition request and timer expired",
+      "action": "None required. If impacting client stability, check configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_MAX_STA",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP Radio has reached maximum capacity",
+      "action": "Check if non-default max client setting per radio has been set, or RF design if additional capacity is needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WIRED_IAPP_DISASSOC",
+      "severity": "Normal, in most scenarios",
+      "explanation": "WGB wired client deleted. This may be triggered by WGB client removed due to inactivity",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WIRED_WGB_CHANGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client mac address was reported by another WGB, so deleting previous entry",
+      "action": "Mac address seen by another WGB. Check if this is intentional"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_WIRED_VLAN_CHANGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "WGB moved client to a different VLAN",
+      "action": "This is for WGB VLAN feature. Check if this is intentional"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_CREDENTIAL_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Wrong username or password",
+      "action": "Check client side user configuration"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DANGLING_CLEANUP_TIMER",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Wired Client was deleted after WGB cleanup event",
+      "action": "Check why WGB was deleted"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DEAUTH_OR_DISASSOC_REQ",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client initiated a deauthentication or deauthentication",
+      "action": "None required in most scenarios. This is normal activity"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_DHCP_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported DHCP error on deauth frame",
+      "action": "Check DHCP server, and collect RA trace"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_EAP_TIMEOUT_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported EAP error on deauth frame",
+      "action": "Check AAA server, and collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_8021X_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported authentication error on deauth frame",
+      "action": "Check AAA server, and collect RA trace and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_DEVICE_IDLE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported idle timeout on deauth frame",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_CAPTIVE_PORTAL_SECURITY_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported webauth error on deauth frame",
+      "action": "Check webauth configuration and certificates"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_DECRYPTION_FAILURE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported decryption errors on deauth frame",
+      "action": "Get RA trace and over the air captures"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_INTERFACE_DISABLED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client informed it is going in deep sleep on deauth frame",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_USER_TRIGGERED_DISASSOC",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client informed user requested disconnection",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_MISC_REASON",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported generic reason in deauth frame",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_UNKNOWN_REASON",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported generic reason in deauth frame",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_PEER_TRIGGERED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported AP sent disconnection in deauth frame",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_CLIENT_BEACON_LOSS",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client reported disconnection due to AP beacon loss. This may be triggered by low RRSI/coverage, or AP radio resets",
+      "action": "Check AP logs for radio reset, and confirm client was not on low coverage scenario"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_DOT11_POOR_CHANNEL_CONDITIONS",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client RSSI is lower than the configured RSSI threshold",
+      "action": "None required, as this may be intentional. Otherwise, check 802.11v and Low RSSI threshold settings."
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, triggered by a channel change request",
+      "action": "Normally, none needed, unless this is happening too frequently, more than 4 times a day per radio"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_IPLEARN_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP reported that client did not complete adress learning process (static or DHCP)",
+      "action": "This may happen occasionally during normal scenarios if client roamed away or was out of coverage. If this is happening frequently or not expected, get RA + AP logs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_REASSOC_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client as it did not complete onboarding after requesting a roaming (reasociation)",
+      "action": "This may happen occasionally during normal scenarios if client roamed away or was out of coverage. If this is happening frequently or not expected, get RA + AP logs"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_DISASSOC",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client due to dissaociation frame. Normally this only is applied for PMF(11w) enabled devices",
+      "action": "Non required, this happens during normal operation. If a large number of events are detected, get OTA to confirm source"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_ASSOC_EXPIRED_AT_AP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client associated to stale SSID on AP, deleted during clean up process",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DHCP_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "DHCP required is enabled, and client never completed DHCP negotiation",
+      "action": "May happen during normal scenarios, if client roams out of coverage during onboarding, or goes to sleep or is turned off, during onboarding. If seen on large counts per VLAN, do client debugging and check DHCP Server pool and status"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_SA_QUERY_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client as it did not reply SA query during PMF roaming (802.11w)",
+      "action": "May happen during normal scenarios. If frequently seen for specific client, it may be needed to do OTA, RA and AP client debug"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_INTRA_AP_ROAM",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client as it roamed across SSID in the same AP",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP had a channel change, that triggered client deletion",
+      "action": "This may happen during normal scenarios. if this is seen very frequently on same AP, it may need RF analisys or RRM tunning"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_REQUEST",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP driver received a delete request for the client",
+      "action": "PENDING"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_INTF_RESET",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP radio interface has been shutdown",
+      "action": "This may happen by admin request"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_REAPER_RADIO",
+      "severity": "Normal, in most scenarios",
+      "explanation": "The radio role has changed, and can be uplink/repeater",
+      "action": "None needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_SLOT_DISABLE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Slow was disabled for MFP wlan",
+      "action": "None needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_MIC_FAIL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "MIC (for TKIP) counter protection triggered, so AP deleted all clients",
+      "action": "None needed, if this happens frequently, check for possible client side issues"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_VLAN_DEL",
+      "severity": "Normal, in most scenarios",
+      "explanation": "VLAN/ACL mapping deleted, config change",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_PAK_MAX_RETRY",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted by maximum frame retransmissions reached. This reason should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_TX_DEAUTH",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP triggered a deauth during webauth/dot1x/run states, this may have been requested by controller",
+      "action": "May happen during normal scenario (for example timeout), if this is frequent or not-expected, collect RA traces for client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_SENSOR_STA_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Sensor station timeout. This reason should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_AGE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP triggered client delete, by session timeout",
+      "action": "None required, this is normal for local auth/standalone flex scenarios"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_TX_FAIL_THOLD",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Bad Client, this reason code should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_UPLINK_RCV_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Uplink timeout, this reason code should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_NXT_RADIO",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Sensor AP in operation, this reason code should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_OTHER_BSSID",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Sensor AP in operation, this reason code should not be active",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_DEL_AUTH_EXPIRED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP triggered a client delete, as client did auth phase, but never completed association",
+      "action": "May happen during normal scenario (for example timeout), if this is frequent or not-expected, collect RA traces for client"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_BY_FLEXGROUP_CHANGE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP Flexgroup name was changed by administrator, leading to client delete request",
+      "action": "None required, configuration change"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_EAPOL_LOGOFF",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client sent EAP-Logoff. This may be due to normal operation (p.e. client user changed) or it may be client supplicant error, restarting auth",
+      "action": "This is normally expected, if happening frequently or leading to problems, this may need RA trace"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_EAP_REQ_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not reply to EAP requests in the specified retries/time",
+      "action": "Check client supplicant/user configuration and AP state. If persistent, collect RA traces and over the air capture"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_MIC_VALIDATION",
+      "severity": "Normal, in most scenarios",
+      "explanation": "MIC (for TKIP) counter protection triggered, so AP deleted all clients",
+      "action": "None needed, if this happens frequently, check for possible client side issues"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_INTER_AP_ROAM",
+      "severity": "Normal, in most scenarios",
+      "explanation": "WLC requested to AP to delete client due to roaming event",
+      "action": "None needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_UNKNOWN_CLIENT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client Unknown, this should not be seen/not in use",
+      "action": "Collect RA traces for initial analysis"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_REAUTH_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client did not complete reauthentication in the specified timer. This may happen on normal scenarios, if client is sleeping or out of coverage",
+      "action": "No action needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CONT_IDLE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Continuous idle timeout, this should not be seen/not in use",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLDP_CLEANUP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted during RLDP (Rogue Link Detection Protocol) execution",
+      "action": "Expected action, depending on configuration. RLDP can be disabled, if not required by security policies"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_PEM_CLEANUP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "Client deleted by Policy Enforcement Module request. This should not be see/not in use",
+      "action": "None required"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DELETE",
+      "severity": "Normal, in most scenarios",
+      "explanation": "All Clients on RLAN port have been deleted, this could be due to port going down, or port getting admin disabled. This could happen on normal scenarios, for example, turning off a RLAN connected device or due to admin port disable configuration.",
+      "action": "Check port config, cable, and connected device state"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_RLAN_INACTIVE_TIMEOUT",
+      "severity": "Normal, in most scenarios",
+      "explanation": "RLAN client deleted due to inactivity timeout. This can happen on normal scenarios",
+      "action": "None needed"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_WEBAUTH_TIMER_EXPIRED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, as it did not complete webauth authentication in time. This may happen on normal scenarios",
+      "action": "if this happens for clients actively trying to login, collect RA traces,  and OTA"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DOT1X_TIMER_EXPIRED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, as it did not complete 802.1x authentication in time.",
+      "action": "if this happens for clients actively trying to authenticate, collect RA traces,  AP debugs, and OTA"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ASSOC_SCB_NOT_AUTHENTICATED",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP is rejecting client association, as it did not do 802.11 authentication, possible client defect",
+      "action": "None required, or OTA is seen frequently"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_AP",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, as max client setting per AP is configured",
+      "action": "None required, or check config in WLAN profile"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_BSSID",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, as max client setting per WLAN is configured",
+      "action": "None required, or check config in WLAN profile"
+    },
+    {
+      "code": "CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_RADIO",
+      "severity": "Normal, in most scenarios",
+      "explanation": "AP deleted client, as max client setting per radio is configured",
+      "action": "None required, or check config in WLAN profile"
+    }
+  ]
+}

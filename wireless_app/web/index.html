@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>无线网优工作台 · WirelessNetOptimizer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='23' font-size='17' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">WN</div>
+    <div><b>无线网优工作台</b><span>WirelessNetOptimizer · 单机离线版</span></div>
+  </div>
+  <nav>
+    <button class="on" data-page="dash">概览</button>
+    <button data-page="catalog">型号库</button>
+    <button data-page="ssid">SSID 配置</button>
+    <button data-page="heat">热力图</button>
+    <button data-page="interf">干扰分析</button>
+    <button data-page="live">现场连接</button>
+    <button data-page="air">空口扫描</button>
+    <button data-page="local">本机诊断</button>
+    <button data-page="roam">移动漫游</button>
+    <button data-page="survey">现场勘测</button>
+    <button data-page="audit">智能审计</button>
+    <button data-page="diag">故障排查</button>
+    <button data-page="wlc">WLC 诊断</button>
+    <button data-page="lib">文档库</button>
+    <button data-page="help">使用说明</button>
+  </nav>
+  <div class="hdr-right">
+    <div class="ssidbar"><label>当前 SSID</label><select id="globals" title="切换后热力图、现场连接与干扰分析同步联动"></select><button class="btn ghost sm" id="gssidmanage" title="打开 SSID 配置页">管理</button></div>
+    <span class="pill"><span class="dot"></span>本地运行</span>
+    <button class="btn ghost sm" id="themebtn" title="切换深色 / 浅色主题">◐ 深色</button>
+    <span class="pill" id="ver">v-</span>
+    <a href="/plan.html" target="_blank" class="small">方案书 v0.18 ↗</a>
+  </div>
+</header>
+
+<main>
+<!-- ==================== 概览 ==================== -->
+<section class="page on" id="page-dash">
+  <div class="pagehead">
+    <div><div class="h1">概览</div><div class="sub">无线故障排除 · 图纸热力图 · 无线优化　|　P0 可运行原型 · 设备 / 终端侧为模拟数据 · 空口 / 漫游 / 勘测为本机真实只读采集</div></div>
+    <div class="row"><button class="btn ghost sm" onclick="go('catalog')">浏览型号库</button><button class="btn ghost sm" onclick="go('survey')">现场勘测</button><button class="btn" onclick="go('audit')">运行智能审计 →</button></div>
+  </div>
+  <div class="grid g6" id="kpis" style="margin-bottom:16px"></div>
+  <div class="grid g2" style="margin-bottom:16px">
+    <div class="card">
+      <h3>能力域全景（对标 Ekahau / AirMagnet 的本地实现）</h3>
+      <ul class="clean">
+        <li><b>真实空口扫描</b>：Windows Native WiFi 读取本空间 BSS（含隐藏 SSID）→ RSSI / SNR / SINR、频率区间重叠、BSS Load、区域评分与信道干扰指数</li>
+        <li><b>移动漫游监测</b>：每秒读本机关联，BSSID 变化即记漫游（同 SSID / 跨频段 / 跨 SSID / 掉线），信号轨迹、驻留与空窗、粘滞终端、当前信道拥挤</li>
+        <li><b>现场勘测与验收</b>：图纸点击落点固化真实数据 → 语音 / 数据 / 高密 / 定位四套需求模板 → 实测 IDW 插值图层、逐点达标率、传播模型校准、离线勘测报告</li>
+        <li><b>智能审计</b>：AirWISE 式自动问题清单（证据 / 影响 / 处置 / 关联章节）+ 信道 / 带宽 / 功率规划 + 开放网络、弱加密、仿冒热点、隐藏 SSID、OUI 核查</li>
+        <li><b>SSID 维度</b>：顶部选择当前分析对象；每个 SSID 独立配置 AP 绑定、频段、VLAN、安全与接入门限，热力图 / 现场连接 / 干扰 / 诊断全部跟随切换</li>
+        <li><b>图纸热力图</b>：导入平面图<b>或直接画现场草图</b> → 标定比例尺 → 绘制墙体与 AP → 传播模型先验 + 实测残差校正 → 输出覆盖 / 置信度 / 重叠度 / SINR 图层</li>
+        <li><b>无线干扰</b>：非 Wi-Fi 干扰源按频率、带宽、占空比建模 → 线性域抬升底噪 → 2.4G 频谱占用、5G 分组、AP 同信道冲突与信道重规划建议</li>
+        <li><b>现场连接状态</b>：终端实时 RSSI / SNR / MCS / 重传 / 流量 / 认证 / 漫游，事件流与异常定位，可叠到图纸上、可一键带入诊断</li>
+        <li><b>故障排查</b>：症状 + 证据输入 → 12 条可配置规则加权推理 → Top 根因、置信度、处置建议与复测项</li>
+        <li><b>优化建议</b>：型号库带出天线增益、默认功率、管理平面与固件上限，为信道 / 功率规划与 EOL 替换提供依据（本版为数据准备阶段）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>本版运行状态</h3>
+      <div class="metric"><span>数据来源</span><b style="font-size:13px">内置型号库 + 本机 SSID + 模拟现场数据</b></div>
+      <div class="metric"><span>现网连接</span><b style="font-size:13px;color:var(--warn)">未接入（SNMP / API 属 P1）</b></div>
+      <div class="metric"><span>网络监听</span><b style="font-size:13px">仅 127.0.0.1，不对外暴露</b></div>
+      <div class="metric"><span>用户数据目录</span><b style="font-size:11px;font-weight:500" id="userdir">-</b></div>
+      <div class="metric"><span>型号库版本 / 生成日期</span><b style="font-size:12px" id="catver">-</b></div>
+      <div class="metric"><span>勘测 / 审计</span><b style="font-size:12px;color:var(--ok)">真实空口驱动 · 离线报告可打印</b></div>
+    </div>
+  </div>
+  <div class="grid g3">
+    <div class="card"><h3>生命周期分布</h3><div id="lc" class="small muted"></div></div>
+    <div class="card"><h3>能力层级分布</h3><div id="cap" class="small muted"></div></div>
+    <div class="card"><h3>厂商 Top 8</h3><div id="vend" class="small muted"></div></div>
+  </div>
+  <div class="note" style="margin-top:16px"><b>说明：</b>这是把方案第 14 节「型号库」与第 6 节「热力图算法」跑通的可安装原型，用来验证 Windows 单机 + 本地 Web UI 的形态是否顺手。热力图使用 ITU-R P.1238 简化模型加多墙衰减，并用稳健化的实测打点残差做 IDW 校正（AP 近场 3 m 保护）；未接真实 AP/WLC 数据前，所有结论仅用于演示与算法验证。</div>
+</section>
+
+<!-- ==================== 型号库 ==================== -->
+<section class="page" id="page-catalog">
+  <div class="pagehead">
+    <div><div class="h1">设备型号库</div><div class="sub">国内外主流 + 老旧 / EOL / 历史品牌，逐 SKU 收录，供 AP 选型与适配器路由</div></div>
+    <div class="row"><button class="btn ghost sm" id="expcsv">导出当前结果 CSV</button></div>
+  </div>
+  <div class="card" style="margin-bottom:13px">
+    <div class="filters">
+      <input type="text" id="cq" placeholder="搜索型号 / 厂商 / 系列 / 适配器…">
+      <select id="corigin"><option value="">全部产地</option><option>国内</option><option>国外</option><option>通用</option></select>
+      <select id="ccat"><option value="">全部类别</option><option>AP</option><option>Controller</option><option>ManagementPlane</option></select>
+      <select id="cvendor"><option value="">全部厂商</option></select>
+      <select id="cgen"><option value="">全部世代</option></select>
+      <select id="clc"><option value="">全部生命周期</option></select>
+      <select id="ccap"><option value="">全部能力层级</option></select>
+      <select id="cstatus"><option value="">全部核实状态</option><option>已核实</option><option>待核对</option><option>预留</option></select>
+      <button class="btn ghost sm" id="creset">重置</button>
+    </div>
+    <div class="row small muted"><span id="ccount">-</span><span>· 点击任意行查看完整元数据与建议使用方式</span></div>
+  </div>
+  <div class="grid" style="grid-template-columns:minmax(0,1fr) 300px;gap:13px;align-items:start" id="catgrid">
+    <div class="tblwrap"><div class="maxh"><table id="ctbl"><thead><tr>
+      <th>型号</th><th>厂商</th><th>产地</th><th>类别</th><th>世代</th><th>生命周期</th><th>能力</th><th>管理平面</th><th>适配器</th><th>核实</th>
+    </tr></thead><tbody></tbody></table></div>
+      <div class="pager"><span id="cpage">-</span><div class="row"><button class="btn ghost sm" id="cprev">上一页</button><button class="btn ghost sm" id="cnext">下一页</button></div></div>
+    </div>
+    <div class="card" id="cdetail" style="position:sticky;top:76px"><h3>型号详情</h3><div class="muted small">点击左侧表格中的任一型号，查看元数据、最低控制器版本、适配器与降级建议。</div></div>
+  </div>
+</section>
+
+<!-- ==================== SSID 配置 ==================== -->
+<section class="page" id="page-ssid">
+  <div class="pagehead">
+    <div><div class="h1">SSID 配置</div><div class="sub">选择分析对象 · 绑定 AP / 频段 / VLAN / 接入门限，切换后各模块同步联动</div></div>
+    <div class="row"><button class="btn ghost sm" id="ssidnew">＋ 新建 SSID</button><button class="btn ghost sm" id="ssidreset">恢复默认</button></div>
+  </div>
+  <div class="note" style="margin-bottom:14px"><b>SSID 是全局分析维度。</b>顶部下拉选中的 SSID 决定：哪些 AP 参与覆盖计算、热力图用哪套频段传播参数、覆盖达标门限、干扰分析统计哪些 AP、现场连接筛选哪一拨终端。P1 接现网后，这些字段可直接映射 WLC 的 WLAN Profile / AP Group，无需改前端。</div>
+  <div class="grid g3" id="ssidkpis" style="margin-bottom:14px"></div>
+  <div class="card" style="margin-bottom:14px;border-color:var(--pri)">
+    <div class="row" style="justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <h3 style="margin:0">本机无线连接 <span class="tag t-cn">离线读取</span> <span class="tiny muted" id="wlanstate">正在读取…</span></h3>
+      <div class="row" style="gap:7px;flex-wrap:wrap">
+        <label class="small" style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="checkbox" id="wlanauto" checked style="width:auto"> 启动时自动采用本机 SSID</label>
+        <button class="btn ghost sm" id="wlanrefresh">重新读取</button>
+        <button class="btn sm" id="wlanuse">用本机当前 SSID 分析</button>
+      </div>
+    </div>
+    <div class="tiny muted" style="margin:7px 0 11px;line-height:1.8">
+      通过 Windows <code>netsh wlan show interfaces</code> 只读获取本机正在连接的 SSID / BSSID / 波段 / 信道 / 信号，全程本地、不联网、不修改任何无线配置。检测到已连接时自动写入 SSID 列表并设为全局分析对象（热力图、干扰、现场连接、诊断同步联动）；也可从本机已保存的配置文件里选一个来分析。
+    </div>
+    <div class="grid g4" id="wlaninfo"></div>
+    <div class="row" style="margin-top:11px;gap:7px;flex-wrap:wrap">
+      <span class="tiny muted">本机已保存配置：</span>
+      <select id="wlanprofiles" style="max-width:260px"></select>
+      <button class="btn ghost sm" id="wlanaddprofile">加入并设为当前</button>
+      <span class="tiny muted" id="wlanhint"></span>
+    </div>
+  </div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>SSID 列表 <span class="tiny muted" id="ssidcnt"></span></h3>
+      <div id="ssidcards"></div>
+    </div>
+    <div class="card">
+      <h3>编辑 SSID <span class="tiny muted" id="ssideditstate">新建</span></h3>
+      <div class="field"><label class="f">SSID 名称</label><input type="text" id="sf_name" placeholder="例如 Corp-Staff"></div>
+      <div class="grid g2" style="gap:0 9px">
+        <div class="field"><label class="f">用途</label><input type="text" id="sf_purpose" placeholder="员工办公 / 访客 / 语音…"></div>
+        <div class="field"><label class="f">生效频段</label><select id="sf_band"><option>双频</option><option>2.4</option><option>5</option><option>6</option></select></div>
+        <div class="field"><label class="f">安全 / 认证</label><input type="text" id="sf_security" list="seclist" placeholder="WPA2/3-Enterprise · 802.1X"><datalist id="seclist"><option>WPA2/3-Enterprise · 802.1X</option><option>WPA2-Enterprise · 802.1X</option><option>Portal / Captive Portal</option><option>WPA2-PSK</option><option>WPA2-PSK / MAB</option><option>Open</option></datalist></div>
+        <div class="field"><label class="f">VLAN ID</label><input type="number" id="sf_vlan" value="20" min="0" max="4094"></div>
+        <div class="field"><label class="f">最小接入 RSSI (dBm)</label><input type="number" id="sf_minrssi" value="-70" step="1"></div>
+        <div class="field"><label class="f">最大客户端数</label><input type="number" id="sf_maxclients" value="60" min="1"></div>
+      </div>
+      <div class="field"><label class="f">备注</label><input type="text" id="sf_note" placeholder="优化约束、SLA 要求…"></div>
+      <div class="row" style="gap:16px;margin:4px 0 10px">
+        <label class="small" style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="checkbox" id="sf_broadcast" checked style="width:auto"> 广播 SSID</label>
+        <label class="small" style="display:flex;align-items:center;gap:5px;cursor:pointer"><input type="checkbox" id="sf_enabled" checked style="width:auto"> 启用该 SSID</label>
+      </div>
+      <div class="field"><label class="f">广播该 SSID 的 AP <span class="tiny muted">（全不勾 = 所有 AP 广播）</span></label><div id="sf_aps" class="apchecks"></div></div>
+      <div class="row" style="margin-top:11px;flex-wrap:wrap;gap:7px"><button class="btn" id="ssidsave">保存并应用</button><button class="btn ghost sm" id="ssidcancel">取消编辑</button><button class="btn ghost sm" id="ssiddelete">删除该 SSID</button></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3>各 SSID 现场状态 <span class="tiny muted">终端数 / 健康率 / 平均信号，来自现场连接模块</span></h3>
+    <div class="tblwrap"><table id="ssidstatstbl"><thead><tr><th>SSID</th><th>用途</th><th>频段</th><th>VLAN</th><th>广播 AP</th><th>终端数</th><th>健康率</th><th>平均 RSSI</th><th>平均 SNR</th><th>接入门限</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<!-- ==================== 热力图 ==================== -->
+<section class="page" id="page-heat">
+  <div class="pagehead">
+    <div><div class="h1">图纸热力图</div><div class="sub">平面图 → 比例尺 → 墙体 / AP / 实测打点 → 传播模型 + 残差校正 → 覆盖评估</div></div>
+    <div class="row">
+      <button class="btn ghost sm" id="hload">加载项目</button>
+      <button class="btn ghost sm" id="hsave">保存项目</button>
+      <button class="btn ghost sm" id="hexp">导出 PNG</button>
+      <button class="btn" id="hrun">计算热力图</button>
+    </div>
+  </div>
+  <div class="workbench">
+    <!-- 左：工具 -->
+    <div class="tools">
+      <div class="panel">
+        <h4>1 · 图纸 <em id="floorinfo">示例楼层</em></h4>
+        <div class="row" style="margin-bottom:8px;gap:6px">
+          <label class="btn ghost sm" style="position:relative;overflow:hidden">上传 PNG/JPG<input type="file" id="hfile" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+          <button class="btn ghost sm" id="hdemo">示例楼层</button>
+          <label class="btn ghost sm" style="position:relative;overflow:hidden" title="读取 ASCII DXF 的线段作为墙体">导入 DXF<input type="file" id="hdxffile" accept=".dxf,.DXF" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+          <button class="btn ghost sm" id="himgwalls" title="从当前底图用灰度游程提取候选直线墙">图片识别候选墙</button>
+        </div>
+        <div id="dxfinfo" class="tiny muted" style="margin:-2px 0 8px;line-height:1.6"></div>
+        <div id="wallinfo" class="tiny muted" style="margin:-2px 0 8px;line-height:1.6"></div>
+        <div class="sk-new">
+          <div class="field" style="margin-bottom:7px"><label class="f">没有图纸？直接画现场草图</label>
+            <select id="sktpl">
+              <option value="blank">空白楼层（只画外墙）</option>
+              <option value="corridor" selected>走廊 + 两侧 6 房间</option>
+              <option value="office">开放办公 + 会议室 + 弱电间</option>
+              <option value="single">单个大开间</option>
+              <option value="lshape">L 形平面</option>
+            </select>
+          </div>
+          <div class="row" style="gap:6px"><button class="btn sm" id="hsketch">绘制草图</button><button class="btn ghost sm" id="skcont">继续编辑</button></div>
+        </div>
+        <div class="note tiny">图纸只在本地读取，不上传任何外部服务。上传后需重新标定比例尺；草图会自动同步给「现场勘测」页点击打点。</div>
+      </div>
+      <details class="panel sk-panel" id="skpanel">
+        <summary>1b · 草图编辑 <em id="skinfo">0 区域 / 0 隔墙 / 0 门洞 / 0 标注</em></summary>
+        <div class="sk-body">
+          <div class="toolgrid sk-tools" id="sktools">
+            <button data-sktool="room">画房间</button>
+            <button data-sktool="wall">画隔墙</button>
+            <button data-sktool="door">开门洞</button>
+            <button data-sktool="label">加标注</button>
+            <button data-sktool="pick">选择 / 改名</button>
+            <button data-sktool="erase">删除元素</button>
+            <button data-sktool="off" style="grid-column:1/-1">完成 / 返回布点</button>
+          </div>
+          <div class="field" style="margin-top:10px"><label class="f">墙体材质（新画 / 选中对象）</label>
+            <select id="skmaterial">
+              <option value="drywall">石膏板隔墙 · 3 dB</option>
+              <option value="glass">玻璃隔断 · 3 dB</option>
+              <option value="wood">木门/木板 · 4 dB</option>
+              <option value="brick">砖墙 · 7 dB</option>
+              <option value="concrete">混凝土承重墙 · 12 dB</option>
+              <option value="metal">金属/机房屏蔽 · 20 dB</option>
+            </select>
+          </div>
+          <div class="field"><label class="f">外框实际宽度（米）</label>
+            <div class="row" style="gap:6px"><input type="number" id="skwidthm" value="40" min="2" step="1" style="flex:1"><button class="btn ghost sm" id="skdimapply">应用</button></div>
+            <div class="tiny muted" id="skdimhint" style="margin-top:5px;line-height:1.6"></div>
+          </div>
+          <div class="field"><label class="f">网格与吸附</label>
+            <div class="row tiny" style="gap:10px;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="skgrid" checked style="width:auto">网格</label>
+              <label style="display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="sksnap" checked style="width:auto">吸附</label>
+              <label style="display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="skortho" checked style="width:auto">正交</label>
+            </div>
+            <select id="skgridsize" style="margin-top:6px">
+              <option value="10">10 px 网格</option><option value="20" selected>20 px 网格</option>
+              <option value="25">25 px 网格</option><option value="40">40 px 网格</option>
+            </select>
+          </div>
+          <div class="field"><label class="f">选中对象</label>
+            <div class="tiny" id="sksel" style="margin-bottom:5px">未选中对象</div>
+            <div class="row" style="gap:5px"><input type="text" id="skrename" placeholder="改名" style="flex:1;min-width:0"><button class="btn ghost sm" id="skrenamebtn">改名</button></div>
+            <div class="row" style="gap:5px;margin-top:6px;flex-wrap:wrap">
+              <button class="btn ghost sm" id="skundo">撤销</button><button class="btn ghost sm" id="skredo">重做</button>
+              <button class="btn ghost sm" id="skdel">删除选中</button><button class="btn ghost sm" id="skclear">清空草图</button>
+            </div>
+          </div>
+          <div class="row" style="gap:5px;flex-wrap:wrap">
+            <button class="btn ghost sm" id="sksync">同步到勘测页</button><button class="btn ghost sm" id="skexp">导出草图 PNG</button>
+          </div>
+          <div class="note tiny" style="margin-top:8px;line-height:1.7">草图的墙直接参与传播模型：相邻房间共边自动去重，门洞按宽度把墙拆成两段让信号穿过。填「外框实际宽度」自动换算像素/米，也可用「比例尺标定」沿已知长度精修。</div>
+        </div>
+      </details>
+      <div class="panel">
+        <h4>2 · 编辑工具 <em>点击画布操作</em></h4>
+        <div class="toolgrid" id="tools">
+          <button data-tool="select" class="on">选择 / 移动</button>
+          <button data-tool="ap">放置 AP</button>
+          <button data-tool="wall">绘制墙体</button>
+          <button data-tool="sample">录入实测点</button>
+          <button data-tool="ruler">比例尺标定</button>
+          <button data-tool="erase">删除元素</button>
+        </div>
+        <hr>
+        <div class="field"><label class="f">墙体材质（绘制时生效）</label>
+          <select id="wmaterial">
+            <option value="drywall">石膏板隔墙 · 3 dB</option>
+            <option value="glass">玻璃隔断 · 3 dB</option>
+            <option value="wood">木门/木板 · 4 dB</option>
+            <option value="brick">砖墙 · 7 dB</option>
+            <option value="concrete" selected>混凝土承重墙 · 12 dB</option>
+            <option value="metal">金属/机房屏蔽 · 20 dB</option>
+          </select>
+        </div>
+        <div class="field"><label class="f">实测 RSSI (dBm)</label><input type="number" id="srssi" value="-62" step="1"></div>
+        <div class="tiny muted" id="toolhint">提示：在画布上点击或拖拽完成当前工具操作。</div>
+      </div>
+      <div class="panel">
+        <h4>3 · 计算参数</h4>
+        <div class="field"><label class="f">分析 SSID</label><div class="row" style="gap:6px"><span class="tag t-cn" id="heatssid">-</span><button class="btn ghost sm" id="heatssidbtn" title="打开 SSID 配置">切换 / 管理</button></div></div>
+        <div class="field"><label class="f">比例尺（像素 / 米）</label><input type="number" id="hppm" value="10" step="0.5" min="0.5"></div>
+        <div class="field"><label class="f">频段 <span class="tiny muted" id="hbandhint">（由 SSID 决定）</span></label><select id="hband"><option value="2.4">2.4 GHz</option><option value="5">5 GHz</option><option value="6">6 GHz</option></select></div>
+        <div class="field"><label class="f">噪声底 (dBm)</label><input type="number" id="hnoise" value="-95" step="1"></div>
+        <div class="field"><label class="f">网格精度</label><select id="hgrid"><option value="s">快速 80×56</option><option value="m" selected>标准 120×84</option><option value="l">精细 160×112</option></select></div>
+        <label class="row small" style="cursor:pointer;gap:6px;margin-top:4px"><input type="checkbox" id="happlyif" checked style="width:auto"> 把干扰源叠加到热力图（SINR）</label>
+        <label class="row small" style="cursor:pointer;gap:6px;margin-top:5px"><input type="checkbox" id="hresid" checked style="width:auto"> 实测残差校正（稳健 + 近场保护 3 m）</label>
+        <label class="row small" style="cursor:pointer;gap:6px;margin-top:5px"><input type="checkbox" id="hauto" checked style="width:auto"> <b>自动重算</b>（移动 AP / 改参数后）</label>
+        <div class="tiny muted" style="margin-top:6px;line-height:1.7">拖动 AP 时先给即时轻量预览，松开鼠标后自动按完整模型重算（含墙体、实测残差、干扰）。AP 近场 3 m 内由传播模型主导、不受旧打点拖累；与当前布局失配的实测点会自动降权并在评估里提示。取消勾选「实测残差校正」可对比纯传播模型。AP 型号、功率、增益与信道在右侧逐台调整。</div>
+      </div>
+      <div class="panel">
+        <h4>4 · 图层</h4>
+        <div class="layers">
+          <label><input type="checkbox" id="lheat" checked> 信号覆盖热力图</label>
+          <label><input type="checkbox" id="lsinr"> 有效 SINR / 干扰影响</label>
+          <label><input type="checkbox" id="lconf"> 低置信区域（斜纹）</label>
+          <label><input type="checkbox" id="loverlap"> AP 重叠 / 潜在同频干扰</label>
+          <label><input type="checkbox" id="laps" checked> AP 位置与编号</label>
+          <label><input type="checkbox" id="llive" checked> 现场终端位置与状态</label>
+          <label><input type="checkbox" id="lwalls" checked> 新增墙体（红色虚线）</label>
+          <label><input type="checkbox" id="lsamples" checked> 实测打点</label>
+        </div>
+        <hr>
+        <div class="field" style="margin-bottom:8px"><label class="f">渲染质量</label>
+          <label class="chk"><input type="checkbox" id="lsmooth" checked> 平滑色带（数值域插值，消除阶梯）</label>
+          <label class="chk"><input type="checkbox" id="lcontour" checked> 覆盖门限等值线</label>
+          <label class="chk"><input type="checkbox" id="ldeadline"> 盲区边界线（&lt; -80 dBm）</label>
+        </div>
+        <div class="field"><label class="f">热力图不透明度 <span class="tiny muted" id="halphaval">72%</span></label>
+          <input type="range" id="halpha" min="10" max="100" value="72" style="width:100%;padding:0"></div>
+        <div class="note tiny" style="line-height:1.7">等值线由模型网格用 marching-squares 求出，与色块同一数据源；门限取自当前 SSID 的接入门限，不是写死的 -67 dBm。</div>
+        <hr>
+        <div class="row"><button class="btn ghost sm" id="hclearheat">清除热力图</button><button class="btn ghost sm" id="hclearall">清空全部</button></div>
+      </div>
+    </div>
+
+    <!-- 中：画布 -->
+    <div class="canvasbox">
+      <div class="canvasbar">
+        <span id="hstatus">就绪 · 点「计算热力图」开始</span>
+        <span class="tiny muted">拖动 AP 即时预览 · 画布坐标：<span id="hcoord">-</span></span>
+      </div>
+      <div id="stage">
+        <canvas id="bg"></canvas><canvas id="heat"></canvas><canvas id="edit"></canvas>
+        <div class="stagehint" id="stagehint">正在准备示例楼层…</div>
+      </div>
+    </div>
+
+    <!-- 右：结果 -->
+    <div class="results">
+      <div class="panel">
+        <h4>覆盖评估 <em id="hgridinfo">-</em></h4>
+        <div id="hmetrics"><div class="tiny muted">尚无结果。点击「计算热力图」生成。</div></div>
+        <div class="legend-wrap"><div class="legend" id="legend"></div><div class="legend-mark" id="legendmark" title="覆盖门限"></div></div>
+        <div class="legend-lbl" id="legendlbl"></div>
+      </div>
+      <div class="panel">
+        <h4>AP 清单 <em id="apcount">0 台</em></h4>
+        <div id="aplist" style="max-height:230px;overflow:auto"></div>
+        <div class="row" style="margin-top:7px"><button class="btn ghost sm" id="haddap">＋ 添加 AP</button><button class="btn ghost sm" id="hclearsamp">清除打点</button></div>
+      </div>
+      <div class="panel">
+        <h4>算法与证据</h4>
+        <ul class="clean tiny">
+          <li>ITU-R P.1238 室内路径损耗 + 逐射线多墙衰减</li>
+          <li>实测打点残差稳健校正（中位偏差 + Huber 限幅 ±10 dB，失配点降权）</li>
+          <li>AP 近场 3 m 保护：由传播模型主导，旧打点不会在 AP 脚下造成假盲区</li>
+          <li>留一交叉验证 RMSE，衡量模型准确度</li>
+          <li>低置信区域按到最近实测点距离衰减</li>
+          <li>重叠度 = 次强与最强 AP 的 dB 差映射</li>
+        </ul>
+        <div class="warn tiny" style="margin-top:9px">模拟数据仅用于验证算法与交互，不可作为现网优化结论。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 干扰分析 ==================== -->
+<section class="page" id="page-interf">
+  <div class="pagehead">
+    <div><div class="h1">无线干扰分析</div><div class="sub">非 Wi-Fi 干扰源 · 频谱占用 · 同信道冲突 · 信道重规划建议</div></div>
+    <div class="row"><span class="pill tiny" id="ifssidpill">SSID -</span><button class="btn ghost sm" id="ifrefresh">刷新分析</button><button class="btn ghost sm" id="ifapplyplan">应用建议信道</button><button class="btn" id="iftoheat">去热力图看干扰影响 →</button></div>
+  </div>
+  <div class="grid g6" id="ifkpis" style="margin-bottom:15px"></div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>2.4 GHz 频谱占用（信道 1–14）</h3>
+      <canvas id="spec24" style="width:100%;height:220px;display:block"></canvas>
+      <div class="row small muted" style="margin-top:8px;gap:14px">
+        <span><i class="swatch" style="background:#1f6feb"></i>AP 占用</span>
+        <span><i class="swatch" style="background:#e07a3f"></i>非 Wi-Fi 干扰</span>
+        <span><i class="swatch" style="background:#12855b"></i>1 / 6 / 11 非重叠信道</span>
+        <span id="ifspectip">-</span>
+      </div>
+      <hr>
+      <h3>5 GHz 信道组概览</h3>
+      <div id="spec5"></div>
+    </div>
+    <div class="card">
+      <h3>AP 同信道冲突 <span class="tiny muted" id="ifconfcnt"></span></h3>
+      <div id="ifconflicts" style="max-height:205px;overflow:auto"></div>
+      <h3 style="margin-top:15px">信道重规划建议 <span class="tiny muted">冲突图贪心着色</span></h3>
+      <div id="ifplan" style="max-height:170px;overflow:auto"></div>
+      <div class="note tiny" style="margin-top:10px">建议只生成本地变更清单，不自动下发设备；应用后请复测同信道重叠占比与空口利用率。</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3>现场干扰源清单</h3>
+    <div class="row" style="margin-bottom:11px">
+      <select id="ifkind" style="width:auto;min-width:210px"></select>
+      <span class="small muted">坐标</span><input type="number" id="ifx" value="500" style="width:80px" title="X">
+      <input type="number" id="ify" value="350" style="width:80px" title="Y">
+      <button class="btn ghost sm" id="ifadd">＋ 添加干扰源</button>
+      <span class="tiny muted">模拟现场排查：添加后频谱与热力图会立即重算</span>
+    </div>
+    <div class="tblwrap"><div style="max-height:300px;overflow:auto"><table id="iftbl"><thead><tr>
+      <th>干扰源</th><th>频段</th><th>中心频率</th><th>占空比</th><th>强度 (1m)</th><th>严重度</th><th>距最近 AP</th><th>受影响信道</th><th>处置建议</th><th></th>
+    </tr></thead><tbody></tbody></table></div></div>
+  </div>
+  <div class="note" style="margin-top:13px">当前干扰源与频谱为<b>模拟采集</b>：非 Wi-Fi 干扰按中心频率、带宽、占空比与 1m 等效功率建模，在线性域叠加到底噪，进而影响 SNR / MCS / 重传与热力图的 SINR 图层。P1 接现网后可替换为频谱扫描仪、控制器射频遥测或空口 PCAP 数据源，本页字段与结论结构保持不变。</div>
+</section>
+
+<!-- ==================== 现场连接 ==================== -->
+<section class="page" id="page-live">
+  <div class="pagehead">
+    <div><div class="h1">无线连接现场状态</div><div class="sub">终端实时连接质量 · 漫游与认证事件 · 与热力图和故障排查联动</div></div>
+    <div class="row"><span class="pill tiny" id="liveclock"><span class="dot"></span>实时采集中</span><button class="btn ghost sm" id="livepause">暂停</button><button class="btn ghost sm" id="livereset">重置现场</button><button class="btn ghost sm" id="livetoheat">在热力图上定位</button><button class="btn" id="livetodiag">用现场数据诊断</button></div>
+  </div>
+  <div class="grid g6" id="livekpis" style="margin-bottom:15px"></div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>在线终端 <span class="tiny muted" id="livecount"></span></h3>
+      <div class="filters">
+        <input type="text" id="liveq" placeholder="搜索终端名 / MAC / IP…">
+        <select id="livessid"><option value="">全部 SSID</option></select>
+        <select id="livestatus"><option value="">全部状态</option><option>正常</option><option>弱信号</option><option>受干扰</option><option>高重传</option><option>频繁漫游</option><option>低速率</option><option>认证异常</option></select>
+        <select id="liveap"><option value="">全部 AP</option></select>
+        <select id="liveband"><option value="">全部频段</option><option>2.4</option><option>5</option></select>
+        <button class="btn ghost sm" id="liveclear">重置筛选</button>
+      </div>
+      <div class="tblwrap"><div style="max-height:520px;overflow:auto"><table id="livetbl"><thead><tr>
+        <th>状态</th><th>终端</th><th>MAC / IP</th><th>关联 AP</th><th>SSID / VLAN</th><th>频段 / 信道</th><th>RSSI</th><th>SNR</th><th>速率 / MCS</th><th>重传</th><th>流量 ↓/↑</th><th>在线时长</th><th>最近事件</th>
+      </tr></thead><tbody></tbody></table></div></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:13px"><h3>终端详情</h3><div id="livecdetail"><div class="muted small">点击左侧任一终端查看连接详情，并可把它的证据直接带入故障排查。</div></div></div>
+      <div class="card"><h3>实时事件流 <span class="tiny muted" id="liveevcnt"></span></h3><div id="liveevents" style="max-height:330px;overflow:auto"></div></div>
+    </div>
+  </div>
+  <div class="warn" style="margin-top:13px"><b>数据源说明：</b>本页为按 2 秒步进的模拟采集引擎（RSSI 随机游走、干扰抬升底噪、SNR→MCS→速率阶梯、漫游 / 认证 / 掉线事件），用于验证「现场状态」这部分的交互与联动。字段按 SNMP v2c / WLC API 客户端表建模（MAC、关联 AP、RSSI、SNR、MCS、重传、认证、流量、漫游计数），P1 接现网时替换采集层即可，无需改前端。</div>
+</section>
+
+<!-- ==================== 故障排查 ==================== -->
+<section class="page" id="page-diag">
+  <div class="pagehead">
+    <div><div class="h1">故障排查</div><div class="sub">症状 + 多证据加权推理，输出 Top 根因、置信度、处置建议与复测项</div></div>
+    <div class="row"><span class="pill tiny" id="diagssidpill">SSID -</span><button class="btn ghost sm" id="dreset">重置证据</button><button class="btn" id="drun">开始推理</button></div>
+  </div>
+  <div class="grid" style="grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>输入证据</h3>
+      <div class="field"><label class="f">主要症状</label><select id="dsymptom">
+        <option>网速慢</option><option>连不上</option><option>认证失败</option><option>漫游掉线</option><option>局部无信号</option><option>时断时续</option>
+      </select></div>
+      <div class="evgrid" id="evgrid"></div>
+      <hr>
+      <div class="row"><button class="btn ghost sm" data-preset="good">填入：健康基线</button><button class="btn ghost sm" data-preset="weak">填入：弱覆盖</button><button class="btn ghost sm" data-preset="congest">填入：高密拥塞</button><button class="btn ghost sm" data-preset="roam">填入：漫游掉线</button><button class="btn ghost sm" data-preset="legacy">填入：老旧 AP</button></div>
+      <div class="note tiny" style="margin-top:11px">这些数值可来自现场实测、SNMP 轮询或控制器 API；本版为手工输入，P1 接入现网后自动填充。</div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:13px"><h3>推理结果 <span class="tiny muted" id="dhit">-</span></h3><div id="dresult"><div class="muted small">填写左侧证据后点「开始推理」。</div></div></div>
+      <div class="card"><h3>规则库说明</h3><ul class="clean small">
+        <li>共 12 条规则，覆盖覆盖、干扰、拥塞、DHCP、802.1X、漫游、功率、DFS、频段与老旧设备</li>
+        <li>命中规则按基础权重 × 症状相关系数 × 证据强度加权，再归一化为置信度</li>
+        <li>每条结论都带证据依据、处置动作与可验证的复测项，避免"只给结论"</li>
+        <li>规则可在后续版本做成可配置 JSON，支持按厂商与场景启用/停用</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WLC 诊断（离线知识包） ==================== -->
+<section class="page" id="page-wlc">
+  <div class="pagehead">
+    <div><div class="h1">WLC 诊断 · 离线知识包</div><div class="sub">厂商公开文档已提炼内置：错误码字典、沟通话术、分步处置、官方引用 · 运行时不访问外网</div></div>
+    <div class="row"><span class="pill tiny" id="wlcoffline">离线内置</span><button class="btn ghost sm" id="wlcclear">清空</button><button class="btn" id="wlcrun">开始分析</button></div>
+  </div>
+
+  <div class="grid" id="wlckpis" style="grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-bottom:14px"></div>
+
+  <div class="grid wlc-cols" style="align-items:start">
+    <div>
+      <div class="card">
+        <h3>粘贴证据（日志 / 配置 / 抓包文本）</h3>
+        <div class="field"><label class="f">厂商 / 平台</label><select id="wlcvendor">
+          <option value="">自动判断</option><option value="Cisco">Cisco Catalyst 9800 / AireOS</option>
+          <option value="Fortinet">Fortinet FortiGate / FortiAP</option><option value="RUCKUS">RUCKUS SmartZone</option>
+          <option value="Huawei">Huawei AirEngine / NCE</option><option value="H3C">H3C WX / Comware</option>
+          <option value="通用">通用 / 802.11 空口</option>
+        </select></div>
+        <div class="field"><label class="f">原文 <span class="tiny muted">（仅在本机内存匹配，不上传）</span></label><textarea id="wlctext" rows="11" placeholder="把 show logging / diagnose 输出、syslog、配置段落或抓包文本粘贴到这里…"></textarea></div>
+        <div class="row" style="flex-wrap:wrap;gap:6px;margin-top:9px">
+          <button class="btn ghost sm" data-wlcdemo="cisco">Cisco 9800 示例</button>
+          <button class="btn ghost sm" data-wlcdemo="fortinet">FortiGate 示例</button>
+          <button class="btn ghost sm" data-wlcdemo="dot11">802.11 示例</button>
+          <button class="btn ghost sm" data-wlcdemo="ruckus">Ruckus 示例</button>
+          <button class="btn ghost sm" data-wlcdemo="h3c">H3C 示例</button>
+        </div>
+        <div class="note tiny" style="margin-top:10px">支持识别：Cisco <code>CO_CLIENT_DELETE_REASON_*</code>、FortiGate <code>last failure</code> / <code>cw_acd</code>、802.11 <code>reason</code> 码、Ruckus 私有错误码、H3C 2052/2206 及配置引用关键词。</div>
+      </div>
+
+      <div class="card" style="margin-top:13px">
+        <h3>错误码速查 <span class="tiny muted" id="wlccodecnt"></span></h3>
+        <div class="row" style="gap:6px"><input type="text" id="wlccodeq" placeholder="输入码值或关键词，例如 DHCP / 152 / 8021X / last failure"><button class="btn ghost sm" id="wlccodebtn">查询</button></div>
+        <div class="row" style="gap:6px;margin-top:7px;flex-wrap:wrap">
+          <select id="wlccodegroup" style="width:auto;min-width:170px"><option value="">全部码表</option><option value="cisco_9800_client_delete">Cisco 9800 原因码（270）</option><option value="ruckus_sz_api">Ruckus API（22）</option><option value="ieee80211_reason">802.11 reason（34）</option><option value="fortigate_wtp_failure">FortiGate WTP</option><option value="h3c_community">H3C 社区资料</option></select>
+          <button class="btn ghost sm" data-wlcquick="DHCP">DHCP</button><button class="btn ghost sm" data-wlcquick="EAP">EAP</button><button class="btn ghost sm" data-wlcquick="ROAM">漫游</button><button class="btn ghost sm" data-wlcquick="RADIUS">RADIUS</button>
+        </div>
+        <div class="tblwrap" style="margin-top:9px;max-height:300px"><table id="wlccodetbl"><thead><tr><th>码 / 名称</th><th>判定</th><th>官方原文 / 含义</th><th>中文处置提示</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:13px"><h3>诊断结论 <span class="tiny muted" id="wlcresmeta"></span></h3><div id="wlcresult"><div class="muted small">粘贴左侧日志后点「开始分析」。也可以直接点示例按钮体验离线匹配。</div></div></div>
+      <div class="card"><h3>内置官方文献（离线摘要）<span class="tiny muted" id="wlcdoccnt"></span></h3>
+        <div class="tiny muted" style="margin-bottom:8px">分析结论会自动列出命中的官方依据；完整文献库可按厂商、专题与关键词检索。</div>
+        <div class="row" style="margin-bottom:9px"><button class="btn ghost sm" id="wlcopenlib">浏览全部内置文献 ↗</button></div>
+        <div id="wlcdocs" class="small"></div></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px"><h3>命令速查 <span class="tiny muted" id="wlccmdcnt"></span></h3>
+    <div class="row" style="gap:6px;margin-bottom:9px"><input type="text" id="wlccmdq" placeholder="按厂商 / 场景 / 命令过滤"><button class="btn ghost sm" id="wlccmdbtn">过滤</button></div>
+    <div class="tblwrap" style="max-height:320px"><table id="wlccmdtbl"><thead><tr><th>厂商</th><th>场景</th><th>命令</th><th>用途</th><th>风险</th></tr></thead><tbody></tbody></table></div>
+  </div>
+
+  <div class="card" style="margin-top:14px"><h3>通用沟通话术模板</h3><div id="wlcphrases" class="wlc-phrases"></div></div>
+  <div class="warn" style="margin-top:14px" id="wlclicense"></div>
+</section>
+
+<!-- ==================== 官方文档库（离线内置） ==================== -->
+<section class="page" id="page-lib">
+  <div class="pagehead">
+    <div><div class="h1">官方文档库 · 全部内置在程序里</div><div class="sub">厂商公开文献索引 + 中文提炼 + 命令 + 处置要点 · 断网可查 · 运行时不访问任何外部链接</div></div>
+    <div class="row"><span class="pill tiny" id="liboffline">离线内置</span><button class="btn ghost sm" id="libreset">重置筛选</button></div>
+  </div>
+
+  <div class="grid" id="libkpis" style="grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-bottom:14px"></div>
+
+  <div class="card">
+    <h3>检索与筛选 <span class="tiny muted" id="libcount"></span></h3>
+    <div class="row" style="gap:6px;flex-wrap:wrap">
+      <input type="text" id="libq" style="flex:1;min-width:260px" placeholder="关键词，例如 DHCP / 证书 / DFS / 抓包 / 上线失败（多词用空格分隔）">
+      <button class="btn sm" id="libsearch">检索</button>
+    </div>
+    <div class="row" style="gap:6px;flex-wrap:wrap;margin-top:9px">
+      <select id="libvendor" style="width:auto;min-width:170px"><option value="">全部厂商</option></select>
+      <select id="libtopic" style="width:auto;min-width:165px"><option value="">全部专题</option></select>
+      <select id="libstatus" style="width:auto;min-width:165px">
+        <option value="">全部核实状态</option>
+        <option value="public-verified">官方已核实</option>
+        <option value="needs-field-check">需现场核对</option>
+        <option value="community">社区资料</option>
+      </select>
+      <span class="tiny muted" id="libhint">数据来自内置离线知识包，检索在浏览器本地完成，不产生任何外网请求。</span>
+    </div>
+    <div class="row" style="gap:5px;flex-wrap:wrap;margin-top:9px" id="libquick"></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:14px">
+    <div class="card">
+      <h3>文献条目 <span class="tiny muted" id="libresultcnt"></span></h3>
+      <div id="liblist" class="lib-list"></div>
+    </div>
+    <div>
+      <div class="card"><h3>标准处置流程 SOP <span class="tiny muted" id="libsopcnt"></span></h3><div id="libsops"></div></div>
+      <div class="card" style="margin-top:14px"><h3>内置边界与回查</h3>
+        <div class="small" style="line-height:1.85">
+          <div>本页内容在打包时已编译进 exe，<b>断网、VPN 隔离均可使用</b>；官方链接仅作展示与人工复制，程序不会自动打开或请求。</div>
+          <div style="margin-top:8px">内置的是「索引 + 事实性码表 + 中文提炼 + 命令 + 话术 + 处置步骤」，<b>不内置文档全文</b>；Cisco 原因码保留官方英文原文，中文为自动归纳。</div>
+          <div style="margin-top:8px">标为「需现场核对」与「社区资料」的条目<b>不得单独用于自动决策</b>；命令、端点与错误码可能随软件版本变化，上线前须按设备实际版本文档复核。</div>
+          <div style="margin-top:8px">诊断结论中的每一条依据都可点回本页对应文献；工具只读分析，不执行设备命令、不自动下发配置。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 空口扫描 ==================== -->
+<section class="page" id="page-air">
+  <div class="pagehead">
+    <div><div class="h1">空口扫描</div><div class="sub">真实扫描本空间 SSID（含隐藏）· 无线质量、信道干扰与区域评分 · 数据来自本机无线网卡，只读</div></div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <h3 style="margin:0">扫描控制</h3>
+      <div class="row" style="gap:8px;align-items:center;flex-wrap:wrap">
+        <input id="airpoint" placeholder="采集点名称，如 3F-东侧会议室" style="width:220px">
+        <button class="btn" id="airscan">开始扫描</button>
+        <button class="btn ghost sm" id="airlast">读取上次结果</button>
+        <button class="btn ghost sm" id="airimport" disabled>导入勾选 SSID</button>
+      </div>
+    </div>
+    <div class="tiny muted" style="margin-top:7px;line-height:1.75">
+      用 Windows 原生 WLAN 接口（<code>WlanScan</code> + <code>WlanGetNetworkBssList</code>）真实扫描，读取 SSID / BSSID / 信道 / 带宽 / RSSI / 加密方式 / BSS Load。
+      <b>隐藏 SSID 也能发现</b>：不广播名称的 BSS 一并列出（标记「隐藏」，可看到 BSSID / 信道 / 信号 / 加密）。
+      注意：隐藏 SSID 的名称在空口上本就不传输，笔记本无法还原真名，需在控制器端或用定向探测确认。
+      全程只读，不连接、不修改无线配置、不上传。单次扫描约 4-8 秒，结果是<b>本采集点</b>的空口快照；
+      要判定整层质量，请换 2-3 个点位各扫一次（采集点名称会记录在结果里）。
+    </div>
+    <div id="airstatus" class="tiny" style="margin-top:9px"></div>
+    <div class="grid g4" id="airkpis" style="margin-top:12px"></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:14px">
+    <div class="card">
+      <h3>SSID 与无线质量 <span class="tiny muted" id="airssidcnt"></span></h3>
+      <div class="tblwrap">
+        <table id="airssidtbl">
+          <thead><tr>
+            <th style="width:34px"><input type="checkbox" id="airall" style="width:auto"></th>
+            <th>SSID</th><th>频段/信道</th><th>RSSI</th><th>SNR</th><th>SINR</th><th>同频</th><th>利用率</th><th>加密</th><th>评分</th>
+          </tr></thead>
+          <tbody><tr><td colspan="10" style="text-align:center;padding:22px;color:#8b97a6">点「开始扫描」获取本空间真实数据</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <h3>区域评分</h3>
+      <div id="airscore"></div>
+      <h3 style="margin-top:16px">发现的问题</h3>
+      <div id="airissues"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>信道占用与干扰程度 <span class="tiny muted">按频率区间判定同频重叠，宽信道会自动计入覆盖到的邻道</span></h3>
+    <div id="airchannels"></div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>物理射频（已按 BSSID 前 5 字节 + 频段归并）<span class="tiny muted" id="airradiocnt"></span></h3>
+    <div class="tblwrap">
+      <table id="airradiotbl">
+        <thead><tr><th>射频</th><th>信道</th><th>带宽</th><th>RSSI</th><th>利用率</th><th>承载 SSID</th></tr></thead>
+        <tbody><tr><td colspan="6" style="text-align:center;padding:18px;color:#8b97a6">等待扫描</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>AP 能力矩阵 <span class="tiny muted">由 Beacon / Probe 信息元素位推断：WPA3 / OWE / PMF / 802.11r·k·v / MBSSID / WMM / 6 GHz / 加密套件</span></h3>
+    <div class="grid g4" id="capkpis" style="margin-bottom:11px"></div>
+    <div class="tblwrap" style="max-height:400px;overflow:auto">
+      <table id="captbl">
+        <thead><tr><th>SSID / BSSID</th><th>频段 / 信道</th><th>PHY / 带宽</th><th>安全 / 加密套件</th><th>PMF</th><th>漫游</th><th>能力标签</th><th>厂商 / DTIM / BSS Color</th></tr></thead>
+        <tbody><tr><td colspan="8" style="text-align:center;padding:18px;color:#8b97a6">点「开始扫描」后显示</td></tr></tbody>
+      </table>
+    </div>
+    <div class="tiny muted" id="capnote" style="margin-top:9px"></div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>扫描历史趋势 <span class="tiny muted">每次扫描自动落一行本地快照，可回放评分 / 干扰 / 射频数随时间的变化</span></h3>
+    <div class="row" style="gap:8px;flex-wrap:wrap;align-items:center">
+      <select id="histMetric" style="width:190px">
+        <option value="overall_score">区域评分</option>
+        <option value="avg_channel_index">平均干扰指数</option>
+        <option value="radio_total">可见射频数</option>
+        <option value="avg_rssi">平均 RSSI (dBm)</option>
+        <option value="best_rssi">最强 RSSI (dBm)</option>
+        <option value="utilization_max">最高信道利用率</option>
+        <option value="current_rssi">当前关联 RSSI</option>
+      </select>
+      <button class="btn ghost sm" id="histrefresh">刷新趋势</button>
+      <button class="btn ghost sm" id="histexport">导出历史 CSV</button>
+      <button class="btn ghost sm" id="histclear">清空历史</button>
+      <span class="tiny muted" id="histinfo"></span>
+    </div>
+    <canvas id="histchart" width="1200" height="250" style="width:100%;height:250px;margin-top:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel)"></canvas>
+    <div class="grid g4" id="histkpis" style="margin-top:12px"></div>
+    <div id="histhours" class="tiny muted" style="margin-top:10px;line-height:1.8"></div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>计算口径与边界</h3>
+    <div id="airassume" class="small muted"></div>
+  </div>
+</section>
+
+<!-- ==================== 本机诊断 ==================== -->
+<section class="page" id="page-local">
+  <div class="pagehead">
+    <div><div class="h1">本机诊断</div><div class="sub">无线网卡能力 / 已保存配置 / IPv4 网络栈 / 系统 WLAN 历史报告 · 全部由本机 netsh 与系统报告只读解析，不读明文密钥、不发包、不联网</div></div>
+    <div class="row">
+      <button class="btn" id="localrefresh">重新读取本机</button>
+      <button class="btn ghost sm" id="localwlanreport">生成系统 WLAN 报告</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:8px">
+      <h3 style="margin:0">采集状态 <span class="tiny muted" id="localat"></span></h3>
+      <span class="pill"><span class="dot"></span>纯只读</span>
+    </div>
+    <div id="localstatus" class="tiny muted" style="margin-top:8px">正在读取本机…</div>
+    <div class="grid g4" id="localKpis" style="margin-top:12px"></div>
+  </div>
+  <div class="grid g2" style="gap:14px;align-items:start;margin-top:14px">
+    <div class="card"><h3>无线网卡与驱动能力 <span class="tiny muted">netsh wlan show drivers</span></h3><div id="localDriver"></div></div>
+    <div class="card"><h3>本机已保存的无线配置 <span class="tiny muted">不读取明文密钥</span></h3><div id="localProfiles"></div></div>
+    <div class="card"><h3>IPv4 网络栈 <span class="tiny muted">ipconfig /all 摘要</span></h3><div id="localNetwork"></div></div>
+    <div class="card"><h3>Windows WLAN 历史报告 <span class="tiny muted">系统已生成文件的只读解析</span></h3><div id="localReport"></div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>本机侧问题清单 <span class="tiny muted">工程辅助判定，不替代抓包与控制器告警</span></h3><div id="localFindings"></div></div>
+  <div class="card" style="margin-top:14px"><h3>采集口径与隐私边界</h3><div id="localNotes" class="small muted"></div></div>
+</section>
+
+<!-- ==================== 移动漫游 ==================== -->
+<section class="page" id="page-roam">
+  <div class="pagehead">
+    <div><div class="h1">移动漫游</div><div class="sub">边走动边采集：当前所在 SSID 与接入点、每次漫游切换、信号轨迹与所在信道的拥挤程度 · 数据来自本机网卡，只读</div></div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <h3 style="margin:0">采集控制</h3>
+      <div class="row" style="gap:8px;align-items:center;flex-wrap:wrap">
+        <input id="roampoint" placeholder="路线/点位名称，如 3F 东走廊 A→B" style="width:240px">
+        <select id="roampoll" style="width:auto">
+          <option value="0.5">采样 0.5 秒</option>
+          <option value="1" selected>采样 1 秒</option>
+          <option value="2">采样 2 秒</option>
+        </select>
+        <select id="roamair" style="width:auto">
+          <option value="15">周边 15 秒</option>
+          <option value="20" selected>周边 20 秒</option>
+          <option value="45">周边 45 秒</option>
+        </select>
+        <button class="btn" id="roamstart">开始监测</button>
+        <button class="btn ghost sm" id="roamstop" disabled>停止</button>
+        <button class="btn ghost sm" id="roamrefresh">刷新周边</button>
+        <button class="btn ghost sm" id="roamexport">导出 CSV</button>
+      </div>
+    </div>
+    <div class="tiny muted" style="margin-top:7px;line-height:1.75">
+      用 Windows <code>netsh wlan show interfaces</code> 每秒读取一次本机当前关联（SSID / BSSID / 信道 / 信号 / 协商速率），
+      BSSID 一变就记为一次漫游；周边 BSS 与信道拥挤用原生 WLAN 接口读取，缓存不足时自动补一次主动扫描。
+      拿着笔记本沿路线走，页面会实时出现「从哪个 AP 切到哪个 AP、切了多久、切完信号多少」。
+      <b>全程只读</b>：不连接、不断开、不改任何无线配置、不联网。
+    </div>
+    <div id="roamstatus" class="tiny" style="margin-top:9px"></div>
+    <div class="grid g4" id="roamkpis" style="margin-top:12px"></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:14px;align-items:start;margin-top:14px">
+    <div class="card">
+      <h3>当前所在 SSID 与接入点 <span class="tiny muted" id="roamnowts"></span></h3>
+      <div id="roamnow"></div>
+      <h3 style="margin-top:16px">当前信道拥挤度 <span class="tiny muted" id="roamchantag"></span></h3>
+      <div id="roamchannow"></div>
+    </div>
+    <div class="card">
+      <h3>漫游体验判定</h3>
+      <div id="roamverdict"></div>
+      <h3 style="margin-top:16px">现场判定与建议</h3>
+      <div id="roamissues"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>信号轨迹 <span class="tiny muted">横轴为采集时间，竖虚线是漫游/掉线时刻；两条水平虚线是 -67（高速率拐点）与 -75（边缘）</span></h3>
+    <div id="roamchartwrap" style="position:relative">
+      <canvas id="roamchart" height="240" style="width:100%;height:240px;display:block"></canvas>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:14px;align-items:start;margin-top:14px">
+    <div class="card">
+      <h3>漫游时间线 <span class="tiny muted" id="roamevcnt"></span></h3>
+      <div id="roamevents" style="max-height:430px;overflow:auto"></div>
+    </div>
+    <div class="card">
+      <h3>本频段信道占用 <span class="tiny muted" id="roamchanscope"></span></h3>
+      <div id="roamchannels"></div>
+      <h3 style="margin-top:16px">同 SSID 的其他接入点 <span class="tiny muted">判断有没有「更近的 AP 却没切过去」</span></h3>
+      <div class="tblwrap">
+        <table id="roamneigh">
+          <thead><tr><th>BSSID</th><th>信道</th><th>频段</th><th>RSSI</th><th>比当前</th><th>判定</th></tr></thead>
+          <tbody><tr><td colspan="6" style="text-align:center;padding:16px;color:#8b97a6">等待采集</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>计算口径与边界</h3>
+    <div class="small muted" style="line-height:1.8">
+      <div>· <b>信号来源</b>：本机 netsh 报告 dBm 时直接用；只有百分比时按 Windows 线性口径换算（RSSI ≈ 百分比/2 − 100），分辨率约 2 dB，不是仪表实测值。</div>
+      <div>· <b>漫游判定</b>：以 BSSID 变化为准。同一 SSID 换 BSSID = 二层漫游；换 SSID = 跨 SSID 切换；换频段 = 跨频段漫游；关联消失 = 掉线。采样间隔就是判定分辨率。</div>
+      <div>· <b>切换耗时</b>：给的是「上一次仍看到旧 BSSID」到「第一次看到新 BSSID」的观测差，上限等于采样间隔，<b>不是空口抓包级时延</b>；要精确测需专用网卡 + 抓包。</div>
+      <div>· <b>信道拥挤</b>：指数 = 射频数 45 + 重叠对 20 + 利用率 35，按频率区间判重叠（40/80/160 MHz 会覆盖邻道），与「空口扫描」页同一套口径。</div>
+      <div>· <b>主动扫描代价</b>：缓存里 BSS 少于 6 个时会自动补一次主动扫描（≥15 秒一次），扫描期间网卡会短暂切信道，可能 1-2 秒瞬断；落在扫描窗口内的事件会标注，判读时请剔除。</div>
+      <div>· 只测本机这一张网卡。手机、PDA 的漫游行为可能不同；要判定整层漫游质量，请用同一台机器按固定路线多走两遍，对比 CSV。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 现场勘测（Ekahau 式实测走测） ==================== -->
+<section class="page" id="page-survey">
+  <div class="pagehead">
+    <div><div class="h1">现场勘测</div><div class="sub">实测走测 → 需求验收 → 插值热力图 → 传播模型校准 → 勘测报告　|　对齐 Ekahau Survey 的核心链路，数据全部来自本机网卡</div></div>
+    <div class="row">
+      <label class="btn ghost sm" style="position:relative;overflow:hidden">上传楼层图<input type="file" id="svfile" accept="image/*" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+      <button class="btn ghost sm" id="svexp">导出点位 CSV</button>
+      <button class="btn" id="svreport">生成勘测报告 ↗</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <h3 style="margin:0">勘测会话与验收标准</h3>
+      <div class="row" style="gap:8px;align-items:center;flex-wrap:wrap">
+        <button class="btn ghost sm" id="svscanhere">扫描并打点（当前位置）</button>
+        <button class="btn ghost sm" id="svclear">清空本会话点位</button>
+      </div>
+    </div>
+    <div class="grid g4" style="margin-top:12px;gap:12px">
+      <div class="field"><label class="f">会话名称 / 路线</label><input id="svsession" placeholder="如 3F 东翼 A→B" style="width:100%"></div>
+      <div class="field"><label class="f">需求验收模板</label><select id="svprofile" style="width:100%"></select></div>
+      <div class="field"><label class="f">热力图图层</label><select id="svlayer" style="width:100%"></select></div>
+      <div class="field"><label class="f">打点方式</label>
+        <label class="chk"><input type="checkbox" id="svrefresh" checked> 每个点位重新扫描（约 4 秒/点）</label>
+        <button class="btn ghost sm" id="svnew" style="margin-top:6px">保存为当前会话</button>
+      </div>
+    </div>
+    <div id="svcustom" class="grid g4" style="margin-top:10px;display:none;gap:10px"></div>
+    <div id="svstatus" class="tiny" style="margin-top:10px"></div>
+    <div class="grid g4" id="svkpis" style="margin-top:12px"></div>
+    <div class="tiny muted" style="margin-top:10px;line-height:1.75">
+      <b>怎么走测：</b>先在右侧图纸上确认比例尺与朝向，拿着笔记本沿路线走，每到一点<b>在图纸上点一下</b>，程序会读取此刻的真实关联（SSID / BSSID / RSSI / 信道）与周边 BSS，把该点固化下来。
+      勾选「每个点位重新扫描」后每点都会独立采一次空口快照（推荐）；不勾选则复用最近一次扫描，多点会共用同一份干扰数据，只适合验证流程。
+      点位需要 ≥5 个才能做空间插值，≥15 个的结论才比较稳。
+    </div>
+  </div>
+
+  <details class="panel adv-panel" id="svadvanced">
+    <summary>高级 · 报告模板 / 多楼层合订 / 基线对比 / 批量导入 <em>全部本地处理，不联网</em></summary>
+    <div class="adv-body grid g2">
+      <div class="card adv-card">
+        <h3>报告模板与客户信息</h3>
+        <div class="grid g2" style="gap:0 10px">
+          <div class="field"><label class="f">报告标题</label><input id="rptTitle" style="width:100%"></div>
+          <div class="field"><label class="f">机构 / 公司名</label><input id="rptOrg" style="width:100%" placeholder="显示在封面品牌栏"></div>
+          <div class="field"><label class="f">项目名称</label><input id="rptProject" style="width:100%"></div>
+          <div class="field"><label class="f">页脚文字</label><input id="rptFooter" style="width:100%"></div>
+          <div class="field"><label class="f">勘测人</label><input id="rptEngineer" style="width:100%"></div>
+          <div class="field"><label class="f">复核人</label><input id="rptReviewer" style="width:100%"></div>
+        </div>
+        <div class="row" style="gap:8px;flex-wrap:wrap;align-items:center">
+          <label class="btn ghost sm" style="position:relative;overflow:hidden">上传 Logo<input type="file" id="rptLogo" accept="image/png,image/jpeg" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+          <button class="btn sm" id="rptSave">保存模板</button>
+          <span class="tiny muted" id="rptLogoHint"></span>
+        </div>
+        <div class="row tiny" style="gap:14px;flex-wrap:wrap;margin:10px 0">
+          <label class="chk"><input type="checkbox" id="rptSign" checked>签署栏</label>
+          <label class="chk"><input type="checkbox" id="rptConf" checked>内部资料标记</label>
+          <label class="chk"><input type="checkbox" id="rptBoundary" checked>口径与边界章节</label>
+        </div>
+        <div id="rptStatus" class="tiny muted"></div>
+      </div>
+
+      <div class="card adv-card">
+        <h3>多楼层 / 多会话合订</h3>
+        <div class="tiny muted" style="line-height:1.7;margin-bottom:9px">按会话独立计算后汇总成一份报告，不把不同楼层的点位混在一起插值。每个会话点位数与达标率单独成行。</div>
+        <div id="rptSessions" class="chklist"></div>
+        <div class="row" style="gap:8px;margin-top:9px"><button class="btn ghost sm" id="rptCombined">生成合订报告 ↗</button><button class="btn ghost sm" id="rptAll">全选 / 全不选</button></div>
+        <h3 style="margin-top:18px">楼层项目台账</h3>
+        <div class="grid g3" style="gap:8px">
+          <div class="field"><label class="f">楼层 / 会话名</label><input id="floorName" style="width:100%" placeholder="如 3F 东翼"></div>
+          <div class="field"><label class="f">实际宽度（m）</label><input id="floorWidth" type="number" min="2" step="1" style="width:100%" placeholder="40"></div>
+          <div class="field"><label class="f">备注</label><input id="floorNote" style="width:100%"></div>
+        </div>
+        <button class="btn ghost sm" id="floorAdd">登记楼层并切换会话</button>
+        <div id="floorList" class="tiny muted" style="margin-top:8px;line-height:1.8"></div>
+      </div>
+
+      <div class="card adv-card">
+        <h3>优化前后基线对比</h3>
+        <div class="tiny muted" style="line-height:1.7;margin-bottom:9px">整改前点「保存基线」，整改后沿同一路线复测并再存一份；选两份对比可看到达标率、健康分、问题清单与逐点 RSSI 的变化，也能写进报告。</div>
+        <div class="row" style="gap:7px"><input id="snapName" style="flex:1" placeholder="快照名，如 优化前 / 优化后"><button class="btn ghost sm" id="snapSave">保存基线</button></div>
+        <div class="grid g2" style="gap:8px;margin-top:9px">
+          <div class="field"><label class="f">优化前</label><select id="snapBefore" style="width:100%"></select></div>
+          <div class="field"><label class="f">优化后</label><select id="snapAfter" style="width:100%"></select></div>
+        </div>
+        <div class="row" style="gap:8px;flex-wrap:wrap"><button class="btn ghost sm" id="snapDiff">对比两次基线</button><button class="btn ghost sm" id="rptWithDiff">把对比写进报告 ↗</button></div>
+        <div id="diffOut" class="tiny" style="margin-top:10px"></div>
+      </div>
+
+      <div class="card adv-card">
+        <h3>点位 CSV 批量导入与走测路径</h3>
+        <div class="tiny muted" style="line-height:1.7;margin-bottom:9px">可把历史实测记录或本工具导出的 CSV 批量灌入当前会话；表头支持中文 / 英文，坐标必须是 1000×700 图纸坐标系。</div>
+        <div class="row" style="gap:8px;flex-wrap:wrap">
+          <a class="btn ghost sm" href="/api/survey/template.csv">下载 CSV 模板</a>
+          <label class="btn ghost sm" style="position:relative;overflow:hidden">选择 CSV<input type="file" id="svcsvfile" accept=".csv,text/csv" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+          <button class="btn sm" id="svcsvimport">导入点位</button>
+        </div>
+        <div id="svcsvout" class="tiny muted" style="margin-top:9px"></div>
+        <h3 style="margin-top:18px">走测路径</h3>
+        <label class="chk"><input type="checkbox" id="svpath" checked>在实测点位图上按采集顺序连出走测路线</label>
+        <div class="note tiny" style="margin-top:9px">路线按点位采集时间连线，是「点击序列」而非 GPS 轨迹；笔记本无定位模块时不推断真实步距。</div>
+      </div>
+
+      <div class="card adv-card" style="grid-column:1/-1">
+        <h3>离线交付与项目备份 <span class="tiny muted">报告 .docx 与备份 zip 均在本机生成，不联网</span></h3>
+        <div class="row" style="gap:8px;flex-wrap:wrap;align-items:center">
+          <button class="btn sm" id="rptdocx">导出 Word 报告 (.docx)</button>
+          <a class="btn ghost sm" href="/api/survey/report" target="_blank">HTML 报告 ↗</a>
+          <a class="btn ghost sm" href="/api/backup/export">导出项目备份 (.zip)</a>
+          <label class="btn ghost sm" style="position:relative;overflow:hidden">选择备份恢复<input type="file" id="bkfile" accept=".zip,application/zip" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+        </div>
+        <div id="bkstatus" class="tiny muted" style="margin-top:9px;line-height:1.7">
+          .docx 由纯标准库按 OOXML 生成，内含执行摘要 / 逐点验收 / 问题清单 / 信道规划 / 安全核查 / 模型校准 / 合订 / 前后对比 / 口径边界，自动套用上方报告模板。
+          备份 zip 含 SSID、勘测点位、草图、图纸、模板、规则与扫描历史；恢复会覆盖同名用户数据并需要刷新页面。
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>实测点位图 <span class="tiny muted" id="svfloorname"></span></h3>
+      <div class="svstage"><canvas id="svcanvas" width="1000" height="700"></canvas><div class="preview-note" id="svlayerhint">点击图纸落点采集</div></div>
+      <div class="row" style="justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:11px">
+        <div class="svlegend" id="svlegend"></div>
+        <div class="tiny muted" id="svarea" style="min-width:150px;text-align:right"></div>
+        <div class="tiny muted">● 点位颜色 = 当前模板下的达标判定；底图淡色区 = 插值置信度低</div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px">
+        <h3>需求验收 <span class="tiny muted" id="svproftag"></span></h3>
+        <div id="svcompliance"></div>
+        <div id="svprofileinfo" class="note tiny" style="margin-top:11px"></div>
+        <div id="svadvice" style="margin-top:10px"></div>
+      </div>
+      <div class="card">
+        <h3>传播模型校准</h3>
+        <div class="tiny muted" style="line-height:1.7;margin-bottom:10px">
+          用实测 RSSI 反推路径损耗指数 <code>n</code> 与 1 m 参考损耗 <code>PL0</code>，让「热力图」工作台的预测模型贴合这栋楼的实际衰减。
+          需要 ≥3 个带 RSSI 的点位，并读取热力图工作台里的 AP / 墙体布局。
+        </div>
+        <div class="row" style="gap:8px;flex-wrap:wrap">
+          <button class="btn ghost sm" id="svcalib">用实测点校准</button>
+          <button class="btn ghost sm" id="svapply" disabled>应用到预测模型</button>
+          <button class="btn ghost sm" onclick="go('heat')">打开热力图 →</button>
+        </div>
+        <div id="svcalibout" class="tiny" style="margin-top:11px"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>点位明细 <span class="tiny muted" id="svpointcnt"></span></h3>
+    <div class="tblwrap">
+      <table id="svpoints">
+        <thead><tr><th>点位</th><th>坐标</th><th>采集时间</th><th>SSID / BSSID</th><th>RSSI</th><th>SINR</th><th>信道</th><th>干扰指数</th><th>可见射频</th><th>判定</th><th>说明</th><th></th></tr></thead>
+        <tbody id="svpointsbody"><tr><td colspan="12" style="text-align:center;padding:22px;color:#8b97a6">在上方图纸点击落点，或用「扫描并打点」开始采集</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 智能审计（AirMagnet AirWISE 式） ==================== -->
+<section class="page" id="page-audit">
+  <div class="pagehead">
+    <div><div class="h1">智能审计</div><div class="sub">自动问题清单 · 信道 / 带宽 / 功率规划 · 安全与合规核查　|　对齐 NetAlly AirMagnet AirWISE 的判定思路</div></div>
+    <div class="row">
+      <button class="btn ghost sm" id="audrescan">重新扫描并审计</button>
+      <button class="btn ghost sm" id="audrun">刷新审计</button>
+      <button class="btn" id="audreport">生成勘测报告 ↗</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <div class="grid g4" id="audkpis"></div>
+    <div id="audstatus" class="tiny" style="margin-top:10px"></div>
+    <div class="note tiny" style="margin-top:9px" id="audmethod"></div>
+  </div>
+
+  <details class="panel adv-panel" id="audrules">
+    <summary>规则设置 · 20 条判定规则逐项启停与严重度覆盖 <em id="audrulesinfo"></em></summary>
+    <div class="adv-body">
+      <div class="tiny muted" style="line-height:1.7;margin-bottom:10px">关闭的规则在问题清单、健康分与报告中一并剔除；改严重度后健康分按同一套扣分口径重算。规则库是确定性阈值，不是机器学习推理。</div>
+      <div id="audrulelist" class="rulegrid"></div>
+      <div class="row" style="gap:8px;margin-top:11px;flex-wrap:wrap">
+        <button class="btn sm" id="audrulesave">保存并重新审计</button>
+        <button class="btn ghost sm" id="audrulereset">恢复默认</button>
+        <span class="tiny muted" id="audrulestatus"></span>
+      </div>
+    </div>
+  </details>
+
+  <div class="grid" style="grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:14px;align-items:start">
+    <div class="card">
+      <h3>自动问题清单 <span class="tiny muted" id="audfindcnt"></span></h3>
+      <div class="row" style="gap:6px;flex-wrap:wrap;margin-bottom:11px" id="audfilters"></div>
+      <div id="audfindings"></div>
+      <div id="audcover" class="tiny" style="margin-top:12px;padding-top:11px;border-top:1px dashed var(--line2)"></div>
+    </div>
+    <div class="card">
+      <h3>网络健康分</h3>
+      <div id="audgauge"></div>
+      <div id="audtop" style="margin-top:12px"></div>
+      <h3 style="margin-top:20px">空口概览</h3>
+      <div id="audair"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>信道 / 带宽 / 功率规划建议</h3>
+    <div id="audplan"></div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h3>安全与合规审计</h3>
+    <div class="grid g4" id="audseckpis" style="margin-bottom:12px"></div>
+    <div id="audtwins"></div>
+    <div class="tblwrap">
+      <table id="audsectbl">
+        <thead><tr><th>SSID</th><th>BSSID</th><th>厂商（OUI 推断）</th><th>频段/信道</th><th>RSSI</th><th>加密</th><th>标记</th></tr></thead>
+        <tbody id="audsecbody"><tr><td colspan="7" style="text-align:center;padding:22px;color:#8b97a6">点「刷新审计」读取空口数据</td></tr></tbody>
+      </table>
+    </div>
+    <div class="tiny muted" style="margin-top:9px;line-height:1.7">
+      厂商由 BSSID 前三字节的 OUI 前缀推断，随机私有 MAC（本地管理位为 1）不能用于厂商判断。
+      <b>空口扫描无法判断某个 AP 是否接入了内部有线网</b>，「未登记 SSID」只作为现场核对提示，不等同于控制器侧基于有线发现判定的 Rogue AP 告警。
+      真正的频谱分析仪（Ekahau Sidekick / AirMagnet Spectrum XT）需要专用射频前端，普通网卡做不到 FFT，本页不识别非 Wi-Fi 干扰源。
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 帮助 ==================== -->
+<section class="page" id="page-help">
+  <div class="pagehead"><div><div class="h1">使用说明</div><div class="sub">安装、启动、典型操作与已知边界</div></div></div>
+  <div class="grid g2">
+    <div class="card"><h3>安装与启动</h3><ul class="clean">
+      <li>本程序为<b>免安装单文件 exe</b>，双击 <code>WirelessNetOptimizer.exe</code> 即可运行，不需要管理员权限，不需要联网</li>
+      <li>启动后会弹出一个黑色控制台窗口并显示本机地址，同时自动打开默认浏览器访问 <code>http://127.0.0.1:8765/</code></li>
+      <li>若 8765 被占用，会自动顺延到 8766、8767… 以控制台显示的地址为准</li>
+      <li>只监听 <code>127.0.0.1</code>，局域网内其他机器无法访问，符合内网离线要求</li>
+      <li>关闭方式：在控制台按 <span class="kbd">Ctrl + C</span>，或直接关闭控制台窗口</li>
+      <li>可选参数：<code>--port 9000</code> 指定端口，<code>--no-browser</code> 不自动打开浏览器</li>
+      <li>图纸与项目保存在 <code>%APPDATA%\WirelessNetOptimizer\</code>，卸载时删掉 exe 和这个目录即可，不留注册表项</li>
+    </ul></div>
+    <div class="card"><h3>热力图五步走（含 SSID 与实时重算）</h3><ul class="clean">
+      <li><b>选 SSID</b>：顶部下拉切换分析对象，或到「SSID 配置」绑定 AP、调整频段与接入门限；切换后热力图会自动重算</li>
+      <li><b>图纸</b>：用「示例楼层」直接体验、上传自己的 PNG/JPG 平面图，或点「绘制草图」从模板起手直接在画布上勾房间与隔墙</li>
+      <li><b>比例尺</b>：选「比例尺标定」，在图上拖出一段已知长度的线（例如走廊 10 米），在弹框里输入实际米数，程序自动算像素/米</li>
+      <li><b>建模</b>：用「绘制墙体」沿房间隔断拖线（材质决定穿墙衰减），用「放置 AP」点上 AP，右侧可逐台改型号、功率与天线增益</li>
+      <li><b>打点与计算</b>：用「录入实测点」在走测位置点击填入 RSSI；点「计算热力图」看覆盖率、盲区、低置信区与留一 RMSE</li>
+      <li><b>实时联动</b>：用「选择 / 移动」拖动 AP，热力图会即时给轻量预览，松手后自动按完整模型重算（可在左侧关闭「自动重算」改为手动）</li>
+    </ul></div>
+    <div class="card"><h3>绘图与渲染增强</h3><ul class="clean">
+      <li><b>平滑色带</b>：默认先在「数值域」做双线性插值、再映射颜色，消除低分辨率网格直接放大造成的色带阶梯；取消「平滑色带」可查看原始网格颗粒</li>
+      <li><b>动态色标</b>：右侧色标随「信号覆盖 / 有效 SINR」图层切换刻度，门限标记取当前 SSID 的接入门限（不再是写死的 -67 dBm）；SINR 图层显示 20 dB 参考线</li>
+      <li><b>等值线</b>：覆盖门限线与盲区边界线由模型网格经 marching-squares 求出，与色块同源；可分别开关，线旁标注门限值</li>
+      <li><b>不透明度</b>：左侧滑块调淡热力图层以便看清底图墙线；「导出 PNG」按同一不透明度合成，并内嵌色标、网格精度、传播模型与生成时间</li>
+      <li><b>绘制辅助</b>：画房间 / 隔墙 / 标比例尺时实时显示米数与角度，靠近已有墙角自动吸附并高亮；「开门洞」悬停即高亮目标墙并预览开口宽度；拖拽预览与最终落笔使用同一吸附结果</li>
+    </ul></div>
+    <div class="card"><h3>没有图纸？直接画现场草图</h3><ul class="clean">
+      <li><b>起手</b>：热力图页左侧「1 · 图纸」选一个模板（空白楼层 / 走廊+6 房间 / 开放办公 / 单间 / L 形），点「绘制草图」；不想从头画可直接用模板，之后随时增删</li>
+      <li><b>画</b>：展开「1b · 草图编辑」，用「画房间」拖拽勾出区域（自动生成 4 面墙）、「画隔墙」补隔断、「开门洞」在墙上点一下开 0.9 m 通口、「加标注」写房间名；网格吸附与正交可关，支持撤销 / 重做 / 改名 / 改材质</li>
+      <li><b>定尺寸</b>：填「外框实际宽度（米）」自动换算像素/米（默认 40 m 宽 ≈ 23 px/m），也可用「比例尺标定」沿已知长度的走廊拖线精修；比例尺直接决定传播模型的距离衰减</li>
+      <li><b>算得准</b>：草图的墙会进入 ITU-R P.1238 多墙衰减模型，相邻房间共边自动去重（不会重复扣 dB），门洞按宽度把墙拆成两段让信号穿过；材质对应 3–20 dB 损耗</li>
+      <li><b>勘测联动</b>：草图自动同步成「现场勘测」页的底图，两页同为 1000×700 坐标系，点击打点位置与 AP 坐标严格对齐；也可点「同步到勘测页」手动刷新</li>
+      <li><b>收尾</b>：点「完成 / 返回布点」后即可放置 AP、录入实测点、计算热力图；「保存项目」会把矢量草图一并存下，下次加载仍可继续编辑；「导出草图 PNG」可贴进报告</li>
+      <li><b>边界</b>：这是示意草图，不是测绘成果，没有真实地理坐标；墙体材质与厚度是人工估计，结论仍需现场实测打点校正</li>
+    </ul></div>
+    <div class="card"><h3>型号库能做什么</h3><ul class="clean">
+      <li>993 条逐 SKU 记录、20 家厂商，含 615 条老旧 / EOL / 历史品牌型号</li>
+      <li>按产地、类别、厂商、世代、生命周期、能力层级、核实状态筛选，可导出当前结果 CSV</li>
+      <li>点开详情可看：最低控制器版本、管理平面形态、适配器 ID、核实日期与备注——这些正是 P1 做适配器路由与兼容校验的入口</li>
+      <li>核实状态分「已核实 / 待核对 / 预留」，待核对条目不要当作确认事实使用</li>
+    </ul></div>
+    <div class="card"><h3>SSID 怎么用</h3><ul class="clean">
+      <li>顶部「当前 SSID」是全局分析对象，切换后热力图、现场连接、干扰分析与诊断会一起变</li>
+      <li>「SSID 配置」页可新建 / 编辑 / 删除 SSID：设频段（双频 / 2.4 / 5 / 6）、VLAN、安全套件、广播与启用状态、最小接入 RSSI、最大客户端数</li>
+      <li>「广播该 SSID 的 AP」不勾表示所有 AP 都广播；勾选后热力图只用这些 AP 计算，可用于验证语音 / IoT / AGV 的专项覆盖</li>
+      <li>「双频」沿用热力图页所选频段；单频 SSID 会覆盖该选择，用对应频段的传播参数（页面会提示）</li>
+      <li>现场连接页可按 SSID 筛选终端，SSID 配置页下方有各 SSID 的终端数、健康率与平均信号</li>
+      <li>配置保存在 <code>%APPDATA%\WirelessNetOptimizer\ssids.json</code>，重启后保留；「恢复默认」可一键还原</li>
+      <li><b>用本机正在连的 SSID</b>：SSID 配置页顶部「本机无线连接」通过 Windows <code>netsh wlan show interfaces</code> 只读读取当前 SSID / BSSID / 波段 / 信道 / 信号，默认在启动时自动加入列表并设为分析对象；断网可用、不联网、不修改无线配置。也可从本机已保存的配置文件里选一个；取消勾选「启动时自动采用本机 SSID」可关闭</li>
+    </ul></div>
+    <div class="card"><h3>干扰分析与现场状态怎么用</h3><ul class="clean">
+      <li><b>干扰分析</b>：2.4G 频谱柱中蓝=AP 占用、橙=非 Wi-Fi 干扰、绿框=1/6/11 非重叠信道；干扰源清单可增删，右侧给出同信道冲突与信道重规划建议，「应用建议信道」会写回热力图的 AP</li>
+      <li><b>去热力图看干扰影响</b>：自动切到 SINR 图层并按现场干扰重算，可直观看到干扰源周边由绿转橙红（噪声抬升 → SNR 下降）</li>
+      <li><b>现场连接</b>：每 2 秒刷新终端 RSSI / SNR / MCS / 重传 / 流量 / 认证 / 漫游，右侧是事件流；支持暂停、筛选、点行看详情</li>
+      <li><b>联动</b>：「在热力图上定位」把终端按状态着色标到图纸；「用现场数据诊断」把聚合证据带入故障排查并直接推理；单个终端详情也可单独诊断</li>
+      <li>这两块当前是<b>模拟采集</b>，字段按 SNMP v2c / WLC API 客户端表建模，P1 接现网时替换采集层即可，前端无需改动</li>
+    </ul></div>
+    <div class="card"><h3>移动漫游怎么测</h3><ul class="clean">
+      <li><b>前提</b>：本机连上被测 SSID（走无线，不能是有线）；选好采样间隔（默认 1 秒）后点「开始监测」</li>
+      <li><b>怎么走</b>：拿着笔记本沿用户投诉路线走一遍，页面每秒刷新当前 SSID / 接入点 / 信号；BSSID 一变，时间线立刻出现一条漫游记录（从哪个 AP 切到哪个、驻留多久、信号变化多少 dB）</li>
+      <li><b>看什么</b>：信号轨迹低于 -67 开始影响高速率、低于 -75 属边缘；切换后仍落在 -70 以下记为「弱切换」；同 SSID 有强 8 dB 以上的邻居却长时间不切，会提示粘滞（常见 802.11k/v 未启用）</li>
+      <li><b>信道拥挤</b>：显示当前信道的干扰指数、射频数、AP 上报利用率与本频段排名；旁边列出本频段各信道占用，▲ 是你所在的信道</li>
+      <li><b>留档</b>：点「导出 CSV」保存漫游事件表；同一路线多走两遍可对比优化前后差异</li>
+      <li><b>注意</b>：周边 BSS 缓存不足时会自动补一次主动扫描（约 4-8 秒，可能瞬断），落在扫描窗口内的事件会标注「可能为扫描伪影」，判读时剔除</li>
+    </ul></div>
+    <div class="card"><h3>现场勘测与智能审计怎么用</h3><ul class="clean">
+      <li><b>准备</b>：在「热力图」页上传楼层图，<b>或直接画一张现场草图</b>（会自动同步为本页底图），并放置 AP（校准传播模型要用）；在「空口扫描」页至少扫一次，或直接勾选勘测页的「每个点位重新扫描」</li>
+      <li><b>走测</b>：打开「现场勘测」→ 填会话名 → 选验收模板（语音 / 通用数据 / 高密度 / 定位）→ 拿笔记本沿路线走，每到一点在图纸上<b>点一下</b>。程序会记录该点真实 SSID、BSSID、RSSI、SINR、信道、干扰指数与可见射频数</li>
+      <li><b>看图层</b>：切换「RSSI / SINR / 信道干扰 / 需求达标 / 可见射频数 / 信道利用率 / SNR / 干扰余量损耗」八个图层，绿=好、黄=边缘、红=差；越靠近实测点颜色越实，远处淡色表示插值置信度低。SNR 与 SINR 相减即干扰吃掉的信号余量</li>
+      <li><b>校准</b>：≥3 个点位后点「用实测点校准」，程序反推路径损耗指数 n 与 1m 损耗 PL0，可一键应用到预测热力图。若拟合值落在边界或改善 &lt;0.5 dB，界面会提示不要采用</li>
+      <li><b>审计</b>：「智能审计」页汇总自动问题清单（严重度 / 证据 / 影响 / 处置）、信道 / 带宽 / 功率建议与安全核查；点「重新扫描并审计」可刷新到当前空口状态</li>
+      <li><b>交付</b>：「生成勘测报告」打开一份单文件离线 HTML（执行摘要 / 逐点验收 / 问题清单 / 信道规划 / 安全审计 / 模型校准 / 口径与边界 / 多楼层合订 / 优化前后对比），浏览器直接打印成 PDF 即可给客户或存档；点位可另存 CSV</li>
+    </ul></div>
+    <div class="card"><h3>报告模板、DXF 与规则自定义（v0.12 新增）</h3><ul class="clean">
+      <li><b>报告模板</b>：勘测页展开「高级」→ 填标题 / 机构 / 项目 / 勘测人 / 复核人 / 页脚，可上传公司 Logo（约 320 KB 内）、关掉签署栏或保密标记；保存后所有报告自动套用，配置只存本机</li>
+      <li><b>多楼层合订</b>：登记楼层（名称 + 实际宽度）会自动切换为同名勘测会话；勾选多个会话点「生成合订报告」，每个楼层单独算点位与达标率，再汇总成一张表，<b>不会把不同楼层的点混在一起插值</b></li>
+      <li><b>优化前后对比</b>：整改前「保存基线」，整改后沿同一路线复测再存一份；选两份点「对比」看达标率 / 健康分 / 问题清单 / 逐点 RSSI 的变化，「把对比写进报告」会追加一章</li>
+      <li><b>点位 CSV 批量导入</b>：先下载模板，按 1000×700 图纸坐标填好历史记录，一次性导入当前会话；中英文表头都认，缺坐标的行会跳过并给出行号</li>
+      <li><b>走测路径</b>：实测点位图按采集顺序连虚线 + 方向箭头，是「点击序列」不是 GPS 轨迹，可在高级面板关掉</li>
+      <li><b>审计规则自定义</b>：智能审计页展开「规则设置」，20 条规则（含 PMF 缺失、802.11r/k/v 漫游能力、OWE、WPA3 过渡模式）可逐条停用或改严重度；保存后问题清单、健康分与报告按同一口径重算，也可一键恢复默认</li>
+      <li><b>DXF 导入</b>：热力图「1 · 图纸」→「导入 DXF」，读取 ASCII DXF 的 LINE / LWPOLYLINE / POLYLINE / ARC / CIRCLE 线段，按包围盒等比铺进 1000×700，图层名推断初始材质；柱 / 设备圆与门弧等非墙体符号会自动跳过。导入后<b>必须人工修墙</b>：用「选择 / 改名」核对材质、删掉标注线、在墙上开门洞。不支持二进制 DXF、块参照 INSERT、填充与三维实体，也不自动识别门洞</li>
+      <li><b>深色主题</b>：顶栏「◐ 深色」切换，偏好存浏览器本地；图纸画布仍按白纸显示，便于对照现场纸质图</li>
+    </ul></div>
+    <div class="card"><h3>本机诊断、能力矩阵与离线交付（v0.13 新增）</h3><ul class="clean">
+      <li><b>本机诊断页</b>：只读解析 <code>netsh wlan show drivers</code>（网卡 / 驱动 / 无线电类型）、<code>show profiles</code> + 逐条 <code>show profile name=X</code>（认证 / 加密，<b>绝不读取明文密钥</b>）、<code>ipconfig /all</code>（IPv4 / 网关 / DNS / DHCP）、Windows 已生成的 <code>WlanReport</code> 历史连接报告；合成本机侧问题清单。不 ping、不联网、不改配置</li>
+      <li><b>AP 能力矩阵</b>：空口扫描后逐 BSS 列出 WPA3-SAE / OWE / PMF / 802.11r·k·v / MBSSID / WMM / 6 GHz / Wi-Fi 6 / 加密套件 / 厂商 OUI / DTIM / BSS Color。能力由 Beacon IE 位推断，<b>未做关联协商验证</b>，厂商实现可能有差异</li>
+      <li><b>扫描历史趋势</b>：每次扫描自动把汇总快照写入本地 JSONL，可切 7 种指标看折线、按小时聚合、导出 CSV、清空；用于对比不同时段 / 不同点位的空口变化，不上传任何数据</li>
+      <li><b>Word 报告</b>：勘测页「高级 → 离线交付」点「导出 Word 报告」，用纯标准库按 OOXML 生成 .docx，自动套用报告模板，可离线编辑、盖章、归档</li>
+      <li><b>项目备份</b>：一键导出全量用户数据 zip（SSID / 点位 / 草图 / 图纸 / 模板 / 规则 / 历史），选择 zip 可恢复；恢复会覆盖同名文件并清空内存缓存，需刷新页面</li>
+      <li><b>图片识别候选墙</b>：热力图「1 · 图纸 → 图片识别候选墙」用灰度 + 水平/垂直连续暗像素游程从底图提取直线段，写入草图墙表。这是<b>候选线段、必须人工修墙</b>（核对材质、删标注线、开门洞），不做 AI 语义识别、不认门弧与填充</li>
+    </ul></div>
+    <div class="card"><h3>当前边界（重要）</h3><ul class="clean">
+      <li>本版是 <b>P0 可运行原型</b>：<b>设备 / 终端 / 控制器侧仍是模拟数据</b>，不轮询 SNMP、不调用 WLC/AP API、不采集客户端数据；<b>空口扫描、移动漫游、勘测打点是本机网卡的真实只读采集</b>。定位仍是单机离线、零外网、纯只读，未放开主动业务测试与配置下发</li>
+      <li>顶部「官方文档库」可按厂商 / 专题 / 核实状态与关键词检索全部内置文献，并可点回诊断结论引用的出处</li>
+      <li><b>空口扫描是真实数据</b>：通过 Windows 原生 WLAN 接口扫描本空间 BSS（含隐藏 SSID），给出 RSSI / SNR / SINR、信道干扰指数、区域评分与整改建议，可把扫到的 SSID 一键导入为分析对象</li>
+      <li><b>移动漫游是真实数据</b>：本机当前关联、漫游事件、信号轨迹与当前信道拥挤全部来自这台电脑的无线网卡，只读采集；切换耗时是采样级观测值，不是空口时延</li>
+      <li>故障排查是规则推理演示，不主动采集设备日志与 trap；但新增的「WLC 诊断」页可读取你粘贴的日志 / 配置 / 抓包文本做<strong>离线匹配</strong>，结论需现场复核</li>
+      <li><b>WLC 诊断与官方文档库完全离线</b>：官方码表、125 篇文献索引与中文提炼、138 条命令、40 个诊断剧本、22 套话术、8 套 SOP 已编译进 exe，运行时不访问外网；官方链接仅作展示，点开与否由你决定</li>
+      <li><b>现场勘测与智能审计是真实数据</b>：点位来自本机网卡的空口快照 + 图纸点击坐标；需求阈值是公开工程经验值（非厂商认证标准），报告会原样列出所用口径</li>
+      <li><b>与 Ekahau / AirMagnet 的硬差距</b>：Sidekick / Spectrum XT 有专用射频前端，能出实时 FFT 频谱并识别蓝牙、微波炉、雷达等<b>非 Wi-Fi 干扰源</b>；普通网卡只解析 Beacon/Probe，本软件的干扰指数是「可见射频数 + 频率区间重叠 + AP 上报 BSS Load」的工程估计，<b>不做原始频谱分析</b></li>
+      <li>审计里的「未登记 SSID」只表示没出现在项目 SSID 清单里；空口无法判断 AP 是否接入内部有线网，<b>不等同于控制器侧基于有线发现判定的 Rogue AP</b>，需现场核对</li>
+      <li>信道规划是基于本次单点扫描的建议，不是控制器下发的配置；整层规划应由 RRM/DCA 统一执行，避免逐台手工改造成信道震荡</li>
+      <li>热力图是单楼层二维模型，未做多层楼板衰减、3D 天线方向图与 MLO/6 GHz AFC；勘测插值图层在点少时置信度低，界面会用淡色标注。DXF / 手绘草图是示意图纸而非测绘成果，无真实地理坐标，墙体为零厚度线段、材质损耗取经验值，仍需实测打点校正</li>
+      <li>型号库覆盖公开主流产品线，不穷举地区管制域后缀；上线前需按现网采购清单核对一次</li>
+      <li>完整设计与验收指标见右上角「方案书 v0.18」第 16.14–16.21 节</li>
+    </ul></div>
+  </div>
+  <div class="note" style="margin-top:14px"><b>反馈建议：</b>先按「热力图五步走」跑一遍示例楼层，重点看交互是否顺手、热力图结果是否可信、型号库筛选够不够用。把不顺的地方告诉我，我再迭代；确认形态 OK 后再进 P1 接现网数据。</div>
+</section>
+</main>
+
+<footer>WirelessNetOptimizer <span id="fver"></span> · 单机离线 · 数据不出本机 · 方案 v0.18 · 绘制与渲染优化版</footer>
+<div class="toast" id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

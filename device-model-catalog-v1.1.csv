@@ -1,0 +1,994 @@
+﻿category,origin,vendor,family,models,device_role,wifi_gen,bands,form_factor,plane_type,mgmt_examples,min_version,adapter_id,verify_status,verified_date,note,lifecycle,capability_tier
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9105AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9105AXW,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9115AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9115AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9117AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXP,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9130AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9130AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9136I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9162I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,A-完整
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9164I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,A-完整
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9166I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,A-完整
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9166D1,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9171I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9172I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9172H,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9174I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9174E,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9176I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9176D1,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9178I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9179F,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a,主流在售,A-完整
+AP,国外,Cisco,Cisco 室外与工业,1542I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,1542D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,1562I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,1562D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,1562E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,C9124AXI,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,C9124AXD,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,C9124AXE,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,C9163E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,IW6300,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,IW9167I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,IW9167E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,IW9165D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,IW9165E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,1800s,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1100AC,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1101AC,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1101AX,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,主流在售,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815W,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815M,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815T,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1830I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1840I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1852I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1852E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1800i,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,2800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,2800E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800P,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,4800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵,存量在用,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-L,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-40,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-80,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-CL,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800L,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800M,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800H1,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800H2,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,EWC on AP,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国外,Cisco,Catalyst 9800 控制器,EWC on Catalyst switch,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Cisco,Catalyst 9800 控制器,Catalyst Center,云管理,混合,-,-,云管理,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Cisco,Catalyst 9800 控制器,Cisco Spaces,云管理,混合,-,-,云管理,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR28,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR36,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR44,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR46,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR46E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR53E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR56,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR57,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR76,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+AP,国外,Cisco Meraki,Meraki MR 系列,MR86,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对,主流在售,B-受限
+ManagementPlane,国外,Cisco Meraki,Meraki MR 系列,Meraki Dashboard,云管理,混合,-,-,云管理,Meraki Dashboard,-,meraki_dashboard,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-503H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-505,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-505H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-515,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-535,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-555,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-575,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-577,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-615,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-634,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-635,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-654,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-655,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-730,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-740,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-750,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-755,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,A-完整
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7005,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7010,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7024,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7030,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7205,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7210,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7220,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7240XM,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7280,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,9240,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,HPE Aruba,Aruba Mobility Controller,Mobility Conductor,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,Aruba Central (AOS 8),云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,Aruba Central (AOS 10),云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,ClearPass,云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,认证联动 非控制器,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-231F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-233F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-234F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-23JF,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-431F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-433F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-432F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-831F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-231G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-233G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-431G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-433G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-234G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-432G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-432FR,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-231K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-241K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-243K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-441K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-443K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,A-完整
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiGate 内置 WLAN 控制器,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,无独立 WLC,主流在售,B-受限
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiGate 400F 内置 WLAN 控制器,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,现网已有设备,主流在售,B-受限
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiManager,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,多站点集中管理,主流在售,B-受限
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiLAN Cloud,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiWLM,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiPresence,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,待核对,2026-11-09,位置分析,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP12,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP21,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP32,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP33,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP41,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP43,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP61,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP63,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP45,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,AP47,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,AP67,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,BT11,AP,-,-,BLE 传感器,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Juniper Mist,Mist 管理平面,Mist Edge,控制器,混合,-,-,虚拟嵌入式,Mist Cloud,-,mist_cloud,已核实,2026-11-09,本地数据面,主流在售,B-受限
+ManagementPlane,国外,Juniper Mist,Mist 管理平面,Mist Cloud / Marvis AI,云管理,混合,-,-,云管理,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R310,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R350,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R510,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R550,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R610,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R650,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R710,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R720,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R730,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R750,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R850,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R760,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Ruckus,Ruckus Wi-Fi 7,R770,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Ruckus,Ruckus Wi-Fi 7,T870,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T310,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T610,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T710,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T750,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T750SE,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H320,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H550,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,E510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,M510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,P300,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ruckus,Ruckus 控制器与云管,ZoneDirector 1200,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ100,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ144,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ300,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ruckus,Ruckus 控制器与云管,vSZ-H,控制器,混合,-,-,虚拟嵌入式,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Ruckus,Ruckus 控制器与云管,Ruckus Cloud,云管理,混合,-,-,云管理,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Ruckus,Ruckus 控制器与云管,Ruckus One,云管理,混合,-,-,云管理,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP305C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP305CX,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP310i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP410C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP460C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP460S,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3912i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3916ic,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3965i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP5010,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP7632,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP8432,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP8533,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP5050,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,已核实,2026-11-09,-,主流在售,A-完整
+ManagementPlane,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ,云管理,混合,-,-,云管理,ExtremeCloud IQ,-,extremecloud_iq,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ Controller,控制器,混合,-,-,独立硬件AC,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ Site Engine,云管理,混合,-,-,云管理,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XGS,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XG,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Max,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Long-Range,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Lite,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XG Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 In-Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Outdoor,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Outdoor,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Industrial,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Mesh,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7 Campus,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7 Audience,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表,主流在售,A-完整
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Enterprise,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Long-Range,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6+,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Lite,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Mesh,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Mesh Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Extender,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Enterprise In-Wall,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 In-Wall,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,AC Mesh,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,AC Mesh Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,Swiss Army Knife Ultra,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,WiFi BaseStation XG,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UniFi Network Server (自托管),控制器,混合,-,-,虚拟嵌入式,UniFi Network,-,unifi_network,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Ubiquiti UniFi,UniFi 管理平面,UniFi Site Manager,云管理,混合,-,-,云管理,UniFi Network,-,unifi_network,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM Pro,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM SE,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,Cloud Key Gen2,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UCG Ultra,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Arista,Arista Campus AP,C-260,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,待核对,2026-11-09,-,主流在售,A-完整
+AP,国外,Arista,Arista Campus AP,C-360,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-,主流在售,A-完整
+AP,国外,Arista,Arista Campus AP,C-460,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-,主流在售,A-完整
+ManagementPlane,国外,Arista,Arista Campus AP,CloudVision,云管理,混合,-,-,云管理,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-,主流在售,B-受限
+AP,国外,Cambium,Cambium XV 系列,XV2-2,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Cambium,Cambium XV 系列,XV2-22H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Cambium,Cambium XV 系列,XV2-23T,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-,主流在售,B-受限
+AP,国外,Cambium,Cambium XV 系列,XV3-8,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国外,Cambium,Cambium XV 系列,cnMaestro,云管理,混合,-,-,云管理,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5760-10,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5760-22W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5761-11,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5761-12W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5761S-10W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5762-12,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,5762-12SW,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,6760-X1,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,6761-21T,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 6,6760-51EI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,华为,AirEngine Wi-Fi 7,5773-22P,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,华为,AirEngine Wi-Fi 7,6776-56TP,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,华为,AirEngine Wi-Fi 7,8776-X6THP,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,华为,AirEngine 室外与面板,AirEngine 室外系列(待补录),AP,Wi-Fi 6,2.4/5,室外/面板,-,AirEngine AC / iMaster NCE,-,huawei_ac,预留,2026-11-09,按现网清单补录,预留,C-降级
+AP,国内,华为,AirEngine 室外与面板,AirEngine 面板系列(待补录),AP,Wi-Fi 6,2.4/5,室外/面板,-,AirEngine AC / iMaster NCE,-,huawei_ac,预留,2026-11-09,按现网清单补录,预留,C-降级
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9703-H,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9703-H-T,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9503-S,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9701-L-T,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AC6508,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AC6005,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AC6605,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+Controller,国内,华为,AirEngine AC 控制器,AC6805,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,华为,AirEngine AC 控制器,iMaster NCE-Campus,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,华为,AirEngine AC 控制器,CloudCampus,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,华为,AirEngine AC 控制器,eSight,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6338,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6628X,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6528,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5530,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5320E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA4320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU,主流在售,B-受限
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7539,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7338,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-,主流在售,A-完整
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7538,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-,主流在售,A-完整
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7220,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-,主流在售,A-完整
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,UAP612MG-AX30,AP,Wi-Fi 6,2.4/5,面板,-,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3508H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3510H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3520H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3540H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3500H-LI,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3510X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3520X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3540X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX5500X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX6500X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3024E,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+Controller,国内,H3C,H3C WX 无线控制器,WX3010E,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC,主流在售,B-受限
+ManagementPlane,国内,H3C,H3C WX 无线控制器,iMC,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,H3C,H3C WX 无线控制器,Cloudnet,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,H3C,H3C WX 无线控制器,AD-Campus,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,H3C,H3C WX 无线控制器,U-Center,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-,主流在售,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-M,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9861-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9850-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9751-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9520-RDX,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9220,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9220(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690D-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920-X,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP194-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP900-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP950-AR-RU,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-O-RU,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-M(V3),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-U,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-MXT,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-A(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690D-A(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,主流在售,A-完整
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP840-AR,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP800,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP820-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP740-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730-L,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730(TR),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-L,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-A,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520-I(SR),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520(DA),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520(BT),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP330-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP3220,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP3220-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP180-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP180-L-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP110-A,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表,存量在用,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7005-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7005-A(V2),控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7216-E,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7880,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7216-S,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7208-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7204-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6816,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6512,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6108,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6008,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS2000-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7816C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7110,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7110C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6816C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6812,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WIE7202,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-VWS,控制器,混合,-,-,虚拟嵌入式,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7228-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7224-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-MXR-2,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-MX-8,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M8600E-WS-ED,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M8600-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M18000-WS-ED,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M7000-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M12000-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机,主流在售,B-受限
+ManagementPlane,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WIS,云管理,混合,-,-,云管理,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,锐捷,锐捷 RG-WS 无线控制器,WIS+EMB 云地一体,云管理,混合,-,-,云管理,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,-,主流在售,B-受限
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-5737(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3927(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3827(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3827PF(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,A-完整
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-2800,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-4650,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1700,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600(MU),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3700,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-5600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8000,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8000(L),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8100,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8100(L),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-2800-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600-P(MU),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1720-LTE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3620,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3620R3,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3680,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-4100V,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料,存量在用,B-受限
+AP,国内,信锐,信锐锐灵 XAP,XAP-6220-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+AP,国内,信锐,信锐锐灵 XAP,XAP-6210-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+AP,国内,信锐,信锐锐灵 XAP,XAP-5520-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6100,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6200,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6300,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6600,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7100,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7200,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7300,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7600,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,HG-2500-P,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,超体XAC,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,SAC-1000,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,CAC-2000,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6300H,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC6100-IOT,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,信锐,信锐 NAC 控制器,NAC6200-IOT,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,信锐,信锐 NAC 控制器,iBrain NMC,云管理,混合,-,-,云管理,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,信锐,信锐 NAC 控制器,信锐 IOT 物联平台,云管理,混合,-,-,云管理,NAC / iBrain NMC,-,sundray_nac,待核对,2026-11-09,-,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1200GI-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1200C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1900DG,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP450C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP302C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP300C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1750C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对,主流在售,B-受限
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC200,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC500,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC1000,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-,主流在售,B-受限
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC10000,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-,主流在售,B-受限
+ManagementPlane,国内,TP-LINK 商用,TP-LINK 商用 AC,TP-LINK 商用云平台,云管理,混合,-,-,云管理,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,-,主流在售,B-受限
+AP,国内,中兴,预留厂商位,待补录 (AP),AP,Wi-Fi 6,2.4/5,室内吸顶,-,按现网补录,-,generic_snmp_v2c,预留,2026-11-09,按现网清单补录,预留,C-降级
+Controller,国内,中兴,预留厂商位,待补录 (AC),控制器,混合,-,-,独立硬件AC,按现网补录,-,generic_snmp_v2c,预留,2026-11-09,-,预留,C-降级
+Fallback,通用,通用,通用降级,未收录型号(通用档案),降级档案,待核对,-,-,-,通用 SNMP v2c + 手工射频参数,-,generic_snmp_v2c,预留,2026-11-09,未知型号降级 不阻塞使用,预留,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP340,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP350,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP1100,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP1121G,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP1230AG,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP1310,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-AP1410,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AIR-BR1310G,AP,802.11a/b/g,2.4/5,室内吸顶,-,自主 AP 或 4400 系列 WLC,AireOS 7.0 之前,autonomous_ap_snmp_v2c,待核对,2026-11-09,Aironet 最早一代自主/轻量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1130AG,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1140,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1240AG,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1250,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1260,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1040,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),700i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),700W,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),702i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),702W,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AP801,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),AP802,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1600,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),2600,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3500i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3500e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3600i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3600e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AireOS WLC 2504/5508/8510/WiSM2,AireOS 8.5（末版）,aireos_snmp_v2c,已核实,2026-11-09,Cisco FlexConnect / AireOS 官方矩阵列名；AireOS 8.5 是 1600/2600/3500/3600 末版；1240AG 2018-07-31 终止支持；9800 不支持,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1520,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1530,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1550,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1552,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1570,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1572,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),703W,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1810,AP,Wi-Fi 4,2.4/5,室外/面板,-,AireOS WLC 2504/5508/8510,AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,Aironet 室外 / Mesh / 面板老品；1552 128MB 版止于 AireOS 8.5；1570 为 Wave1 11ac,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),1700,AP,Wi-Fi 5,2.4/5,室外/工业,-,Catalyst 9800 或 AireOS WLC,IOS XE 17.3 / AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,官方 FN74109 明确 Wave1 11ac AP 可注册 9800 WLC；其余 11n 老 AP 不可,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),2700,AP,Wi-Fi 5,2.4/5,室外/工业,-,Catalyst 9800 或 AireOS WLC,IOS XE 17.3 / AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,官方 FN74109 明确 Wave1 11ac AP 可注册 9800 WLC；其余 11n 老 AP 不可,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3700,AP,Wi-Fi 5,2.4/5,室外/工业,-,Catalyst 9800 或 AireOS WLC,IOS XE 17.3 / AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,官方 FN74109 明确 Wave1 11ac AP 可注册 9800 WLC；其余 11n 老 AP 不可,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),3700P,AP,Wi-Fi 5,2.4/5,室外/工业,-,Catalyst 9800 或 AireOS WLC,IOS XE 17.3 / AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,官方 FN74109 明确 Wave1 11ac AP 可注册 9800 WLC；其余 11n 老 AP 不可,EOL 已停产,C-降级
+AP,国外,Cisco,Aironet 802.11a/b/g 早期 (EOL),IW3700,AP,Wi-Fi 5,2.4/5,室外/工业,-,Catalyst 9800 或 AireOS WLC,IOS XE 17.3 / AireOS 8.5,aireos_snmp_v2c,已核实,2026-11-09,官方 FN74109 明确 Wave1 11ac AP 可注册 9800 WLC；其余 11n 老 AP 不可,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 2006,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 2106,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 2112,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 2125,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 4402,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 4404,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 2504,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 5508,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 3504,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 5520,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 7510,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 8510,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WLC 8540,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WiSM,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),WiSM2,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Flex 7500,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Flex 8500,控制器,混合,-,-,独立硬件AC,AireOS WLC SNMP v2c + 私有 MIB,AireOS 8.5 / 8.10,aireos_snmp_v2c,已核实,2026-11-09,Cisco 官方 AireOS 版本建议：8.5 是 2504/5508/7510/8510/WiSM2 最后一版；8.10 为 3504/5520/8540 末版；8.9/8.8/8.7/8.6 已淘汰,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),vWLC,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Catalyst 5760 WLC,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Catalyst 3850 WLC,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Catalyst 3650 WLC,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Catalyst 3750G 集成 WLC,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),NM-AIR-WLC6,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),NM-AIR-WLC8,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),ISR WLC 模块,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+Controller,国外,Cisco,AireOS / 融合接入 WLC (EOL),Mobility Express,控制器,混合,-,-,虚拟嵌入式,交换机或 AP 内置 WLC,AireOS 8.5 / IOS XE 3.x,aireos_snmp_v2c,待核对,2026-11-09,虚拟 / 交换机内置 / AP 内置控制器旧架构；不支持与 9800 的 IRCM,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR11,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR12,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR14,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR16,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR18,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR24,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR26,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR58,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR62,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11n (EOL),MR66,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR16/MR24 止于 2021-05-31，MR18 2024-03-31，MR12 2022-10-24；固件上限 MR 26.x,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR20,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR30H,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR32,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR33,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR34,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR42,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR42E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR45,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR52,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR53,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR55,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR72,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR74,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MR84,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Meraki Dashboard（云）,MR 26.x / 30.x（上限）,meraki_dashboard_legacy,已核实,2026-11-09,Meraki 官方 EOL 清单：MR34 止于 2023-10-31，MR42/52/53/84 止于 2026-07-21；EOL 后 Dashboard 不保证长期可连,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MX60W,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MX64W,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MX65W,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MX67W,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),MX68W,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cisco Meraki,Meraki MR 早期 802.11ac (EOL),Z1,AP,Wi-Fi 4,2.4/5,网关内置无线,-,Meraki Dashboard（云）,MX 14.x / 18.x,meraki_dashboard_legacy,待核对,2026-11-09,带无线的安全网关 / 远程办公网关（内置 AP）；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-60,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-61,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-65,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-68,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-68P,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-70,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-85,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-92,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-93,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-104,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-105,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-114,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-115,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-124,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-125,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-134,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-135,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-175,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-103,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-103H,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-203R,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),AP-203RP,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),RAP-155,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),RAP-3WN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 早期 802.11a/b/g / Wi-Fi 4 (EOL),RAP-5WN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Aruba 600/3200/6000/M3 控制器 或 Instant,ArubaOS 6.4 / 8.1（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 EOL / AOS 支持矩阵：AP-92/93 与 AP-68 最高 AOS 8.1，AP-124/125 最高 6.4；Campus AP 与 Instant AP 两种形态,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-205,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-207,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-215,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-225,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-228,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-275,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-277,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-303,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-303H,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-304,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-305,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-314,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-315,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-325,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-335,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-345,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-365,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-367,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-375,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-377,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+AP,国外,HPE Aruba,Aruba AP 2xx / 3xx 存量 (Wi-Fi 5),AP-387,AP,Wi-Fi 5,2.4/5,室内吸顶,-,Aruba 72xx / 70xx 控制器 或 Instant,ArubaOS 6.5 / 8.x,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵：2xx 系列最低 6.3/6.4，3xx 系列最低 6.5/8.0；AOS 8.x 之后逐步停止支持,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),600,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),620,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),650,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),651,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),800,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),2000,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),3000,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),3200,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),3400,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),3600,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),6000,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),M3,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),7008,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),7240,控制器,混合,-,-,独立硬件AC,Aruba Mobility Controller AOS 6.x,ArubaOS 6.4.x（上限）,aruba_aos6_snmp_v2c,已核实,2026-11-09,Aruba 官方 AOS 支持矩阵老控制器；600/620/650/3200 等最高 AOS 6.4.x,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),Aruba Instant Virtual Controller,控制器,混合,-,-,虚拟嵌入式,Instant / AirWave,AOS 6.x / AirWave 8.x,aruba_aos6_snmp_v2c,待核对,2026-11-09,Instant 虚拟控制器 / AirWave 网管 / Activate 激活服务（旧管理平面）,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),AirWave,控制器,混合,-,-,虚拟嵌入式,Instant / AirWave,AOS 6.x / AirWave 8.x,aruba_aos6_snmp_v2c,待核对,2026-11-09,Instant 虚拟控制器 / AirWave 网管 / Activate 激活服务（旧管理平面）,EOL 已停产,C-降级
+Controller,国外,HPE Aruba,Aruba 早期控制器与网管 (EOL),Aruba Activate,控制器,混合,-,-,虚拟嵌入式,Instant / AirWave,AOS 6.x / AirWave 8.x,aruba_aos6_snmp_v2c,待核对,2026-11-09,Instant 虚拟控制器 / AirWave 网管 / Activate 激活服务（旧管理平面）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-220A,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-220B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-221B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-222B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-223B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-320B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-210B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-112B,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-11C,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-14C,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-28C,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-25D,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-21D,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-24D,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-112D,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP B / C 早期 802.11n (EOL),FAP-221B-A-G,AP,Wi-Fi 4,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器（旧 FortiOS）,FortiOS 5.x / 6.0,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL 公告（经 eol.network 汇总）：220B 2018-10-06、320B 2022-04-25 终止支持,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-221C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-222C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-223C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-320C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-321C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-224D,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S221E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S223E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S321C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S322C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S323C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S421E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S422E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S423E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-C220C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-C225C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-C23JD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-C24JE,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-U221EV,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-221E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-222E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-223E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-224E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-231E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-321E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-421E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-423E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S311C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+AP,国外,Fortinet,FortiAP C / D / E 系列 (EOL),FAP-S313C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,FortiGate 内置 WLAN 控制器,FortiOS ≤ 7.2（部分 ≤ 6.0）,fortigate_wlc_legacy,已核实,2026-11-09,Fortinet 官方 EOL / 兼容矩阵：321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列、U/W2 E 系列（仅 221E/223E/421E/423E 保留）,EOL 已停产,C-降级
+Controller,国外,Fortinet,Fortinet 旧无线管理平面,FortiWLC (Meru 血统),控制器,混合,-,-,网关内置,FortiGate / FortiWLC,FortiOS 6.x / FortiWLC 8.x,fortigate_wlc_legacy,待核对,2026-11-09,FortiWLC 独立控制器 / 旧版 FortiGate 内置控制器；现网 400F 属后者的现代版本,EOL 已停产,C-降级
+Controller,国外,Fortinet,Fortinet 旧无线管理平面,FortiGate WiFi Controller (FortiOS 5.x/6.x),控制器,混合,-,-,网关内置,FortiGate / FortiWLC,FortiOS 6.x / FortiWLC 8.x,fortigate_wlc_legacy,待核对,2026-11-09,FortiWLC 独立控制器 / 旧版 FortiGate 内置控制器；现网 400F 属后者的现代版本,EOL 已停产,C-降级
+Controller,国外,Fortinet,Fortinet 旧无线管理平面,FortiCloud (旧版),控制器,混合,-,-,虚拟嵌入式,FortiCloud / FortiWLM,-,fortigate_wlc_legacy,待核对,2026-11-09,旧版云管 / 无线网管组件；内网离线场景需降级,EOL 已停产,C-降级
+Controller,国外,Fortinet,Fortinet 旧无线管理平面,FortiWLM 旧版,控制器,混合,-,-,虚拟嵌入式,FortiCloud / FortiWLM,-,fortigate_wlc_legacy,待核对,2026-11-09,旧版云管 / 无线网管组件；内网离线场景需降级,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF2741,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF2942,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7025,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7055,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7321,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7321-U,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7341,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7343,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7351,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7352,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7363,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7372,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7372-E,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7441,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7942,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7962,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7982,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7761-CM,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7762,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7762-S,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7762-T,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7762-AC,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7762-S-AC,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7781-CM,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7782,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF7782-S,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),ZF8800,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex 802.11g / Wi-Fi 4 (EOL),H500,AP,Wi-Fi 4,2.4/5,室内/室外/面板,-,ZoneDirector 1100/3000/5000,ZoneDirector 9.8.3.0.58（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus ZoneDirector 9.7/9.8 官方发行说明与 EoS 表：9.8.3.0.58 是 7962/7762/7025 最后推荐版；9.9 后不支持 7962/7762，9.10 后不支持 7025,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),R300,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),R500,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),R600,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),R700,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),T300,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),T301,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+AP,国外,Ruckus,ZoneFlex Wi-Fi 5 早期 (EOL),C500,AP,Wi-Fi 5,2.4/5,室内吸顶,-,ZoneDirector 1100/3000/5000 或 SmartZone,ZoneDirector 9.8 / 9.9 / 9.10,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：R300/H500 2022-11-01、R700 2023-02-01、R500/R600/T300/T301 2024-04-30 终止支持,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),ZoneDirector 1000,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),ZoneDirector 1100,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),ZoneDirector 3000,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),ZoneDirector 5000,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),SCG200,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),SZ104,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),SZ124,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+Controller,国外,Ruckus,Ruckus 早期控制器 (EOL),FlexMaster,控制器,混合,-,-,独立硬件AC,ZoneDirector / SCG / FlexMaster,ZoneDirector 9.10 / SZ 3.x（上限）,ruckus_zonedirector,已核实,2026-11-09,Ruckus 官方 EoS 表：ZD1100 2020-06-30、ZD5000 2021-12-31、ZD3000 2024-01-01 终止支持；ZD1100 最高 9.10，无 legacy 兼容模式,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3605,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3610,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3620,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3630,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3710,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3715,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3720,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3725,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3825i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3825e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3835i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Extreme,Extreme IdentiFi 存量 AP,AP3865e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,ExtremeCloud IQ Controller / IdentiFi,IdentiFi 9.x / ExtremeCloud IQ Controller,extreme_wing_snmp_v2c,待核对,2026-11-09,Extreme IdentiFi（原 Enterasys）存量 AP；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveAP 20,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveAP 28,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveAP 320,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveAP 330,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP110,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP120,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP121,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP130,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP141,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP230,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP245X,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP250,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP330,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP340,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP350,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP370,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP380,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP390,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,AP1130,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,BR100,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,BR200,AP,Wi-Fi 4,2.4/5,室内吸顶,-,HiveManager Classic / NG,HiveOS 6.x / HiveManager Classic,aerohive_hivemanager,待核对,2026-11-09,Aerohive HiveOS 产品线；HiveManager 已并入 ExtremeCloud IQ；按现网铭牌核对,历史品牌,C-降级
+Controller,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveManager Classic,控制器,混合,-,-,虚拟嵌入式,HiveManager,HiveManager 6.x / 8.x,aerohive_hivemanager,待核对,2026-11-09,Aerohive 旧管理平面，收购后迁移至 ExtremeCloud IQ,历史品牌,C-降级
+Controller,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveManager NG,控制器,混合,-,-,虚拟嵌入式,HiveManager,HiveManager 6.x / 8.x,aerohive_hivemanager,待核对,2026-11-09,Aerohive 旧管理平面，收购后迁移至 ExtremeCloud IQ,历史品牌,C-降级
+Controller,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveManager Online,控制器,混合,-,-,虚拟嵌入式,HiveManager,HiveManager 6.x / 8.x,aerohive_hivemanager,待核对,2026-11-09,Aerohive 旧管理平面，收购后迁移至 ExtremeCloud IQ,历史品牌,C-降级
+Controller,国外,Aerohive（历史）,Aerohive 历史产品线（2019 被 Extreme 收购）,HiveOS 虚拟控制器,控制器,混合,-,-,虚拟嵌入式,HiveManager,HiveManager 6.x / 8.x,aerohive_hivemanager,待核对,2026-11-09,Aerohive 旧管理平面，收购后迁移至 ExtremeCloud IQ,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-650,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-6511,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-6521,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-6522,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-6532,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7131,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7131N,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7161,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7502,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7522,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7532,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7562,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7602,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7622,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-7662,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-8132,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,AP-8232,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RFS / NX / VX 控制器（WiNG）,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,Motorola / Zebra WiNG 产品线，后归 Extreme；按现网铭牌核对,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,RFS4000,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,RFS6000,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,RFS7000,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,NX 9000,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,VX 9000,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+Controller,国外,Symbol/Zebra（历史）,Symbol / Motorola / Zebra WiNG 历史产品线（无线业务售予 Extreme）,WiNG 虚拟控制器,控制器,混合,-,-,独立硬件AC,WiNG 控制器,WiNG 5.x,extreme_wing_snmp_v2c,待核对,2026-11-09,WiNG / RFS 无线交换机与虚拟控制器,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP200,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP300,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP320i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP320e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP822i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP822e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP832i,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP832e,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP1010,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP1020,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+AP,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,AP1100,AP,Wi-Fi 4,2.4/5,室内吸顶,-,Meru System Director / FortiWLC,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru System Director 体系，后并入 FortiWLC / FortiGate；按现网铭牌核对,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,MC1500,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,MC3000,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,MC4200,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,MC5000,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,MC6000,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+Controller,国外,Meru（历史）,Meru 历史产品线（2015 被 Fortinet 收购）,System Director 虚拟版,控制器,混合,-,-,独立硬件AC,Meru System Director,System Director 7.x,meru_systemdirector,待核对,2026-11-09,Meru 控制器 / System Director 虚拟版,历史品牌,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP (v1),AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP (v2),AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-LR (v1),AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-LR (v2),AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-Pro,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-IW,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-Outdoor,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-Outdoor+,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-Outdoor-5,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-AC,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-AC-Outdoor,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-AC-EDU,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi 官方 Legacy 第一代 (EOL),UAP-AC-IW-PRO,AP,Wi-Fi 4,2.4/5,室内吸顶,-,UniFi Network 5.x 自托管,UniFi Network 5.x（旧 Java 控制器）,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 Vintage & Legacy 清单；第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再支持,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-Lite,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-LR,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-Pro,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-M,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-M-PRO,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-IW,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-HD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-AC-SHD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-nanoHD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-FlexHD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-BeaconHD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-IW-HD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UAP-XG,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+AP,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UWB-XG,AP,Wi-Fi 5,2.4/5,室内吸顶,-,UniFi Network 自托管,UniFi Network 6.x / 7.x,unifi_controller_legacy,已核实,2026-11-09,Ubiquiti 官方 RoHS 型号清单 / 安装支架兼容表；AC 系列属存量，仍可由 UniFi Network 自托管管理,EOL 已停产,C-降级
+Controller,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UniFi Network Controller 5.x,控制器,混合,-,-,虚拟嵌入式,UniFi Network 旧版,UniFi Network 5.x,unifi_controller_legacy,已核实,2026-11-09,旧版 Java 控制器 / 第一代 Cloud Key / 应用服务器（官方列为 Legacy）,EOL 已停产,C-降级
+Controller,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),Cloud Key Gen1 (UC-CK),控制器,混合,-,-,虚拟嵌入式,UniFi Network 旧版,UniFi Network 5.x,unifi_controller_legacy,已核实,2026-11-09,旧版 Java 控制器 / 第一代 Cloud Key / 应用服务器（官方列为 Legacy）,EOL 已停产,C-降级
+Controller,国外,Ubiquiti UniFi,UniFi AC 系列存量 (Wi-Fi 5),UniFi Application Server,控制器,混合,-,-,虚拟嵌入式,UniFi Network 旧版,UniFi Network 5.x,unifi_controller_legacy,已核实,2026-11-09,旧版 Java 控制器 / 第一代 Cloud Key / 应用服务器（官方列为 Legacy）,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e400,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e410,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e430,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e500,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e501S,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e600,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot e700,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot r190V,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot r200P,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国外,Cambium,Cambium cnPilot 存量 AP,cnPilot r201P,AP,Wi-Fi 4,2.4/5,室内吸顶,-,cnMaestro On-Premises,cnMaestro On-Premises 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,Cambium cnPilot 存量线；按现网铭牌核对,EOL 已停产,C-降级
+Controller,国外,Cambium,Cambium cnPilot 存量 AP,cnMaestro On-Premises,控制器,混合,-,-,虚拟嵌入式,cnMaestro 本地,cnMaestro 2.x,cambium_cnmaestro_onprem,待核对,2026-11-09,cnMaestro 本地部署版（内网离线可用）,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP3010DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP3010DN-AGN-FAT,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP3010DN-V2,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP5010DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP5010DN-AGN-FAT,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP5010SN-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6010DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6010DN-AGN-FAT,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6010SN-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6310SN-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6510DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6510DN-AGN-FAT,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6610DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP6610DN-AGN-FAT,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11n (EOL),AP7110DN-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,AC6605 / AC6005（旧软件分支）,V200R005C10 / V200R006 / V200R008,huawei_ac_v2r5,已核实,2026-11-09,华为官方产品列表；政府采购文件确认 AC6605 V200R005C10 + AP6010DN 已停产停供，新 AirEngine 不再兼容该软件版本；AP6610DN-AGN 2023-06-30 停止服务,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2030DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2050DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2050DN-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2051DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2051DN-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP2051DN-S,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP3030DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP3030DN-FAT,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4030DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4030DN-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4030TN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4050DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4050DN-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4050DN-HD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4050DN-S,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP4051TN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP430-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP5030DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP5030DN-FAT,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP5030DN-S,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP5130DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP6050DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP6052DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP6150DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP7030DE,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP7050DE,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP7052DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP7152DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP8030DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP8050TN-HD,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP8130DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP8130DN-FAT,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP8150DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP9130DN-FAT,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+AP,国内,华为,华为 AP2000~AP9000 系列 802.11ac (EOL),AP9330DN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,AC6605 / AC6005 / AC6805（旧分支）,V200R006 / V200R008 / V200R010,huawei_ac_v2r5,已核实,2026-11-09,华为官方技术支持全部产品列表（AP2000~AP9000 系列）；Fit/Fat 双模式，旧 AC 软件分支管理,EOL 已停产,C-降级
+Controller,国内,华为,华为 旧 AC 板卡与网管,ACU2 (S7700/S9700 无线控制板卡),控制器,混合,-,-,独立硬件AC,ACU2 / Agile Controller / eSight,V200R005 / V200R008,huawei_ac_v2r5,待核对,2026-11-09,旧 AC 板卡 / 敏捷控制器 / 网管组件；与 AirEngine 新平台不兼容,EOL 已停产,C-降级
+Controller,国内,华为,华为 旧 AC 板卡与网管,Agile Controller-Campus,控制器,混合,-,-,独立硬件AC,ACU2 / Agile Controller / eSight,V200R005 / V200R008,huawei_ac_v2r5,待核对,2026-11-09,旧 AC 板卡 / 敏捷控制器 / 网管组件；与 AirEngine 新平台不兼容,EOL 已停产,C-降级
+Controller,国内,华为,华为 旧 AC 板卡与网管,eSight WLAN 组件,控制器,混合,-,-,独立硬件AC,ACU2 / Agile Controller / eSight,V200R005 / V200R008,huawei_ac_v2r5,待核对,2026-11-09,旧 AC 板卡 / 敏捷控制器 / 网管组件；与 AirEngine 新平台不兼容,EOL 已停产,C-降级
+Controller,国内,华为,华为 旧 AC 板卡与网管,iManager U2000 WLAN,控制器,混合,-,-,独立硬件AC,ACU2 / Agile Controller / eSight,V200R005 / V200R008,huawei_ac_v2r5,待核对,2026-11-09,旧 AC 板卡 / 敏捷控制器 / 网管组件；与 AirEngine 新平台不兼容,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA1208E-GNP,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2110-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2210E-GE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610-GNE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610E-GNE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610E-GNP,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610H-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610H-GN-H20,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610i-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2610X,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2612,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620-AGN-C,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620-AGN-S,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620E,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620i-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA2620X,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA3610i-GN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA3620i-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA3628i-AGN,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA3628i-AGN-X,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA 早期 802.11n (EOL),WA4310-TB,AP,Wi-Fi 4,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / R5457 旧分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方 AC-AP License 兼容列表（WX2560H / WX3520H）与无线产品下载页；WA26/36 系列需对应旧软件版本,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-B,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-C,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-D,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-PI,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320-ACN-SI,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320H,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320H-ACN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320H-SI,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320H-EI,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320i-ACN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320i-X,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4320X,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4330-ACN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA4620i-ACN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA5320H,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA5320-SI,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA5620,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C WA43xx / WA53xx 存量 802.11ac,WA5620i-CAN,AP,Wi-Fi 5,2.4/5,室内吸顶,-,WX / WAC / MSG360,WX R5451 / WAC 对应版本,h3c_wx_legacy,已核实,2026-11-09,H3C 官方《WLAN 特性与硬件适配关系》Wi-Fi4/Wi-Fi5 AP 款型表；WA4320 系列为园区存量主力,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP621,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP712C,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP722,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP722E,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP722S,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP422,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,WAP422S,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini A20,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini A21,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini A31,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini A50,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini A51,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,H3C,H3C 小贝 / Mini 存量 AP,Mini NW8321C,AP,Wi-Fi 4,2.4,面板/小型,-,WAC360/361/WAC380/MSG360,WAC / MSG360,h3c_wx_legacy,待核对,2026-11-09,H3C 小贝 / Mini 分销与 SOHO 线；按现网铭牌核对,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC360,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC361,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC380-30,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC380-60,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC380-90,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WAC380-120,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,MSG360-10,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,MSG360-20,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,MSG360-20N,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,MSG360-40,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WX2560H,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,iMC WSM 无线业务管理,控制器,混合,-,-,独立硬件AC,WAC / MSG360 / WX 系列,WAC / MSG / WX R5451 分支,h3c_wx_legacy,已核实,2026-11-09,H3C 官方无线产品下载页与 License 兼容列表；WX2560H 最多管理 128 AP；iMC WSM 为网管组件,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WX5000 系列,控制器,混合,-,-,独立硬件AC,WX 系列,WX 旧版,h3c_wx_legacy,待核对,2026-11-09,H3C 更早期 AC 系列；按现网铭牌与软件版本核对,EOL 已停产,C-降级
+Controller,国内,H3C,H3C 早期 AC / 网管,WX3000 系列,控制器,混合,-,-,独立硬件AC,WX 系列,WX 旧版,h3c_wx_legacy,待核对,2026-11-09,H3C 更早期 AC 系列；按现网铭牌与软件版本核对,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP110-W,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP120-M,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP120-W,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP120-S,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP130-W,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP130(L),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP130(W),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP130(W2),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-SE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-I,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-SI,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-E,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-E(M),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-E(M)-V2,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-SH,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-SH(C),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-E(C),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP220-E(P),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP320-I,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP3220-S,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP3220-D,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP620-H,AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP620-H(-S),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 2016 年前老品 AP (EOL),AP620-H(C),AP,Wi-Fi 4,2.4/5,室内吸顶,-,RG-WS3302 / WS5302 / WS5504 / WS5708 / M8600-WS,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方《AC 支持管理的 AP 型号列表》2016 年前老品清单；型号为官方简写，等价于 RG-AP 前缀写法；WS3302/WS5302 不再提供 11.1(5)B9 及以后 11.x，无法管理 B9+ 新品 AP,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP520-I,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP520,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP530-I,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP530-I(V2),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP520-I(G2),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP630(IDA),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP630(IODA),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),RG-AP630,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),RG-AP630(CD),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP552(SR),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP552,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP552-W,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP5280,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP4210,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),APD-M,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),APD-M(AC),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AM5528,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AM5514,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AM5528(EP),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AM5528(ES),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AM5532,AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP752(T),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP752(G),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP752(E),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),MAP752(S),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP530-I(S1),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP530-I(S2),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+AP,国内,锐捷,锐捷 老品 802.11ac / 智分 / 零漫游 AP (EOL),AP530-I(S3),AP,Wi-Fi 5,2.4/5,面板/智分/专用,-,RG-WS 系列旧 AC,RGOS 10.4(1b19) / 11.x,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC-AP 兼容列表与《无线产品 AC&AP 参数表》；智分 / 零漫游 / 地铁 AP 为专用形态,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-WS3302,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-WS5302,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-WS5504,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-WS5708,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-WS6024,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-M6000-WS,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+Controller,国内,锐捷,锐捷 早期 AC / 网管 (EOL),RG-SNC,控制器,混合,-,-,独立硬件AC,RG-WS 系列 / RG-SNC,RGOS 10.4(1b19) / 11.1(5)B8,ruijie_ws_legacy,已核实,2026-11-09,锐捷官方 AC 兼容列表与参数表：WS3302/WS5302 止于 11.1(5)B8；其余 WS5 旧 AC 对 2016 年后新品 AP 限制 100 license；RG-SNC 为统一网管,EOL 已停产,C-降级
+AP,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AP300I-PoE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期吸顶 / 面板 AP；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AP450I-PoE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期吸顶 / 面板 AP；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AP900C-PoE,AP,Wi-Fi 4,2.4/5,室内吸顶,-,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期吸顶 / 面板 AP；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AP1200GI-PoE(旧版),AP,Wi-Fi 4,2.4/5,室内吸顶,-,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期吸顶 / 面板 AP；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+AP,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AP1750C-PoE(旧版),AP,Wi-Fi 4,2.4/5,室内吸顶,-,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期吸顶 / 面板 AP；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+Controller,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AC100,控制器,混合,-,-,独立硬件AC,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期 AC；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+Controller,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AC300,控制器,混合,-,-,独立硬件AC,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期 AC；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+Controller,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AC2000,控制器,混合,-,-,独立硬件AC,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期 AC；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+Controller,国内,TP-LINK 商用,TP-LINK 商用 早期 AC / AP,TL-AC5000,控制器,混合,-,-,独立硬件AC,TL-AC 系列,TL-AC 旧版,tplink_ac_legacy,待核对,2026-11-09,商用线早期 AC；具体 SKU 按现网铭牌核对,EOL 已停产,C-降级
+Fallback,通用,通用,老旧设备通用降级档案,EOL 未识别型号(通用降级档案),降级档案,待核对,-,-,-,通用 SNMP v2c + 手工参数,-,generic_snmp_v2c,预留,2026-11-09,铭牌无法识别的老旧设备：通用 SNMP v2c + 手工射频参数 + 实测打点,预留,C-降级

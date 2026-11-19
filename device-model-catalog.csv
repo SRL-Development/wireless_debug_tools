@@ -1,0 +1,435 @@
+﻿category,origin,vendor,family,models,device_role,wifi_gen,bands,form_factor,plane_type,mgmt_examples,min_version,adapter_id,verify_status,verified_date,note
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9105AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9105AXW,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9115AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9115AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9117AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9120AXP,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9130AXI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9130AXE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 9100 Wi-Fi 6,C9136I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9162I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9164I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9166I,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Catalyst 916x Wi-Fi 6E,C9166D1,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9171I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9172I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9172H,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9174I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9174E,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9176I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9176D1,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9178I,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,CW917x Wi-Fi 7,CW9179F,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,C9800 / CW9800,IOS XE 17.15.2,cisco_9800,已核实,2026-11-09,17.18.3 兼容矩阵; 官方推荐 17.18.4a
+AP,国外,Cisco,Cisco 室外与工业,1542I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,1542D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,1562I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,1562D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,1562E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,C9124AXI,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,C9124AXD,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,C9124AXE,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,C9163E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,IW6300,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,IW9167I,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,IW9167E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,IW9165D,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,IW9165E,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,1800s,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1100AC,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1101AC,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Cisco 室外与工业,ISR-AP1101AX,AP,Wi-Fi 6,2.4/5,室外/工业,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815W,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815M,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1815T,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1830I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1840I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1852I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1852E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,1800i,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,2800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,2800E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800E,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,3800P,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+AP,国外,Cisco,Aironet 存量 Wi-Fi 5,4800I,AP,Wi-Fi 5,2.4/5,室内吸顶,-,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco 9800 17.18.3 官方兼容矩阵
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-L,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-40,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-80,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,C9800-CL,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800L,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800M,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800H1,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,CW9800H2,控制器,混合,-,-,独立硬件AC,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,Cisco IOS XE
+Controller,国外,Cisco,Catalyst 9800 控制器,EWC on AP,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-
+Controller,国外,Cisco,Catalyst 9800 控制器,EWC on Catalyst switch,控制器,混合,-,-,虚拟嵌入式,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-
+ManagementPlane,国外,Cisco,Catalyst 9800 控制器,Catalyst Center,云管理,混合,-,-,云管理,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-
+ManagementPlane,国外,Cisco,Catalyst 9800 控制器,Cisco Spaces,云管理,混合,-,-,云管理,C9800 / CW9800,-,cisco_9800,已核实,2026-11-09,-
+AP,国外,Cisco Meraki,Meraki MR 系列,MR28,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR36,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR44,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR46,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR46E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR53E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR56,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR57,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR58,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR76,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+AP,国外,Cisco Meraki,Meraki MR 系列,MR86,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Meraki Dashboard,-,meraki_dashboard,待核对,2026-11-09,按 Meraki 最新产品目录核对
+ManagementPlane,国外,Cisco Meraki,Meraki MR 系列,Meraki Dashboard,云管理,混合,-,-,云管理,Meraki Dashboard,-,meraki_dashboard,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-503H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-505,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-505H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-515,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-535,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-555,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-575,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-5xx Wi-Fi 6,AP-577,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-615,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-634,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-635,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-654,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-6xx Wi-Fi 6E,AP-655,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-730,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-740,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-750,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+AP,国外,HPE Aruba,Aruba AP-7xx Wi-Fi 7,AP-755,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7005,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7010,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7024,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7030,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7205,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7210,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7220,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7240XM,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,7280,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,9240,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+Controller,国外,HPE Aruba,Aruba Mobility Controller,Mobility Conductor,控制器,混合,-,-,独立硬件AC,Aruba Central / AOS,-,aruba_central,待核对,2026-11-09,-
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,Aruba Central (AOS 8),云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,Aruba Central (AOS 10),云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,-
+ManagementPlane,国外,HPE Aruba,Aruba Mobility Controller,ClearPass,云管理,混合,-,-,云管理,Aruba Central / AOS,-,aruba_central,已核实,2026-11-09,认证联动 非控制器
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-231F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-233F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-234F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-23JF,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-431F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-433F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-432F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP F 系列 Wi-Fi 6,FAP-831F,AP,Wi-Fi 6,2.4/5,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-231G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-233G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-431G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-433G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-234G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-432G,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP G 系列 Wi-Fi 6E,FAP-432FR,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-231K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-241K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-243K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-441K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+AP,国外,Fortinet,FortiAP K 系列 Wi-Fi 7,FAP-443K,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiGate 内置 WLAN 控制器,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,无独立 WLC
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiGate 400F 内置 WLAN 控制器,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,现网已有设备
+Controller,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiManager,控制器,混合,-,-,网关内置,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,多站点集中管理
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiLAN Cloud,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiWLM,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,已核实,2026-11-09,-
+ManagementPlane,国外,Fortinet,FortiGate 内置控制器与集中管理,FortiPresence,云管理,混合,-,-,云管理,FortiGate / FortiManager,-,fortigate_wlc,待核对,2026-11-09,位置分析
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP12,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP21,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP32,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP33,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP41,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP43,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP61,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP63,AP,Wi-Fi 6,2.4/5,室内吸顶,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 5 / 6,AP45,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,AP47,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,AP67,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-
+AP,国外,Juniper Mist,Mist AP Wi-Fi 7,BT11,AP,-,-,BLE 传感器,-,Mist Cloud,-,mist_cloud,待核对,2026-11-09,-
+Controller,国外,Juniper Mist,Mist 管理平面,Mist Edge,控制器,混合,-,-,虚拟嵌入式,Mist Cloud,-,mist_cloud,已核实,2026-11-09,本地数据面
+ManagementPlane,国外,Juniper Mist,Mist 管理平面,Mist Cloud / Marvis AI,云管理,混合,-,-,云管理,Mist Cloud,-,mist_cloud,已核实,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R310,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R350,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R510,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R550,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R610,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R650,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R710,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R720,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R730,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R750,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R850,AP,Wi-Fi 6,2.4/5,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus R 系列 Wi-Fi 5 / 6,R760,AP,Wi-Fi 6E,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-
+AP,国外,Ruckus,Ruckus Wi-Fi 7,R770,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-
+AP,国外,Ruckus,Ruckus Wi-Fi 7,T870,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,SmartZone / Ruckus Cloud,-,ruckus_sz,已核实,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T310,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T610,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T710,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T750,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,T750SE,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H320,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,H550,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,E510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,M510,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Ruckus,Ruckus 室外 / 面板 / 工业,P300,AP,Wi-Fi 6,2.4/5,室外/面板,-,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+Controller,国外,Ruckus,Ruckus 控制器与云管,ZoneDirector 1200,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ100,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ144,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+Controller,国外,Ruckus,Ruckus 控制器与云管,SZ300,控制器,混合,-,-,独立硬件AC,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+Controller,国外,Ruckus,Ruckus 控制器与云管,vSZ-H,控制器,混合,-,-,虚拟嵌入式,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+ManagementPlane,国外,Ruckus,Ruckus 控制器与云管,Ruckus Cloud,云管理,混合,-,-,云管理,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+ManagementPlane,国外,Ruckus,Ruckus 控制器与云管,Ruckus One,云管理,混合,-,-,云管理,SmartZone / Ruckus Cloud,-,ruckus_sz,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP305C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP305CX,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP310i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP410C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP460C,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP460S,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3912i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3916ic,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP3965i,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP5010,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP7632,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP8432,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP8533,AP,Wi-Fi 6,2.4/5,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Extreme,Extreme Wi-Fi 6 / 6E AP,AP5050,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,ExtremeCloud IQ,-,extremecloud_iq,已核实,2026-11-09,-
+ManagementPlane,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ,云管理,混合,-,-,云管理,ExtremeCloud IQ,-,extremecloud_iq,已核实,2026-11-09,-
+Controller,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ Controller,控制器,混合,-,-,独立硬件AC,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+ManagementPlane,国外,Extreme,Extreme 管理平面,ExtremeCloud IQ Site Engine,云管理,混合,-,-,云管理,ExtremeCloud IQ,-,extremecloud_iq,待核对,2026-11-09,-
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XGS,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XG,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Max,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Long-Range,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Lite,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro XG Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 In-Wall,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Pro Outdoor,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Outdoor,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Industrial,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,U7 Mesh,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7 Campus,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U7 / E7 Wi-Fi 7,E7 Audience,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,Ubiquiti 官网旗舰 AP 列表
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Enterprise,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Long-Range,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6+,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Lite,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Mesh,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Mesh Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Extender,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 Enterprise In-Wall,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,U6 In-Wall,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,AC Mesh,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,AC Mesh Pro,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,Swiss Army Knife Ultra,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+AP,国外,Ubiquiti UniFi,UniFi U6 / AC 系列,WiFi BaseStation XG,AP,Wi-Fi 6,2.4/5,室内吸顶,-,UniFi Network,-,unifi_network,已核实,2026-11-09,U6 Enterprise 为 Wi-Fi 6E
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UniFi Network Server (自托管),控制器,混合,-,-,虚拟嵌入式,UniFi Network,-,unifi_network,已核实,2026-11-09,-
+ManagementPlane,国外,Ubiquiti UniFi,UniFi 管理平面,UniFi Site Manager,云管理,混合,-,-,云管理,UniFi Network,-,unifi_network,已核实,2026-11-09,-
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM Pro,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UDM SE,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,Cloud Key Gen2,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-
+Controller,国外,Ubiquiti UniFi,UniFi 管理平面,UCG Ultra,控制器,混合,-,-,网关内置,UniFi Network,-,unifi_network,待核对,2026-11-09,-
+AP,国外,Arista,Arista Campus AP,C-260,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,待核对,2026-11-09,-
+AP,国外,Arista,Arista Campus AP,C-360,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-
+AP,国外,Arista,Arista Campus AP,C-460,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-
+ManagementPlane,国外,Arista,Arista Campus AP,CloudVision,云管理,混合,-,-,云管理,CloudVision,-,arista_cloudvision,已核实,2026-11-09,-
+AP,国外,Cambium,Cambium XV 系列,XV2-2,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-
+AP,国外,Cambium,Cambium XV 系列,XV2-22H,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-
+AP,国外,Cambium,Cambium XV 系列,XV2-23T,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-
+AP,国外,Cambium,Cambium XV 系列,XV3-8,AP,Wi-Fi 6,2.4/5,室内吸顶,-,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-
+ManagementPlane,国外,Cambium,Cambium XV 系列,cnMaestro,云管理,混合,-,-,云管理,cnMaestro,-,cambium_cnmaestro,待核对,2026-11-09,-
+AP,国内,华为,AirEngine Wi-Fi 6,5760-10,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5760-22W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5761-11,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5761-12W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5761S-10W,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5762-12,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,5762-12SW,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,6760-X1,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,6761-21T,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 6,6760-51EI,AP,Wi-Fi 6,2.4/5,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,按华为最新产品目录核对 SKU
+AP,国内,华为,AirEngine Wi-Fi 7,5773-22P,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+AP,国内,华为,AirEngine Wi-Fi 7,6776-56TP,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+AP,国内,华为,AirEngine Wi-Fi 7,8776-X6THP,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+AP,国内,华为,AirEngine 室外与面板,AirEngine 室外系列(待补录),AP,Wi-Fi 6,2.4/5,室外/面板,-,AirEngine AC / iMaster NCE,-,huawei_ac,预留,2026-11-09,按现网清单补录
+AP,国内,华为,AirEngine 室外与面板,AirEngine 面板系列(待补录),AP,Wi-Fi 6,2.4/5,室外/面板,-,AirEngine AC / iMaster NCE,-,huawei_ac,预留,2026-11-09,按现网清单补录
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9703-H,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9703-H-T,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9503-S,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AirEngine 9701-L-T,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AC6508,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AC6005,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AC6605,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+Controller,国内,华为,AirEngine AC 控制器,AC6805,控制器,混合,-,-,独立硬件AC,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+ManagementPlane,国内,华为,AirEngine AC 控制器,iMaster NCE-Campus,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,已核实,2026-11-09,-
+ManagementPlane,国内,华为,AirEngine AC 控制器,CloudCampus,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+ManagementPlane,国内,华为,AirEngine AC 控制器,eSight,云管理,混合,-,-,云管理,AirEngine AC / iMaster NCE,-,huawei_ac,待核对,2026-11-09,-
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6338,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6628X,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA6528,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5530,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA5320E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA 系列 Wi-Fi 6,WA4320,AP,Wi-Fi 6,2.4/5,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,按 H3C 最新产品目录核对 SKU
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7539,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7338,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7538,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,WA7220,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-
+AP,国内,H3C,H3C WA7xxx Wi-Fi 7,UAP612MG-AX30,AP,Wi-Fi 6,2.4/5,面板,-,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-
+Controller,国内,H3C,H3C WX 无线控制器,WX3508H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对
+Controller,国内,H3C,H3C WX 无线控制器,WX3510H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对
+Controller,国内,H3C,H3C WX 无线控制器,WX3520H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对
+Controller,国内,H3C,H3C WX 无线控制器,WX3540H,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对
+Controller,国内,H3C,H3C WX 无线控制器,WX3500H-LI,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,官网标注可管 Wi-Fi 7 AP 但社区资料有分歧 需核对
+Controller,国内,H3C,H3C WX 无线控制器,WX3510X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX3520X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX3540X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX5500X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX6500X,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX3024E,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+Controller,国内,H3C,H3C WX 无线控制器,WX3010E,控制器,混合,-,-,独立硬件AC,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,新一代 / 存量 AC
+ManagementPlane,国内,H3C,H3C WX 无线控制器,iMC,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-
+ManagementPlane,国内,H3C,H3C WX 无线控制器,Cloudnet,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,已核实,2026-11-09,-
+ManagementPlane,国内,H3C,H3C WX 无线控制器,AD-Campus,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-
+ManagementPlane,国内,H3C,H3C WX 无线控制器,U-Center,云管理,混合,-,-,云管理,WX 系列 / iMC,-,h3c_wx,待核对,2026-11-09,-
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-M,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9861-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9850-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9751-R,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9520-RDX,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9220,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP9220(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690D-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920-X,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP1920(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP194-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP900-A,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP950-AR-RU,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-O-RU,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-M(V3),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-U,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-MAP920-SF-MXT,AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690-A(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 7 全场景,RG-AP690D-A(V2),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP840-AR,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP800,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP820-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP740-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730-L,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP730(TR),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-L,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP720-A,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520-I(SR),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520(DA),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP520(BT),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP330-I,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP3220,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP3220-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP180-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP180-L-A(V3),AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+AP,国内,锐捷,锐捷 Wi-Fi 6 / 存量 AP,RG-AP110-A,AP,Wi-Fi 6,2.4/5,室内吸顶,-,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线产品列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7005-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7005-A(V2),控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7216-E,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7880,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7216-S,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7208-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7204-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6816,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6512,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6108,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6008,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS5302,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS3302,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS2000-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7816C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7110,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7110C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6816C,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS6812,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WIE7202,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-VWS,控制器,混合,-,-,虚拟嵌入式,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7228-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WS7224-A,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,锐捷官网无线控制器列表
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-MXR-2,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-MX-8,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M8600E-WS-ED,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M8600-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M18000-WS-ED,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M7000-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+Controller,国内,锐捷,锐捷 RG-WS 无线控制器,RG-M12000-WS,控制器,混合,-,-,独立硬件AC,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,无线控制模块 / 智能无线交换机
+ManagementPlane,国内,锐捷,锐捷 RG-WS 无线控制器,RG-WIS,云管理,混合,-,-,云管理,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,-
+ManagementPlane,国内,锐捷,锐捷 RG-WS 无线控制器,WIS+EMB 云地一体,云管理,混合,-,-,云管理,RG-WS / WIS,-,ruijie_ws,已核实,2026-11-09,-
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-5737(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3927(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3827(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐 Turbo Sense Wi-Fi 7,NAP-3827PF(SR),AP,Wi-Fi 7,2.4/5/6,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-2800,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-4650,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1700,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600(MU),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3700,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-5600,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8000,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8000(L),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8100,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-8100(L),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-2800-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600-P,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3600-P(MU),AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-1720-LTE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3620,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3620R3,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-3680,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐 NAP Wi-Fi 6 / 存量,NAP-4100V,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,信锐产品资料
+AP,国内,信锐,信锐锐灵 XAP,XAP-6220-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐锐灵 XAP,XAP-6210-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+AP,国内,信锐,信锐锐灵 XAP,XAP-5520-E,AP,Wi-Fi 6,2.4/5,室内吸顶,-,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6100,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6200,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6300,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6600,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7100,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7200,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7300,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-7600,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,HG-2500-P,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,超体XAC,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,SAC-1000,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,CAC-2000,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC-6300H,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC6100-IOT,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+Controller,国内,信锐,信锐 NAC 控制器,NAC6200-IOT,控制器,混合,-,-,独立硬件AC,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+ManagementPlane,国内,信锐,信锐 NAC 控制器,iBrain NMC,云管理,混合,-,-,云管理,NAC / iBrain NMC,-,sundray_nac,已核实,2026-11-09,-
+ManagementPlane,国内,信锐,信锐 NAC 控制器,信锐 IOT 物联平台,云管理,混合,-,-,云管理,NAC / iBrain NMC,-,sundray_nac,待核对,2026-11-09,-
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1200GI-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1200C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1900DG,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP450C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP302C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP300C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+AP,国内,TP-LINK 商用,TP-LINK 商用 AP,TL-AP1750C-PoE,AP,Wi-Fi 6,2.4/5,室内吸顶,-,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,按商用最新目录核对
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC200,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC500,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC1000,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-
+Controller,国内,TP-LINK 商用,TP-LINK 商用 AC,TL-AC10000,控制器,混合,-,-,独立硬件AC,TL-AC / 商用云,-,tplink_ac,已核实,2026-11-09,-
+ManagementPlane,国内,TP-LINK 商用,TP-LINK 商用 AC,TP-LINK 商用云平台,云管理,混合,-,-,云管理,TL-AC / 商用云,-,tplink_ac,待核对,2026-11-09,-
+AP,国内,中兴,预留厂商位,待补录 (AP),AP,Wi-Fi 6,2.4/5,室内吸顶,-,按现网补录,-,generic_snmp_v2c,预留,2026-11-09,按现网清单补录
+Controller,国内,中兴,预留厂商位,待补录 (AC),控制器,混合,-,-,独立硬件AC,按现网补录,-,generic_snmp_v2c,预留,2026-11-09,-
+Fallback,通用,通用,通用降级,未收录型号(通用档案),降级档案,待核对,-,-,-,通用 SNMP v2c + 手工射频参数,-,generic_snmp_v2c,预留,2026-11-09,未知型号降级 不阻塞使用

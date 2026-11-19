@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无线故障排除 · 图纸热力图 · 无线优化 — 方案与技术路线 v0.1</title>
+<style>
+:root{
+  --bg:#ffffff; --page:#f6f7f9; --ink:#1f2328; --ink2:#4a5158; --ink3:#7b838c;
+  --line:#e3e6ea; --line2:#cfd5db; --blue:#185fa5; --blue-bg:#e6f1fb;
+  --teal:#0f6e56; --teal-bg:#e1f5ee; --amber:#854f0b; --amber-bg:#faeeda;
+  --red:#a32d2d; --red-bg:#fcebeb; --green:#3b6d11; --green-bg:#eaf3de;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;font-size:14px;line-height:1.75}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px 80px}
+header{background:var(--bg);border-bottom:1px solid var(--line);padding:38px 0 30px;margin-bottom:26px}
+header .wrap{padding-bottom:0}
+.kicker{font-size:12px;letter-spacing:.12em;color:var(--blue);font-weight:500;margin:0 0 10px}
+h1{font-size:27px;font-weight:600;line-height:1.35;margin:0 0 12px;letter-spacing:-.01em}
+.sub{color:var(--ink2);font-size:14px;margin:0 0 18px;max-width:760px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink3)}
+.meta span{background:var(--page);border:1px solid var(--line);border-radius:5px;padding:3px 9px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:9;margin-bottom:28px}
+nav .wrap{padding-top:10px;padding-bottom:10px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:12px;color:var(--ink2);text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:3px 9px;background:var(--bg)}
+nav a:hover{border-color:var(--blue);color:var(--blue)}
+section{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:26px 28px;margin-bottom:18px}
+h2{font-size:19px;font-weight:600;margin:0 0 6px;letter-spacing:-.01em}
+h2 .n{display:inline-block;min-width:32px;color:var(--blue);font-size:14px;font-weight:500;vertical-align:2px}
+.lead{color:var(--ink2);font-size:13px;margin:0 0 20px}
+h3{font-size:15px;font-weight:600;margin:24px 0 10px;padding-left:10px;border-left:3px solid var(--blue)}
+h4{font-size:13px;font-weight:600;margin:16px 0 6px;color:var(--ink)}
+p{margin:8px 0}
+ul,ol{margin:8px 0;padding-left:22px}
+li{margin:5px 0}
+code{font-family:Consolas,"SF Mono",monospace;font-size:12px;background:var(--page);border:1px solid var(--line);border-radius:4px;padding:1px 5px;color:#0c447c}
+table{width:100%;border-collapse:collapse;margin:12px 0 6px;font-size:12.5px}
+th{background:var(--page);text-align:left;font-weight:600;color:var(--ink2);border:1px solid var(--line);padding:8px 10px;white-space:nowrap}
+td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;color:var(--ink2)}
+td strong{color:var(--ink);font-weight:600}
+tr:nth-child(even) td{background:#fbfcfd}
+.tag{display:inline-block;font-size:11px;border-radius:4px;padding:1px 7px;font-weight:500;white-space:nowrap}
+.t-b{background:var(--blue-bg);color:var(--blue)}
+.t-t{background:var(--teal-bg);color:var(--teal)}
+.t-a{background:var(--amber-bg);color:var(--amber)}
+.t-r{background:var(--red-bg);color:var(--red)}
+.t-g{background:var(--green-bg);color:var(--green)}
+.grid{display:grid;gap:12px;margin:14px 0}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid var(--line);border-radius:8px;padding:14px 16px;background:#fbfcfd}
+.card .ct{font-size:13px;font-weight:600;margin:0 0 6px;color:var(--ink)}
+.card .cd{font-size:12px;color:var(--ink2);line-height:1.65;margin:0}
+.card ul{font-size:12px;color:var(--ink2);margin:6px 0 0;padding-left:18px}
+.note{background:var(--blue-bg);border-left:3px solid var(--blue);border-radius:0 6px 6px 0;padding:12px 16px;font-size:12.5px;color:#0c447c;margin:14px 0}
+.warn{background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:12px 16px;font-size:12.5px;color:#633806;margin:14px 0}
+.fig{border:1px solid var(--line);border-radius:8px;background:#fbfcfd;padding:18px;margin:16px 0}
+.fig svg{width:100%;height:auto;display:block}
+.cap{font-size:11.5px;color:var(--ink3);margin:8px 0 0;text-align:center}
+.timeline{border-left:2px solid var(--line2);margin:16px 0 6px 8px;padding-left:22px}
+.tl{position:relative;margin-bottom:22px}
+.tl::before{content:"";position:absolute;left:-29px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--blue)}
+.tl h4{margin:0 0 4px;font-size:14px;color:var(--ink)}
+.tl .tp{font-size:11px;color:var(--blue);font-weight:500;margin:0 0 6px}
+.tl ul{font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+footer{text-align:center;color:var(--ink3);font-size:11.5px;padding:10px 0 30px}
+@media print{body{background:#fff}nav{display:none}section{break-inside:avoid;border:1px solid #ddd;box-shadow:none;margin-bottom:12px}header{padding-top:0}.wrap{max-width:100%}}
+@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.wrap{padding:0 14px 50px}section{padding:18px 16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">NETDEVICEUI · 无线专项能力建设</p>
+    <h1>无线故障排除 · 图纸热力图 · 无线优化<br>方案与技术路线</h1>
+    <p class="sub">面向多厂商企业无线网络的自研运维工具：以楼层图纸为空间底座，融合控制器 API、SNMP 轮询与现场实测数据，输出可解释的覆盖热力图、故障根因链与可回滚的射频优化建议。</p>
+    <div class="meta">
+      <span>版本 v0.13（方案评审稿 + P0 原型）</span><span>2026-11-10 更新</span><span>定位：Windows 单机 + 本地 Web UI</span><span>状态：待确认开放项</span>
+    </div>
+    <div class="note" style="margin-top:16px"><strong>版本记录：</strong>v0.2 新增第 14 节型号库设计；v0.3 全量导入国内外主流型号（434 条 / 17 家）；v0.4 补齐老旧 / EOL / 历史品牌型号，总计 993 条 / 20 家厂商；<strong>v0.5 交付可安装的 P0 可运行原型</strong>——单文件 <code>WirelessNetOptimizer.exe</code>（Windows 免安装、本地 Web UI、仅监听 127.0.0.1），已把型号库（993 条）、图纸热力图（ITU-R P.1238 + 多墙衰减 + 实测残差 IDW、留一 RMSE）与 12 条规则的故障排查跑通，示例楼层覆盖率 78.6%、RMSE 2.34 dB。原型使用模拟数据、未接现网，用于验证形态与算法；P1 接 SNMP/控制器 API 后再进入试运行。<strong>v0.6 按试用反馈补齐「无线干扰」与「无线连接现场状态」</strong>——新增干扰分析页（非 Wi-Fi 干扰源建模、2.4G 频谱占用、5G 分组、AP 同信道冲突、贪心图着色重规划）与现场连接页（终端实时 RSSI/SNR/MCS/重传/流量/认证/漫游、事件流、异常终端定位）；干扰在线性域抬升底噪并驱动热力图 SINR 图层，现场证据可一键带入故障排查，形成「干扰 → 连接质量 → 根因 → 复测」的可视闭环，仍为模拟数据。<strong>v0.7 按试用反馈新增「SSID 全局分析维度」并修复「移动 AP 后热力图不重算」</strong>——详见第 15 节：顶部全局 SSID 选择器 + 配置页（绑定 AP / 频段 / VLAN / 接入门限），切换后热力图、干扰分析、现场连接、故障排查同步联动；热力图引入拖动即时轻量预览与松手后防抖自动重算，覆盖 AP 增删移动、墙体、打点、比例尺、频段、干扰、项目加载等全部改动入口。<strong>v0.8 按「如何分析 WLC 的错误包与配置问题」新增第 16 节</strong>——把错误包拆成控制面报文 / 空口帧 / 错误码日志三层，设计阶段化报文解析、客户端生命周期时间轴、错误码字典与五类配置检查（引用完整性 / 基线 / 版本兼容 / 漂移 diff / 变更仿真），并给出官方文档「索引 → 规则 → 结论 → 回查」的离线融合方案与 14 家主流 WLC / 管理平面接入矩阵；配套交付规则库种子（26 条规则、11 个官方引用）。<strong>v0.9 按试用环境可能断网的情况，把公开文档能提炼的部分全部内置进程序</strong>——新增第 16.9 节：离线知识包（Cisco 270 条原因码全量 + Ruckus 22 条 + 802.11 34 条等共 329 条码表、26 条诊断剧本 / 113 个处置步骤、20 篇官方文献中文摘要、45 条命令速查、8 套话术模板），以及「对业务用户 / 对运维 / 对厂商工单」三套沟通话术。exe 内新增「WLC 诊断」页与 4 个纯本地接口，粘贴日志即可离线匹配，运行时零外网请求。<strong>v0.10 按试用反馈修复「移动 AP 后离得近的反而有盲区」并改为使用本机当前 SSID</strong>——详见第 16.10 节：残差稳健化（中位偏差 + Huber 限幅 + 失配打点降权）、AP 近场 3 m 保护、贴墙近场墙损折减、重叠度与 RMSE 口径统一；新增本机 <code>netsh wlan</code> 只读接入，启动时自动把这台电脑正在连接的 SSID（实测 SAFRAN / 5 GHz / ch36）设为全局分析对象，断网可用、不修改无线配置。<strong>v0.11 按「文档太少了」的试用反馈大幅扩容离线文献库</strong>——详见第 16.11 节：官方文献 20 → <strong>125 篇</strong>（14 家厂商 / 34 专题）、命令 45 → 138 条、诊断剧本 26 → 40 个 / 183 步、话术 8 → 22 套，另增 8 套标准处置 SOP；新增「官方文档库」页支持厂商 / 专题 / 核实状态筛选与多关键词全文检索，并打通「诊断结论 → 官方出处」回查链。全部编译进 exe，运行时零外网请求。<strong>v0.13 按「用电脑边走边扫：要看漫游信息、当前 SSID 与信道拥挤」的反馈</strong>——详见第 16.13 节：新增「移动漫游」页，高频（默认 1 秒）轮询本机关联、低频读周边 BSS 缓存并自动按需补主动扫描，BSSID 变化即记漫游（同 SSID / 跨频段 / 跨 SSID / 掉线四类），输出信号轨迹、漫游时间线、驻留与空窗统计、粘滞终端检测、当前信道拥挤指数与本频段排名，可导出 CSV 留档；扫描窗口内的事件自动标注，避免把扫描伪影当成真掉线。<strong>v0.12 按「新建 SSID 无法使用，要扫描本空间 SSID（含隐藏）、看该区域无线质量与干扰」的反馈</strong>——详见第 16.12 节：接入 Windows 原生 WLAN 扫描（<code>WlanScan</code> + <code>WlanGetNetworkBssList</code>，逐条解析 IE），真实读取 SSID / BSSID / 信道 / 带宽 / RSSI / 加密 / BSS Load；按「BSSID 前 5 字节 + 频段」归并物理射频，SNR 与 SINR 分离计算，重叠按频率区间判定，输出区域总分、每 SSID 质量分、每信道干扰指数与整改建议；扫到的 SSID 可一键导入为分析对象。同时修复新建 SSID 后无终端可用的联动缺陷。</div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#s1">1 定位与边界</a><a href="#s2">2 能力域</a><a href="#s3">3 数据来源</a><a href="#s4">4 总体架构</a>
+  <a href="#s5">5 数据模型</a><a href="#s6">6 热力图引擎</a><a href="#s7">7 故障排除</a><a href="#s8">8 优化引擎</a>
+  <a href="#s9">9 技术选型</a><a href="#s10">10 分期路线</a><a href="#s11">11 验收指标</a><a href="#s12">12 风险与开放项</a><a href="#s13">13 能力对照</a><a href="#s14">14 型号库</a><a href="#s15">15 SSID 与实时重算</a><a href="#s16">16 WLC 错误包与配置</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="s1">
+  <h2><span class="n">01</span> 定位与边界</h2>
+  <p class="lead">一句话定位：把「图纸 + 射频数据 + 故障证据」放在同一张空间底图上，让无线问题从「凭经验猜」变成「看得见、可回溯、可验证」。</p>
+  <div class="grid g3">
+    <div class="card"><p class="ct">与 NetDeviceUI 的关系</p><p class="cd">复用既有自研 <strong>SNMP v2c 轮询框架</strong>、设备清单、告警通道、Windows exe 打包与本地 Web UI；新增无线专属的数据模型、空间引擎、规则库与优化模块。可作为独立子模块启停，不影响有线监控主链路。</p></div>
+    <div class="card"><p class="ct">核心差异点</p><p class="cd">现有 Zabbix / 通用监控以「设备是否在线、指标是否越阈」为主；本工具以<strong>空间维度</strong>和<strong>用户体验维度</strong>为主，回答「哪里信号差、为什么差、改哪个参数」。</p></div>
+    <div class="card"><p class="ct">明确不做</p><p class="cd">不替代专业预测规划软件的完整射线追踪与 3D 建模；不做 802.11 协议栈全量解码（空口抓包仅做证据提取）；不做自动下发变更（只生成可回滚的变更清单，由人审批执行）。</p></div>
+  </div>
+  <div class="note"><strong>设计原则：</strong>数据可追溯（每个热力值都能回查原始样本）、结论可解释（每条故障结论附带证据链与置信度）、变更可回滚（优化建议先仿真对比再出单）、离线可运行（内网无外网环境完整可用）。</div>
+</section>
+
+<section id="s2">
+  <h2><span class="n">02</span> 三大能力域与功能矩阵</h2>
+  <p class="lead">三域共用同一张图纸坐标系与同一份指标字典，形成「观测 → 诊断 → 优化 → 复测」闭环。</p>
+  <table>
+    <thead><tr><th style="width:14%">能力域</th><th style="width:29%">核心功能</th><th style="width:29%">关键输入</th><th style="width:28%">交付物</th></tr></thead>
+    <tbody>
+      <tr><td><strong>A 故障排除</strong><br><span class="tag t-r">诊断</span></td><td>症状 → 证据 → 根因链；五条主症状树；跨层关联（空口 / AP / 交换机端口 / 认证 / DHCP）；时间轴回放；变更前后 A/B 对比</td><td>实时与历史指标、syslog/trap、认证日志、客户端样本、AP 邻接关系</td><td>故障单：根因排序 + 证据快照 + 建议动作 + 置信度</td></tr>
+      <tr><td><strong>B 图纸热力图</strong><br><span class="tag t-b">空间</span></td><td>图纸导入与坐标标定；墙体矢量化与材质衰减标注；多图层叠加；预测 / 实测融合；等值线、盲区标注、AP 覆盖圈</td><td>PDF / PNG / DXF 图纸、AP 位置与射频参数、实测打点 CSV、墙体材质</td><td>8 类热力图、覆盖率统计、验收报告、图层快照</td></tr>
+      <tr><td><strong>C 无线优化</strong><br><span class="tag t-t">决策</span></td><td>信道 / 功率 / 带宽联合规划；2.4G、5G、6G 分频段策略；DFS 约束；漫游参数与负载均衡；优化前后仿真差分</td><td>AP 冲突图、信道利用率、邻居 RSSI、客户端分布、业务 SLA 模板</td><td>变更清单（按 AP 逐条）、预期增益、回滚方案、复测任务</td></tr>
+    </tbody>
+  </table>
+  <h3>闭环工作流</h3>
+  <div class="fig">
+    <svg viewBox="0 0 680 118" role="img"><title>观测诊断优化复测闭环</title><desc>五个阶段从采集到复测形成闭环</desc>
+      <defs><marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <g font-family="sans-serif">
+        <rect x="16" y="30" width="112" height="54" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="72" y="50" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">1 采集</text><text x="72" y="68" text-anchor="middle" font-size="11" fill="#185fa5">API / SNMP / 打点</text>
+        <rect x="152" y="30" width="112" height="54" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="208" y="50" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">2 空间化</text><text x="208" y="68" text-anchor="middle" font-size="11" fill="#185fa5">标定 / 图层 / 热力</text>
+        <rect x="288" y="30" width="112" height="54" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/><text x="344" y="50" text-anchor="middle" font-size="13" font-weight="500" fill="#791f1f">3 诊断</text><text x="344" y="68" text-anchor="middle" font-size="11" fill="#a32d2d">根因链 / 置信度</text>
+        <rect x="424" y="30" width="112" height="54" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/><text x="480" y="50" text-anchor="middle" font-size="13" font-weight="500" fill="#085041">4 优化</text><text x="480" y="68" text-anchor="middle" font-size="11" fill="#0f6e56">规划 / 仿真 / 变更单</text>
+        <rect x="560" y="30" width="104" height="54" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/><text x="612" y="50" text-anchor="middle" font-size="13" font-weight="500" fill="#085041">5 复测</text><text x="612" y="68" text-anchor="middle" font-size="11" fill="#0f6e56">验证增益 / 归档</text>
+        <path d="M130 57 L150 57" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar1)"/><path d="M266 57 L286 57" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar1)"/><path d="M402 57 L422 57" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar1)"/><path d="M538 57 L558 57" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar1)"/>
+        <path d="M612 90 L612 103 Q612 108 607 108 L77 108 Q72 108 72 103 L72 90" fill="none" stroke="#0f6e56" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#ar1)"/><text x="342" y="105" text-anchor="middle" font-size="11" fill="#0f6e56">复测数据回流，更新模型与阈值</text>
+      </g>
+    </svg>
+    <p class="cap">图 1　三域共用数据底座的运维闭环</p>
+  </div>
+</section>
+
+<section id="s3">
+  <h2><span class="n">03</span> 数据来源全景</h2>
+  <p class="lead">用户已确认四类来源全部纳入，并要求覆盖更多场景。下表把「必备」与「扩展」分层，扩展项以插件式接入，避免主链路被小众场景拖累。</p>
+  <h3>3.1 一期必备来源</h3>
+  <table>
+    <thead><tr><th style="width:18%">来源</th><th style="width:24%">采集方式</th><th style="width:30%">关键字段</th><th style="width:28%">主要用途</th></tr></thead>
+    <tbody>
+      <tr><td><strong>AP / WLC 控制器 API</strong><br><span class="tag t-b">主力</span></td><td>各厂商 REST / NETCONF，5–60 s 拉取；只读账号</td><td>AP 名/型号/坐标、射频状态、信道、带宽、发射功率、BSSID、SSID、关联客户端数、信道利用率、噪声底、邻居表、客户端 RSSI/SNR/速率/重传</td><td>实时故障证据、客户端级定位、优化输入</td></tr>
+      <tr><td><strong>SNMP v2c 轮询</strong><br><span class="tag t-b">沿用</span></td><td>复用 NetDeviceUI 自研轮询器，30–300 s；IF-MIB、IEEE 802.11 MIB(1.2.840.10036)、厂商私有 MIB（按现网型号核对 OID）</td><td>接口流量/错包、AP 在线状态、CPU/内存、客户端计数、SSID 状态、PoE 供电、上行交换机端口</td><td>兜底覆盖无 API 的老设备；上行链路与供电类故障关联</td></tr>
+      <tr><td><strong>现场实测打点</strong><br><span class="tag t-a">精度基准</span></td><td>Web/移动端打点或走测记录，CSV 批量导入；含楼层、像素/米坐标、时间戳、终端型号</td><td>RSSI、SNR、噪声、协商 PHY 速率、丢包、重传率、关联 BSSID、漫游事件、业务体验评分</td><td>实测热力图真值、模型校准、验收报告</td></tr>
+      <tr><td><strong>平面图</strong><br><span class="tag t-b">空间底座</span></td><td>PDF → 位图（PyMuPDF）、PNG/JPG 直读、DXF 矢量解析；人工标定控制点与比例尺</td><td>楼层轮廓、房间、墙体线段与材质、AP 图标坐标、指北与比例尺</td><td>坐标配准、传播模型遮挡计算、热力图底图</td></tr>
+    </tbody>
+  </table>
+  <h3>3.2 扩展接入场景（插件式，不限于此）</h3>
+  <div class="grid g3">
+    <div class="card"><p class="ct">空口与射频层</p><ul><li>802.11 空口抓包 PCAP：重传、隐藏节点、认证握手失败、Deauth 风暴</li><li>频谱扫描 / 非 Wi-Fi 干扰源：微波炉、蓝牙、无线摄像头、雷达</li><li>DFS 雷达事件与信道跳变日志</li></ul></div>
+    <div class="card"><p class="ct">网络与认证层</p><ul><li>syslog / SNMP Trap：AP 掉线、CAPWAP 重建、PoE 掉电</li><li>RADIUS / 802.1X 认证日志、DHCP 地址池耗尽</li><li>交换机端口与 VLAN、组播/广播风暴、上行链路瓶颈</li><li>NetFlow / 出口质量（区分空口慢还是外网慢）</li></ul></div>
+    <div class="card"><p class="ct">业务与空间层</p><ul><li>用户投诉工单、CMDB/资产、门禁与人员密度</li><li>BLE/UWB 定位信标辅助客户端位置推断</li><li>多站点、多楼层、室外园区、Mesh 回传链路</li><li>高密场馆、仓储金属货架、冷链、AGV 漫游、医疗语音、临时展会等场景模板</li></ul></div>
+  </div>
+  <div class="warn"><strong>关键取舍：</strong>API 提供「客户端级实时证据」，SNMP 提供「全量兜底与上行关联」，实测打点提供「空间真值」，图纸提供「坐标框架」。四者不可互相替代；缺失任一来源时，引擎应显式降级并在结论中标注数据完整度，而不是静默用估算值冒充实测。</div>
+</section>
+
+<section id="s4">
+  <h2><span class="n">04</span> 总体架构</h2>
+  <p class="lead">单机部署、分层解耦：Windows 主机上运行采集与计算服务，浏览器访问本地 Web UI，全部数据留在内网。</p>
+  <div class="fig">
+    <svg viewBox="0 0 680 336" role="img"><title>无线工具六层架构</title><desc>从采集层到展现层的分层架构与南北向数据流</desc>
+      <g font-family="sans-serif" font-size="12">
+        <rect x="40" y="18" width="600" height="300" rx="18" fill="#f6f7f9" stroke="#cfd5db" stroke-width="0.5"/>
+        <rect x="60" y="38" width="560" height="46" rx="9" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+        <text x="76" y="58" font-size="13" font-weight="500" fill="#0c447c">① 采集层</text><text x="76" y="75" font-size="11" fill="#185fa5">WLC/AP REST · NETCONF · SNMP v2c 轮询器 · CSV 打点导入 · PCAP/syslog/trap · 图纸解析</text>
+        <rect x="60" y="94" width="560" height="42" rx="9" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+        <text x="76" y="112" font-size="13" font-weight="500" fill="#0c447c">② 归一化层</text><text x="76" y="129" font-size="11" fill="#185fa5">厂商适配器 → 统一指标字典 · 单位/时序对齐 · 坐标配准 · 去重去噪 · 数据完整度标记</text>
+        <rect x="60" y="146" width="560" height="42" rx="9" fill="#f1efe8" stroke="#5f5e5a" stroke-width="0.5"/>
+        <text x="76" y="164" font-size="13" font-weight="500" fill="#2c2c2a">③ 存储层</text><text x="76" y="181" font-size="11" fill="#5f5e5a">SQLite（单站点 MVP）/ 时序库（多站点） · 图纸与快照文件 · 指标时序 · 事件与故障单 · 规则库</text>
+        <rect x="60" y="198" width="560" height="52" rx="9" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+        <text x="76" y="217" font-size="13" font-weight="500" fill="#085041">④ 分析引擎</text><text x="76" y="234" font-size="11" fill="#0f6e56">热力图引擎（传播模型 + 插值融合） · 故障推理（规则 + 证据加权） · 优化规划（冲突图 + 搜索）</text><text x="76" y="248" font-size="11" fill="#0f6e56">达标评估 · 差分仿真 · 置信度与误报抑制</text>
+        <rect x="60" y="260" width="560" height="36" rx="9" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/>
+        <text x="76" y="277" font-size="13" font-weight="500" fill="#633806">⑤ 服务层</text><text x="180" y="283" font-size="11" fill="#854f0b">FastAPI · REST + WebSocket 推送 · 任务调度 · 报告导出 · 权限与审计</text>
+        <rect x="60" y="304" width="560" height="0.5" fill="#cfd5db"/>
+        <text x="340" y="330" text-anchor="middle" font-size="11" fill="#4a5158">⑥ 展现层：浏览器本地 Web UI（图纸编辑器 / 热力图层 / 故障面板 / 时间轴 / 优化工单）</text>
+        <path d="M340 85 L340 92" fill="none" stroke="#185fa5" stroke-width="1.2"/><path d="M340 137 L340 144" fill="none" stroke="#185fa5" stroke-width="1.2"/><path d="M340 189 L340 196" fill="none" stroke="#0f6e56" stroke-width="1.2"/><path d="M340 251 L340 258" fill="none" stroke="#0f6e56" stroke-width="1.2"/>
+      </g>
+    </svg>
+    <p class="cap">图 2　六层架构：南北向数据流单向依赖，便于逐层替换</p>
+  </div>
+  <p>部署形态：一台 Windows 主机承载采集服务 + 计算服务 + 静态前端，浏览器访问 <code>127.0.0.1</code>；通过现有 FortiClient VPN 或直连主机可达现网设备。所有外部访问均为<strong>只读</strong>，凭据用 Windows DPAPI 加密存储。若后续要多站点集中，仅需把 ③ 换为集中时序库、把 ① 拆为分布式采集器，上三层不变。</p>
+</section>
+
+<section id="s5">
+  <h2><span class="n">05</span> 数据模型与指标字典</h2>
+  <p class="lead">空间实体与射频指标解耦，指标字典可配置，是「不限于更多场景」的承载点：新场景 = 新 Site 标签 + 新指标项 + 新规则包，不动主程序。</p>
+  <h3>5.1 核心实体</h3>
+  <table>
+    <thead><tr><th style="width:20%">实体</th><th style="width:44%">关键属性</th><th style="width:36%">说明</th></tr></thead>
+    <tbody>
+      <tr><td><code>Site / Building / Floor</code></td><td>站点类型标签（办公/高密/仓储/室外/工业…）、楼层号、层高、比例尺、指北角</td><td>多站点与场景模板的挂载点</td></tr>
+      <tr><td><code>Floorplan / Wall</code></td><td>图纸文件、控制点（像素↔米仿射变换）、墙线段、材质、单墙衰减 dB（按频段）</td><td>传播模型与热力图底图</td></tr>
+      <tr><td><code>AP / Radio</code></td><td>厂商型号、坐标、挂高、天线与朝向、频段、信道、带宽、EIRP、BSSID、SSID、CAPWAP 状态</td><td>2.4G / 5G / 6G 各自成 Radio 记录</td></tr>
+      <tr><td><code>Client / Sample</code></td><td>MAC 脱敏、坐标（实测或推断）、时间、RSSI、SNR、PHY 速率、重传、关联 BSSID、业务标签</td><td>打点真值与客户端级证据</td></tr>
+      <tr><td><code>MetricDef / MetricTS</code></td><td>指标名、单位、来源、采集周期、达标阈值、适用场景标签</td><td>可扩展指标字典 + 时序值</td></tr>
+      <tr><td><code>Incident / Evidence / Rule</code></td><td>症状、时间窗、根因候选、证据引用、置信度、建议动作、处理状态</td><td>故障单与规则库</td></tr>
+      <tr><td><code>ChangePlan / Snapshot</code></td><td>变更前配置快照、逐 AP 变更项、预期增益、回滚项、复测任务</td><td>闭环与回滚</td></tr>
+    </tbody>
+  </table>
+  <h3>5.2 统一指标字典（示例）</h3>
+  <table>
+    <thead><tr><th>指标</th><th>单位</th><th>典型来源</th><th>建议周期</th><th>常用达标线（可按场景模板覆盖）</th></tr></thead>
+    <tbody>
+      <tr><td>RSSI / 接收信号强度</td><td>dBm</td><td>打点、API、PCAP</td><td>按需 / 30 s</td><td>数据 ≥ −70；语音与实时业务 ≥ −67；边缘不低于 −75</td></tr>
+      <tr><td>SNR / 信噪比</td><td>dB</td><td>打点、API</td><td>按需 / 30 s</td><td>≥ 25（语音），≥ 20（普通数据）</td></tr>
+      <tr><td>噪声底 / 非 Wi-Fi 干扰</td><td>dBm</td><td>API、频谱扫描</td><td>60 s</td><td>噪声底 ≤ −90；异常抬升 &gt; 10 dB 触发</td></tr>
+      <tr><td>信道利用率</td><td>%</td><td>API、SNMP</td><td>60 s</td><td>&lt; 50%（忙时），&gt; 70% 判拥塞</td></tr>
+      <tr><td>重传率 / 丢包率</td><td>%</td><td>API、PCAP</td><td>60 s</td><td>&lt; 10%；语音 &lt; 5%</td></tr>
+      <tr><td>协商 PHY 速率</td><td>Mbps</td><td>打点、API</td><td>按需 / 30 s</td><td>按业务模板设定最低可用速率</td></tr>
+      <tr><td>同/邻信道 AP 重叠</td><td>个 / dBm</td><td>API、邻居表</td><td>5 min</td><td>同频可见 AP 的 RSSI 高于 −85 dBm 需评估</td></tr>
+      <tr><td>AP 在线率 / 客户端数</td><td>% / 个</td><td>SNMP、API</td><td>30 s</td><td>在线率 ≥ 99.9%；单射频客户端数按型号阈值</td></tr>
+      <tr><td>漫游切换时延 / 失败率</td><td>ms / %</td><td>PCAP、API、打点</td><td>事件触发</td><td>语音 &lt; 50 ms；失败率 &lt; 1%</td></tr>
+    </tbody>
+  </table>
+  <div class="note">指标字典必须保存<strong>来源标签</strong>与<strong>采样时刻</strong>；热力图上任一格点都要能展开其贡献样本，避免使用估算值冒充实测时无法追溯。MAC 地址默认哈希脱敏展示。</div>
+</section>
+
+<section id="s6">
+  <h2><span class="n">06</span> 热力图引擎（技术核心）</h2>
+  <p class="lead">推荐路线：<strong>传播模型给先验 + 实测打点做残差校正</strong>，而非纯插值。这样在打点稀疏的楼层也能给出合理分布，在打点密集处收敛到实测真值。</p>
+  <h3>6.1 坐标标定与墙体建模</h3>
+  <ol>
+    <li><strong>图纸导入：</strong>PDF 经 PyMuPDF 转高 DPI 位图；DXF 用 ezdxf 提取墙线图层；PNG/JPG 直读。保留原图作为不可变底图。</li>
+    <li><strong>坐标配准：</strong>人工放置 ≥ 3 个控制点（图纸像素 ↔ 实际米坐标），求最小二乘仿射变换；记录比例尺与误差（RMSE），超过阈值提示重标。</li>
+    <li><strong>墙体矢量化：</strong>人工/半自动描墙并标注材质，按频段给出单墙衰减参考值（示例：石膏板 ~3 dB、砖墙 ~6–8 dB、混凝土 ~10–15 dB、金属/玻璃幕墙 ~15 dB+），5G/6G 衰减高于 2.4G；数值可现场用实测打点反演校准。</li>
+    <li><strong>AP 落图：</strong>录入坐标、挂高、天线方向图（先简化为全向 / 定向两档），作为预测模型输入。</li>
+  </ol>
+  <h3>6.2 预测 + 实测融合</h3>
+  <div class="fig">
+    <svg viewBox="0 0 680 154" role="img"><title>热力图融合流程</title><desc>先验模型与实测残差融合生成最终热力图</desc>
+      <defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <g font-family="sans-serif">
+        <rect x="18" y="20" width="146" height="54" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="91" y="41" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">传播先验</text><text x="91" y="59" text-anchor="middle" font-size="11" fill="#185fa5">ITU-R P.1238 / 多墙模型</text>
+        <rect x="18" y="90" width="146" height="50" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="91" y="110" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">实测打点</text><text x="91" y="127" text-anchor="middle" font-size="11" fill="#185fa5">CSV / 走测 / 客户端样本</text>
+        <rect x="206" y="52" width="140" height="52" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/><text x="276" y="72" text-anchor="middle" font-size="13" font-weight="500" fill="#633806">残差计算</text><text x="276" y="90" text-anchor="middle" font-size="11" fill="#854f0b">实测 − 先验，逐点</text>
+        <rect x="386" y="52" width="140" height="52" rx="8" fill="#faeeda" stroke="#854f0b" stroke-width="0.5"/><text x="456" y="72" text-anchor="middle" font-size="13" font-weight="500" fill="#633806">残差场插值</text><text x="456" y="90" text-anchor="middle" font-size="11" fill="#854f0b">IDW / RBF / 克里金</text>
+        <rect x="552" y="52" width="112" height="52" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/><text x="608" y="72" text-anchor="middle" font-size="13" font-weight="500" fill="#085041">最终热力图</text><text x="608" y="90" text-anchor="middle" font-size="11" fill="#0f6e56">先验 + 残差</text>
+        <path d="M166 47 L204 70" fill="none" stroke="#185fa5" stroke-width="1.2" marker-end="url(#ar2)"/><path d="M166 115 L204 86" fill="none" stroke="#185fa5" stroke-width="1.2" marker-end="url(#ar2)"/><path d="M348 78 L384 78" fill="none" stroke="#854f0b" stroke-width="1.2" marker-end="url(#ar2)"/><path d="M528 78 L550 78" fill="none" stroke="#854f0b" stroke-width="1.2" marker-end="url(#ar2)"/><path d="M91 78 L91 88" fill="none" stroke="#185fa5" stroke-width="1.2"/>
+        <text x="340" y="148" text-anchor="middle" font-size="11" fill="#4a5158">打点稀疏时以先验为主，密集时残差主导，天然收敛到实测</text>
+      </g>
+    </svg>
+    <p class="cap">图 3　模型先验与实测残差融合，解决稀疏打点下的热力图失真</p>
+  </div>
+  <h3>6.3 插值算法选型</h3>
+  <table>
+    <thead><tr><th style="width:16%">算法</th><th style="width:28%">适用</th><th style="width:28%">优点</th><th style="width:28%">局限 / 处置</th></tr></thead>
+    <tbody>
+      <tr><td><strong>IDW 反距离加权</strong><br><span class="tag t-g">基线</span></td><td>打点较密、快速出图</td><td>实现简单、计算快、无需调参，结果稳定</td><td>牛眼效应、忽略遮挡；作为 P0 基线与融合残差默认项</td></tr>
+      <tr><td><strong>RBF / 薄板样条</strong></td><td>中等密度、边界平滑</td><td>曲面光滑，等值线美观</td><td>外推易过冲；用墙体做掩膜裁剪</td></tr>
+      <tr><td><strong>普通克里金</strong></td><td>打点密且需不确定度</td><td>给出估计方差，可标注「低置信区域」</td><td>需拟合变差函数，计算较重；P2 引入</td></tr>
+      <tr><td><strong>自然邻域</strong></td><td>边界不规则房间</td><td>不越界外推，适合房间级统计</td><td>需三角剖分；用于分区达标率统计</td></tr>
+      <tr><td><strong>传播模型 + 残差</strong><br><span class="tag t-b">推荐</span></td><td>全场景，尤其打点稀疏</td><td>物理可解释、能跨墙体、支持「未测区域」预测与优化前仿真</td><td>依赖墙体标注质量；用现场打点反演校准衰减参数</td></tr>
+    </tbody>
+  </table>
+  <h3>6.4 图层类型与渲染</h3>
+  <div class="grid g2">
+    <div class="card"><p class="ct">八类热力图层</p><ul><li>RSSI 覆盖（分 AP / 分 SSID / 分频段）</li><li>SNR 与噪声底</li><li>信道利用率与同频干扰</li><li>非 Wi-Fi 干扰强度</li><li>协商 PHY 速率 / 可用带宽</li><li>丢包与重传率</li><li>客户端密度与 AP 负载</li><li>漫游域 / AP 重叠度 / 验收达标率</li></ul></div>
+    <div class="card"><p class="ct">渲染与交互</p><ul><li>0.25–0.5 m 网格，Canvas 2D 起、WebGL 色阶 LUT 提速；marching squares 生成等值线</li><li>色阶：绿=达标 / 黄=边缘 / 红=问题，工程惯例，色谱与阈值均可配置</li><li>图层叠加、透明度、按楼层/时间/SSID/AP 过滤</li><li>时间轴回放、优化前后差分热力图、盲区与问题区域自动圈注</li><li>点击任一格点展开原始样本与来源，支持导出 PNG / PDF 验收报告</li></ul></div>
+  </div>
+  <div class="warn"><strong>精度纪律：</strong>现场打点建议每 3–5 m 一个采样点，墙角、拐角、电梯厅、会议室、AP 正下方加密；预留 15% 样本作 holdout 校验，目标热力图误差 RMSE ≤ 5 dB。图纸未标注墙体时，必须在报告上标注「未考虑遮挡，仅供参考」。</div>
+</section>
+
+<section id="s7">
+  <h2><span class="n">07</span> 故障排除引擎</h2>
+  <p class="lead">采用「症状树 + 可配置规则库 + 多证据加权」，输出根因候选排序而非单一断言，便于人工复核。</p>
+  <h3>7.1 五条主症状树</h3>
+  <table>
+    <thead><tr><th style="width:16%">用户症状</th><th style="width:44%">典型根因链（按排查顺序）</th><th style="width:40%">关键证据</th></tr></thead>
+    <tbody>
+      <tr><td><strong>连不上 / 认证失败</strong></td><td>终端侧 → 802.1X/RADIUS → DHCP 地址池 → SSID/VLAN → AP 射频与 CAPWAP → 控制器</td><td>认证日志、握手 PCAP、地址池使用率、AP 在线状态、BSSID 是否广播</td></tr>
+      <tr><td><strong>网速慢</strong></td><td>低 RSSI/低 SNR → 低速率终端拖累空口 → 同频干扰/高信道利用率 → AP 负载 → 上行端口/出口带宽</td><td>RSSI/SNR、PHY 速率分布、信道利用率、重传率、端口错包、NetFlow</td></tr>
+      <tr><td><strong>频繁掉线</strong></td><td>覆盖空洞 → 功率过高致粘滞 → 漫游参数不当 → DFS 信道跳变 → AP 重启/PoE → 控制器切换</td><td>漫游事件、Deauth 帧、DFS 日志、AP uptime、PoE 状态、trap</td></tr>
+      <tr><td><strong>漫游卡顿 / 语音断续</strong></td><td>重叠区不足 → 802.11k/v/r 未启用 → 邻居表缺失 → 认证重协商过慢 → 频段切换抖动</td><td>切换时延、邻居 RSSI、k/v/r 配置、逐跳打点轨迹</td></tr>
+      <tr><td><strong>局部区域整体差</strong></td><td>遮挡/新隔断 → AP 故障或移位 → 天线朝向 → 信道规划劣化 → 新增干扰源</td><td>差分热力图、墙体变更、AP 坐标与功率、频谱扫描、配置快照对比</td></tr>
+    </tbody>
+  </table>
+  <h3>7.2 规则库示例</h3>
+  <table>
+    <thead><tr><th style="width:10%">ID</th><th style="width:30%">触发条件（同时间窗内）</th><th style="width:24%">结论</th><th style="width:24%">建议动作</th><th style="width:12%">置信度</th></tr></thead>
+    <tbody>
+      <tr><td><code>R-101</code></td><td>区域内打点 RSSI &lt; −75 dBm 且相邻 AP 距离 &gt; 阈值</td><td>覆盖空洞</td><td>评估增设 AP 或调整挂高/朝向，跑一次预测仿真</td><td>高</td></tr>
+      <tr><td><code>R-204</code></td><td>同信道 AP 相互可见 RSSI &gt; −85 dBm 且利用率 &gt; 70%</td><td>同频干扰 / CCI</td><td>重新规划信道或降功率，检查 2.4G 是否只用 1/6/11</td><td>高</td></tr>
+      <tr><td><code>R-217</code></td><td>噪声底抬升 &gt; 10 dB 且无 Wi-Fi 信道占用对应增长</td><td>非 Wi-Fi 干扰</td><td>触发频谱扫描，定位干扰源（微波炉/蓝牙/设备）</td><td>中高</td></tr>
+      <tr><td><code>R-305</code></td><td>客户端 RSSI &lt; −75 仍长期关联远 AP，近处 AP 信号强 15 dB 以上</td><td>粘滞客户端</td><td>启用/校准 802.11k/v、设置最小 RSSI 踢除、复核功率</td><td>高</td></tr>
+      <tr><td><code>R-412</code></td><td>单射频关联客户端数越阈且低速率终端占比高</td><td>空口时间被低速率占用</td><td>提高最小基本速率、启用 Airtime Fairness、评估负载均衡</td><td>中</td></tr>
+      <tr><td><code>R-508</code></td><td>AP 频繁 offline，同期上行交换机端口 PoE/错包异常</td><td>供电或链路问题</td><td>转有线侧排查（复用 NetDeviceUI 既有交换机监控数据）</td><td>中高</td></tr>
+    </tbody>
+  </table>
+  <p>误报控制：规则需 <strong>≥ 2 类独立证据</strong> 且持续 ≥ 2 个采样周期才生成故障单；同类告警合并、维护窗口静默、阈值按场景模板调整。每条结论保留「当时的数据快照」，便于事后复盘与规则调优。</p>
+</section>
+
+<section id="s8">
+  <h2><span class="n">08</span> 无线优化引擎</h2>
+  <p class="lead">输入是 AP 冲突图与实测/预测覆盖，输出是<strong>逐 AP 的变更清单 + 预期增益 + 回滚项</strong>，而非直接下发配置。</p>
+  <div class="grid g2">
+    <div class="card"><p class="ct">信道与带宽规划</p><ul><li>构建 AP 冲突图（共信道可见 + 邻接重叠），转为<strong>图着色问题</strong>：贪心初始解 + 局部搜索/模拟退火迭代，目标为最小化加权同频干扰</li><li>2.4G 限定 1/6/11、20 MHz；5G/6G 按 UNII 与 DFS 约束，权衡 20/40/80/160 MHz：带宽越大速率越高但可用信道越少</li><li>DFS 信道单独标记，结合历史雷达跳变记录决定是否规避</li><li>6E/6GHz（若现网具备）优先引导新终端，缓解 5G 压力</li></ul></div>
+    <div class="card"><p class="ct">功率与覆盖优化</p><ul><li>目标：边缘 RSSI 达标 + 相邻 AP 重叠度约 15–20%，避免功率过大导致粘滞与同频干扰</li><li>以预测模型做「改前 / 改后」差分热力图，量化达标面积变化与盲区变化</li><li>提高最小基本速率（禁用 802.11b 低速率）压缩低速终端空口占用</li><li>输出 AP 增删/移位建议与天线朝向调整建议</li></ul></div>
+    <div class="card"><p class="ct">漫游与负载</p><ul><li>802.11k 邻居表 / 802.11v BSS 过渡 / 802.11r 快速漫游的启用与兼容性检查（注意老旧终端兼容风险）</li><li>最小 RSSI 踢除阈值、Band Steering 策略、AP 间负载均衡阈值</li><li>Airtime Fairness 与组播速率优化，语音业务单独 SLA 模板</li></ul></div>
+    <div class="card"><p class="ct">变更闭环</p><ul><li>变更前自动保存配置快照与当前热力图</li><li>变更清单按 AP / 射频逐条列出，含命令或 API 参数、预期增益、影响范围、回滚项</li><li>变更窗口后自动生成复测打点任务，差分对比验证增益，未达标则提示回滚</li><li>归档为「站点优化档案」，供后续同类场景复用</li></ul></div>
+  </div>
+  <div class="note">与厂商 RRM（自动射频管理）的关系：本工具不替代 RRM，而是<strong>评估与校验</strong> RRM 的结果，或在静态规划场景下给出人工方案。若现网启用 RRM，优化模块应先读取其配置与历史调整记录，避免给出相互冲突的建议。</div>
+</section>
+
+<section id="s9">
+  <h2><span class="n">09</span> 技术选型建议</h2>
+  <table>
+    <thead><tr><th style="width:16%">层次</th><th style="width:36%">建议</th><th style="width:48%">理由与注意</th></tr></thead>
+    <tbody>
+      <tr><td>后端服务</td><td>Python 3.11 + FastAPI，REST + WebSocket，后台任务用 APScheduler</td><td>与现有 NetDeviceUI 的 Windows/Python 交付链一致，PyInstaller 可直接打成单 exe；WebSocket 用于指标刷新与轮询进度</td></tr>
+      <tr><td>SNMP</td><td>复用自研 v2c 轮询器；pysnmp / easysnmp；MIB 编译与 OID 映射表按型号维护</td><td>v2c community 明文，仅限内网只读；批量 GETBULK + 并发控制，避免压垮老设备（C2960 等）</td></tr>
+      <tr><td>控制器适配</td><td>每厂商一个 Adapter（Cisco WLC 9800 / AireOS、FortiGate-FortiAP、Aruba、Ruckus、UniFi、H3C/华为 AC）</td><td>统一出参到指标字典；新厂商只加 Adapter，不动上层。需现网只读账号与接口文档</td></tr>
+      <tr><td>图纸处理</td><td>PyMuPDF（PDF→图）、ezdxf（DXF）、Pillow / OpenCV（配准与矢量化辅助）</td><td>矢量图纸优先保留线图层；位图只做底图，坐标标定靠控制点</td></tr>
+      <tr><td>数值计算</td><td>NumPy / SciPy（griddata、RBFInterpolator、最小二乘）、可选 scikit-learn 实现克里金</td><td>网格规模可控，单机 CPU 足够；避免在 UI 线程做插值，走后台任务 + 缓存图层瓦片</td></tr>
+      <tr><td>存储</td><td>P0 用 SQLite（WAL）+ 本地文件存图纸/快照；规模扩大后接 TimescaleDB 或 InfluxDB</td><td>单站点免运维、备份就是拷文件；时序库仅在多站点/长周期回溯时才引入</td></tr>
+      <tr><td>前端</td><td>Vue 3 + TypeScript；Canvas 2D/WebGL 自绘热力图层；可用 Leaflet + 自定义 CRS 管理缩放平移</td><td>图纸是自定义坐标系，不建议直接用地图库默认投影；色阶 LUT 与等值线自绘更可控</td></tr>
+      <tr><td>打包与运行</td><td>PyInstaller 单 exe + 内嵌静态前端，监听 127.0.0.1；全离线运行</td><td>延续现有 NetDeviceUI 部署习惯；无需外网、无需容器，适合内网与 VPN 环境</td></tr>
+      <tr><td>安全</td><td>凭据 DPAPI 加密、只读账号、RBAC、操作审计、MAC 哈希脱敏、PCAP 自动过滤载荷</td><td>抓包与客户端数据涉及个人信息，默认只存统计量，不留存原始报文载荷</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="s10">
+  <h2><span class="n">10</span> 分期路线图</h2>
+  <p class="lead">按「先看得见、再判得准、后给得出建议」推进，每期都有可独立验收的交付物，便于测试驱动迭代。</p>
+  <div class="timeline">
+    <div class="tl"><p class="tp">P0 · 空间底座与热力图 MVP</p><h4>让图纸上先有热力图</h4><ul><li>数据模型、指标字典、SQLite 存储、图纸导入与控制点标定</li><li>实测 CSV 导入 + IDW 插值 + RSSI/SNR 两类图层 + 等值线与色阶</li><li>AP 落图、楼层切换、格点溯源、快照导出</li><li>验收：用模拟打点数据在一张真实楼层图上出图，坐标误差 &lt; 0.5 m</li></ul></div>
+    <div class="tl"><p class="tp">P1 · 数据接入与故障排查</p><h4>接上现网，能定位问题</h4><ul><li>SNMP v2c 适配器接入既有轮询框架；首个 WLC/AP API 适配器（按现网品牌定）</li><li>墙体标注与传播先验、预测+实测融合热力图、干扰/利用率图层</li><li>规则库 v1（约 20 条）、五条症状树、故障单与时间轴回放</li><li>验收：对 1 个真实故障场景给出带证据链的结论，误报可控</li></ul></div>
+    <div class="tl"><p class="tp">P2 · 多图层分析与优化建议</p><h4>能给出可回滚的优化清单</h4><ul><li>8 类图层补全、客户端密度与漫游域、A/B 差分热力图</li><li>AP 冲突图 + 信道/功率规划、改前改后仿真、变更清单与回滚项</li><li>多厂商 Adapter 扩展、场景模板（高密/仓储/语音）、报告导出（PDF）</li><li>验收：holdout RMSE ≤ 5 dB；优化方案在仿真中达标面积有可量化提升</li></ul></div>
+    <div class="tl"><p class="tp">P3 · 闭环与规模化</p><h4>复测验证、多站点与生态对接</h4><ul><li>复测任务与增益验证、优化档案、规则库自调优（基于处理反馈）</li><li>PCAP / 频谱 / syslog / RADIUS 插件接入；多站点与集中时序库（按需）</li><li>与 NetDeviceUI 有线告警联动、工单系统对接、权限与审计完善</li><li>验收：从「投诉 → 定位 → 变更 → 复测」全流程可在工具内闭环留痕</li></ul></div>
+  </div>
+  <div class="note">P0 可完全用模拟数据跑通，不依赖现网账号权限，因此可以先启动；P1 开始需要开放只读 API / community 与图纸资料，对应第 12 节的开放项。</div>
+</section>
+
+<section id="s11">
+  <h2><span class="n">11</span> 验收指标（KPI）</h2>
+  <table>
+    <thead><tr><th style="width:26%">维度</th><th style="width:40%">指标</th><th style="width:34%">目标</th></tr></thead>
+    <tbody>
+      <tr><td>空间精度</td><td>图纸配准误差 / AP 落图偏差</td><td>&lt; 0.5 m（有可靠比例尺的控制点）</td></tr>
+      <tr><td>热力图精度</td><td>holdout 样本 RSSI 预测 RMSE</td><td>≤ 5 dB（打点密度达标时）</td></tr>
+      <tr><td>采集性能</td><td>轮询周期 / 单轮完成时间 / 设备负载</td><td>API 30–60 s、SNMP 60–300 s；不造成设备 CPU 明显抬升</td></tr>
+      <tr><td>渲染性能</td><td>单层热力图首帧与图层切换</td><td>&lt; 1 s（千级 AP 以下、常规楼层图）</td></tr>
+      <tr><td>诊断质量</td><td>根因 Top-3 命中率 / 误报率</td><td>命中率 ≥ 80%、误报率 &lt; 15%（基于已确认历史故障集）</td></tr>
+      <tr><td>优化有效性</td><td>仿真达标面积提升 / 复测一致性</td><td>目标区域达标率提升可量化，复测与仿真趋势一致</td></tr>
+      <tr><td>可用性</td><td>离线运行、备份恢复、故障恢复</td><td>无外网可用；单文件备份可完整恢复站点数据</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="s12">
+  <h2><span class="n">12</span> 风险与待确认开放项</h2>
+  <div class="grid g2">
+    <div class="card"><p class="ct">技术风险</p><ul><li><strong>厂商差异：</strong>各 WLC API 字段与能力差异大，客户端级 RSSI 未必都能取到；需先做现网能力摸底</li><li><strong>MIB 覆盖：</strong>老型号 AP 的私有 MIB 可能缺失关键指标，只能降级到接口级统计</li><li><strong>墙体信息缺失：</strong>无材质标注时预测模型精度受限，必须显式标注置信度</li><li><strong>SNMP v2c 安全：</strong>community 明文、无认证加密，限定只读 + 内网 + ACL</li><li><strong>数据合规：</strong>客户端 MAC、位置与抓包涉及个人信息，默认脱敏与最小留存</li></ul></div>
+    <div class="card"><p class="ct">需要你确认（影响 P1 排期）</p><ul><li>现网无线品牌/型号与控制器版本清单，是否已部署 6E / 6 GHz</li><li>能否提供只读 API 账号与 SNMP community，以及接口文档/测试环境</li><li>图纸格式与来源（PDF/PNG/DXF）、是否含比例尺与墙体材质信息</li><li>规模：站点数、楼层数、AP 总数、并发客户端数</li><li>现场打点用什么终端、是否允许在工具内做移动端打点</li><li>是否已启用厂商 RRM；优化是否允许人工静态规划</li><li>是否需要与既有 NetDeviceUI 共用同一进程/端口，还是独立 exe</li><li>优先落地的第一个真实故障场景（用于 P1 验证）</li></ul></div>
+  </div>
+</section>
+
+<section id="s13">
+  <h2><span class="n">13</span> 与商业工具的能力对照</h2>
+  <p class="lead">用于明确自研定位：不是复刻专业规划软件，而是补齐「内网可离线、与自有设备台账打通、可持续自动化监测」这一块。</p>
+  <table>
+    <thead><tr><th style="width:22%">类别</th><th style="width:26%">代表工具</th><th style="width:26%">强项</th><th style="width:26%">自研工具的取舍</th></tr></thead>
+    <tbody>
+      <tr><td>专业勘测/预测规划</td><td>Ekahau、Hamina、iBwave</td><td>预测建模、3D 射线追踪、标准化验收报告，精度与体验最好</td><td>不硬碰预测精度；重在<strong>常态化、自动化、可回溯</strong>，且数据留内网</td></tr>
+      <tr><td>轻量勘测</td><td>NetSpot、Wi-Fi Explorer、WiFiMan</td><td>上手快、成本低，适合单点走测</td><td>纳入数据来源之一（可导入其导出数据），不做竞品替代</td></tr>
+      <tr><td>厂商网管</td><td>Cisco DNA Center / Meraki、Aruba Central / AirWave、FortiManager / FortiWLM</td><td>本厂商深度集成、可下发配置、自带 RRM</td><td>做<strong>跨厂商统一视图</strong>与独立校验；不重复实现配置下发</td></tr>
+      <tr><td>开源分析</td><td>Wireshark、Kismet、horst、wavemon</td><td>空口细节与协议分析无可替代</td><td>作为 PCAP / 频谱证据接入，引擎只提取所需特征</td></tr>
+      <tr><td>通用监控</td><td>Zabbix 7.0、现有 NetDeviceUI</td><td>设备可用性与指标告警</td><td>复用其采集与告警底座，补上<strong>空间维度与根因推理</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>结论：</strong>本方案的核心价值不在「画一张更漂亮的热力图」，而在把热力图、故障根因与射频变更串成一条可验证的闭环，并让每一条结论都能回溯到原始证据。技术上最关键的决策是第 6.2 节的「传播先验 + 实测残差」融合路线，它同时解决了稀疏打点失真与优化前仿真两个难题。</div>
+</section>
+
+<section id="s14">
+  <h2><span class="n">14</span> 设备型号库（AP / WLC / 管理平面）设计</h2>
+  <p class="lead">v0.2 新增。本节细化第 3 节采集入口、第 5 节数据模型与第 9 节适配器设计：<strong>型号不是一个文本标签，而是驱动采集、建模、诊断与规划的参数入口</strong>。国内外主流型号必须可选、可检索、可维护、可校验。</p>
+
+  <h3>14.1 设计目标</h3>
+  <div class="grid g2">
+    <div class="card"><p class="ct">选得到</p><ul><li>国内 + 国外主流厂商全覆盖，按厂商 → 系列 → 具体型号三级级联</li><li>支持按 Wi-Fi 世代、频段、形态（吸顶/面板/室外/高密/工业）、国产化属性筛选与全文搜索</li><li>AP 与控制器分开选，再建立关联；未知型号不阻塞使用</li></ul></div>
+    <div class="card"><p class="ct">带得动</p><ul><li>选中型号即自动填充射频能力、PoE、天线、默认功率、适配器、MIB 映射、阈值模板</li><li>兼容性实时校验：AP ↔ 控制器型号 ↔ 软件版本 ↔ 法规域</li><li>能力位驱动功能裁剪：不支持频谱扫描的型号不启用对应干扰规则</li></ul></div>
+  </div>
+
+  <h3>14.2 选择交互与自动填充</h3>
+  <div class="fig">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:stretch">
+      <div style="flex:1;min-width:220px;border:1px solid var(--line2);border-radius:8px;background:#fff;padding:12px 14px">
+        <p style="font-size:12px;color:var(--ink3);margin:0 0 8px">① 三级级联选择</p>
+        <p style="font-size:13px;margin:4px 0"><strong>厂商</strong>　国内：华为 / H3C / 锐捷 / 信锐 …　国外：Cisco / Aruba / Fortinet …</p>
+        <p style="font-size:13px;margin:4px 0"><strong>系列</strong>　AirEngine 5773 · CW917x · FortiAP K · RG-AP9xxx · NAP-3xxx …</p>
+        <p style="font-size:13px;margin:4px 0"><strong>型号</strong>　精确到 SKU，含别名匹配（sysObjectID / API model 字段）</p>
+        <p style="font-size:12px;color:var(--blue);margin:8px 0 0">筛选：Wi-Fi 7 · 三射频 · 6 GHz · 室外 · 仅国产</p>
+      </div>
+      <div style="flex:1;min-width:220px;border:1px solid var(--line2);border-radius:8px;background:#fff;padding:12px 14px">
+        <p style="font-size:12px;color:var(--ink3);margin:0 0 8px">② 选中后自动带出</p>
+        <p style="font-size:13px;margin:4px 0">世代 / 频段 / 带宽 / 空间流 / 天线增益与方向图</p>
+        <p style="font-size:13px;margin:4px 0">默认 EIRP · PoE 标准与功率 · 上行端口 · 法规域</p>
+        <p style="font-size:13px;margin:4px 0"><code>adapter_id</code> · MIB/OID 映射 · 最低控制器版本</p>
+        <p style="font-size:12px;color:var(--teal);margin:8px 0 0">所有字段允许人工覆盖，覆盖值留痕并标注来源</p>
+      </div>
+      <div style="flex:1;min-width:200px;border:1px solid var(--line2);border-radius:8px;background:#fff;padding:12px 14px">
+        <p style="font-size:12px;color:var(--ink3);margin:0 0 8px">③ 关联与校验</p>
+        <p style="font-size:13px;margin:4px 0">绑定所属控制器 / 管理平面记录</p>
+        <p style="font-size:13px;margin:4px 0">版本不满足 → <span class="tag t-a">告警</span>　不兼容 → <span class="tag t-r">阻断</span></p>
+        <p style="font-size:13px;margin:4px 0">未收录 → <span class="tag t-b">通用 SNMP 降级</span></p>
+        <p style="font-size:12px;color:var(--amber);margin:8px 0 0">校验结论可查看依据链接与核对日期</p>
+      </div>
+    </div>
+    <p class="cap">图 4　型号选择器的三段式交互（静态示意）</p>
+  </div>
+
+  <h3>14.3 型号元数据 schema</h3>
+  <table>
+    <thead><tr><th style="width:15%">字段组</th><th style="width:42%">字段</th><th style="width:43%">用途 / 示例</th></tr></thead>
+    <tbody>
+      <tr><td><strong>标识</strong></td><td><code>vendor</code> / <code>origin</code> / <code>family</code> / <code>model</code> / <code>sku_alias[]</code> / <code>device_role</code></td><td>origin 区分国内/国外，支持「仅显示国产型号」；sku_alias 用于把 SNMP <code>sysObjectID</code>、<code>sysDescr</code> 或 API 返回的 model 自动匹配到型号记录</td></tr>
+      <tr><td><strong>射频能力</strong></td><td><code>wifi_gen</code> / <code>bands[]</code> / <code>max_channel_width</code> / <code>spatial_streams</code> / <code>mlo</code> / <code>qam4k</code> / <code>max_eirp</code> / <code>antenna_gain</code> / <code>antenna_pattern</code> / <code>regulatory_domain</code></td><td>驱动第 6 节传播先验与第 8 节规划可行域；例如 6 GHz + 320 MHz 仅 Wi-Fi 7 型号可选，智能天线型号使用不同方向图</td></tr>
+      <tr><td><strong>物理与供电</strong></td><td><code>form_factor</code> / <code>ip_rating</code> / <code>poe_standard</code> / <code>poe_budget_w</code> / <code>uplink</code></td><td>关联第 7 节 PoE/上行链路故障（R-508）；802.3bt 供电不足会导致射频降级，需在校准时排除</td></tr>
+      <tr><td><strong>管理接入</strong></td><td><code>plane_type</code> / <code>adapter_id</code> / <code>api_schema</code> / <code>snmp_mib</code> / <code>sys_object_id</code> / <code>min_controller_version</code> / <code>supported_controller_models[]</code></td><td>决定走 REST/NETCONF 还是 MIB，以及可拉取哪些指标；兼容矩阵的数据来源</td></tr>
+      <tr><td><strong>能力位</strong></td><td><code>client_rssi_api</code> / <code>spectrum_scan</code> / <code>dfs</code> / <code>band_6ghz</code> / <code>dot11kvr</code> / <code>ble</code> / <code>rtls</code> / <code>airtime_fairness</code></td><td>规则库按能力裁剪，避免对不支持的型号给出无效结论；也用于标注报告的数据完整度</td></tr>
+      <tr><td><strong>默认模板</strong></td><td><code>threshold_template</code> / <code>propagation_profile</code> / <code>channel_plan_profile</code></td><td>不同世代/形态用不同 SLA 阈值与传播参数，避免 Wi-Fi 5 老 AP 套用 Wi-Fi 7 阈值</td></tr>
+      <tr><td><strong>治理</strong></td><td><code>source_url</code> / <code>verified_date</code> / <code>catalog_version</code> / <code>user_defined</code> / <code>localization_tag</code> / <code>notes</code></td><td>每条记录可追溯、可复核；超过复核周期提示更新；支持信创/国产化标注</td></tr>
+      <tr><td><strong>生命周期</strong><br><span class="tag t-b">v0.4 新增</span></td><td><code>lifecycle</code> / <code>capability_tier</code> / <code>last_supported_controller_version</code></td><td><code>lifecycle</code> 五态：主流在售 / 存量在用 / EOL 已停产 / 历史品牌 / 预留；<code>capability_tier</code> 三级：A-完整（现代 API + 遥测）/ B-受限（SNMP、仅 2.4+5 GHz）/ C-降级（通用 SNMP v2c + 手工参数 + 实测打点）。老设备最后一版可用控制器固件写入 <code>min_controller_version</code>，参与兼容校验</td></tr>
+    </tbody>
+  </table>
+  <div class="note">对第 5 节数据模型的补充：新增 <code>Controller / ManagementPlane</code> 实体（管理平面类型、型号、软件版本、纳管 AP 清单、兼容矩阵引用），<code>AP / Radio</code> 增加指向型号库的外键。这样 FortiGate 内置控制器、云管理平台与独立 AC 能统一建模，不必硬塞进「WLC」一张表。</div>
+
+  <h3>14.4 管理平面的四种形态（必须支持，不能只建 WLC 表）</h3>
+  <table>
+    <thead><tr><th style="width:18%">形态</th><th style="width:32%">特征</th><th style="width:32%">代表</th><th style="width:18%">本工具接入</th></tr></thead>
+    <tbody>
+      <tr><td><strong>独立硬件 AC</strong></td><td>CAPWAP 隧道，集中或本地转发，射频管理最完整</td><td>Cisco C9800 / CW9800、H3C WX3500H·WX3500X、华为 AirEngine 9703-H·9503-S、锐捷 RG-WS 系列、信锐 NAC 系列、Aruba 9240 + Mobility Conductor、Ruckus SmartZone</td><td>REST/NETCONF + 私有 MIB</td></tr>
+      <tr><td><strong>网关 / 防火墙内置</strong></td><td>没有独立 WLC，由安全网关兼任控制器</td><td><strong>FortiGate 内置 WLAN 控制器（现网 400F 即属此类）</strong>、FortiManager 多站点、FortiLAN Cloud、部分国产融合网关</td><td>网关 API + FortiAP MIB</td></tr>
+      <tr><td><strong>云管理</strong></td><td>无本地控制器，管理面在云端，AP 本地转发</td><td>Aruba Central、Juniper Mist、Meraki Dashboard、ExtremeCloud IQ、华为 iMaster NCE-Campus / CloudCampus、H3C Cloudnet / iMC、锐捷 WIS、信锐 iBrain NMC、UniFi Site Manager</td><td>云 API；<span class="tag t-a">内网约束</span></td></tr>
+      <tr><td><strong>虚拟 / 嵌入式</strong></td><td>虚机、或 AP/交换机内置控制器</td><td>C9800-CL、EWC（AP 或 Catalyst 交换机上）、vSZ-H、Mist Edge、UniFi 自托管 Network Server</td><td>同厂商本地 API</td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>与内网离线约束的冲突：</strong>云管理形态的管理面在公网，而本工具要求全离线内网运行。若现网存在云管 AP，需二选一：① 通过厂商提供的本地/私有化 API 或本地镜像接入；② 降级为 SNMP v2c + 现场打点，并在报告标注「客户端级指标不可用」。这一点应纳入 P1 的现网能力摸底。</div>
+
+  <h3>14.5 主流 + 老旧 / EOL 全量清单</h3>
+  <p class="lead" style="margin-bottom:10px"><strong>全量型号库已导入</strong>（核对日期 2026-11-09，目录 v1.1）：逐 SKU 收录 20 家厂商的 AP、控制器与管理平面共 <strong>993 条</strong>，其中现代在售 372 条、<strong>老旧 / EOL / 存量 615 条</strong>（EOL 已停产 496、存量在用 54、历史品牌 65），Wi-Fi 4 及更早世代 284 条。下表为总体摘要，完整逐条目录见配套文件。</p>
+  <table>
+    <thead><tr><th>总记录</th><th>厂商</th><th>国内</th><th>国外</th><th>AP</th><th>控制器</th><th>云管理</th><th>老旧/EOL</th><th>Wi-Fi4及更早</th><th>Wi-Fi 7</th><th>已核实</th><th>待核对</th><th>预留</th></tr></thead>
+    <tbody><tr><td><strong>993</strong></td><td>20</td><td>376</td><td>615</td><td>753</td><td>209</td><td>29</td><td><strong>615</strong></td><td>284</td><td>74</td><td>701</td><td>286</td><td>6</td></tr></tbody>
+  </table>
+  <div class="grid g2">
+    <div class="card"><p class="ct">生命周期与能力层级</p><ul><li>生命周期：主流在售 372 · 存量在用 54 · EOL 已停产 496 · 历史品牌 65 · 预留 6</li><li>能力层级：A-完整 92 · B-受限 334 · <strong>C-降级 567</strong>（老旧设备主体）</li><li>老旧型号对应 15 个旧管理平面适配器，见 14.9 节</li><li>浏览页可按生命周期、能力层级、世代、核实状态组合筛选并导出筛选结果 CSV</li></ul></div>
+    <div class="card"><p class="ct">四个配套文件（同源，改一处即全同步）</p><ul><li><code>device-model-catalog-v1.1.csv</code>：993 条 × 18 字段，UTF-8 BOM，Excel 可直接打开，<strong>本版正式导入源</strong></li><li><code>device-model-catalog.json</code>：同数据 + 统计信息，供 P0 程序直接 load</li><li><code>device-model-library.html</code>：可搜索、多维筛选并导出 CSV 的浏览页，用来核对「是否全部导入」</li><li><code>build_catalog.py</code>：生成器，修改数据后重跑即刷新上述三份产物</li></ul></div>
+  </div>
+  <div class="warn"><strong>本版文件状态：</strong>原 <code>device-model-catalog.csv</code> 被本地编辑器（Excel / WPS / editor_sdk）独占打开，生成器无法原地覆盖（WinError 5 拒绝访问），因此本版 CSV 输出为 <code>device-model-catalog-v1.1.csv</code>；JSON 与浏览页已原地更新。<strong>关闭占用程序后重跑一次 <code>build_catalog.py</code> 即可把原 CSV 同步为同版数据</strong>。生成器已内置该容错分支，之后遇到文件占用不会再中断。</div>
+  <div class="grid g2">
+    <div class="card"><p class="ct">核实状态（数据诚实性）</p><ul><li><span class="tag t-g">已核实 701</span>　来自厂商官网、官方兼容矩阵、EOL 公告与旧版发行说明（Cisco AireOS 建议版本、Ruckus EoS 表、Fortinet EOL 与 FortiOS 兼容说明、Meraki EOL 清单、Ubiquiti Vintage &amp; Legacy 清单、锐捷 AC-AP 兼容列表、华为/H3C/Aruba 官方产品列表等）</li><li><span class="tag t-a">待核对 286</span>　按公开目录与历史资料整理，具体 SKU、地区变体、停产日期与兼容关系需按现网铭牌确认</li><li><span class="tag t-b">预留 6</span>　厂商占位与通用降级档案</li><li>每条记录带 <code>verified_date</code> 与来源说明，不允许把待核对 SKU 当作已确认事实使用</li></ul></div>
+    <div class="card"><p class="ct">边界说明</p><ul><li>「全部导入」指覆盖国内外主流厂商的公开产品线与主要历史产品线，不等于穷举所有 SKU 与地区版本</li><li>同一型号常有管制域后缀（-A / -B / -E / -CN）、Fat/Fit 变体、面板/外置天线变体与硬件修订版（V1/V2），老设备尤其常见</li><li>老旧型号的停产日期与固件上限以厂商公告为准，现场实测结果可覆盖；正式上线前必须按现网采购清单与铭牌做一次核对</li><li>这也是 14.8 节保留「用户自建型号 + 未收录降级」机制的原因</li></ul></div>
+  </div>
+  <h4>国内厂商</h4>
+  <table>
+    <thead><tr><th style="width:13%">厂商</th><th style="width:31%">AP 型号 / 系列示例</th><th style="width:31%">控制器 / 管理平面示例</th><th style="width:25%">世代与备注</th></tr></thead>
+    <tbody>
+      <tr><td><strong>华为</strong></td><td>AirEngine 5762-12、5773-22P、6776-56TP、8776-X6THP；5760 / 6760 / 8760 系列</td><td>AirEngine 9703-H、9503-S、9701-L-T、AC6508、AC6805；iMaster NCE-Campus / CloudCampus</td><td>Wi-Fi 6 / 7；9703-H 可管 20480 AP，8776-X6THP 为 12 流旗舰</td></tr>
+      <tr><td><strong>新华三 H3C</strong></td><td>WA7539（Wi-Fi 7 三射频）、WA7xxx 系列；WA6xxx（Wi-Fi 6）；UAP612MG-AX30 面板</td><td>WX3500H 系列（WX3508H / 3510H / 3520H / 3540H）、WX3500X 系列（WX3510X / 3520X / 3540X）、WX5500X / WX6500X；iMC / Cloudnet / AD-Campus</td><td>Wi-Fi 6 / 7；<span class="tag t-a">兼容资料存在差异，须核对</span>（见 14.6）</td></tr>
+      <tr><td><strong>锐捷</strong></td><td>RG-AP9520-RDX、9850-R、9861-R、9751-R（高密）；RG-AP900-A、9220(V2)、840-AR、820-A(V3)；RG-AP690-A(V2) / 690D-A(V2) 室外；RG-MAP920-SF-M 行星 AP</td><td>RG-WS7228-A（320 AP）、WS7224-A（160 AP）、WS7208-A / 7204-A / 7005-A(V2)、WS6816C / 7880；RG-WIS 云管理</td><td>Wi-Fi 6 / 7；面板、室外、一机一网远端模块形态齐全</td></tr>
+      <tr><td><strong>信锐 Sundray</strong></td><td>Turbo Sense Wi-Fi 7：NAP-5737(SR)、3927(SR)、3827(SR)、3827PF(SR)；Wi-Fi 6：NAP-3600 / 3700 / 5600 等</td><td>NAC-6100 / 6200 / 6300 / 6600 / 7100 / 7200 / 7300 / 7600；超体 XAC / SAC-1000 / CAC-2000；iBrain NMC</td><td>Wi-Fi 6 / 7；国产化政企、医疗与制造场景常见</td></tr>
+      <tr><td><strong>TP-LINK 商用</strong></td><td>TL-AP 系列吸顶 / 面板 AP</td><td>TL-AC200 / AC500 / AC1000 / AC10000 无线控制器；商用云平台</td><td>中小园区与连锁门店，功能以基础覆盖为主</td></tr>
+      <tr><td><strong>中兴等其他</strong></td><td>按现网清单补录</td><td>按现网清单补录</td><td>预留厂商位，型号留空由用户自建</td></tr>
+    </tbody>
+  </table>
+  <h4>国外厂商</h4>
+  <table>
+    <thead><tr><th style="width:13%">厂商</th><th style="width:31%">AP 型号 / 系列示例</th><th style="width:31%">控制器 / 管理平面示例</th><th style="width:25%">世代与备注</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Cisco</strong></td><td>Catalyst 9105AX / 9115AX / 9120AX / 9130AX / 9136；9162 / 9164 / 9166（6E）；<strong>CW9171 / 9172 / 9174 / 9176 / 9178 / 9179（Wi-Fi 7）</strong>；9124AX、IW9165 / 9167 室外工业</td><td>C9800-L / -40 / -80 / -CL、<strong>CW9800L / M / H1 / H2</strong>、EWC（AP 或交换机内置）；Catalyst Center</td><td>Wi-Fi 6 / 6E / 7；917x 需 IOS XE 17.15+，当前推荐 17.18.4a</td></tr>
+      <tr><td><strong>Cisco Meraki</strong></td><td>MR36 / 44 / 46 / 56、MR57 / MR58 等</td><td>Meraki Dashboard（纯云管理）</td><td>Wi-Fi 6 / 6E / 7；云依赖，需评估内网可达性</td></tr>
+      <tr><td><strong>HPE Aruba Networking</strong></td><td>AP-635 / 655 / 577（6E）；<strong>AP-730 / 740 / 750 / 755（Wi-Fi 7）</strong></td><td>Aruba Central（AOS 10）、9240 Mobility Controller + Mobility Conductor、AOS 8；ClearPass（认证联动）</td><td>Wi-Fi 6E / 7；云管与本地控制器两种形态并存</td></tr>
+      <tr><td><strong>Fortinet</strong></td><td>FortiAP F 系列（FAP-231F / 431F / 433F / 831F / 432F / 23JF，Wi-Fi 6）；G 系列（231G / 233G / 431G / 433G / 234G / 432G / 432FR，6E）；<strong>K 系列（231K / 241K / 243K / 441K / 443K，Wi-Fi 7）</strong></td><td><strong>FortiGate 内置 WLAN 控制器（含 400F 级别）</strong>、FortiManager、FortiLAN Cloud、FortiWLM / FortiPresence</td><td>Wi-Fi 6 / 6E / 7；与现网 Fortinet 设备天然同源，建议优先适配</td></tr>
+      <tr><td><strong>Juniper Mist</strong></td><td>AP43 / AP45（6E）；<strong>AP47 / AP67（Wi-Fi 7）</strong></td><td>Mist Cloud + Marvis AI、Mist Edge（本地数据面）</td><td>Wi-Fi 6E / 7；纯云管理，SLE 与 vBLE 定位能力强</td></tr>
+      <tr><td><strong>Ruckus (CommScope)</strong></td><td>R350 / 550 / 650 / 750 / 850、R760（6E）、<strong>R770 / T870（Wi-Fi 7）</strong></td><td>SmartZone 144 / vSZ-H、ZoneDirector、Ruckus Cloud / Ruckus One</td><td>Wi-Fi 6 / 6E / 7；高密与场馆场景常见</td></tr>
+      <tr><td><strong>Extreme Networks</strong></td><td>AP305C / 410C / 460C、<strong>AP5050（Wi-Fi 7）</strong></td><td>ExtremeCloud IQ / ExtremeCloud IQ Controller</td><td>Wi-Fi 6 / 6E / 7；有线无线一体化管理</td></tr>
+      <tr><td><strong>Ubiquiti UniFi</strong></td><td>U6 Pro / LR / Enterprise；<strong>U7 Lite / Pro / Pro Max / Pro XG / Pro XGS / Long-Range / Outdoor / In-Wall / Industrial、E7 / E7 Campus</strong></td><td>UniFi Network（自托管或云）、Site Manager</td><td>Wi-Fi 6E / 7；成本敏感与分支场景，可做自托管离线</td></tr>
+      <tr><td><strong>Arista / Cambium 等</strong></td><td>C-360 / C-460、XV2 / XV3 等</td><td>CloudVision、cnMaestro</td><td>新进入或细分场景，预留扩展位</td></tr>
+    </tbody>
+  </table>
+
+  <h3>14.6 兼容矩阵与版本校验（不是可选项）</h3>
+  <table>
+    <thead><tr><th style="width:20%">约束</th><th style="width:44%">实例</th><th style="width:36%">工具行为</th></tr></thead>
+    <tbody>
+      <tr><td>AP ↔ 软件版本</td><td>Cisco IOS XE 17.15.2 起才支持 CW9176I / CW9176D1 / CW9178I 等 Wi-Fi 7 AP 与 MLO；17.18.3 兼容矩阵列出 9171 / 9172 / 9174 / 9176 / 9178 / 9179；官方当前推荐 17.18.4a</td><td>型号记录写入 <code>min_controller_version</code>；录入时读取控制器实际版本，低于阈值给出告警并禁用 6 GHz / MLO 相关图层</td></tr>
+      <tr><td>AP ↔ 控制器型号</td><td>H3C 官网 WX3500H 产品页标注「可管理 Wi-Fi 7 AP」，而厂商社区答复称 WX3500H 仅到 Wi-Fi 6、需 WX3500X 系列配合 WA7xxx</td><td>资料存在差异时<strong>不静默判定</strong>：标注双方来源与核对日期，提供「以现场实测结果覆盖」开关，覆盖值留痕；这是型号库必须带 <code>source_url + verified_date</code> 的直接理由</td></tr>
+      <tr><td>控制器形态 ↔ 外键</td><td>FortiAP 由 FortiGate 管理时，「控制器」实为 FortiGate 型号 + FortiOS 版本；云管 AP 无本地控制器实体</td><td>AP 外键指向 <code>ManagementPlane</code> 记录而非 WLC 表；云管形态额外记录可达性与降级策略</td></tr>
+      <tr><td>型号 ↔ 法规域</td><td>6 GHz / DFS 信道、最大 EIRP、320 MHz 带宽随国家码与 AFC/标准功率规则变化</td><td><code>regulatory_domain</code> 参与第 8 节规划可行域计算，禁止给出本地区不合法的信道与功率组合</td></tr>
+      <tr><td>老设备 ↔ 控制器固件上限<br><span class="tag t-b">v0.4 新增</span></td><td>Cisco AireOS 8.5 是 1600/2600/3500/3600 与 2504/5508/8510/WiSM2 的末版；FortiOS 8.0.0 起不再支持 FortiAP C 系列与 U/W2 E 系列；Ruckus ZD1100 最高 9.10 且无 legacy 兼容模式；锐捷 WS3302/WS5302 止于 11.1(5)B8</td><td>型号库 <code>min_controller_version</code> 增加反向语义「固件上限」：读取到更高的控制器版本时，不是告警而是<strong>判定该老 AP 不可能在线</strong>，转而按离线设备处理并提示替换；详见 14.9 节</td></tr>
+    </tbody>
+  </table>
+
+  <h3>14.7 型号库驱动的下游能力</h3>
+  <table>
+    <thead><tr><th style="width:22%">下游模块</th><th style="width:34%">使用的字段</th><th style="width:44%">影响</th></tr></thead>
+    <tbody>
+      <tr><td>采集适配器路由（§3/§9）</td><td><code>adapter_id</code> / <code>api_schema</code> / <code>snmp_mib</code> / <code>sys_object_id</code></td><td>决定走 REST/NETCONF 还是 MIB，以及可拉取的指标集合；新厂商只加 Adapter + 型号记录，不动主程序</td></tr>
+      <tr><td>指标字典绑定（§5）</td><td><code>capability_flags</code> / <code>snmp_mib</code></td><td>老型号无客户端级 RSSI 时自动降级，并在报告标注数据完整度，避免用估算冒充实测</td></tr>
+      <tr><td>传播先验（§6）</td><td><code>antenna_gain</code> / <code>antenna_pattern</code> / <code>default_tx_power</code> / <code>bands</code></td><td>决定热力图预测模型的初始场；智能天线与定向天线使用不同方向图，直接用错会系统性偏差数 dB</td></tr>
+      <tr><td>优化可行域（§8）</td><td><code>max_eirp</code> / <code>max_channel_width</code> / <code>dfs</code> / <code>band_6ghz</code> / <code>regulatory_domain</code></td><td>信道/功率规划只在不违反硬件与法规的集合中搜索，防止给出无法下发的建议</td></tr>
+      <tr><td>故障规则库（§7）</td><td><code>spectrum_scan</code> / <code>poe_budget_w</code> / <code>dot11kvr</code></td><td>按能力裁剪规则；如型号无频谱扫描则不触发 R-217，PoE 预算用于供电类根因判定</td></tr>
+      <tr><td>阈值与选型合规（§11/§12）</td><td><code>wifi_gen</code> / <code>form_factor</code> / <code>origin</code> / <code>localization_tag</code></td><td>按世代与场景套用 SLA 模板；支持「仅国产型号」过滤以满足信创/国产化要求</td></tr>
+    </tbody>
+  </table>
+
+  <h3>14.8 维护与降级机制</h3>
+  <div class="grid g2">
+    <div class="card"><p class="ct">可维护</p><ul><li>内置基线库随工具版本发布，带 <code>catalog_version</code> 与核对日期</li><li>用户可增删改、从现有型号克隆为自定义型号，所有改动留痕</li><li>CSV 导入/导出，便于批量维护与跨站点复用（配套文件 <code>device-model-catalog.csv</code>）</li><li>超过复核周期的记录在界面提示「待核对」，不自动删除</li></ul></div>
+    <div class="card"><p class="ct">不阻塞</p><ul><li>自动识别：用 SNMP <code>sysObjectID</code> / <code>sysDescr</code> 或 API 的 model 字段匹配 <code>sku_alias</code></li><li>未收录型号 → 降级为「通用 SNMP v2c + 手工录入射频参数」，标记 <code>data_completeness</code></li><li>降级状态下热力图与故障单仍可用，但报告显式标注「型号未收录，精度受限」</li><li>现场实测结果可反写型号参数，逐步把通用档案校准为正式型号</li></ul></div>
+  </div>
+  <div class="note"><strong>落地优先级建议：</strong>结合现网已有多厂商设备（Cisco 交换机/防火墙、Fortinet 400F），P1 适配器建议先做 <strong>FortiGate 内置控制器 + Cisco 9800/CW9800</strong> 两条，其余厂商按基线库逐步扩展；型号库本身在 P0 就要建好，因为 P0 的预测热力图已需要天线增益、默认功率与频段这些字段。</div>
+
+  <h3>14.9 老旧 / EOL 型号的支持策略（v0.4 新增）</h3>
+  <p class="lead">园区无线最常见的故障源恰恰是 Wi-Fi 4/5 时代的老 AP 与旧控制器：厂商已停止固件维护、私有 MIB 与现代 API 不通用、控制器软件版本被锁死。若型号库只收在售型号，这些设备会被当成「未收录」而统一降级，既丢掉仍可用的 SNMP 证据，也会把 2.4 GHz 单频设备套进 6 GHz 规划逻辑。因此老旧型号必须<strong>逐 SKU 入库并带生命周期标签</strong>。</p>
+
+  <h4>14.9.1 五态生命周期与三级能力</h4>
+  <table>
+    <thead><tr><th style="width:18%">lifecycle</th><th style="width:24%">判定依据</th><th style="width:18%">capability_tier</th><th style="width:40%">工具行为</th></tr></thead>
+    <tbody>
+      <tr><td>主流在售</td><td>厂商当前产品线</td><td>A-完整 / B-受限</td><td>走现代 REST / NETCONF + 遥测，全图层可用</td></tr>
+      <tr><td>存量在用</td><td>非主推但现网常见</td><td>B-受限</td><td>厂商适配器可用，按能力位裁剪；阈值使用 Wi-Fi 5/6 模板</td></tr>
+      <tr><td><strong>EOL 已停产</strong></td><td>厂商 EOL 公告 / 兼容矩阵</td><td>C-降级</td><td>旧管理平面 SNMP v2c + 私有 MIB；客户端级指标缺失时以实测打点补；报告标注数据完整度与 EOL 安全风险</td></tr>
+      <tr><td>历史品牌</td><td>已被收购或退市（Aerohive / Meru / Symbol-Zebra）</td><td>C-降级</td><td>仅按 <code>sysObjectID</code> / 铭牌识别，走通用 SNMP v2c；不假设云管或现代 API</td></tr>
+      <tr><td>预留</td><td>占位 / 未识别铭牌</td><td>C-降级</td><td>通用档案 + 手工射频参数，不阻塞热力图与故障单</td></tr>
+    </tbody>
+  </table>
+
+  <h4>14.9.2 旧管理平面适配器（15 个）</h4>
+  <table>
+    <thead><tr><th style="width:30%">adapter_id</th><th style="width:28%">对应管理平面</th><th style="width:42%">接入要点与硬约束</th></tr></thead>
+    <tbody>
+      <tr><td><code>aireos_snmp_v2c</code><br><code>autonomous_ap_snmp_v2c</code></td><td>Cisco AireOS WLC / 自主 AP</td><td>AIRESPACE-WIRELESS-MIB、CISCO-LWAPP-AP-MIB；AireOS 8.5 是 1600/2600/3500/3600 与 2504/5508/8510/WiSM2 的末版；9800 仅收 1700/2700/3700/1570/IW3700 等 Wave1 与部分 Wave2 型号，其余老 AP 必须走 AireOS</td></tr>
+      <tr><td><code>aruba_aos6_snmp_v2c</code></td><td>Aruba AOS 6.x / Instant</td><td>老 AP 固件上限不一致（AP-92/93 与 AP-68 ≤ 8.1，AP-124/125 ≤ 6.4）；Campus AP 与 Instant AP 走不同 MIB 分支</td></tr>
+      <tr><td><code>fortigate_wlc_legacy</code></td><td>FortiGate 内置控制器（FortiOS 5.x / 6.x / 7.2）</td><td>FAP-321C 固件上限 6.0.6，FortiOS 7.4+ 不再支持；FortiOS 8.0.0 起不再支持 C 系列与 U / W2 的 E 系列（仅 221E/223E/421E/423E 保留）</td></tr>
+      <tr><td><code>ruckus_zonedirector</code></td><td>ZoneDirector 1000 / 1100 / 3000 / 5000、SCG200</td><td>ZD 与 AP 必须同版本且无 legacy 兼容模式；9.8.3.0.58 是 7962/7762/7025 的最后推荐版，9.9 后不支持 7962/7762，9.10 后不支持 7025；ZD1100 最高 9.10</td></tr>
+      <tr><td><code>huawei_ac_v2r5</code><br><code>h3c_wx_legacy</code><br><code>ruijie_ws_legacy</code></td><td>华为 AC6605/AC6005 旧分支、H3C WX/WAC/MSG360、锐捷 WS5 旧 AC</td><td>私有 MIB + 旧软件分支；华为 AC6605 V200R005C10 + AP6010DN 已停产停供且新 AirEngine 不再兼容；锐捷 WS3302/WS5302 止于 11.1(5)B8，无法管理 2016 年后 B9+ 新品 AP，其余 WS5 旧 AC 对新品 AP 限 100 license</td></tr>
+      <tr><td><code>meraki_dashboard_legacy</code><br><code>unifi_controller_legacy</code></td><td>Meraki Dashboard、UniFi Network 5.x</td><td>Meraki 老 MR 固件冻结（MR16/MR24 止于 2021-05-31、MR34 2023-10-31、MR42/52/53/84 2026-07-21）；Ubiquiti 第一代 UAP 于 2021-03 停止更新，新版 UniFi Network 不再纳管；云管形态在内网离线约束下需本地化或降级</td></tr>
+      <tr><td><code>aerohive_hivemanager</code><br><code>extreme_wing_snmp_v2c</code><br><code>meru_systemdirector</code></td><td>HiveManager、WiNG / RFS、System Director</td><td>收购后已并入 ExtremeCloud IQ / FortiWLC，但现网旧设备仍可能跑旧控制器；仅做识别与通用 SNMP，不投入专用适配器</td></tr>
+      <tr><td><code>cambium_cnmaestro_onprem</code><br><code>tplink_ac_legacy</code><br><code>generic_snmp_v2c</code></td><td>cnMaestro 本地版、TL-AC 旧版、未知铭牌</td><td>内网离线优先；无法识别时回落到通用档案 + 手工参数，仍可出热力图与故障单</td></tr>
+    </tbody>
+  </table>
+
+  <h4>14.9.3 能力降级对三大能力域的影响</h4>
+  <table>
+    <thead><tr><th style="width:20%">能力域</th><th style="width:38%">老设备缺失的数据</th><th style="width:42%">降级策略</th></tr></thead>
+    <tbody>
+      <tr><td>图纸热力图（§6）</td><td>客户端级 RSSI / SNR、天线方向图、实时发射功率、6 GHz 射频</td><td>传播先验按 Wi-Fi 4/5 参数与全向天线模板初始化，靠现场实测打点做残差校正；2.4 GHz 单频设备只渲染 2.4 GHz 图层，禁止输出 5/6 GHz 覆盖结论；低置信区域显式标注</td></tr>
+      <tr><td>故障排除（§7）</td><td>频谱扫描、DFS 事件、802.11k/v/r、客户端漫游轨迹、PoE 明细</td><td>按 <code>capability_tier</code> 裁剪规则库：无频谱扫描不触发干扰类规则，无 k/v/r 不出漫游类根因，改用「低速率 / 重传 / 2.4 GHz 同频干扰 / 单 AP 负载 / PoE 供电」等可由 SNMP 与打点支撑的证据链</td></tr>
+      <tr><td>无线优化（§8）</td><td>6 GHz 与 320 MHz、MLO、4K-QAM、RRM 遥测</td><td>信道规划可行域收敛到 2.4 GHz 的 1/6/11 与 5 GHz 非 DFS 子集；功率优化以不扩大同频重叠为约束；802.11k/v/r 与负载均衡建议仅对支持型号输出；变更清单仍带预期增益、回滚项与复测任务</td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>EOL 设备不是「性能差一点」，而是不可修复的风险敞口：</strong>厂商停止固件与安全补丁后，WPA2 / 802.1X 相关漏洞长期无法修补；部分旧控制器（AireOS 8.5、ZoneDirector 9.10、RGOS 11.1(5)B8、FortiOS 6.x）已无法升级。工具应在故障报告与优化报告中<strong>单独生成「EOL 资产清单 + 替换优先级」</strong>，按「仍在承载关键业务 / 无备件 / 控制器已锁死版本 / 与现网新 AP 混管」四项加权排序，但<strong>不自动下发任何配置</strong>。</div>
+
+  <h4>14.9.4 落地顺序</h4>
+  <div class="grid g2">
+    <div class="card"><p class="ct">P0 就要做</p><ul><li>型号库带 <code>lifecycle</code> 与 <code>capability_tier</code>，浏览页可按老旧程度筛选</li><li>传播先验按世代分模板（Wi-Fi 4/5 与 Wi-Fi 6/7 不共用天线与功率默认值）</li><li>降级档案与实测打点入口打通，保证无 API 也能出热力图</li></ul></div>
+    <div class="card"><p class="ct">P1 按现网清单排序</p><ul><li>先做现网实际在用的旧管理平面（结合已有 Fortinet 400F：优先 FortiOS 旧分支兼容校验 + Cisco AireOS/9800 双体系）</li><li>逐条核对现网老 AP 的控制器型号与软件版本，确认固件上限</li><li>其余历史品牌只做识别与通用 SNMP，不投入专用适配器</li></ul></div>
+  </div>
+  <div class="note"><strong>与第 12 节风险项的衔接：</strong>型号库中的 286 条「待核对」记录与 65 条「历史品牌」记录，不属于可直接用于自动决策的事实；上线前必须由现场铭牌与控制器读数确认。所有 EOL 判定都保留来源与核对日期，允许现场实测覆盖，覆盖值留痕。</div>
+</section>
+
+<!-- ==================== 15 ==================== -->
+<section id="s15">
+  <h2><span class="n">15</span> SSID 全局维度与热力图实时重算（v0.7）</h2>
+  <p class="lead">来自 P0 原型试用反馈的两处缺口：现场排障是以「某个 SSID」为单位进行的，而图纸热力图在移动 AP 后没有重绘。前者是功能缺失，后者是交互缺陷，两者都直接影响结论可信度，因此单独成节说明设计与验证。</p>
+
+  <h3>15.1 为什么 SSID 必须是一等数据，而不是一个显示标签</h3>
+  <div class="note">同一个楼层、同一批 AP，往往同时广播员工、访客、语音、IoT、AGV 等多个 SSID，各自绑定不同 AP 组、频段、VLAN、认证方式与接入门限。<strong>如果热力图只算「所有 AP 的物理覆盖」，就无法回答「语音终端在这个角落能不能用」这类真实问题</strong>：Voice SSID 只在 5 GHz 的 5 台 AP 上广播，物理上有 2.4 GHz 信号不等于语音可用。因此 SSID 必须作为贯穿全工具的全局分析维度参与计算，而不是给报告加个标题。</div>
+
+  <h3>15.2 SSID 数据模型</h3>
+  <table>
+    <thead><tr><th>字段</th><th>含义</th><th>下游作用</th></tr></thead>
+    <tbody>
+      <tr><td><code>id</code> / <code>name</code> / <code>purpose</code></td><td>唯一标识、SSID 名、业务用途</td><td>全局下拉与项目文件引用；实测打点归属</td></tr>
+      <tr><td><code>ap_ids</code></td><td>广播该 SSID 的 AP 集合（空 = 所有 AP）</td><td>热力图只对这些 AP 求传播；干扰分析只统计这些 AP 的同信道冲突；AP 列表标注「本 SSID / 不广播」</td></tr>
+      <tr><td><code>band</code></td><td>双频 / 2.4 / 5 / 6</td><td>锁定 BAND_PARAM 传播参数（PL₀ 与路径损耗指数）；单频 SSID 会禁用频段下拉并提示锁定原因</td></tr>
+      <tr><td><code>min_rssi</code></td><td>最小接入 RSSI（覆盖达标门限）</td><td>替代默认 −67 dBm 计算覆盖达标率与盲区，语音类 −67、IoT 类 −75 与办公类 −70 得到不同结论</td></tr>
+      <tr><td><code>vlan</code> / <code>security</code> / <code>broadcast</code> / <code>enabled</code></td><td>网络与认证属性</td><td>终端表展示、诊断结论的核查提示（认证 / VLAN / 广播配置）；停用 SSID 不产生覆盖</td></tr>
+      <tr><td><code>max_clients</code> / <code>note</code></td><td>容量上限与运维备注</td><td>负载类规则与优化约束</td></tr>
+    </tbody>
+  </table>
+  <p class="lead" style="margin:10px 0 6px">P0 内置 5 个可直接选择的基线 SSID（可增删改、持久化到本地 <code>ssids.json</code>）：</p>
+  <table>
+    <thead><tr><th>SSID</th><th>用途</th><th>频段</th><th>AP 绑定</th><th>VLAN</th><th>门限</th><th>典型约束</th></tr></thead>
+    <tbody>
+      <tr><td><b>Corp-Staff</b></td><td>员工办公</td><td>双频</td><td>全部 AP</td><td>20</td><td>−70 dBm</td><td>覆盖评估基线，802.1X</td></tr>
+      <tr><td><b>Guest-Portal</b></td><td>访客上网</td><td>双频</td><td>全部 AP</td><td>90</td><td>−72 dBm</td><td>Portal 认证，建议客户端隔离</td></tr>
+      <tr><td><b>Voice-VoWiFi</b></td><td>语音 / IP 话机</td><td>5 GHz</td><td>5 台</td><td>30</td><td>−67 dBm</td><td>需 802.11k/v/r + WMM/DSCP EF</td></tr>
+      <tr><td><b>IoT-Sensor</b></td><td>物联网 / 扫码枪</td><td>2.4 GHz</td><td>5 台</td><td>60</td><td>−75 dBm</td><td>隐藏 SSID，低速终端需限制速率集</td></tr>
+      <tr><td><b>AGV-Prod</b></td><td>AGV / 产线漫游</td><td>5 GHz</td><td>5 台</td><td>50</td><td>−67 dBm</td><td>快速漫游，保障重叠区与最小接入 RSSI</td></tr>
+    </tbody>
+  </table>
+
+  <h3>15.3 联动矩阵（切换 SSID 后自动生效）</h3>
+  <table>
+    <thead><tr><th>模块</th><th>联动行为</th></tr></thead>
+    <tbody>
+      <tr><td>图纸热力图</td><td>按 <code>ap_ids</code> 过滤参与计算的 AP、按 <code>band</code> 换传播参数、按 <code>min_rssi</code> 判定覆盖达标；带 SSID 标签的实测打点只用于对应 SSID；<strong>立即按完整模型重算一次</strong></td></tr>
+      <tr><td>干扰分析</td><td>只统计该 SSID 生效 AP 的同信道冲突对与 2.4G/5G 频谱占用；信道重规划建议也只针对这些 AP</td></tr>
+      <tr><td>现场连接</td><td>终端带 <code>ssid</code> / <code>ssid_id</code> / <code>vlan</code>，默认筛选当前 SSID；SSID 配置页按现场快照输出各 SSID 的终端数、健康率、平均 RSSI/SNR</td></tr>
+      <tr><td>故障排查</td><td>请求携带 <code>ssid_id</code>，结论文字明确当前分析对象，并提示核对「该 SSID 的广播 / 认证 / VLAN 配置」，避免把配置类问题误判为射频问题</td></tr>
+      <tr><td>项目文件</td><td>保存时写入 <code>ssid_id</code>，加载时自动还原分析对象；项目频段与 SSID 锁定频段冲突时以 SSID 为准</td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>边界：</strong>P0 的 SSID 与终端归属均为模拟配置，不读取真实 WLC 的 WLAN Profile。P1 接现网时，这些字段可直接映射 <code>WLAN Profile / AP Group / SSID Profile</code> 与控制器客户端表，前端无需改动；但「某 AP 是否广播某 SSID」必须以控制器实读为准，不能只依赖命名推断。</div>
+
+  <h3>15.4 热力图实时重算机制（缺陷修复）</h3>
+  <p class="lead" style="margin-bottom:8px">原缺陷：拖动 AP 只重绘了 AP 标记图层，热力图 canvas 沿用上一次计算结果，视觉上「AP 动了、颜色块没动」。修复采用<strong>两级重算</strong>，兼顾即时反馈与模型精度：</p>
+  <div class="grid g2">
+    <div class="card"><p class="ct">① 拖动中 · 即时轻量预览</p><ul><li>每个 <code>mousemove</code> 用 64×45 低分辨率网格、只算自由空间路径损耗与 AP 功率，直接刷新热力图 canvas</li><li>状态栏显示「拖动预览（轻量模型）」，明确这不是最终结论</li><li>同样按当前 SSID 过滤 AP 与频段，避免预览与实际结果不一致</li></ul></div>
+    <div class="card"><p class="ct">② 松手后 · 完整模型重算</p><ul><li>统一入口 <code>markDirty()</code>，280 ms 防抖后调用完整 <code>/api/heatmap</code></li><li>完整模型含多墙材质衰减、实测残差 IDW 校正、留一交叉验证 RMSE、干扰噪声抬升与 SINR 图层</li><li>「自动重算」开关默认开启；关闭时状态栏提示需手动点「计算热力图」，不静默使用过期结果</li></ul></div>
+  </div>
+  <table>
+    <thead><tr><th>改动入口</th><th>是否触发重算</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>拖动 / 新增 / 删除 AP</td><td>✓</td><td>拖动中预览 + 松手完整重算</td></tr>
+      <tr><td>AP 型号 / 功率 / 增益 / 2.4G-only / 信道 / 启停</td><td>✓</td><td>右侧 AP 列表逐台编辑后防抖重算</td></tr>
+      <tr><td>绘制 / 删除墙体、录入 / 清除实测点</td><td>✓</td><td>影响传播模型与残差校正</td></tr>
+      <tr><td>比例尺、频段、噪声底、网格精度、干扰叠加开关</td><td>✓</td><td>频段在 SSID 锁定时不可改并给出提示</td></tr>
+      <tr><td>切换 / 新建 / 编辑 / 删除 / 重置 SSID</td><td>✓</td><td>全局维度变更，强制重算（不受自动开关限制）</td></tr>
+      <tr><td>应用干扰页的信道建议、加载项目、恢复示例楼层</td><td>✓</td><td>均走统一 dirty 入口</td></tr>
+      <tr><td>切换图层（覆盖 / SINR / 置信度 / 重叠度）</td><td>△</td><td>仅重绘已有数据；SINR 图层无缓存时触发一次完整重算</td></tr>
+    </tbody>
+  </table>
+
+  <h3>15.5 验证结果（真实浏览器事件，非接口模拟）</h3>
+  <div class="grid g2">
+    <div class="card"><p class="ct">拖拽 AP</p><ul><li>拖动中热力图校验和改变：<span class="tag t-g">通过</span></li><li>松手后完整模型重算、校验和再次改变：<span class="tag t-g">通过</span></li><li>状态栏回到「完成 · SSID · 120×84 网格」</li></ul></div>
+    <div class="card"><p class="ct">切换 SSID</p><ul><li>Corp-Staff → Voice-VoWiFi 后热力图改变：<span class="tag t-g">通过</span></li><li>频段自动锁定 5 GHz、下拉禁用并给出提示：<span class="tag t-g">通过</span></li><li>诊断页 SSID 标签同步、配置页 5 张卡片齐全：<span class="tag t-g">通过</span></li></ul></div>
+  </div>
+  <div class="note"><strong>接口层量化验证：</strong>同一楼层下 Corp-Staff（双频 / 全部 AP / 门限 −70）覆盖率 100%，Voice-VoWiFi（5 GHz / 5 台 AP / 门限 −67）为 41.5%，IoT-Sensor（2.4 GHz / 2 台 AP / 门限 −75）为 100%；Corp 与 Voice 的 2520 个网格值全部不同；将单台 AP 平移 320 px 后 1008 / 2520 个网格值发生变化。这说明 SSID 与 AP 位置都真实进入了计算，而非只改了显示。</div>
+  <div class="warn"><strong>仍需现场确认：</strong>当前「SSID → AP 绑定」由工具内置配置给出。真实网络中一个 AP 可广播多个 SSID、BSSID 与射频的映射还可能随频段变化，P1 接入控制器后必须做一次现网一致性校验，否则过滤出的 AP 集合可能与实际广播不符。</div>
+</section>
+
+<!-- ==================== 16 ==================== -->
+<section id="s16">
+  <h2><span class="n">16</span> WLC 错误包与配置问题分析 · 官方文档融合（v0.8）</h2>
+  <p class="lead">v0.8 新增。前 15 节解决的是「空间与体验」问题；本节解决排障现场更前置的两类问题——<strong>看不懂控制器报出来的错误包 / 错误码</strong>，以及<strong>说不清配置哪里不对</strong>。两者共同特点是可以被官方文档直接证实，因此把「厂商文档」也作为一等数据源纳入架构，而不是散落在浏览器收藏夹里。</p>
+
+  <h3>16.1 先界定「错误的包」</h3>
+  <p class="lead">现场口语里的「错误的包」实际涵盖三个层次，混在一起会导致功能做偏。工具按三层分别建模、共用一条时间轴：</p>
+  <table>
+    <thead><tr><th style="width:18%">层次</th><th style="width:28%">数据形态</th><th style="width:27%">回答的问题</th><th style="width:27%">典型来源</th></tr></thead>
+    <tbody>
+      <tr><td><strong>① 控制面报文</strong><br><span class="tag t-b">PCAP</span></td><td>CAPWAP / DTLS、RADIUS、DHCP、EAPOL 的报文序列或抓包文件</td><td>AP 为什么注册不上？终端卡在认证还是拿地址？是哪一侧没回包？</td><td>控制器内嵌抓包、CLI sniffer 导出 PCAP、上联端口镜像</td></tr>
+      <tr><td><strong>② 空口帧</strong><br><span class="tag t-a">802.11</span></td><td>管理帧 / 数据帧、Retry 位、Deauth reason code、Beacon / Probe、RSSI 与 MCS</td><td>是覆盖不足、隐藏节点、干扰，还是 AP 主动踢人？</td><td>空口抓包、AP 频谱扫描、OTAP</td></tr>
+      <tr><td><strong>③ 错误码与日志</strong><br><span class="tag t-r">语义层</span></td><td>厂商内部原因码、告警 ID、trap、debug 跟踪、客户端删除原因</td><td>这串 <code>CO_CLIENT_DELETE_REASON_*</code> / <code>last failure : 8</code> 到底要我做什么？</td><td>syslog / trap、always-on trace、RA trace、北向告警 API、Log Reference</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>关键设计：</strong>第 ③ 层是投入产出比最高的一层——厂商文档已经把原因码写成了「含义 / 可能原因 / 处理步骤」，可半自动编译成规则；第 ① 层次之；第 ② 层协议解码成本最高，按第 1 节边界只做证据提取，不做全量协议栈解码。</div>
+
+  <h3>16.2 能力一：错误包 / 报文分析引擎</h3>
+  <div class="grid g3">
+    <div class="card"><p class="ct">① 阶段化报文序列</p><ul><li>把 CAPWAP 上线拆为 Discovery → Response → DTLS → Join → Configuration 五段，缺哪段定位到哪段</li><li>客户端拆为 Association → 802.1X → DHCP → 数据面，逐段标出首个失败点</li><li>PCAP 只解析出「阶段 + 时间戳 + 源/目的 + 结果」，不存整包内容</li></ul></div>
+    <div class="card"><p class="ct">② 客户端生命周期时间轴</p><ul><li>按 MAC / 用户名 / SSID 聚合控制器日志、认证日志、空口事件、漫游事件</li><li>与现有「现场连接」页的终端表、事件流对接，替换模拟数据</li><li>支持按投诉时间点回放，自动截取前后 N 分钟证据窗口</li></ul></div>
+    <div class="card"><p class="ct">③ 错误码字典与取证阶梯</p><ul><li>厂商错误码 → 是否正常 → 建议动作 → 需补充的证据 → 官方原文引用</li><li>取证按「历史日志 → 定向 trace 复现 → 抓包」逐级加码，避免一上来全量 debug</li><li>高频原因码按 SSID / AP / 时段聚合，区分个体问题与共因问题</li></ul></div>
+  </div>
+  <div class="fig">
+    <svg viewBox="0 0 680 112" role="img"><title>取证阶梯与证据回流</title><desc>从历史日志到定向跟踪再到抓包，逐级加码并回流到统一时间轴</desc>
+      <defs><marker id="ar16" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#185fa5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <g font-family="sans-serif">
+        <rect x="20" y="28" width="140" height="54" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="90" y="48" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">1 历史日志</text><text x="90" y="66" text-anchor="middle" font-size="11" fill="#185fa5">always-on / 告警 / trap</text>
+        <rect x="186" y="28" width="140" height="54" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/><text x="256" y="48" text-anchor="middle" font-size="13" font-weight="500" fill="#0c447c">2 定向跟踪</text><text x="256" y="66" text-anchor="middle" font-size="11" fill="#185fa5">按 MAC 过滤复现</text>
+        <rect x="352" y="28" width="140" height="54" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/><text x="422" y="48" text-anchor="middle" font-size="13" font-weight="500" fill="#791f1f">3 报文抓取</text><text x="422" y="66" text-anchor="middle" font-size="11" fill="#a32d2d">控制面 + 空口 PCAP</text>
+        <rect x="518" y="28" width="142" height="54" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/><text x="589" y="48" text-anchor="middle" font-size="13" font-weight="500" fill="#085041">统一时间轴</text><text x="589" y="66" text-anchor="middle" font-size="11" fill="#0f6e56">首个失败点 + 证据链</text>
+        <path d="M162 55 L184 55" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar16)"/><path d="M328 55 L350 55" fill="none" stroke="#185fa5" stroke-width="1.5" marker-end="url(#ar16)"/><path d="M494 55 L516 55" fill="none" stroke="#0f6e56" stroke-width="1.5" marker-end="url(#ar16)"/>
+        <text x="340" y="100" text-anchor="middle" font-size="11" fill="#5f5e5a">每级结论带官方引用与置信度，证据不足时显式标注「需补充」而非猜测</text>
+      </g>
+    </svg>
+    <p class="cap">图 16-1　取证阶梯：先查已有证据，再决定是否开 debug 或抓包</p>
+  </div>
+  <table>
+    <thead><tr><th style="width:22%">典型故障场景</th><th style="width:39%">决定性证据</th><th style="width:39%">官方可核实的处理方向</th></tr></thead>
+    <tbody>
+      <tr><td>AP 不上线</td><td>UDP 5246/5247 序列、DTLS 阶段、<code>last failure</code> 字段、DHCP/ARP</td><td>核对地址分配、控制器管理接口放行（FortiGate 为 Security Fabric Connection）、控制面守护进程</td></tr>
+      <tr><td>连上无 IP</td><td>Discover 无 Offer、<code>DHCP_FAILURE</code> / <code>MN_DHCP_TIMEOUT</code>、VLAN 存在性</td><td>核对 WLAN/Policy 绑定 VLAN、地址池容量、ACL 是否误拦</td></tr>
+      <tr><td>认证失败</td><td>EAPOL 完整性、<code>EAP_TIMEOUT</code> / <code>8021X_FAILURE</code>、RADIUS 结果码</td><td>核对 AAA、证书链、NTP，以及随机 MAC 对基于 MAC 策略的影响</td></tr>
+      <tr><td>无规律掉线</td><td>Deauth reason code 分布、<code>BEACON_LOSS</code> / <code>SA_QUERY_TIMEOUT</code>、AP 射频复位</td><td>核对低 RSSI 门限、802.11k/v/w、DFS 信道切换频率</td></tr>
+    </tbody>
+  </table>
+
+  <h3>16.3 能力二：配置问题分析引擎</h3>
+  <p class="lead">配置类问题的特征是<strong>确定性</strong>：引用断裂、版本不匹配、对象缺失都可以直接证实，不需要统计推断。引擎把各厂商差异巨大的配置文本归一化为「对象 → 属性 → 引用」键值图，再做五类检查。</p>
+  <table>
+    <thead><tr><th style="width:19%">检查类型</th><th style="width:41%">具体做什么</th><th style="width:40%">输出</th></tr></thead>
+    <tbody>
+      <tr><td><strong>引用完整性</strong><br><span class="tag t-r">阻断级</span></td><td>Cisco 9800 的 WLAN Profile ↔ Policy Profile ↔ Policy/Site/RF Tag ↔ AP；FortiGate 的 SSID → VAP → wtp-profile → AP 组 → 接口/VLAN；AAA 下发的 ACL/VLAN 是否在设备上存在</td><td>悬空引用清单 + 影响范围（哪些 AP / 哪些 SSID 受影响）</td></tr>
+      <tr><td><strong>基线 / 最佳实践</strong></td><td>按 SSID 用途加载模板（语音 k/v/r + WMM、访客隔离、IoT 速率集、PMF/安全套件、信道带宽与 DFS 约束）</td><td>偏离项 + 官方文档条款 + 严重度；允许站点级例外并留痕</td></tr>
+      <tr><td><strong>版本 / 型号兼容</strong></td><td>复用第 14 节 993 条型号库的 <code>min_controller_version</code> 与 <code>lifecycle</code>，与控制器实读版本比对</td><td>兼容性告警 + 禁用依赖新特性的规划图层（如 6 GHz / MLO）</td></tr>
+      <tr><td><strong>配置漂移与 diff</strong></td><td>定时保存只读配置快照，结构化 diff；与主备一致性、变更工单时间轴对齐</td><td>最小差异集 + 「谁在故障前改了什么」</td></tr>
+      <tr><td><strong>变更影响仿真</strong></td><td>把拟修改的信道 / 功率 / VLAN / 门限先送入现有热力图与干扰引擎做前后差分</td><td>预期增益、受影响终端数、回滚清单；<strong>工具不自动下发</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>强制约束：</strong>所有控制器访问均为只读；诊断结论只生成「建议动作 + 回滚清单」，由人审批执行。版本不匹配的条目按第 12 节规则处理——标注来源与核对日期，允许现场实测覆盖，覆盖值留痕，绝不静默用推断值冒充实读值。</div>
+
+  <h3>16.4 能力三：官方文档融合（离线可用）</h3>
+  <p class="lead">「融合官方文档」不是把 PDF 塞进 exe，而是建立<strong>文档 → 规则 → 结论 → 回查</strong>的可追溯链路。规则库每条记录携带：适用厂商/平台、软件版本范围、症状、证据条件、结论、建议动作、<code>doc_refs</code>（标题 + 官方 URL + 版本 + 核对日期）、<code>verify_status</code>。</p>
+  <div class="grid g3">
+    <div class="card"><p class="ct">① 文档索引层</p><ul><li>内置配置指南、命令参考、Log Reference、Alarm/Event Reference、Release Notes、Bug / Field Notice / 安全公告的<strong>索引与摘要</strong></li><li>按厂商 + 平台 + 版本切片，避免把 17.6 的规则套到 17.18</li><li>用户可导入已获授权的 PDF / HTML，本地解析后加入索引</li></ul></div>
+    <div class="card"><p class="ct">② 规则编译层</p><ul><li>厂商文档里的「含义 / 可能原因 / 处理步骤」四段式可半自动编译为规则（华为 Log Reference 最规整）</li><li>错误码表、告警码表做成常量表，随文档版本更新</li><li>确定型规则优先，统计型规则需标注数据完整度</li></ul></div>
+    <div class="card"><p class="ct">③ 引用回溯层</p><ul><li>每条诊断结论可点开原文出处与版本，一键跳转官方页面（外网可用时）</li><li>离线时展示本地摘要与核对日期，不显示「好像是」</li><li>无出处的推断一律标为「经验判断」，不计入置信度</li></ul></div>
+  </div>
+  <table>
+    <thead><tr><th style="width:23%">文档类型</th><th style="width:30%">融合方式</th><th style="width:23%">是否内置全文</th><th style="width:24%">版本约束</th></tr></thead>
+    <tbody>
+      <tr><td>配置指南 / 命令参考</td><td>抽取采集命令、取证 SOP、配置对象关系</td><td>否，仅索引 + 摘要 + 链接</td><td>按大版本锁定</td></tr>
+      <tr><td>Log / Alarm Reference</td><td>编译为「码 → 原因 → 动作」规则</td><td>否，仅规则 + 引用</td><td>按设备软件版本锁定</td></tr>
+      <tr><td>API / OpenAPI 文档</td><td>生成字段映射与适配器骨架，校验 API 版本矩阵</td><td>否</td><td>严格按 SZ / NCE 等版本矩阵</td></tr>
+      <tr><td>Release Notes / Bug / Field Notice / 安全公告</td><td>升级阻断项、已知缺陷命中提示</td><td>否</td><td>需带公告日期与影响版本范围</td></tr>
+      <tr><td>用户自行导入的文档</td><td>本地解析建索引，不上传、不外发</td><td>是（用户本地）</td><td>用户自行标注版本</td></tr>
+    </tbody>
+  </table>
+  <div class="warn"><strong>版权与防幻觉：</strong>厂商文档受版权保护，工具默认只存索引、摘要、官方链接与核对日期；全文检索仅在用户自行导入且有权使用的文档范围内进行。引擎不允许生成没有 <code>doc_refs</code> 的「官方结论」，也不调用外网大模型补全缺失条款；离线环境必须完整可用。</div>
+
+  <h3>16.5 主流厂商 WLC / 管理平面接入矩阵</h3>
+  <p class="lead">按第 14 节的建模原则，统一称 <code>Controller / ManagementPlane</code>：独立 AC、防火墙内置控制器、云管平台分别建模，不硬塞进一张 WLC 表。下表为摘要，完整 14 行含官方入口与适配器 ID 的矩阵见配套文件 <code>wlc-vendor-adapters.csv</code>。</p>
+  <table>
+    <thead><tr><th style="width:16%">厂商 / 平台</th><th style="width:31%">采集通道</th><th style="width:33%">官方错误证据来源</th><th style="width:20%">优先级</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Cisco Catalyst 9800</strong><br>IOS XE</td><td>RESTCONF / NETCONF-YANG（<code>netconf-yang</code>，830）、SSH 只读、syslog、gRPC telemetry、SNMP v2c</td><td><code>show tech-support wireless</code>、RA trace、always-on trace、嵌入式抓包、<a href="https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons">DevNet Client Delete Reasons</a></td><td><span class="tag t-r">P1 现网体系</span></td></tr>
+      <tr><td><strong>Cisco AireOS</strong><br>5508/5520/8540</td><td>SSH CLI、私有 MIB、syslog（无现代 RESTCONF）</td><td><code>debug client</code>、traplog、AireOS 客户端排除码</td><td><span class="tag t-a">P2 老旧存量</span></td></tr>
+      <tr><td><strong>Fortinet FortiGate</strong><br>内置 WLC / FortiAP</td><td>FortiOS REST API、<code>diagnose</code> CLI、SNMP、syslog / FortiAnalyzer</td><td><code>wlac -c wtp/-d sta</code>、<code>sta_filter</code>/<code>wtp_filter</code>、<code>cw_acd</code> debug、<code>sniff packet "port 5246" 6 0 l</code> 转 PCAP、<a href="https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575">官方连接问题指南</a></td><td><span class="tag t-r">P1 现网 400F</span></td></tr>
+      <tr><td><strong>Huawei AirEngine WAC</strong><br>+ iMaster NCE-Campus</td><td>NCE 北向 RESTCONF 告警、CampusInsight REST（<code>X-Auth-Token</code>）、AC CLI、SNMP</td><td><a href="https://support.huawei.cn/enterprise/zh/doc/EDOC1100459361/9d0ee50f">Log Reference</a> 四段式、<code>display diagnostic-information</code>、<a href="https://support.huawei.cn/enterprise/zh/doc/EDOC1100458566/ca8ec7de">北向告警接口</a></td><td><span class="tag t-r">P1 国内主流</span></td></tr>
+      <tr><td><strong>RUCKUS SmartZone</strong><br>SZ / vSZ</td><td>REST <code>https://{host}:8443/wsg/api/public</code> + <code>serviceTicket</code>、设备内置 OpenAPI、SNMP、GPB/MQTT</td><td>私有错误码（105 版本不支持 / 152 备集群）、<a href="https://docs.ruckuswireless.com/smartzone/6.0.0/vszh-public-api-reference-guide-600.html">API Reference</a>、Alarm and Event / Troubleshooting Guide</td><td><span class="tag t-a">P2 文档公开</span></td></tr>
+      <tr><td><strong>HPE Aruba</strong><br>AOS 8 MC / AOS 10 Central</td><td>CLI + 北向接口（AOS 8）；Central REST / Webhook（AOS 10）；SNMP、syslog</td><td><code>auth-tracebuf</code>、user-table、Central 客户端事件；官方文档门户需按账号与版本核对</td><td><span class="tag t-a">P2 / P3</span></td></tr>
+      <tr><td><strong>Juniper Mist</strong><br>Cloud / Marvis</td><td>Mist REST API、Webhook / 事件流、AP 本地 CLI</td><td>客户端失败原因码与 SLE 分类体系（可作官方分类参考）</td><td><span class="tag t-b">P3 云侧授权</span></td></tr>
+      <tr><td><strong>H3C / 锐捷 / 信创</strong><br>WX、RG-WS 等</td><td>SSH CLI、SNMP v2c、网管北向 REST（按现场版本）、syslog</td><td>命令参考 / 日志参考 / 故障处理手册，需按现场版本复核</td><td><span class="tag t-a">P2 现场确认</span></td></tr>
+      <tr><td><strong>Meraki / UniFi / Extreme</strong><br>云管或软件控制器</td><td>云 REST / 本地控制器 API、SNMP、syslog</td><td>事件日志与连接失败原因；差异大，统一走通用规则</td><td><span class="tag t-b">P3 通用兜底</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>厂商侧变化需跟踪：</strong>HPE 在 2026 年 10 月宣布把 EdgeConnect 与 Mist、Aruba Central 纳入统一智能体框架（Aruba Central 侧计划 2027 上半年支持），AOS 10 起管理平面已迁移至 Central。这类变化影响的是 <code>ManagementPlane</code> 外键与采集通道，不影响上层诊断逻辑，因此适配器必须按版本维护而非一次写死。</div>
+
+  <h3>16.6 与现有模块的联动（替换模拟数据的落点）</h3>
+  <table>
+    <thead><tr><th style="width:22%">现有模块</th><th style="width:33%">当前模拟数据</th><th style="width:45%">P1 实读来源与联动</th></tr></thead>
+    <tbody>
+      <tr><td>设备型号库（993 条）</td><td>静态 CSV/JSON，含 <code>adapter_id</code></td><td>选中型号即决定用哪个适配器、哪些 MIB、哪些命令；控制器实读版本回填兼容校验</td></tr>
+      <tr><td>SSID 全局维度（第 15 节）</td><td>内置 5 个 SSID、<code>ap_ids</code> 手工绑定</td><td>由 <code>WLAN/VAP Profile</code> 与 AP 组实读生成；「某 AP 是否广播某 SSID」以控制器为准，不再靠命名推断</td></tr>
+      <tr><td>图纸热力图</td><td>手工录入 AP 位置 / 功率 / 信道</td><td>实读发射功率、信道、带宽、BSSID 与射频状态；AP 离线时自动从计算中剔除并在图上标注</td></tr>
+      <tr><td>干扰分析</td><td>9 类模拟干扰源 + 频谱占用</td><td>实读信道利用率、噪声底、DFS 事件、邻居表；同信道冲突对来自真实 AP 邻居关系</td></tr>
+      <tr><td>现场连接</td><td>36 台模拟终端、2 s 刷新</td><td>控制器客户端表直接提供 RSSI/SNR/MCS/速率/重传/认证/漫游；错误码字典把事件流翻译成动作</td></tr>
+      <tr><td>故障排查</td><td>12 条规则、内置证据</td><td>新增本节 26 条种子规则，证据来自 syslog / PCAP / 配置快照；每条结论附官方引用</td></tr>
+    </tbody>
+  </table>
+
+  <h3>16.7 分期与优先级</h3>
+  <table>
+    <thead><tr><th style="width:12%">阶段</th><th style="width:44%">范围</th><th style="width:44%">验收口径</th></tr></thead>
+    <tbody>
+      <tr><td><strong>P1</strong><br><span class="tag t-r">优先</span></td><td>先做现网实际在用的 <strong>FortiGate 400F 内置 WLC</strong> 与 <strong>Cisco 9800 / AireOS</strong>；同步纳入华为 NCE 告警（文档最规整）；落地离线证据导入（PCAP / syslog / 配置文本）而非先打通实时 API</td><td>导入一份真实 <code>show tech</code> / 配置备份 / PCAP，能给出带官方引用的错误码解释、引用完整性检查结果与取证建议；全程只读、离线可跑</td></tr>
+      <tr><td><strong>P2</strong></td><td>只读实时接入（RESTCONF / REST / SNMP），SmartZone、H3C、锐捷适配器；配置快照 diff 与版本兼容校验；文档 → 规则半自动编译器</td><td>配置变更能在时间轴上与故障对齐；版本不匹配能阻断 6 GHz / MLO 规划图层；每条规则可回查到版本化官方引用</td></tr>
+      <tr><td><strong>P3</strong></td><td>云管平台（Central / Mist / Meraki / UniFi）、空口帧解码深化、已知缺陷与 Field Notice 命中、多站点集中</td><td>需明确的账号授权与外网策略；不作为单机离线版本的默认依赖</td></tr>
+    </tbody>
+  </table>
+
+  <h3>16.8 边界与风险</h3>
+  <div class="grid g2">
+    <div class="card"><p class="ct">技术与数据边界</p><ul><li>控制器 API 差异极大（YANG / REST / CLI / 云 API），适配器必须版本化，且失败时降级到 SNMP + 日志导入</li><li>错误码与告警 ID 随软件分支变化，规则必须带 <code>version_range</code>，禁止跨版本套用</li><li>抓包涉及用户数据，默认只保留阶段元数据，完整 PCAP 由用户自行保管并可设置留存期</li></ul></div>
+    <div class="card"><p class="ct">合规与运营边界</p><ul><li>官方全文不内置、不转载；只存索引与引用，用户导入文档需自行确认授权</li><li>凭据用 Windows DPAPI 加密，全链路只读，所有采集动作留审计日志</li><li>云管平台需要外网与订阅授权，与「内网离线优先」冲突时以后者为准</li></ul></div>
+  </div>
+  <div class="note"><strong>配套文件（本次交付）：</strong><code>build_wlc_kb.py</code>（单一数据源生成器）、<code>wlc-vendor-adapters.csv</code>（14 行厂商接入矩阵，18 字段，UTF-8 BOM）、<code>wlc-diagnostic-rules.json</code>（26 条种子规则 / 4 类 / 11 个官方文档引用 / 3 条标注待现场核对）。规则库为<strong>方案级种子</strong>：字段结构可直接供 P1 使用，但 <code>needs-field-check</code> 条目与厂商版本取值必须以现网设备读数与官方文档复核后才可用于自动决策。</div>
+  <h3>16.9 离线内置：把官方文档提炼进程序（v0.9）</h3>
+  <p class="lead">现场测试环境不一定能上外网，「点开链接看官方文档」在排障现场等于没集成。因此 v0.9 把能从公开文档中提炼的事实性内容<strong>全部编译进单文件 exe</strong>：运行时不发起任何外部网络请求，断网、VPN 隔离与纯内网环境下功能完整。</p>
+  <table>
+    <thead><tr><th style="width:22%">内置类别</th><th style="width:43%">内容</th><th style="width:35%">来源与约束</th></tr></thead>
+    <tbody>
+      <tr><td><strong>官方码表</strong><br><span class="tag t-b">329 条</span></td><td>Cisco DevNet 客户端删除原因码 <strong>270 条全量</strong>（含官方 Severity / Explanation / Action）；Ruckus SmartZone 私有错误码 22 条；802.11 deauth/disassoc reason code 34 条；FortiGate WTP last failure；H3C 社区资料码 2 条</td><td>官方公开表格结构化提炼；Cisco 英文原文原样保留，中文分类与处置提示为自动归纳，界面同时展示原文。FortiGate 官方只明确给出 <code>8</code>，其余数字不臆造</td></tr>
+      <tr><td><strong>诊断剧本</strong><br><span class="tag t-g">26 条 / 113 步</span></td><td>症状话术、定位结论、三口径沟通话术、分步处置（动作 + 命令 + 验证方法）、升级开 case 条件、回滚方案</td><td>覆盖 Cisco 9800、FortiGate/FortiAP、Ruckus、Huawei NCE、H3C 与通用 802.11 场景；命令取自官方配置/排错文档</td></tr>
+      <tr><td><strong>官方文献索引</strong><br><span class="tag t-a">20 篇</span></td><td>厂商 + 版本 + 标题 + 官方 URL + 核对日期 + <strong>中文摘要</strong>（3–6 句提炼关键流程、命令与约束）</td><td>只存索引与摘要，<strong>不内置文档全文</strong>；URL 仅用于展示与手动复制，程序不自动访问。社区资料与待核对条目单独标注</td></tr>
+      <tr><td><strong>命令速查 / 话术模板</strong></td><td>45 条命令（含「只读 / 配置变更 / 需人工收尾」风险标注）、8 套通用沟通模板</td><td>用于现场取证与汇报，不自动执行任何命令</td></tr>
+    </tbody>
+  </table>
+  <div class="grid g3">
+    <div class="card"><p class="ct">话术口径 ①：对业务用户</p><ul><li>不含技术黑话，说明「发生了什么、我们在做什么、您要不要配合」</li><li>例：「已连上但未获取到网络地址，正在核对地址分配服务，修复后请重新连接一次」</li></ul></div>
+    <div class="card"><p class="ct">话术口径 ②：对运维工程师</p><ul><li>给证据链与定位方向，明确先查什么、先排除什么</li><li>例：「按 CAPWAP 五阶段定位首个缺失段；先查地址分配与管理访问，再看 DTLS」</li></ul></div>
+    <div class="card"><p class="ct">话术口径 ③：对厂商工单</p><ul><li>问题描述 + 设备型号/版本 + 时间 + 影响范围 + 已执行步骤 + 附件清单</li><li>直接可复制提交，减少来回补资料</li></ul></div>
+  </div>
+  <div class="note"><strong>程序内落点：</strong>知识包文件 <code>wireless_app/data/wlc_offline_kb.json</code>（262 KB）随 exe 打包；后端新增 <code>/api/wlc/kb</code>、<code>/api/wlc/codes</code>、<code>/api/wlc/commands</code>、<code>/api/wlc/analyze</code> 四个纯本地接口；前端新增「WLC 诊断」页，可粘贴日志 / 配置 / 抓包文本做离线匹配，输出命中码表、三套话术、分步处置与命中的官方文献摘要，并内置 5 类示例日志供无外网时演示。文本只在本机内存匹配，不上传、不外发。</div>
+  <div class="warn"><strong>边界（不得越线）：</strong>厂商文档全文不内置、不转载；中文提示是自动归纳而非逐条官方翻译；H3C 2052 / 2206 属社区资料、Aruba / Mist 条目属待核对，均不得直接用于自动决策；未在 DevNet 270 条表中出现的 Cisco 原因码明确标注「需现场核对」；工具只做只读分析与建议，<strong>不自动下发配置、不执行设备命令、不发起外网请求</strong>。</div>
+
+  <h3>16.10 近场保护与「本机当前 SSID」（v0.10）</h3>
+  <p class="lead">现场试用反馈：按示例楼层模板拖动 AP 后，<strong>离 AP 近的地方反而出现盲区，远处却正常</strong>；另外演示用的 SSID 是虚构名称，与现场口径对不上。前者不是渲染问题，而是把「布局相关的实测残差」当成「固定空间偏移场」导致的模型错误。v0.10 同时修正模型、并把这台电脑正在使用的 SSID 变成默认分析对象。</p>
+  <p><strong>① 根因</strong>：残差定义为「实测 RSSI − 当前布局的模型预测」，本身随 AP 位置变化。旧实现每次都按新布局重算残差，再用 <code>1/d⁴</code> 的 IDW 把它插值成全图固定偏移（限幅 ±18 dB）。把 AP 拖到某个打点上时，该点预测骤升到 −23 dBm、实测仍是 −51 dBm，产生约 −28 dB 的残差；这个大负值在 AP 脚下权重最大，把近场整体压低 18 dB，于是「越近越像盲区」。次要因素：AP 贴墙时极短射线可能连穿多段墙，累加到 42 dB 衰减上限，在墙边 AP 脚下形成第二个假洞。</p>
+  <table>
+    <thead><tr><th style="width:26%">修复点</th><th style="width:74%">做法与物理依据</th></tr></thead>
+    <tbody>
+      <tr><td><strong>残差稳健化</strong></td><td>以中位数代表系统性偏差（发射功率标定、统一墙损偏差），Huber 软限幅 ±10 dB；偏离中位数超过 12 dB 的打点判为「与当前布局失配」，权重降到 0.15，并在评估区提示数量。单个旧打点不再能主导一片区域。</td></tr>
+      <tr><td><strong>近场保护 3 m</strong></td><td>残差校正量按 <code>(d_AP / 3 m)²</code> 渐入，AP 脚下校正权重为 0，完全由传播模型决定。近场本来就是直射 / 绕射主导，实测校准只对中远场阴影衰落有意义。</td></tr>
+      <tr><td><strong>近场墙损折减</strong></td><td>AP 3 m 内墙损按 35%→100% 渐入，避免贴墙 AP 因射线连穿多段墙而在脚下挖洞；3 m 以外恢复完整多墙衰减。</td></tr>
+      <tr><td><strong>口径一致性</strong></td><td>AP 重叠度改用未校正的传播先验值计算；留一交叉验证 RMSE 与渲染共用同一套残差权重；新增开关可关闭残差校正，直接对比纯传播模型。</td></tr>
+    </tbody>
+  </table>
+  <p><strong>② 量化验收</strong>（示例楼层 100×70 网格，把 AP-5 从 (140,160) 拖到打点 (110,110)）：</p>
+  <table>
+    <thead><tr><th style="width:46%">指标</th><th style="width:27%">修复前</th><th style="width:27%">修复后</th></tr></thead>
+    <tbody>
+      <tr><td>打点处 RSSI（AP 正下方）</td><td>−41.0 dBm</td><td><strong>−23.4 dBm</strong></td></tr>
+      <tr><td>AP 近场 60 px 平均 RSSI</td><td>−58.0 dBm</td><td><strong>−46.9 dBm</strong></td></tr>
+      <tr><td>全图盲区占比（&lt; −80 dBm）</td><td>4.7%（原布局 2.3%）</td><td><strong>2.1%</strong></td></tr>
+      <tr><td>失配打点检出 / 降权</td><td>无</td><td>1 个，前端提示重新走测</td></tr>
+      <tr><td>移动 AP 后改变的网格</td><td colspan="2">2282 / 7000 格，v0.9 的「松手即重算」能力未被削弱</td></tr>
+      <tr><td>留一交叉验证 RMSE</td><td>6.05 dB</td><td>6.14 dB（<strong>有意保留</strong>：不靠抹平误差「修图」，如实反映旧打点与新布局不一致）</td></tr>
+    </tbody>
+  </table>
+  <p><strong>③ 本机当前 SSID 只读接入</strong>：测试机经常只有 VPN、甚至完全断网，因此不依赖任何在线查询。后端通过 Windows <code>netsh wlan show interfaces</code> / <code>show profiles</code> <strong>只读</strong>解析本机无线网卡的当前连接，兼容中文 / 英文系统字段（名称、状态、SSID、AP BSSID、波段、通道、Rssi、信号、无线电类型、身份验证、速率、配置文件）。实测本机读到 <code>SAFRAN</code> / 5 GHz / ch36 / RSSI −50 dBm / 88% / WPA2-个人，以及 12 个已保存配置。</p>
+  <div class="grid g3">
+    <div class="card"><p class="ct">默认行为</p><ul><li>启动时自动把当前 SSID 写入列表并设为全局分析对象</li><li>频段按本机「波段」字段锁定，热力图 / 干扰 / 现场连接 / 诊断同步联动</li><li>重复启动不重复建项；可在 SSID 页取消「启动时自动采用」</li></ul></div>
+    <div class="card"><p class="ct">手动能力</p><ul><li>「重新读取」「用本机当前 SSID 分析」</li><li>从本机已保存配置里任选一个加入并分析</li><li>本机来源的 SSID 在顶部下拉带「本机」标记，可随时切回演示 SSID</li></ul></div>
+    <div class="card"><p class="ct">新增接口（纯本地）</p><ul><li><code>GET /api/wlan/local</code>：扫描结果</li><li><code>POST /api/wlan/use</code>：写入并设为当前</li><li><code>POST /api/wlan/auto</code>：自动采用开关</li></ul></div>
+  </div>
+  <div class="note"><strong>安全边界：</strong>只执行 <code>netsh wlan show ...</code>，不连接、不修改、不启用任何无线配置，不采集邻居 AP、不上传任何信息；无 WLAN 服务 / 仅有线时给出友好提示并保留原分析对象。频段按本机波段与信道判定，属<strong>推断值</strong>，上线前仍需在 SSID 配置页按现网设计核对。内置 5 个演示 SSID 保留，不删除用户已有配置。</div>
+
+  <h3>16.11 离线文献库扩容与程序内检索（v0.11）</h3>
+  <p>试用反馈「文档太少了吧」指向一个真实缺口：v0.9 只内置了 <strong>20 篇</strong>官方文献摘要，现场遇到不同厂商、不同阶段的问题时，结论能点回的依据不够用。本轮按「测试时不一定能上外网，去外面拉太费劲」的约束，把厂商公开文档中<strong>能内置的部分尽量多地编译进程序</strong>，并做成可检索的独立页面，而不是继续给外链。</p>
+
+  <div class="grid g3">
+    <div class="card"><p class="ct">扩容后的离线知识包</p><ul>
+      <li><b>125 篇</b>官方文献索引（20 → 125），覆盖 <b>14 家厂商 / 标准组织</b>、34 个专题</li>
+      <li><b>138 条</b>命令速查（45 → 138），含只读 / 配置变更 / 需人工收尾风险标注</li>
+      <li><b>40 个</b>诊断剧本 / <b>183 步</b>处置（26 / 113 → 40 / 183），每个仍带三套话术</li>
+      <li><b>22 套</b>话术模板（8 → 22）+ <b>8 套</b>标准处置流程 SOP（新增）</li>
+      <li>码表不变：Cisco DevNet <b>270 条</b>原因码全量 + Ruckus 22 + 802.11 34 + FortiGate / H3C</li>
+    </ul></div>
+    <div class="card"><p class="ct">新增厂商与专题</p><ul>
+      <li>Cisco 9800（29 篇）、Fortinet（21）、Huawei（15）、RUCKUS（11）、H3C（10）、Aruba（9）、Meraki（7）、Mist（4）、锐捷（4）、UniFi（4）、IETF / IEEE</li>
+      <li>新增场景：AP Join 阶段定位、DTLS 证书与 Field Notice、配置同步不一致、DFS 事件、STA 上线失败 RESULT 归因、License / 脱管、CAPWAP 被中间设备丢弃、Portal 两种模式、WPA3 / PMF / 802.11r 兼容性、PoE 与 NTP 取证前提</li>
+      <li>新增标准层：RFC 5415（CAPWAP 状态机 / DTLS / MTU）、RFC 5416（Split / Local MAC、802.11 绑定消息）</li>
+    </ul></div>
+    <div class="card"><p class="ct">程序内的使用方式</p><ul>
+      <li>顶部新增「官方文档库」页：按厂商 / 专题 / 核实状态筛选 + 多关键词 AND 全文检索</li>
+      <li>每篇可展开看中文提炼、适用场景、关键命令（点击复制）、处置要点、官方链接（仅展示）</li>
+      <li>诊断结论的每条依据新增「在文献库中打开 ↗」，形成<strong>结论 → 出处</strong>回查链</li>
+      <li>SOP 卡片列出步骤与依据文献，可一键跳到对应条目</li>
+    </ul></div>
+  </div>
+
+  <p><strong>新增纯本地接口：</strong><code>GET /api/wlc/docs?q=&amp;vendor=&amp;topic=&amp;status=&amp;limit=</code>（多关键词 AND 检索 + facets 计数）、<code>GET /api/wlc/sop</code>（SOP 及其关联文献）。retrieval 在浏览器本地完成，<strong>运行时不产生任何外网请求</strong>；<code>/api/wlc/kb</code> 同步返回 <code>doc_facets</code> 与 <code>sops</code>。</p>
+
+  <div class="grid g2">
+    <div class="card"><p class="ct">可维护性设计</p><ul>
+      <li>新增 <code>wlc_kb_extra.py</code> 作为扩展单一数据源（文献 / 命令 / 剧本 / 话术 / SOP），由 <code>build_wlc_offline_kb.py</code> 的 <code>merge_into()</code> 合并生成 <code>wlc_offline_kb.json</code>（513,928 B）</li>
+      <li>每条文献带 <code>id / vendor / topic / version / url / captured / verify_status / summary_zh / scene / keywords / commands_zh / action_zh / kind</code>；章节切片条目复用同一官方 URL 并明确标注 <code>kind</code></li>
+      <li>核实状态三档：<code>public-verified</code> 101 篇、<code>needs-field-check</code> 19 篇、<code>community</code> 5 篇；后两档不得用于自动决策</li>
+      <li>生成器校验 ID 唯一、剧本 <code>doc_refs</code> 与 SOP <code>source_docs</code> 均无悬空引用</li>
+    </ul></div>
+    <div class="card"><p class="ct">验收结果（v0.9.5-beta）</p><ul>
+      <li>HTTP 自测：知识包 125 篇 / 14 厂商 / 40 剧本 / 138 命令 / 8 SOP 全部加载</li>
+      <li>检索：<code>?q=DHCP</code> 命中 19 篇、<code>?q=DHCP RADIUS</code> 命中 5 篇、Fortinet 21 篇、community 5 篇、按 doc id 精确命中 1 篇</li>
+      <li>10 类厂商日志分别命中 <code>PB-FGT-001 / PB-C9800-007 / PB-HW-003 / PB-RZ-002 / PB-H3C-003 / PB-MERAKI-001 / PB-RJ-001 / PB-UI-001 / PB-ARUBA-001 / PB-MIST-001</code></li>
+      <li>语法 <code>py_compile</code> / <code>node --check</code> 通过；文献库页 14 个元素 ID 全部匹配，<code>boot()</code> 已挂 <code>initLib()</code></li>
+    </ul></div>
+  </div>
+
+  <div class="warn"><strong>边界（不得越线）：</strong>厂商文档全文仍不内置、不转载；中文提炼是自动归纳而非逐条官方翻译；<code>needs-field-check</code> 与 <code>community</code> 条目、以及按版本切片的命令 / 端点 / 错误码，必须按设备实际软件版本现场复核；未在 DevNet 270 条表中出现的 Cisco 原因码明确标注「需现场核对」；工具只读分析，不执行设备命令、不自动下发配置、不发起外网请求。厂商文档可能更新，本知识包的核对日期为 <b>2026-11-10</b>，接入现网前应按该日期之后的版本差异复查。</div>
+
+  <h3>16.12 真实空口扫描与干扰评估（v0.12）</h3>
+  <p>前 11 节里「现场连接」「干扰分析」都是模拟数据。本节补上唯一一条<b>真实无线数据链路</b>：直接调用 Windows 原生 WLAN 接口扫描本空间空口，把 SSID（含隐藏）、信道、带宽、RSSI、加密方式、BSS Load 读出来，再算成可判读的质量与干扰结论。</p>
+  <div class="grid g2">
+    <div class="card"><p class="ct">采集：为什么用 Native WiFi 而不是 netsh</p><ul>
+      <li><code>netsh wlan show networks</code> 只给名字、信号条和加密，<b>没有 BSSID、没有信道、没有带宽、没有 BSS Load</b>，且默认隐藏空 SSID 条目</li>
+      <li>改用 <code>wlanapi.dll</code>：<code>WlanOpenHandle</code> → <code>WlanEnumInterfaces</code> → <code>WlanScan</code> → <code>WlanGetNetworkBssList</code></li>
+      <li>逐条解析 <code>WLAN_BSS_ENTRY</code> 与紧随的 IE：DS Parameter(3) 取信道、HT Cap/Op(45/61)、VHT Op(191)、HE Op(255/36)、RSN(48) 与 WPA 厂商 IE 取加密、BSS Load(11) 取终端数与信道利用率</li>
+      <li>字段偏移按实测标定（条目步长 <b>360 B</b>，SSID 在 0/4、BSSID 在 40、RSSI 在 56、频率在 92、IE 偏移在 352/356），并用 <code>dwTotalSize</code> 兜底，避免不同 Windows 版本的 SDK 差异</li>
+      <li><b>隐藏 SSID</b>：<code>uSSIDLength = 0</code> 的 BSS 单独保留并标记「隐藏」，仍可看到 BSSID / 信道 / 带宽 / RSSI / 加密 —— 这正是排查「谁在占信道」最需要的信息</li>
+    </ul></div>
+    <div class="card"><p class="ct">评估：三个容易算错的地方</p><ul>
+      <li><b>射频归并</b>：一台 AP 会广播多个 SSID，BSSID 只差最后一字节。按 <code>BSSID 前 5 字节 + 频段</code> 归并为「物理射频」，干扰只计一次；否则一台 AP 挂 6 个 SSID 会被算成 6 个干扰源</li>
+      <li><b>噪声与干扰分开</b>：SNR 只用热噪声（-174 dBm/Hz + 带宽 + 7 dB NF，20/40/80/160 MHz 分别 -94/-91/-88/-85 dBm）；SINR 才叠加干扰功率 × 占空比（占空比取 BSS Load，缺失按 30%）。混在一起会把「同频争用」误报成「噪声底 -33 dBm」</li>
+      <li><b>重叠按频率区间算</b>：每个 BSS 展开成 <code>[中心频率 ± 带宽/2]</code>，两段区间重叠 ≥50% 记同频；2.4G 再按 ±1/-3 dB、±2/-10 dB、±3/-20 dB、±4/-30 dB 补邻频。用「信道号相减」判宽信道会算出 156/160 这种不存在的信道</li>
+    </ul></div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><p class="ct">输出指标</p><ul>
+      <li>区域总分（0-100）＝ 覆盖 35% + 干扰 35% + 安全 15% + 2.4G 密度 15%，分优/良/中/差/很差五档</li>
+      <li>每个 SSID：最强 RSSI、SNR、SINR、同频/邻频射频数、信道利用率、加密强度、质量分（SINR 55% + 同频争用 20% + 利用率 15% + 绝对信号 10%）</li>
+      <li>每个信道：BSS 数 / 射频数 / 活跃射频数 / 重叠对数 / 利用率 / <b>干扰指数 0-100</b>（射频数 45% + 重叠对 20% + 利用率 35%）与等级</li>
+      <li>整改建议：每频段推荐 3 个最干净信道；问题清单按严重度给出（干扰信道、2.4G 过密、开放网络、隐藏 SSID、80 MHz 宽信道）</li>
+    </ul></div>
+    <div class="card"><p class="ct">与已有模块的关系</p><ul>
+      <li>扫到的 SSID 可勾选后 <b>一键导入</b>为全局分析对象（<code>source=scan</code>），带本次采集点最强 RSSI 作为备注</li>
+      <li>新建 / 编辑 / 删除 SSID 后自动重建模拟终端池，任何新 SSID 都会分到终端，按 SSID 筛选不再是空表（修复「新建 SSID 无法使用」）</li>
+      <li>真实扫描数据不写入热力图：热力图仍按图纸坐标与传播模型算，二者口径不同，混用会得出错误结论；后续 P1 可用扫描结果校准路径损耗指数</li>
+    </ul></div>
+  </div>
+  <div class="warn"><strong>边界：</strong>① 单台笔记本扫描是<b>单点测量</b>，换位置结果会变，判定整层需 2-3 个点位；② 隐藏 SSID 的<b>名称</b>在空口上不传输，无法还原（我们只报 BSSID / 信道 / 信号），要真名需控制器端查询或定向探测；③ 扫描会让网卡短暂切换信道，可能造成 1-2 秒瞬断，生产终端上请避开业务高峰；④ 有线环境、网卡被禁用、WLAN 服务未启动时无法扫描，界面会给出对应提示；⑤ 全程只读，不连接、不改配置、不上传，不调用任何外网接口。</div>
+
+  <h3>16.13 移动漫游监测：边走边看当前 SSID、漫游与信道拥挤（v0.13）</h3>
+  <p>16.12 解决「<b>站在一个点</b>看环境」，本节解决「<b>带着电脑走动</b>看体验」：按路线走一遍，实时出现当前所在 SSID / 接入点、每次漫游（从哪个 BSSID 切到哪个、切完信号多少、停留多久）、掉线区间，以及所在信道的拥挤程度。数据仍然是本机真实无线网卡，只读。</p>
+  <div class="grid g2">
+    <div class="card"><p class="ct">采集：两层频率，互不干扰</p><ul>
+      <li><b>高频层（默认 1 秒）</b>：<code>netsh wlan show interfaces</code> 轻量轮询，拿当前关联的 SSID / BSSID / 信道 / 频段 / 信号 / 收发速率；netsh 报 dBm 时直接用，只有百分比时按线性口径换算并标注「百分比换算」</li>
+      <li><b>低频层（默认 20 秒）</b>：读系统 BSS 缓存算周边与信道拥挤；缓存不足 6 个 BSS 时自动补一次主动扫描（≥15 秒限速一次），避免高频触发 <code>WlanScan</code> 干扰被测漫游本身</li>
+      <li><b>扫描窗口标记</b>：主动扫描会让网卡短暂切信道，可能产生假掉线 / 假漫游；窗口起止时间记入记录，落在窗口内的事件标注「可能是扫描伪影」，判读时剔除</li>
+    </ul></div>
+    <div class="card"><p class="ct">判定与产出</p><ul>
+      <li><b>漫游分类</b>：同 SSID 换 BSSID＝二层漫游；换 SSID＝跨 SSID 切换；换频段＝跨频段漫游；关联消失＝掉线，恢复时记空窗时长</li>
+      <li><b>每条漫游记录</b>：from → to（BSSID / 信道 / RSSI）、旧 AP 驻留时长、观测空窗（≤ 采样间隔，非空口时延）、信号变化 dB、是否落在扫描窗口</li>
+      <li><b>粘滞检测</b>：当前信号 ≤ -72 dBm 且停留 ≥ 20 秒，同时同 SSID 存在强 ≥ 8 dB 的邻居 BSSID 未切换 → 提示 802.11k/v 未启用、漫游门限过高或驱动策略保守</li>
+      <li><b>输出</b>：信号轨迹图（含 -67 / -75 阈值线与切换时刻标记）、漫游时间线、漫游体验分（掉线 / 切换后弱信号 / 空窗 / 当前信道拥挤加权）、同 SSID 邻居表、当前信道拥挤指数与本频段排名、CSV 导出留档</li>
+    </ul></div>
+  </div>
+  <div class="warn"><strong>边界：</strong>① 采样间隔就是漫游判定分辨率，「切换耗时」是两次观测的差，<b>不是空口抓包级时延</b>；② netsh 信号百分比换算的 RSSI 分辨率约 2 dB，不用于精细比较；③ 周边 BSS 为系统扫描缓存，主动扫描后才新鲜；④ 只测本机这一张网卡，手机 / PDA 漫游行为可能不同，同一台机器按固定路线多走两遍对比 CSV 更可信；⑤ 全程只读，不连接、不断开、不改配置、不联网。</div>
+</section>
+
+<footer>无线故障排除 · 图纸热力图 · 无线优化　|　方案与技术路线 v0.13　|　2026-11-10　|　附 P0 可运行原型</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1676 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.production.devnetcloud.com/images/favicon.ico">
+    <link rel="canonical" href="https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons/">
+    <title>Client Delete Reasons - Wireless Troubleshooting Tools - Cisco DevNet</title>
+    <meta name="description" content="Client Delete Reasons - Learn how to use the Wireless Troubleshooting tools to perform Wireless networks troubleshooting and RF analysis.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="ssr_time" content="1789490698920">
+    <meta name="content_state" content="live">
+    <meta name="pubhub_id" content="1959">
+    <meta name="commit_id" content="d4cc1a29">
+    <link href="https://static.production.devnetcloud.com/dwc-header-and-footer/style.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/fontawesome/css/fontawesome-all.min.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/platformsdk/sdk.css" rel="stylesheet"><link href="https://static.production.devnetcloud.com/pubhubsdk/pubhubdoc.css" rel="stylesheet">
+    <meta property="og:title" name="og:title" content="Client Delete Reasons - Wireless Troubleshooting Tools - Cisco DevNet">
+    <meta property="og:type" name="og:type" content="article">
+    <meta property="og:url" name="og:url" content="https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons/">
+    <meta property="og:site_name" name="og:site_name" content="Cisco DevNet">
+    <meta property="og:description" name="og:description" content="Client Delete Reasons - Learn how to use the Wireless Troubleshooting tools to perform Wireless networks troubleshooting and RF analysis.">
+    <meta property="og:image" name="og:image" content="https://static.production.devnetcloud.com/images/cisco-developer-doc.jpg">
+    <meta property="twitter:card" name="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" name="twitter:site" content="@CiscoDevNet">
+    <meta property="twitter:title" name="twitter:title" content="Client Delete Reasons - Wireless Troubleshooting Tools - Cisco DevNet">
+    <meta property="twitter:url" name="twitter:url" content="https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons/">
+    <meta property="twitter:description" name="twitter:description" content="Client Delete Reasons - Learn how to use the Wireless Troubleshooting tools to perform Wireless networks troubleshooting and RF analysis.">
+    <meta property="twitter:image" name="twitter:image" content="https://static.production.devnetcloud.com/images/cisco-developer-doc.jpg">
+    <style type="text/css">data,pubhub-content{display:none}dui-breadcrumb{z-index:100;position:relative}</style>
+    
+    
+    
+    
+  </head>
+  <body>
+    <div id="root">
+      <dwc-header theme="dark" thin container="small"></dwc-header>
+      <div id="main"><pubhub-content>
+        <table>
+<thead>
+<tr>
+<th>Log Identifier</th>
+<th>Severity</th>
+<th>Explanation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_PMKID"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_PMKID</td>
+<td>Possible defect or config error</td>
+<td>Controller could not validate PMKID provided by client. This may have different triggers</td>
+<td>Update client to latest, if issue persists, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_WRONG_PSK"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_WRONG_PSK</td>
+<td>Possible defect or config error</td>
+<td>Client excluded due to wrong PSK password</td>
+<td>Check PSK configuration on client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_DENIED_RATES"></a>CO_CLIENT_DELETE_REASON_DOT11_DENIED_RATES</td>
+<td>Possible defect or config error</td>
+<td>Client sent invalid data rates during association request</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_IE"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_IE</td>
+<td>Possible defect or config error</td>
+<td>Client sent invalid Information Element</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_GROUP_CIPHER_INVALID"></a>CO_CLIENT_DELETE_REASON_DOT11_GROUP_CIPHER_INVALID</td>
+<td>Possible defect or config error</td>
+<td>Client requested invalid Group cipher during association</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_UNICAST_CIPHER_INVALID"></a>CO_CLIENT_DELETE_REASON_DOT11_UNICAST_CIPHER_INVALID</td>
+<td>Possible defect or config error</td>
+<td>Client requested invalid Unicast cipher during association</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_AKMP_INVALID"></a>CO_CLIENT_DELETE_REASON_DOT11_AKMP_INVALID</td>
+<td>Possible defect or config error</td>
+<td>Client requested invalid Authentication Key Management during association</td>
+<td>Possible client side defect or configuration. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_UNSUPPORTED_RSN_VERSION"></a>CO_CLIENT_DELETE_REASON_DOT11_UNSUPPORTED_RSN_VERSION</td>
+<td>Possible defect or config error</td>
+<td>Client invalid RSN version during association</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_RSN_IE_CAPABILITIES"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_RSN_IE_CAPABILITIES</td>
+<td>Possible defect or config error</td>
+<td>Client provided invalid RSN capabilities during association</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_INVALID_PMK_LEN"></a>CO_CLIENT_DELETE_REASON_INVALID_PMK_LEN</td>
+<td>Possible defect or config error</td>
+<td>Controller received PMK with invalid length</td>
+<td>Possible Radius server issue. Collect RA traces to confirm and check server side</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_FRAME"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_FRAME</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. malformed EAP frame</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Unexpected install bit</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_INSTALL_BIT</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Key Error bit set</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_ACK_BIT"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_ACK_BIT</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Key ACK bit set</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_KEY"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_INVALID_KEY</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Invalid key type</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_SECURE_BIT"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_SECURE_BIT</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Unexpected secure bit set</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_KEY_DESC_VER"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_KEY_DESC_VER</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Key version mismatch</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_NO_MIC_BIT"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_NO_MIC_BIT</td>
+<td>Possible defect or config error</td>
+<td>Invalid EAPoL message received from client. Key MIC bit was not set</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ANCHOR_NO_MEMORY"></a>CO_CLIENT_DELETE_REASON_ANCHOR_NO_MEMORY</td>
+<td>Possible defect or config error</td>
+<td>Internal error, could not allocate data structures to handle  client for anchored WLAN</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NO_DOT1X_AUTH_CONFIG"></a>CO_CLIENT_DELETE_REASON_NO_DOT1X_AUTH_CONFIG</td>
+<td>Possible defect or config error</td>
+<td>Authentication configuration is missing. Applies to 802.1x or MAB</td>
+<td>Check authentication lists in WLAN and AAA config in policy profile</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NACK_IFID_EXISTS"></a>CO_CLIENT_DELETE_REASON_NACK_IFID_EXISTS</td>
+<td>Possible defect or config error</td>
+<td>Controller internal error while creating client interface</td>
+<td>Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_QOS_PARAMETER"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_QOS_PARAMETER</td>
+<td>Possible defect or config error</td>
+<td>Client sent invalid TSPEC during roaming</td>
+<td>Possible client defect or invalid configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CIPHER_SUITE_REJECTED"></a>CO_CLIENT_DELETE_REASON_DOT11_CIPHER_SUITE_REJECTED</td>
+<td>Possible defect or config error</td>
+<td>During RSN Information element processing, the group key provided by client is invalid</td>
+<td>This is probable client side issue. Check RA traces, and contact client manufacturer</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_FAIL</td>
+<td>Possible defect or config error</td>
+<td>Radius server sent an invalid PSK attribute</td>
+<td>Check Radius server logs and configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_MODE_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_PSK_MODE_FAIL</td>
+<td>Possible defect or config error</td>
+<td>Radius server sent an invalid PSK mode attribute</td>
+<td>Check Radius server logs and configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_BSSID_MISMATCH"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_BSSID_MISMATCH</td>
+<td>Possible defect or config error</td>
+<td>AP deleted client, as it sent managemnt frame with wrong BSSID address</td>
+<td>This is potential defect. It may need RA traces, AP logs and OTA to isolate trigger</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_NO_MEMORY"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_NO_MEMORY</td>
+<td>Possible defect or config error</td>
+<td>AP was not able to allocate memory to handle client in WCP component. Possible defect or capacity problem</td>
+<td>Collect AP show tech, check AP load, and possibly contact TAC for further memory analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_PARENT_WGB"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_PARENT_WGB</td>
+<td>Possible defect or config error</td>
+<td>AP deleted client as it received add request marked as WGB client for non-existing WGB entry. Possible defect</td>
+<td>Collect RA traces, AP debug</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_NO_OVERLAP_LEGACY_RATES"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_NO_OVERLAP_LEGACY_RATES</td>
+<td>Possible defect or config error</td>
+<td>Client legacy rates requested do not match association response rate. Possible defect (client side and network as it should have rejected)</td>
+<td>Collect OTA and RA traces for client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MAX_VHT_STREAMS"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MAX_VHT_STREAMS</td>
+<td>Possible defect or config error</td>
+<td>Number of VHT streams requested for client is higher than 8. Possible defect</td>
+<td>Collect OTA and RA traces, AP debugs for client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_WRONG_REPLAY_COUNTER"></a>CO_CLIENT_DELETE_REASON_MN_AP_WRONG_REPLAY_COUNTER</td>
+<td>May need validation</td>
+<td>Invalid replay counter received during EAPoL negotiation. Client should recover on new attempt</td>
+<td>Possible client side issue. If issue persists, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_GROUP_KEY_UPDATE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_GROUP_KEY_UPDATE_TIMEOUT</td>
+<td>May need validation</td>
+<td>Client did not complete Broadcast key rotation. This may happen if client was sleeping or out of coverage</td>
+<td>None required, as it may happen on normal scenarios. If issue persists, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_FTIE"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_FTIE</td>
+<td>May need validation</td>
+<td>Failure during FT processing for client. This may have different triggers</td>
+<td>RA trace needed to isolate fault</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_AAA_SERVER_UNAVAILABLE"></a>CO_CLIENT_DELETE_REASON_AAA_SERVER_UNAVAILABLE</td>
+<td>May need validation</td>
+<td>Radius server was not reachable</td>
+<td>Check WLC and Radius server logs for possible triggers. Confirm server is reachable and up</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_RADIO_DOWN"></a>CO_CLIENT_DELETE_REASON_RADIO_DOWN</td>
+<td>May need validation</td>
+<td>AP sent radio down event, leading to client delete</td>
+<td>There are valid reasons for this to happen, if this is frequent even, check AP logs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_UNSPECIFIED_FAILURE"></a>CO_CLIENT_DELETE_REASON_DOT11_UNSPECIFIED_FAILURE</td>
+<td>May need validation</td>
+<td>Association response creation fail, possible due to client malformed request</td>
+<td>if issue persists, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NOOP"></a>CO_CLIENT_DELETE_REASON_NOOP</td>
+<td>May need validation</td>
+<td>Default code when no other reason is known, it should have been replaced with corresponding delete trigger, internal error. Client will recover after a new session</td>
+<td>Collect RA trace for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NONE"></a>CO_CLIENT_DELETE_REASON_NONE</td>
+<td>May need validation</td>
+<td>Default code when no other reason is known, it should have been replaced with corresponding delete trigger, related to SISF/Guest anchor component. Client will recover after a new session</td>
+<td>Collect RA trace for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SANET"></a>CO_CLIENT_DELETE_REASON_SANET</td>
+<td>May need validation</td>
+<td>Error handling the security session of the client. Triggers could be FT roam, PMK error during iPSK, client orchestration</td>
+<td>If this happens frequently, collect RA trace for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_CONNECT_TIMEOUT</td>
+<td>May need validation</td>
+<td>Client associated to Flex AP, and did not complete onboarding process, may be triggered if client was on low RF, or did not do local authentication</td>
+<td>None required, if this happens frequently, collect RA and AP side debugs for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DPATH_FAILURE"></a>CO_CLIENT_DELETE_REASON_DPATH_FAILURE</td>
+<td>May need validation</td>
+<td>Internal error processing operation for Client in dataplane</td>
+<td>If the issue persists, collect RA traces and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_FAILURE"></a>CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_FAILURE</td>
+<td>May need validation</td>
+<td>Client removed after inter-WNCD roaming</td>
+<td>Validate tag and policy configuration. If this happens frequently, collect RA trace for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_BLACKLIST"></a>CO_CLIENT_DELETE_REASON_CLIENT_BLACKLIST</td>
+<td>May need validation</td>
+<td>Default client exclusion reason, when something more precise was not found</td>
+<td>If this happens frequently, collect RA trace for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SERVICE_UNAVAILABLE"></a>CO_CLIENT_DELETE_REASON_SERVICE_UNAVAILABLE</td>
+<td>May need validation</td>
+<td>Session was disconnected, may be triggered by radio down</td>
+<td>None required, if this happens frequently, collect RA and AP side debugs for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SAE_AUTH_FAILURE"></a>CO_CLIENT_DELETE_REASON_SAE_AUTH_FAILURE</td>
+<td>May need validation</td>
+<td>Client failed SAE authentication</td>
+<td>Check configuration and configured password</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_FAILURE_IGNORE_REQ"></a>CO_CLIENT_DELETE_REASON_DOT11_FAILURE_IGNORE_REQ</td>
+<td>May need validation</td>
+<td>SAE authentication protocol error. May be triggered by client side defect, or replay attack</td>
+<td>None required, if this happens frequently, collect RA and over the air capture for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_INVALID_MDIE"></a>CO_CLIENT_DELETE_REASON_DOT11_INVALID_MDIE</td>
+<td>May need validation</td>
+<td>802.11r(FT) client sent invalid mobility domain</td>
+<td>Possible client side defect. Collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_AID_ALLOC_CONFLICT_REQ"></a>CO_CLIENT_DELETE_REASON_DOT11_AID_ALLOC_CONFLICT_REQ</td>
+<td>May need validation</td>
+<td>AP-COS in Flex mode with central association. This is not supported scenario. Not applicable to releases 17.6 and higher</td>
+<td>Change the configuration on the policy profile.</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_MIC_VALIDATION"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_MIC_VALIDATION</td>
+<td>May need validation</td>
+<td>if WLAN is PSK, possible invalid password. For 802.1x, this is client side supplicant issue</td>
+<td>For PSK, check password on WLAN and client side. For 802.1x, contact client manufacturer</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_THEFT"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_THEFT</td>
+<td>May need validation</td>
+<td>Client was deleted due to suspected mac theft, MAC was seen on different anchor or vlan in case of wired guest</td>
+<td>Check topology, and confirm if mac movement is possible, this is spoofing, or false positive</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_IP_THEFT"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_IP_THEFT</td>
+<td>May need validation</td>
+<td>Client tried to reuse IP registered to another device. High probability, it is client side issue</td>
+<td>Check client side logs, and confirm DHCP server configuration. Update client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_BIND_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_BIND_FAIL</td>
+<td>May need validation</td>
+<td>This is related to iPSK scenarios: AAA override returned password is not proper length or format, PSK is not configured properly for AAA override,</td>
+<td>Check Radius server returned attributes</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_ASSOC_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_ASSOC_FAIL</td>
+<td>May need validation</td>
+<td>Client deleted during association processing, or MAB error</td>
+<td>Check radius logs for client address. if no issues found, collect RA and over the air traces</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DB_POPULATE_FAIL"></a>CO_CLIENT_DELETE_REASON_DB_POPULATE_FAIL</td>
+<td>May need validation</td>
+<td>Internal error, Client handling failure during guest access or anchored WLAN</td>
+<td>Collect RA traces and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ANCHOR_CREATE_REQ_FAIL"></a>CO_CLIENT_DELETE_REASON_ANCHOR_CREATE_REQ_FAIL</td>
+<td>May need validation</td>
+<td>Internal error, Client Mobility error on anchored WLAN</td>
+<td>Collect RA traces and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ANCHOR_INVALID_MBSSID"></a>CO_CLIENT_DELETE_REASON_ANCHOR_INVALID_MBSSID</td>
+<td>May need validation</td>
+<td>Internal error, could not map client to WLAN/Policy profile table (MBSSID)</td>
+<td>Collect RA traces, show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ANCHOR_THROTTLED"></a>CO_CLIENT_DELETE_REASON_ANCHOR_THROTTLED</td>
+<td>May need validation</td>
+<td>Internal error, controller detected congestion while creating WLAN anchor request for client</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_REAUTH_FAILURE"></a>CO_CLIENT_DELETE_REASON_REAUTH_FAILURE</td>
+<td>May need validation</td>
+<td>AAA reauthentication failure. This should not be applicable to  wireless clients</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_MGMT_PTK_COMPUTATION"></a>CO_CLIENT_DELETE_REASON_KEY_MGMT_PTK_COMPUTATION</td>
+<td>May need validation</td>
+<td>Invalid EAPoL message received from client</td>
+<td>Possible client side defect, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_AND_IP_THEFT"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_MAC_AND_IP_THEFT</td>
+<td>May need validation</td>
+<td>Traffic for client arrived at different interface from the currently associated one. Possible race condition</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_FAIL</td>
+<td>May need validation</td>
+<td>QoS policies for client could not be applied</td>
+<td>Validate QoS config at WLAN, if no problems found, collect RA traces and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_SEND_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_SEND_FAIL</td>
+<td>May need validation</td>
+<td>Internal error. Controller could not send QoS update for client to AP or mobility</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_BIND_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_BIND_FAIL</td>
+<td>May need validation</td>
+<td>Internal error. AP  could not apply QoS update for client</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_UNBIND_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_QOS_POLICY_AP_UNBIND_FAIL</td>
+<td>May need validation</td>
+<td>Internal error. AP  could not apply QoS update for client</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_VLAN_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_VLAN_FAIL</td>
+<td>May need validation</td>
+<td>Failure to apply authorization, possible VLAN not existing</td>
+<td>Check VLAN in use, and attributes returned by Radius server if using AAA override</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_ACL_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_ACL_FAIL</td>
+<td>May need validation</td>
+<td>Failure to apply authorization, possible ACL not existing</td>
+<td>Check ACL in use, and attributes returned by Radius server if using AAA override</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_PUNT_ACL_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_PUNT_ACL_FAIL</td>
+<td>May need validation</td>
+<td>Failure to apply authorization, possible URL redirect ACL not existing</td>
+<td>Check URL redirect ACL in use, and attributes returned by Radius server if using AAA override</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_ACCOUNTING_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_ACCOUNTING_FAIL</td>
+<td>May need validation</td>
+<td>Client deleted during accounting of authorization process</td>
+<td>Check RA traces for details</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_CTS_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_CTS_FAIL</td>
+<td>May need validation</td>
+<td>Registration of Trustsec CTS functions for client failed</td>
+<td>Check RA traces for details</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_NO_DEF_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_NO_DEF_FAIL</td>
+<td>May need validation</td>
+<td>Client deleted as URL filter does not exist</td>
+<td>Check WLAN/Flex profile configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_POSTAUTH_MISMATCH_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_POSTAUTH_MISMATCH_FAIL</td>
+<td>May need validation</td>
+<td>Post authentication filter type received for client, is invalid</td>
+<td>Check configuration in WLAN profile</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_ZERO_GID_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_FQDN_ZERO_GID_FAIL</td>
+<td>May need validation</td>
+<td>For 17.3/17.6 this may indicate client did ARP flood</td>
+<td>Check client for applications doing network scan, in some scenarios it may need client driver updates</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_MISC_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_MISC_FAIL</td>
+<td>May need validation</td>
+<td>Default reason for policy error, when no more detailed information is available</td>
+<td>Check Radius server returned attributed. Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_REAUTH_FAILURE"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_REAUTH_FAILURE</td>
+<td>May need validation</td>
+<td>Registration for internal reauth  for client failed</td>
+<td>Check RA traces for details</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_FAILURE"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_POLICY_FAILURE</td>
+<td>May need validation</td>
+<td>Unknown failure for EPM component for client policies</td>
+<td>Check RA traces for details</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_AAA_NOT_READY"></a>CO_CLIENT_DELETE_REASON_AAA_NOT_READY</td>
+<td>May need validation</td>
+<td>AAA subsystem not ready</td>
+<td>Confirm radius server is reachable, then collect RA traces for client, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ASSOC_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_ASSOC_CONNECT_TIMEOUT</td>
+<td>May need validation</td>
+<td>Controller internal error. Client association processing was not completed in time, could be load issue</td>
+<td>Collect RA traces for further analysis, include AP logs if Flexmode</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MOBILITY_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MOBILITY_CONNECT_TIMEOUT</td>
+<td>May need validation</td>
+<td>Controller internal error. Client mobility processing was not completed in time, could be load issue</td>
+<td>Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_S_IP_ANCHOR_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_S_IP_ANCHOR_CONNECT_TIMEOUT</td>
+<td>May need validation</td>
+<td>Controller internal error. Client IP static check on mobility  was not completed in time, could be load issue</td>
+<td>Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SM_SESSION_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_SM_SESSION_CONNECT_TIMEOUT</td>
+<td>May need validation</td>
+<td>Controller internal error. Client connection data creation in DB did not complete in time</td>
+<td>Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_GUEST_LAN_INVALID_MBSSID"></a>CO_CLIENT_DELETE_REASON_GUEST_LAN_INVALID_MBSSID</td>
+<td>May need validation</td>
+<td>Internal controller error. It was not possible to find valid guest LAN and policy profile for client</td>
+<td>Collect RA traces and contact Cisco support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_GUEST_LAN_NO_MEMORY"></a>CO_CLIENT_DELETE_REASON_GUEST_LAN_NO_MEMORY</td>
+<td>May need validation</td>
+<td>Internal error, could not allocate data structures to handle  client for wired guest LAN</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_GUEST_LAN_CREATE_REQ_FAIL"></a>CO_CLIENT_DELETE_REASON_GUEST_LAN_CREATE_REQ_FAIL</td>
+<td>May need validation</td>
+<td>Internal error, could not send client creation event for wired guest LAN</td>
+<td>Collect RA traces,  show tech wireless, and contact Cisco Support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_JOIN_FAIL"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_JOIN_FAIL</td>
+<td>May need validation</td>
+<td>EoGRE Tunnel join failed</td>
+<td>Check controller and gateway configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NACK_IFID_MISMATCH"></a>CO_CLIENT_DELETE_REASON_NACK_IFID_MISMATCH</td>
+<td>May need validation</td>
+<td>Controller internal error while updating client interface</td>
+<td>Collect RA traces for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_VLAN"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_VLAN</td>
+<td>May need validation</td>
+<td>Invalid VLAN for EoGRE client</td>
+<td>Check configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_EMPTY_DOMAIN"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_EMPTY_DOMAIN</td>
+<td>May need validation</td>
+<td>No domain provided for EoGRE client</td>
+<td>Check authentication logs and configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_DOMAIN"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_DOMAIN</td>
+<td>May need validation</td>
+<td>Unknown domain provided for EoGRE client</td>
+<td>Check authentication logs and configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_DOMAIN_SHUT"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_DOMAIN_SHUT</td>
+<td>May need validation</td>
+<td>Tunnel for domain is shut down</td>
+<td>Check authentication logs and configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_GW"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_INVALID_GW</td>
+<td>May need validation</td>
+<td>Destination GW for EoGRE client is invalid</td>
+<td>Check configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_GW_DOWN"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_GW_DOWN</td>
+<td>May need validation</td>
+<td>All destination GWs for EoGRE client are down</td>
+<td>Check configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_FLEX_NO_ACTIVE_GW"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_FLEX_NO_ACTIVE_GW</td>
+<td>May need validation</td>
+<td>EoGRE Flex LS AP reported no active GW</td>
+<td>Check AP logs and profile configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RULE_MATCH"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RULE_MATCH</td>
+<td>May need validation</td>
+<td>Controller internal error. Rule matching for EoGRE client failed</td>
+<td>Collect RA traces and check with Cisco support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD</td>
+<td>May need validation</td>
+<td>Controller internal error. Application of AAA attributes for EoGRE client failed</td>
+<td>Collect RA traces and check with Cisco support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_MSPAYLOAD</td>
+<td>May need validation</td>
+<td>Controller internal error. Creation of  EoGRE client failed</td>
+<td>Collect RA traces and check with Cisco support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_HANDOFF_ERROR"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_HANDOFF_ERROR</td>
+<td>May need validation</td>
+<td>Controller internal error. Mobility handling of  EoGRE client failed</td>
+<td>Collect RA traces and check with Cisco support</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_QOS_FAILURE"></a>CO_CLIENT_DELETE_REASON_QOS_FAILURE</td>
+<td>May need validation</td>
+<td>QOS module operation failed for the client</td>
+<td>If the issue persists, collect RA trace for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_ASSOC_DENIED_UNSPEC"></a>CO_CLIENT_DELETE_REASON_DOT11_ASSOC_DENIED_UNSPEC</td>
+<td>May need validation</td>
+<td>Used when WGB tries association to webauth WLAN</td>
+<td>Correct WGB configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CCX_INSUFFICIENT_BANDWIDTH"></a>CO_CLIENT_DELETE_REASON_DOT11_CCX_INSUFFICIENT_BANDWIDTH</td>
+<td>May need validation</td>
+<td>CAC TSPEC error due to insufficient bandwidth on AP radio</td>
+<td>Check CAC configuration, and collect RA trace</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ABORT_RECEIVED"></a>CO_CLIENT_DELETE_REASON_ABORT_RECEIVED</td>
+<td>May need validation</td>
+<td>Internal controller error. Client connection abort received during state processing</td>
+<td>Collect RA traces for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_M1_FAILURE"></a>CO_CLIENT_DELETE_REASON_KEY_M1_FAILURE</td>
+<td>May need validation</td>
+<td>Controller internal error. It was not possible to send EAPoL M1 to AP</td>
+<td>Collect RA traces for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_M3_FAILURE"></a>CO_CLIENT_DELETE_REASON_KEY_M3_FAILURE</td>
+<td>May need validation</td>
+<td>Controller internal error. It was not possible to send EAPoL M3 to AP</td>
+<td>Collect RA traces for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WLAN_ID_ATTR_MISMATCH"></a>CO_CLIENT_DELETE_REASON_WLAN_ID_ATTR_MISMATCH</td>
+<td>May need validation</td>
+<td>Radius server returned a WLAN ID attribute, not matching client policy</td>
+<td>Check if this is expected, and confirm Radius server configuration vs controller WLANs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_SUPPLICANT_NAME_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_SUPPLICANT_NAME_FAIL</td>
+<td>May need validation</td>
+<td>Policy validation error of the supplicant name</td>
+<td></td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_USER_NAME_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_USER_NAME_FAIL</td>
+<td>May need validation</td>
+<td>Error handling username attribute</td>
+<td>Collect RA traces</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_SERVICE_SET_ID_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_SERVICE_SET_ID_FAIL</td>
+<td>May need validation</td>
+<td>Invalid SSID name received from AAA server</td>
+<td>Check Radius server configuration and collect RA traces for more info</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_ANCHOR_VLAN_ID_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_ANCHOR_VLAN_ID_FAIL</td>
+<td>May need validation</td>
+<td>Error handling Anchor VLAN ID attribute</td>
+<td>Check Radius server configuration and collect RA traces for more info</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_INTERIM_INTERVAL_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_INTERIM_INTERVAL_FAIL</td>
+<td>May need validation</td>
+<td>Internal controller error while handling Accounting Interim interval settings</td>
+<td>Collect RA traces for more info</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_LINKLOCAL_BRIDGE_VLAN_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_LINKLOCAL_BRIDGE_VLAN_FAIL</td>
+<td>May need validation</td>
+<td>Invalid Local-link bridging VLAN assigned to client</td>
+<td>Check configuration and RA traces</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MBSSID_DOWN"></a>CO_CLIENT_DELETE_REASON_MBSSID_DOWN</td>
+<td>May need validation</td>
+<td>Client removed due to mobility tunnel going down</td>
+<td>Check mobility peer status</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_L3AUTH_FAIL"></a>CO_CLIENT_DELETE_REASON_L3AUTH_FAIL</td>
+<td>May need validation</td>
+<td>Security processing for a L3 Auth failed (Webauth/guest)</td>
+<td>Confirm username/password and if required, collect RA trace</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CAPWAP_DOWN"></a>CO_CLIENT_DELETE_REASON_CAPWAP_DOWN</td>
+<td>May need validation</td>
+<td>Client was deleted due to CAPWAP tunnel failure</td>
+<td>Confirm if there are any network connectivity issues, if none found, check AP logs for any crash</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WGB_CLIENT_DIRECT_ASSOC"></a>CO_CLIENT_DELETE_REASON_WGB_CLIENT_DIRECT_ASSOC</td>
+<td>May need validation</td>
+<td>Mac address was seen as wired WGB client, has now associated as wireless client</td>
+<td>This is unusual scenario. Check if this is intentional</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_CLASS3_RECV"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_CLASS3_RECV</td>
+<td>May need validation</td>
+<td>AP triggered delete, as client sent class 3 frame (data, power save, some management) from non-authenticated client, may happen occasionally on connection recovery</td>
+<td>Nothing required, unless this is happening frequently. This may need RA trace and OTA capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_AUTH_RESP_REJECT"></a>CO_CLIENT_DELETE_REASON_MN_AP_AUTH_RESP_REJECT</td>
+<td>May need validation</td>
+<td>AP deleted client, as Auth request was FT or SAE, and these are not enabled in the SSID</td>
+<td>Possible client side defect, may need OTA and config to validate</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_WITH_FAILURE_STATUS"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_WITH_FAILURE_STATUS</td>
+<td>May need validation</td>
+<td>AP rejected association request. This could be due to invalid rates, or other incorrect information element</td>
+<td>If this happens frequently, it may need AP side logs + OTA</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_CLIENT_ACL_MISMATCH"></a>CO_CLIENT_DELETE_REASON_MN_CLIENT_ACL_MISMATCH</td>
+<td>May need validation</td>
+<td>AP deleted client during Facebook Express wifi feature, due to missing ACL</td>
+<td>Possible configuration error. Check assigned postauth ACL</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_AUTH_STOP"></a>CO_CLIENT_DELETE_REASON_MN_AP_AUTH_STOP</td>
+<td>May need validation</td>
+<td>AP deleted client during association phase. This may  have different triggers, from internal AP process errors, normal delete on RLANs, etc</td>
+<td>If seen frequently or observing connection problems, collect AP logs and OTA for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_4WAY_HANDSHAKE_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_4WAY_HANDSHAKE_FAILED</td>
+<td>May need validation</td>
+<td>EAPoL 4WAY exchange failed at AP side, no specific trigger</td>
+<td>Collect AP logs/client debug for further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_BAD_AID"></a>CO_CLIENT_DELETE_REASON_MN_DEL_BAD_AID</td>
+<td>May need validation</td>
+<td>Association ID assigned by controller is already in use</td>
+<td>This may need further investigation for possible defect on either controller or AP. RA traces and AP logs will be needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_ALL_ON_SLOT"></a>CO_CLIENT_DELETE_REASON_MN_DEL_ALL_ON_SLOT</td>
+<td>May need validation</td>
+<td>AP received request to delete all clients in the interface. Could be due to config change, or recovery from radio event</td>
+<td>This could be due to config request. If none was performed, check AP logs for possible radio recovery/reset that needs to be investigated</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_STOP_REASSOC"></a>CO_CLIENT_DELETE_REASON_MN_DEL_STOP_REASSOC</td>
+<td>May need validation</td>
+<td>AP triggered delete, may be due to AP staggered upgrade in process, or client sent more than 3 continuous requests, or during some scenarios of inter-radio roaming</td>
+<td>Some triggers are normal during operation. If this happens frequently, collect AP debug client logs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_TX_DISASSOC"></a>CO_CLIENT_DELETE_REASON_MN_DEL_TX_DISASSOC</td>
+<td>May need validation</td>
+<td>AP Radio driver sent a client delete, or other component sent a downstream dissasociation request</td>
+<td>This should not be seen,  may need additional investigation to confirm if it is valid trigger. Collect RA + AP debugs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_4WAY_HANDSHAKE_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_AP_4WAY_HANDSHAKE_FAILED</td>
+<td>May need validation</td>
+<td>AP side report of different failure points on EAPoL 4way. May be triggered by wrong PSK, or possible defects on client or infrastructure side</td>
+<td>If using PSK, check it, otherwise, collect RA trace and AP debugs, and either EPC or OTA capture.</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_TUNNEL_DOWN"></a>CO_CLIENT_DELETE_REASON_MN_AP_TUNNEL_DOWN</td>
+<td>May need validation</td>
+<td>AP reports EoGRE tunnel down</td>
+<td>This is specific to EoGRE tunnel from AP. Check network connectivity and EoGRE configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLAN_CENTRAL_SWITCH"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLAN_CENTRAL_SWITCH</td>
+<td>May need validation</td>
+<td>Client on RLAN with Central Switching, and AP lost CAPWAP tunnel (moved to standalone)</td>
+<td>Check AP network connectivity to controller</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DP_ADD_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DP_ADD_FAIL</td>
+<td>May need validation</td>
+<td>It was not possible to add RLAN client to AP dataplane, possible defect or load related issue</td>
+<td>Get AP logs and client debugs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLAN_MAB_FAILURE"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLAN_MAB_FAILURE</td>
+<td>May need validation</td>
+<td>Mac address bypass failed for RLAN client. Either not authorized client, invalid config, or radius server issue</td>
+<td>Check Radius configuration, and mac address entry in server</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_ACL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DELETE_NO_ACL</td>
+<td>May need validation</td>
+<td>AP deleted client, as ACL name provided, was not present in AP</td>
+<td>Check ACL configuration, collect RA traces, AP logs, AP show tech</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_KEY_PLUMB_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_KEY_PLUMB_FAIL</td>
+<td>May need validation</td>
+<td>AP radio driver could not configure client encryption keys. Possible defect</td>
+<td>Collect AP debugs for client, this may need further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_MESH_KEY_PLUMB_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_MESH_KEY_PLUMB_FAIL</td>
+<td>May need validation</td>
+<td>AP radio driver could not configure mesh AP encryption keys. Possible defect</td>
+<td>Collect AP debugs for mesh AP, this may need further analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DP_ADD_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DP_ADD_FAIL</td>
+<td>May need validation</td>
+<td>AP could not add client entry to data path during association processing. Possible defect</td>
+<td>Collect AP show tech, and debug client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_AUTH_RESP_SEND_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_AUTH_RESP_SEND_FAIL</td>
+<td>May need validation</td>
+<td>AP could not send Auth response to client, default delete reason for auth failures. Possible defect</td>
+<td>Collect AP show tech, OTA  and debug client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_SEND_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_ASSOC_RESP_SEND_FAIL</td>
+<td>May need validation</td>
+<td>AP could not send Association response to client, default delete reason for association failures. Possible defect</td>
+<td>Collect AP show tech, OTA  and debug client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DEAUTH_DISASSOC_SEND_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DEAUTH_DISASSOC_SEND_FAIL</td>
+<td>May need validation</td>
+<td>AP could not send deauth or dissasociate to client. Possible defect</td>
+<td>Collect AP show tech, OTA  and debug client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_PSP_WHEN_UNAUTH"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_PSP_WHEN_UNAUTH</td>
+<td>May need validation</td>
+<td>A device sent Power Saving Poll without being associated to AP. May be client side state problem</td>
+<td>If this happens frequently, collect OTA, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_IOCTL_ERROR"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_EVENT_IOCTL_ERROR</td>
+<td>May need validation</td>
+<td>Driver could not obtain statistics for client, leading to client delete request</td>
+<td>If this happens frequently, collect OTA, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_FLEX_FT_FAILURE"></a>CO_CLIENT_DELETE_REASON_MN_AP_FLEX_FT_FAILURE</td>
+<td>May need validation</td>
+<td>FT (802.11w) roaming failed for client, with AP in Flex mode. May be client side issue</td>
+<td>If this happens frequently, collect OTA, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DRIVER_ADD_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DRIVER_ADD_FAIL</td>
+<td>May need validation</td>
+<td>AP could not add client entry to radio driver. Possible defect</td>
+<td>Collect OTA, ap show tech, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CLIENT_NOT_FOUND"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CLIENT_NOT_FOUND</td>
+<td>May need validation</td>
+<td>AP could not add client entry to radio driver. Possible defect</td>
+<td>Collect OTA, ap show tech, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MGMT_PKT_ALLOC_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_MGMT_PKT_ALLOC_FAIL</td>
+<td>May need validation</td>
+<td>AP radio driver could not allocate memory to handle the client add. Possible defect</td>
+<td>Collect OTA, ap show tech, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_CIPHER"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_CIPHER</td>
+<td>May need validation</td>
+<td>AP driver deleted client, as requested crypto cipher is invalid or Unknown. Possible defect</td>
+<td>Collect OTA, ap show tech, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_AID"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_AID</td>
+<td>May need validation</td>
+<td>AP driver reported invalid Association ID received for client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY</td>
+<td>May need validation</td>
+<td>AP driver reported they key type sent for client is invalid type (direction, mode, etc). Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_FW_KEY_SET_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_FW_KEY_SET_FAILED</td>
+<td>May need validation</td>
+<td>AP driver could not program the client key into radio firmware. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_HT_VHT_RATES"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_HT_VHT_RATES</td>
+<td>May need validation</td>
+<td>AP Radio driver received association response add with invalid HT/VHT rates or legacy rates with invalid size</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_LEGACY_RATES"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_LEGACY_RATES</td>
+<td>May need validation</td>
+<td>AP Radio driver received association response add with invalid legacy rates, or no rates at all</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_AID_INUSE"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_AID_INUSE</td>
+<td>May need validation</td>
+<td>AP Radio driver reports that association ID set for Client is already in use. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CIPHER_ATTACH_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_CIPHER_ATTACH_FAIL</td>
+<td>May need validation</td>
+<td>AP Radio driver reports that it was not possible to link the cipher type to the key when adding the client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ALGORITHM_MISMATCH"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ALGORITHM_MISMATCH</td>
+<td>May need validation</td>
+<td>AP Radio driver reports mismatch between multicast/unicast cipher when trying to set key for client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEYLENGTH"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEYLENGTH</td>
+<td>May need validation</td>
+<td>AP Radio driver reports mismatch invalid key length while adding  client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY_INDEX"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_INVALID_KEY_INDEX</td>
+<td>May need validation</td>
+<td>AP Radio driver reports mismatch invalid key index while adding  client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_STADB_INIT_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_STADB_INIT_FAILED</td>
+<td>May need validation</td>
+<td>AP driver creation of IO control block for client failed. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_FAILED</td>
+<td>May need validation</td>
+<td>AP driver reports that IO control block for client could not be found. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_IN_FIRMWARE_FAILED"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ADDING_ENTRY_IN_FIRMWARE_FAILED</td>
+<td>May need validation</td>
+<td>AP driver reports that radio firmware could not add client. Possible defect</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_REASON_AP_MAX"></a>CO_CLIENT_DELETE_REASON_MN_AP_REASON_AP_MAX</td>
+<td>May need validation</td>
+<td>Default driver client delete reason, if no other trigger was found</td>
+<td>Collect OTA, ap show tech, controller show tech wireless, and client debug bundle</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_KEY_XCHNG_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_KEY_XCHNG_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>This can happen during normal scenarios. Client deleted due to EAPoL M1 retries. Possible client side issue, or it roamed during auth phase</td>
+<td>If issue persists, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SESSION_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_SESSION_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client removed after reaching session timeout. Normal scenario</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_IPLEARN_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_IPLEARN_CONNECT_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Controller did not learn client IP address in the allowed time</td>
+<td>Check DHCP server and client IP configuration. Validate if DHCP required is set and client is performing DHCP negotiation. If all is correct, collect RA traces and EPC</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_BSSID_DOWN"></a>CO_CLIENT_DELETE_REASON_BSSID_DOWN</td>
+<td>Normal, in most scenarios</td>
+<td>Triggered by configuration changes, for example WLAN or Policy profile modifications</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MAX_SAQUERIES"></a>CO_CLIENT_DELETE_REASON_MAX_SAQUERIES</td>
+<td>Normal, in most scenarios</td>
+<td>For PMF clients, triggered when client did not reply to SA queries and reached max retries. Could be triggered on failed roams, or client spoofing attacks</td>
+<td>None required, as it may happen on normal scenarios. If issue persists, collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_RESTART_PURGE"></a>CO_CLIENT_DELETE_REASON_RESTART_PURGE</td>
+<td>Normal, in most scenarios</td>
+<td>Client was roaming during HA failure, or Association ID conflict was detected after failover</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_SUCCESS"></a>CO_CLIENT_DELETE_REASON_INTER_WNCD_ROAM_SUCCESS</td>
+<td>Normal, in most scenarios</td>
+<td>Client roamed across WNCD instances. This is normal scenario for default tag, or roaming across tags</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_INTER_CTRL_ROAM_SUCCESS"></a>CO_CLIENT_DELETE_REASON_INTER_CTRL_ROAM_SUCCESS</td>
+<td>Normal, in most scenarios</td>
+<td>Successful inter controller client roam</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MOBILITY_FAILURE"></a>CO_CLIENT_DELETE_REASON_MOBILITY_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client delete, either due to roaming while on IP learning state, or due to policy configuration mismatch</td>
+<td>Check logging details for client. In case of mismatch, correct configuration. Delete by IP learning will happen on normal scenarios</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_NAS_ERROR"></a>CO_CLIENT_DELETE_REASON_NAS_ERROR</td>
+<td>Normal, in most scenarios</td>
+<td>Default AAA disconnect reason</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_80211V_SMART_ROAM_FAILED"></a>CO_CLIENT_DELETE_REASON_80211V_SMART_ROAM_FAILED</td>
+<td>Normal, in most scenarios</td>
+<td>Failure while sending 802.11v Transition request frame. Causes could be 11v not supported by client, or BSS transition is not enabled on the radio</td>
+<td>Check configuration. If this happens frequently, collect RA trace</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11V_ASSOC_FAILED"></a>CO_CLIENT_DELETE_REASON_DOT11V_ASSOC_FAILED</td>
+<td>Normal, in most scenarios</td>
+<td>Not in use</td>
+<td>None, this should not be triggered</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_FT_AUTH_RESPONSE"></a>CO_CLIENT_DELETE_REASON_FT_AUTH_RESPONSE</td>
+<td>Normal, in most scenarios</td>
+<td>Client failed pre-authentication during FT roaming</td>
+<td>None required, if this happens frequently, collect RA and AP side debugs for the client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_AVC_REANCHORING"></a>CO_CLIENT_DELETE_REASON_AVC_REANCHORING</td>
+<td>Normal, in most scenarios</td>
+<td>WLAN Reanchor feature is enabled, and client was not using voice/video</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_EAP_ID_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_CLIENT_EAP_ID_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not reply to EAP requests in the specified retries/time</td>
+<td>Check client supplicant/user configuration. If persistent, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_DOT1X_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_CLIENT_DOT1X_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not reply to 802.1x requests in the specified retries/time</td>
+<td>Check client supplicant/user configuration and AAA server logs. If persistent, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_WEB_AUTH_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_WEB_AUTH_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>Client failed webauth, most probably wrong username or password</td>
+<td>Check client credentials</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_AUTH_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_AUTH_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>Client provided wrong username or password during 802.1x authentication</td>
+<td>Check client credentials and supplicant configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_DOT1X_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not reply to 802.1x request. Not currently used</td>
+<td>Check client supplicant configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_DOT11_AUTH_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_DOT11_AUTH_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>Failure during 802.11 auth request. Not currently used</td>
+<td>None required.</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_CONFIG"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_CONFIG</td>
+<td>Normal, in most scenarios</td>
+<td>Client was manually excluded by administrator</td>
+<td>Check controller configuration, if this was not intentional</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_SUPPLICANT_RESTART"></a>CO_CLIENT_DELETE_REASON_SUPPLICANT_RESTART</td>
+<td>Normal, in most scenarios</td>
+<td>Not in use</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_PORT_ADMIN_DISABLED"></a>CO_CLIENT_DELETE_REASON_PORT_ADMIN_DISABLED</td>
+<td>Normal, in most scenarios</td>
+<td>802.1x or MAB has been disabled on the client interface. This should not be applicable to  wireless clients</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_LOST_CARRIER"></a>CO_CLIENT_DELETE_REASON_LOST_CARRIER</td>
+<td>Normal, in most scenarios</td>
+<td>AAA lost carrier failure. This should not be applicable to wireless clients</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUDE_STATIC_IP_ANCHOR_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUDE_STATIC_IP_ANCHOR_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>Policy profile has static IP mobility enabled, and controller could not find valid anchor for client IP</td>
+<td>Check controllers configuration and IP address used by client. Could be client was using IP not valid in any controller in mobility group</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MACAUTH_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MACAUTH_CONNECT_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Controller internal error. Client mac authentication was not completed in time, could be load issue or radius server</td>
+<td>Check radius server, then collect RA traces for further analysis, include AP logs if Flexmode</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_L2AUTH_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_L2AUTH_CONNECT_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not complete L2 auth like PSK or 802.1x,  in time. Could be normal if client roamed or went out of coverage</td>
+<td>If it is not expected, collect RA traces for further analysis, include AP logs if Flexmode</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_L3AUTH_CONNECT_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_L3AUTH_CONNECT_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not complete webauth in time. Could be normal if client roamed or went out of coverage</td>
+<td>If it is not expected, collect RA traces for further analysis, include AP logs if Flexmode</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RESET"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RESET</td>
+<td>Normal, in most scenarios</td>
+<td>EoGRE tunnel was reset</td>
+<td>Check network status</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RECONCILIATION"></a>CO_CLIENT_DELETE_REASON_TUNNEL_EOGRE_RECONCILIATION</td>
+<td>Normal, in most scenarios</td>
+<td>Unknown client deleted after HA failover</td>
+<td>None Required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WIRED_IDLE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_WIRED_IDLE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Wired client was deleted on idle timeout, normal scenario</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_IP_UPDATE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_IP_UPDATE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Anchor informed of client IP timeout</td>
+<td>Anchored client did not complete IP negotiation in time. Check client config, DHCP server</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_AP_DELETE_MN"></a>CO_CLIENT_DELETE_REASON_AP_DELETE_MN</td>
+<td>Normal, in most scenarios</td>
+<td>AP-side triggered client delete, may be normal during operation</td>
+<td>None required. If this happens frequently collect RA trace and AP side debugs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CAPS_UNSUPPORTED"></a>CO_CLIENT_DELETE_REASON_DOT11_CAPS_UNSUPPORTED</td>
+<td>Normal, in most scenarios</td>
+<td>Invalid client capabilities during 802.11 frame parsing. Should not be seen</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CCX_INVALID_QOS_PARAMETER"></a>CO_CLIENT_DELETE_REASON_DOT11_CCX_INVALID_QOS_PARAMETER</td>
+<td>Normal, in most scenarios</td>
+<td>CCX QoS error, not in use</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CCX_NON_OPTIMAL_ASSOCIATION_CHOICE"></a>CO_CLIENT_DELETE_REASON_DOT11_CCX_NON_OPTIMAL_ASSOCIATION_CHOICE</td>
+<td>Normal, in most scenarios</td>
+<td>Client is trying to join to an non-optimal Access point when assisted roaming is enabled</td>
+<td>This can be intentional, depending on your configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WIRED_WGB_DELETE"></a>CO_CLIENT_DELETE_REASON_WIRED_WGB_DELETE</td>
+<td>Normal, in most scenarios</td>
+<td>WGB removal triggered delete of its child clients</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_REMOTE_MOBILITY_DELETE"></a>CO_CLIENT_DELETE_REASON_REMOTE_MOBILITY_DELETE</td>
+<td>Normal, in most scenarios</td>
+<td>Mobility requested client to be deleted, could have different triggers, like tunnel down</td>
+<td>Check RA traces</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_IP_DOWN_NO_IP"></a>CO_CLIENT_DELETE_REASON_IP_DOWN_NO_IP</td>
+<td>Normal, in most scenarios</td>
+<td>Client sent a DHCP release IP address</td>
+<td>This can be normal scenario depending on client behavior</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_CCX_QOS_POLICY"></a>CO_CLIENT_DELETE_REASON_DOT11_CCX_QOS_POLICY</td>
+<td>Normal, in most scenarios</td>
+<td>CCX QoS policy error. Not in use</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ROAM_ACROSS_POLICY_PROFILE_DENY"></a>CO_CLIENT_DELETE_REASON_ROAM_ACROSS_POLICY_PROFILE_DENY</td>
+<td>Normal, in most scenarios</td>
+<td>Client roamed across policy profiles</td>
+<td>Check configuration. This can be intentional on some scenarios, but policy usage should be optimised for best roaming experience</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_EXCLUSION_POLICY_TEMPLATE_FAIL"></a>CO_CLIENT_DELETE_REASON_EXCLUSION_POLICY_TEMPLATE_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>Error applying service template provided by AAA server</td>
+<td>Collect RA traces and Radius logs for further investigation</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_AP_UPGRADE"></a>CO_CLIENT_DELETE_REASON_AP_UPGRADE</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted as AP is performing an upgrade</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MAB_FAILED"></a>CO_CLIENT_DELETE_REASON_MAB_FAILED</td>
+<td>Normal, in most scenarios</td>
+<td>Client failed Mac Authentication Bypass</td>
+<td>Check if MAB configuration is correct</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WLAN_CHANGE"></a>CO_CLIENT_DELETE_REASON_WLAN_CHANGE</td>
+<td>Normal, in most scenarios</td>
+<td>Client changed WLANs/SSID</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_VLAN_CHANGE"></a>CO_CLIENT_DELETE_REASON_VLAN_CHANGE</td>
+<td>Normal, in most scenarios</td>
+<td>On client reassociation or roaming, a new VLAN was assigned. This would be caused by AAA override, different policy profiles, etc</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_ADMIN_RESET"></a>CO_CLIENT_DELETE_REASON_ADMIN_RESET</td>
+<td>Normal, in most scenarios</td>
+<td>Administrator removed the client, or in some scenarios, AAA server requested client delete</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_IDLE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_IDLE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted due to inactivity. Normal scenario</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_IDLE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_IDLE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted by AP, due to inactivity. Normal scenario</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_USER_REQUEST"></a>CO_CLIENT_DELETE_REASON_USER_REQUEST</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted due to supplicant sending EAP Logoff. This may happen during machine authentication</td>
+<td>None required. If this is not intentional, do RA trace and check on client side logs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MM_TUNNEL_DOWN"></a>CO_CLIENT_DELETE_REASON_MM_TUNNEL_DOWN</td>
+<td>Normal, in most scenarios</td>
+<td>Client was deleted as Mobility tunnel to peer went down</td>
+<td>Check network connectivity, and remote mobility peer status</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11V_TIMER_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_DOT11V_TIMER_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not perform roaming on 802.11v transition request and timer expired</td>
+<td>None required. If impacting client stability, check configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_MAX_STA"></a>CO_CLIENT_DELETE_REASON_DOT11_MAX_STA</td>
+<td>Normal, in most scenarios</td>
+<td>AP Radio has reached maximum capacity</td>
+<td>Check if non-default max client setting per radio has been set, or RF design if additional capacity is needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WIRED_IAPP_DISASSOC"></a>CO_CLIENT_DELETE_REASON_WIRED_IAPP_DISASSOC</td>
+<td>Normal, in most scenarios</td>
+<td>WGB wired client deleted. This may be triggered by WGB client removed due to inactivity</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WIRED_WGB_CHANGE"></a>CO_CLIENT_DELETE_REASON_WIRED_WGB_CHANGE</td>
+<td>Normal, in most scenarios</td>
+<td>Client mac address was reported by another WGB, so deleting previous entry</td>
+<td>Mac address seen by another WGB. Check if this is intentional</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_WIRED_VLAN_CHANGE"></a>CO_CLIENT_DELETE_REASON_WIRED_VLAN_CHANGE</td>
+<td>Normal, in most scenarios</td>
+<td>WGB moved client to a different VLAN</td>
+<td>This is for WGB VLAN feature. Check if this is intentional</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_CREDENTIAL_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_CREDENTIAL_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Wrong username or password</td>
+<td>Check client side user configuration</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DANGLING_CLEANUP_TIMER"></a>CO_CLIENT_DELETE_REASON_DANGLING_CLEANUP_TIMER</td>
+<td>Normal, in most scenarios</td>
+<td>Wired Client was deleted after WGB cleanup event</td>
+<td>Check why WGB was deleted</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DEAUTH_OR_DISASSOC_REQ"></a>CO_CLIENT_DELETE_REASON_DEAUTH_OR_DISASSOC_REQ</td>
+<td>Normal, in most scenarios</td>
+<td>Client initiated a deauthentication or deauthentication</td>
+<td>None required in most scenarios. This is normal activity</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_DHCP_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_DHCP_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported DHCP error on deauth frame</td>
+<td>Check DHCP server, and collect RA trace</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_EAP_TIMEOUT_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_EAP_TIMEOUT_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported EAP error on deauth frame</td>
+<td>Check AAA server, and collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_8021X_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_8021X_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported authentication error on deauth frame</td>
+<td>Check AAA server, and collect RA trace and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_DEVICE_IDLE"></a>CO_CLIENT_DELETE_REASON_CLIENT_DEVICE_IDLE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported idle timeout on deauth frame</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_CAPTIVE_PORTAL_SECURITY_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_CAPTIVE_PORTAL_SECURITY_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported webauth error on deauth frame</td>
+<td>Check webauth configuration and certificates</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_DECRYPTION_FAILURE"></a>CO_CLIENT_DELETE_REASON_CLIENT_DECRYPTION_FAILURE</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported decryption errors on deauth frame</td>
+<td>Get RA trace and over the air captures</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_INTERFACE_DISABLED"></a>CO_CLIENT_DELETE_REASON_CLIENT_INTERFACE_DISABLED</td>
+<td>Normal, in most scenarios</td>
+<td>Client informed it is going in deep sleep on deauth frame</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_USER_TRIGGERED_DISASSOC"></a>CO_CLIENT_DELETE_REASON_CLIENT_USER_TRIGGERED_DISASSOC</td>
+<td>Normal, in most scenarios</td>
+<td>Client informed user requested disconnection</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_MISC_REASON"></a>CO_CLIENT_DELETE_REASON_CLIENT_MISC_REASON</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported generic reason in deauth frame</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_UNKNOWN_REASON"></a>CO_CLIENT_DELETE_REASON_CLIENT_UNKNOWN_REASON</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported generic reason in deauth frame</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_PEER_TRIGGERED"></a>CO_CLIENT_DELETE_REASON_CLIENT_PEER_TRIGGERED</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported AP sent disconnection in deauth frame</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_CLIENT_BEACON_LOSS"></a>CO_CLIENT_DELETE_REASON_CLIENT_BEACON_LOSS</td>
+<td>Normal, in most scenarios</td>
+<td>Client reported disconnection due to AP beacon loss. This may be triggered by low RRSI/coverage, or AP radio resets</td>
+<td>Check AP logs for radio reset, and confirm client was not on low coverage scenario</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_DOT11_POOR_CHANNEL_CONDITIONS"></a>CO_CLIENT_DELETE_REASON_DOT11_POOR_CHANNEL_CONDITIONS</td>
+<td>Normal, in most scenarios</td>
+<td>Client RSSI is lower than the configured RSSI threshold</td>
+<td>None required, as this may be intentional. Otherwise, check 802.11v and Low RSSI threshold settings.</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP"></a>CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, triggered by a channel change request</td>
+<td>Normally, none needed, unless this is happening too frequently, more than 4 times a day per radio</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_IPLEARN_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_AP_IPLEARN_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>AP reported that client did not complete adress learning process (static or DHCP)</td>
+<td>This may happen occasionally during normal scenarios if client roamed away or was out of coverage. If this is happening frequently or not expected, get RA + AP logs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_REASSOC_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_REASSOC_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client as it did not complete onboarding after requesting a roaming (reasociation)</td>
+<td>This may happen occasionally during normal scenarios if client roamed away or was out of coverage. If this is happening frequently or not expected, get RA + AP logs</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_DISASSOC"></a>CO_CLIENT_DELETE_REASON_MN_DEL_DISASSOC</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client due to dissaociation frame. Normally this only is applied for PMF(11w) enabled devices</td>
+<td>Non required, this happens during normal operation. If a large number of events are detected, get OTA to confirm source</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_ASSOC_EXPIRED_AT_AP"></a>CO_CLIENT_DELETE_REASON_MN_ASSOC_EXPIRED_AT_AP</td>
+<td>Normal, in most scenarios</td>
+<td>Client associated to stale SSID on AP, deleted during clean up process</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DHCP_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_DHCP_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>DHCP required is enabled, and client never completed DHCP negotiation</td>
+<td>May happen during normal scenarios, if client roams out of coverage during onboarding, or goes to sleep or is turned off, during onboarding. If seen on large counts per VLAN, do client debugging and check DHCP Server pool and status</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_SA_QUERY_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_SA_QUERY_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client as it did not reply SA query during PMF roaming (802.11w)</td>
+<td>May happen during normal scenarios. If frequently seen for specific client, it may be needed to do OTA, RA and AP client debug</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_INTRA_AP_ROAM"></a>CO_CLIENT_DELETE_REASON_MN_INTRA_AP_ROAM</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client as it roamed across SSID in the same AP</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP"></a>CO_CLIENT_DELETE_REASON_MN_CHANNEL_SWITCH_AT_AP</td>
+<td>Normal, in most scenarios</td>
+<td>AP had a channel change, that triggered client deletion</td>
+<td>This may happen during normal scenarios. if this is seen very frequently on same AP, it may need RF analisys or RRM tunning</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_REQUEST"></a>CO_CLIENT_DELETE_REASON_MN_DEL_REQUEST</td>
+<td>Normal, in most scenarios</td>
+<td>AP driver received a delete request for the client</td>
+<td>PENDING</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_INTF_RESET"></a>CO_CLIENT_DELETE_REASON_MN_DEL_INTF_RESET</td>
+<td>Normal, in most scenarios</td>
+<td>AP radio interface has been shutdown</td>
+<td>This may happen by admin request</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_REAPER_RADIO"></a>CO_CLIENT_DELETE_REASON_MN_DEL_REAPER_RADIO</td>
+<td>Normal, in most scenarios</td>
+<td>The radio role has changed, and can be uplink/repeater</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_SLOT_DISABLE"></a>CO_CLIENT_DELETE_REASON_MN_DEL_SLOT_DISABLE</td>
+<td>Normal, in most scenarios</td>
+<td>Slow was disabled for MFP wlan</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_MIC_FAIL"></a>CO_CLIENT_DELETE_REASON_MN_DEL_MIC_FAIL</td>
+<td>Normal, in most scenarios</td>
+<td>MIC (for TKIP) counter protection triggered, so AP deleted all clients</td>
+<td>None needed, if this happens frequently, check for possible client side issues</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_VLAN_DEL"></a>CO_CLIENT_DELETE_REASON_MN_DEL_VLAN_DEL</td>
+<td>Normal, in most scenarios</td>
+<td>VLAN/ACL mapping deleted, config change</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_PAK_MAX_RETRY"></a>CO_CLIENT_DELETE_REASON_MN_DEL_PAK_MAX_RETRY</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted by maximum frame retransmissions reached. This reason should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_TX_DEAUTH"></a>CO_CLIENT_DELETE_REASON_MN_DEL_TX_DEAUTH</td>
+<td>Normal, in most scenarios</td>
+<td>AP triggered a deauth during webauth/dot1x/run states, this may have been requested by controller</td>
+<td>May happen during normal scenario (for example timeout), if this is frequent or not-expected, collect RA traces for client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_SENSOR_STA_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_DEL_SENSOR_STA_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Sensor station timeout. This reason should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_AGE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_DEL_AGE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>AP triggered client delete, by session timeout</td>
+<td>None required, this is normal for local auth/standalone flex scenarios</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_TX_FAIL_THOLD"></a>CO_CLIENT_DELETE_REASON_MN_DEL_TX_FAIL_THOLD</td>
+<td>Normal, in most scenarios</td>
+<td>Bad Client, this reason code should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_UPLINK_RCV_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_DEL_UPLINK_RCV_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Uplink timeout, this reason code should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_NXT_RADIO"></a>CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_NXT_RADIO</td>
+<td>Normal, in most scenarios</td>
+<td>Sensor AP in operation, this reason code should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_OTHER_BSSID"></a>CO_CLIENT_DELETE_REASON_MN_DEL_SNSR_SCAN_OTHER_BSSID</td>
+<td>Normal, in most scenarios</td>
+<td>Sensor AP in operation, this reason code should not be active</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_DEL_AUTH_EXPIRED"></a>CO_CLIENT_DELETE_REASON_MN_DEL_AUTH_EXPIRED</td>
+<td>Normal, in most scenarios</td>
+<td>AP triggered a client delete, as client did auth phase, but never completed association</td>
+<td>May happen during normal scenario (for example timeout), if this is frequent or not-expected, collect RA traces for client</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_BY_FLEXGROUP_CHANGE"></a>CO_CLIENT_DELETE_REASON_MN_AP_BY_FLEXGROUP_CHANGE</td>
+<td>Normal, in most scenarios</td>
+<td>AP Flexgroup name was changed by administrator, leading to client delete request</td>
+<td>None required, configuration change</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_EAPOL_LOGOFF"></a>CO_CLIENT_DELETE_REASON_MN_AP_EAPOL_LOGOFF</td>
+<td>Normal, in most scenarios</td>
+<td>Client sent EAP-Logoff. This may be due to normal operation (p.e. client user changed) or it may be client supplicant error, restarting auth</td>
+<td>This is normally expected, if happening frequently or leading to problems, this may need RA trace</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_EAP_REQ_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_AP_EAP_REQ_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not reply to EAP requests in the specified retries/time</td>
+<td>Check client supplicant/user configuration and AP state. If persistent, collect RA traces and over the air capture</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_MIC_VALIDATION"></a>CO_CLIENT_DELETE_REASON_MN_AP_MIC_VALIDATION</td>
+<td>Normal, in most scenarios</td>
+<td>MIC (for TKIP) counter protection triggered, so AP deleted all clients</td>
+<td>None needed, if this happens frequently, check for possible client side issues</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_INTER_AP_ROAM"></a>CO_CLIENT_DELETE_REASON_MN_AP_INTER_AP_ROAM</td>
+<td>Normal, in most scenarios</td>
+<td>WLC requested to AP to delete client due to roaming event</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_UNKNOWN_CLIENT"></a>CO_CLIENT_DELETE_REASON_MN_AP_UNKNOWN_CLIENT</td>
+<td>Normal, in most scenarios</td>
+<td>Client Unknown, this should not be seen/not in use</td>
+<td>Collect RA traces for initial analysis</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_REAUTH_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_AP_REAUTH_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Client did not complete reauthentication in the specified timer. This may happen on normal scenarios, if client is sleeping or out of coverage</td>
+<td>No action needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CONT_IDLE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_AP_CONT_IDLE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>Continuous idle timeout, this should not be seen/not in use</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLDP_CLEANUP"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLDP_CLEANUP</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted during RLDP (Rogue Link Detection Protocol) execution</td>
+<td>Expected action, depending on configuration. RLDP can be disabled, if not required by security policies</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_PEM_CLEANUP"></a>CO_CLIENT_DELETE_REASON_MN_AP_PEM_CLEANUP</td>
+<td>Normal, in most scenarios</td>
+<td>Client deleted by Policy Enforcement Module request. This should not be see/not in use</td>
+<td>None required</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DELETE"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLAN_DELETE</td>
+<td>Normal, in most scenarios</td>
+<td>All Clients on RLAN port have been deleted, this could be due to port going down, or port getting admin disabled. This could happen on normal scenarios, for example, turning off a RLAN connected device or due to admin port disable configuration.</td>
+<td>Check port config, cable, and connected device state</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_RLAN_INACTIVE_TIMEOUT"></a>CO_CLIENT_DELETE_REASON_MN_AP_RLAN_INACTIVE_TIMEOUT</td>
+<td>Normal, in most scenarios</td>
+<td>RLAN client deleted due to inactivity timeout. This can happen on normal scenarios</td>
+<td>None needed</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_WEBAUTH_TIMER_EXPIRED"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_WEBAUTH_TIMER_EXPIRED</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, as it did not complete webauth authentication in time. This may happen on normal scenarios</td>
+<td>if this happens for clients actively trying to login, collect RA traces,  and OTA</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DOT1X_TIMER_EXPIRED"></a>CO_CLIENT_DELETE_REASON_MN_AP_CLSM_DOT1X_TIMER_EXPIRED</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, as it did not complete 802.1x authentication in time.</td>
+<td>if this happens for clients actively trying to authenticate, collect RA traces,  AP debugs, and OTA</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ASSOC_SCB_NOT_AUTHENTICATED"></a>CO_CLIENT_DELETE_REASON_MN_AP_DRIVER_ASSOC_SCB_NOT_AUTHENTICATED</td>
+<td>Normal, in most scenarios</td>
+<td>AP is rejecting client association, as it did not do 802.11 authentication, possible client defect</td>
+<td>None required, or OTA is seen frequently</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_AP"></a>CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_AP</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, as max client setting per AP is configured</td>
+<td>None required, or check config in WLAN profile</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_BSSID"></a>CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_BSSID</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, as max client setting per WLAN is configured</td>
+<td>None required, or check config in WLAN profile</td>
+</tr>
+<tr>
+<td><a name="CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_RADIO"></a>CO_CLIENT_DELETE_REASON_MN_AP_MAX_STA_ON_RADIO</td>
+<td>Normal, in most scenarios</td>
+<td>AP deleted client, as max client setting per radio is configured</td>
+<td>None required, or check config in WLAN profile</td>
+</tr>
+</tbody></table>
+
+        </pubhub-content></div>
+      <dwc-footer theme="dark"></dwc-footer>
+    </div>
+    <script>PUBHUB_ENV="production"</script>
+    <script>window.SITE_PROTECTED=!1,window.PREVIEW_PUBHUB_PROJECT=!1,window.ETTAPI="https://devnet-ett.cisco.com/",window.API_HOST="https://devnet.cisco.com/",window.REPORT_ISSUE_URL="https://devnet.cisco.com/v1/issues/",window.MAIL_URL="https://devnet.cisco.com/v1/mail/",window.newsletterURL="https://devnet.cisco.com/v1/subscribers/269cae8744",window.sparkURL="https://devnet.cisco.com/v1/sparkmessage/memberships/",window.EVENT_SERVICE_URL="https://devnet.cisco.com/v1/events/",window.PROTECT_SERVICE_URL="https://devnet.cisco.com/v1/presigned/",window.FILE_SERVICE_URL="https://devnet.cisco.com/v1/uploadfile",window.TERM_SERVICE_URL="https://devnet.cisco.com/v1/terms/",window.UPM_URL="https://devnet.cisco.com/api/v1.0.0/",window.AUTH_URL="https://auth-devnet.cisco.com/v1/auth/",window.LEARNING_LAB_URL="https://learninglabs.cisco.com",window.QUOTA_SEARCH_URL="https://devnet.cisco.com/v1/companies/search?domains=",window.NEW_MENU="https://pubhub.devnetcloud.com/media/new-announcement/site"</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/platformsdk/sdk.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/dui/index.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/analyticSDK/sdk.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/dwc-header-and-footer/index.js" defer="defer"></script><script src="https://static.production.devnetcloud.com/pubhubsdk/pubhubdoc.js" defer="defer"></script> 
+    <script>var SEO=function(){function t(t){return t?"Cisco Meraki Developer Hub":"Cisco DevNet"}function e(t){return t?"Meraki APIs make it possible to rapidly deploy and manage networks at scale, build on a platform of intelligent, cloud-connected IT products, and engage with users in powerful new ways":"Cisco DevNet enable software developers and network engineers to build more secure, better-performing software and IT infrastructure with APIs, SDKs, tools, and resources."}function l(t,e){if(t){var l=t.match(e);return l?l[1]:void 0}}function i(t){return(l(t,/<seotitle>([\s\S]*?)<\/seotitle>/i)||l(t,/<pubhubtitle>([\s\S]*?)<\/pubhubtitle>/i)||"").trim()}function a(t){return(i(t)||l(t,/<head>[\s\S]*?<title>([\s\S]*?)<\/title>[\s\S]*?<\/head>/i)||function(t){var e=l(t,/<div\s+class\s*=\s*['"][^'"]*breadcrumbs[^'"]*['"][^>]*>([\s\S]*?)<\/div>/i);return e?e.replace(/<[^>]*>/g,"").replace(/\n|\t/g,"").trim().split(/&gt;|>/).map(t=>t.trim()).pop():""}(t)||l(t,/<h1\b[^>]*>(.*?)<\/h1>/i)||"").trim()}function r(t){return(l(t,/<seodescription>([\s\S]*?)<\/seodescription>/i)||l(t,/<pubhubdescription>([\s\S]*?)<\/pubhubdescription>/i)||"").trim()}function s(t){return(r(t)||l(t,/<meta\s+name\s*=\s*["']description["']\s+content\s*=\s*["']([\s\S]*?)["']\s*\/?>/i)||"").trim()}function o(t){return t?t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;").replace(/\n|^\s|\s$/g,""):t}return{parseSeoTitleTag:i,parseSeoDescriptionTag:r,parseTitle:a,parseDescription:s,getSiteTitleDesc:function(l,n,u){var c,h,g=t(u);if("/site/index/"==l.meta.url)c=i(n)||l.meta.name,h=r(n)||l.meta.description||e(u);else{var p=a(n)||l.meta.name,d=s(n)||l.meta.description||e(u);c=(p==l.meta.name?`${p}`:`${p} - ${l.meta.name}`)+" - "+g,h=`${p} - ${d}`}return{title:c,description:h=o(h)}},getDocTitleDesc:function(l,a,s,n){var u,c,h,g,p=t(n);try{h="object"==typeof s?s:JSON.parse(s)}catch(t){}if(!h||"api"!==h.type&&"model"!==h.type){u=((d=i(s)||a.title)==l.meta.name?d:`${d} - ${l.meta.name}`)+" - "+p,c=`${d} - ${r(s)||l.meta.description||e(n)}`}else{g=!0;var d,m=h.spec||{},w=h.meta?.info||{};u=`${d=h.title||m.title} - ${l.meta.name} - ${p}`,c=(m.description||m.summary||m.title)+" - "+l.meta.name+" - "+((w.description||"").split("\n")[0]||l.meta.description||e(n))}return{title:u,description:c=o(c),isAPI:g,apiData:h}},getDocSearchTitleDesc:function(e,l,i,a=!0){var r,s,n=t(i);return a&&l?(r=`Search results for "${l}" - ${e.meta.name} - ${n}`,s=`'${l}' in ${e.meta.name} - ${e.meta.description||n}`):(r=`Search results - ${e.meta.name} - ${n}`,s=`Search in ${e.meta.name} - ${e.meta.description||n}`),{title:r,description:s=o(s)}},getSiteName:t,getSiteDescription:e}}();document.addEventListener("DOMContentLoaded",function(){!function(t){let e=window.document;if(!window.PubHub)return window._waitPubHubTimeout&&clearTimeout(window._waitPubHubTimeout),selfFn=arguments.callee,window._waitPubHubTimeout=setTimeout(()=>selfFn(t),5e3),void console.log("pubhub not ready, wait for a while");Object.defineProperty(PubHub,"SDKURL",{get:function(){return"https://static.production.devnetcloud.com/pubhubsdk/"}});let l=e.getElementById("main"),i=window.doc=window._docInstance=window.PubHub.createDocPage({container:l,config:{useBreadcrumb:!0}});i.on("configDataError",function(t){switch(t.detail.error.message){case"forbidden":window.location="/403";break;case"cco_login_required":PlatformSDK.isNewUser()||PlatformSDK.loginWith("ciscosso");break;case"login_required":PlatformSDK.isNewUser()||PlatformSDK.openLogin();break;default:window.location="/404"}}),i.router.mode="history",i.router.baseURL="/docs/wireless-troubleshooting-tools/",i.checkAccess=!0,i.config=t.webJson;var a={};a["client-delete-reasons"]=t.html,i.content=a,i.on("load",function(){var t=i.store.getState(),l=i.router,a=l._getHashQueryString();if(void 0===l.queryString&&a){var r=a.split("/");t.itemsObj[r[0]]?setTimeout(()=>{l.navigateTo(a.replace("/","#"))},0):location.hash.startsWith("#!")&&setTimeout(()=>{l.navigateTo(a.replace("/","#")),location.reload()},0)}if(t.selected&&t.selected.item){var s=SEO.getDocTitleDesc(i.configData,t.selected.item,t.selected.data,!1);setTimeout(()=>{AnalyticsSDK.setMetaDataTags(s.title,s.description)},1)}if(t.selected&&t.selected.data&&(""+t.selected.data).indexOf("<dwc-widget-loader")>-1){var o=e.createElement("script");o.src="https://static.production.devnetcloud.com/dwc/dwc-widget-loader/v0.0.3/index.js",e.body.append(o)}}),i.on("search",function(t){var e=t.detail.data.q,l=SEO.getDocSearchTitleDesc(i.configData,e,!1);setTimeout(function(){AnalyticsSDK.setMetaDataTags(l.title,l.description)},1)})}({webJson:{config:{include_header:!1},items:[{items:[{content:"intro.html",nav:[{tag:"h1",title:"Wireless Troubleshooting Tools",url:"wireless-troubleshooting-tools"},{tag:"h2",title:"Wireless Config Analyzer Express - WCAE",url:"wireless-config-analyzer-express---wcae"},{tag:"h2",title:"WLAN Poller",url:"wlan-poller"},{tag:"h2",title:"9800 Guestshell scripts",url:"9800-guestshell-scripts"},{tag:"h2",title:"WiFi Hawk",url:"wifi-hawk"},{tag:"h2",title:"Wireless Lan Config Analyzer - WLCCA",url:"wireless-lan-config-analyzer---wlcca"},{tag:"h2",title:"9800 Traces to ELK - Github",url:"9800-traces-to-elk---github"},{tag:"h2",title:"9800 Telemetry Pipeline - Github",url:"9800-telemetry-pipeline---github"},{tag:"h2",title:"Wireless Debug Analyzer",url:"wireless-debug-analyzer"},{tag:"h2",title:"WLC Config Converter BETA",url:"wlc-config-converter-beta"}],title:"Wireless Troubleshooting Tools",type:"markdown",url:"wireless-troubleshooting-tools"}],title:"Overview",url:"overview"},{items:[{content:"wcae/wcae.html",nav:[{tag:"h1",title:"Wireless Config Analyzer Express",url:"wireless-config-analyzer-express"},{tag:"h2",title:"What is WCAE?",url:"what-is-wcae"},{tag:"h2",title:"Quick Feature list:",url:"quick-feature-list"},{tag:"h2",title:"What is needed?",url:"what-is-needed"},{tag:"h2",title:"What is supported?",url:"what-is-supported"},{tag:"h2",title:"WCAE mini-Desktop",url:"wcae-mini-desktop"},{tag:"h2",title:"Reports included",url:"reports-included"}],title:"Wireless Config Analyzer Express - Engine",type:"markdown",url:"wireless-config-analyzer-express-engine"},{content:"wcae-gui/gui.html",nav:[{tag:"h1",title:"Using WCAE GUI",url:"using-wcae-gui"},{tag:"h2",title:"How to load a file:",url:"how-to-load-a-file"},{tag:"h2",title:"AP and Controller Checks",url:"ap-and-controller-checks"},{tag:"h2",title:"Using Channel View",url:"using-channel-view"},{tag:"h2",title:"Detecting Client Issues",url:"detecting-client-issues"},{tag:"h2",title:"Version Check",url:"version-check"},{tag:"h2",title:"AP RF View",url:"ap-rf-view"},{tag:"h2",title:"Exporting to Excel",url:"exporting-to-excel"},{tag:"h2",title:"Known limitations and issues",url:"known-limitations-and-issues"}],title:"Wireless Config Analyzer Express - GUI",type:"markdown",url:"wireless-config-analyzer-express-gui"},{content:"wcae/license_statement.html",nav:[],title:"License Statement",type:"markdown",url:"license-statement"},{content:"wcae/whatisnew.html",nav:[{tag:"h1",title:"What is new !",url:"what-is-new"},{tag:"h2",title:"Release 0.61",url:"release-061"},{tag:"h2",title:"Release 0.60",url:"release-060"},{tag:"h2",title:"Release 0.56",url:"release-056"},{tag:"h2",title:"Release 0.52-55",url:"release-052-55"},{tag:"h2",title:"Release 0.51",url:"release-051"},{tag:"h2",title:"Release 0.49",url:"release-049"},{tag:"h2",title:"Release 0.45",url:"release-045"},{tag:"h2",title:"Release 0.44",url:"release-044"},{tag:"h2",title:"Release 0.43",url:"release-043"},{tag:"h2",title:"Release 0.42",url:"release-042"},{tag:"h2",title:"Release 0.40",url:"release-040"},{tag:"h2",title:"Release 0.39",url:"release-039"},{tag:"h2",title:"Release  0.38",url:"release--038"},{tag:"h2",title:"Release 0.37",url:"release-037"},{tag:"h2",title:"Release 0.36",url:"release-036"},{tag:"h2",title:"Release 0.35",url:"release-035"},{tag:"h2",title:"Release 0.34",url:"release-034"},{tag:"h2",title:"Release 0.33",url:"release-033"},{tag:"h2",title:"Release 0.32, July 2024",url:"release-032-july-2024"},{tag:"h2",title:"Release 0.18, December  2023. 5 new checks, several fixes",url:"release-018-december--2023-5-new-checks-several-fixes"},{tag:"h2",title:"v0.17",url:"v017"},{tag:"h2",title:"v0.16",url:"v016"},{tag:"h2",title:"Release 0.14, April 23. Focus on fixes",url:"release-014-april-23-focus-on-fixes"},{tag:"h2",title:"Release 0.13, March 23. RF Health Improvements, new checks",url:"release-013-march-23-rf-health-improvements-new-checks"},{tag:"h2",title:"Release 0.12, December 22.  Lots of new checks",url:"release-012-december-22--lots-of-new-checks"},{tag:"h2",title:"Release 0.10, October 22. Focus in Load analysis",url:"release-010-october-22-focus-in-load-analysis"}],title:"What is new! (engine)",type:"markdown",url:"what-is-new-engine"},{content:"wcae-gui/whatisnew.html",nav:[{tag:"h1",title:"What is new !",url:"what-is-new"},{tag:"h2",title:"Release 1.5",url:"release-15"},{tag:"h2",title:"Release 1.4",url:"release-14"},{tag:"h2",title:"Release 1.3",url:"release-13"},{tag:"h2",title:"Release 1.2",url:"release-12"},{tag:"h2",title:"Release 1.1 May 2025",url:"release-11-may-2025"},{tag:"h2",title:"Release 1.0 March 2025",url:"release-10-march-2025"},{tag:"h2",title:"Release 0.9 October 2024",url:"release-09-october-2024"},{tag:"h2",title:"Release 0.8 July 2024",url:"release-08-july-2024"},{tag:"h2",title:"Release 0.6, March 2024.",url:"release-06-march-2024"},{tag:"h2",title:"Release 0.5, February 2024.",url:"release-05-february-2024"},{tag:"h2",title:"v0.4",url:"v04"},{tag:"h2",title:"v0.4",url:"v04-1"}],title:"What is new! (GUI)",type:"markdown",url:"what-is-new-gui"},{content:"wcae/checks.html",nav:[],title:"Checks available in tool",type:"markdown",url:"checks-available-in-tool"},{content:"wcae/rfhealth.html",nav:[{tag:"h1",title:"RF Health",url:"rf-health"},{tag:"h2",title:"Main objectives",url:"main-objectives"},{tag:"h2",title:"Worst metric selection",url:"worst-metric-selection"},{tag:"h2",title:"Data Summarization",url:"data-summarization"},{tag:"h2",title:"RF Health indicators",url:"rf-health-indicators"}],title:"RF Health",type:"markdown",url:"rf-health"},{content:"wcae/how-to-use-cloud.html",nav:[{tag:"h1",title:"How to use WCAE Cloud",url:"how-to-use-wcae-cloud"},{tag:"h2",title:"Obtain the wireless files",url:"obtain-the-wireless-files"},{tag:"h2",title:"Load Files",url:"load-files"},{tag:"h2",title:"Cloud Interface Components",url:"cloud-interface-components"},{tag:"h2",title:"Initial View",url:"initial-view"},{tag:"h2",title:"RF stats View",url:"rf-stats-view"}],title:"How to use - Cloud",type:"markdown",url:"how-to-use-cloud"},{content:"wcae/collect-show-tech.html",nav:[{tag:"h1",title:"How to Collect show tech wireless",url:"how-to-collect-show-tech-wireless"}],title:"How to collect show tech wireless for Catalyst 9800",type:"markdown",url:"how-to-collect-show-tech-wireless-for-catalyst-9800"},{content:"wcae/collect-run-config.html",nav:[{tag:"h1",title:"How to Collect run-config",url:"how-to-collect-run-config"}],title:"How to colletct sh-run-config",type:"markdown",url:"how-to-colletct-sh-run-config"},{content:"wcae/graphs.html",nav:[{tag:"h1",title:"RF Graph analysis using WCAE Desktop and Gephi",url:"rf-graph-analysis-using-wcae-desktop-and-gephi"},{tag:"h2",title:"Content",url:"content"},{tag:"h2",title:"Initial requirements",url:"initial-requirements"},{tag:"h2",title:"Creating a meaningful Topology",url:"creating-a-meaningful-topology"},{tag:"h2",title:"Coloring Aps by RF cluster",url:"coloring-aps-by-rf-cluster"},{tag:"h2",title:"Changing AP node size to represent Neighbor count (RF visibility)",url:"changing-ap-node-size-to-represent-neighbor-count-rf-visibility"},{tag:"h2",title:"Visualizing the signal power between Aps",url:"visualizing-the-signal-power-between-aps"},{tag:"h2",title:"Zooming to see details",url:"zooming-to-see-details"},{tag:"h2",title:"Adding AP names",url:"adding-ap-names"},{tag:"h2",title:"Visualizing relationship for single AP",url:"visualizing-relationship-for-single-ap"},{tag:"h2",title:"Final Comments",url:"final-comments"}],title:"RF Graph analysis using WCAE Desktop and Gephi",type:"markdown",url:"rf-graph-analysis-using-wcae-desktop-and-gephi"},{content:"wcae/client_audits/intro.html",nav:[{tag:"h1",title:"Client Audit Tools",url:"client-audit-tools"}],title:"Client Audits",type:"markdown",url:"client-audits"},{content:"wcae/support.html",nav:[{tag:"h1",title:"Support",url:"support"}],title:"Support",type:"markdown",url:"support"}],title:"WCAE",url:"wcae"},{items:[{content:"wlan-poller/wlanpoller.html",nav:[{tag:"h1",title:"WLAN Poller",url:"wlan-poller"},{tag:"h2",title:"Download",url:"download"},{tag:"h2",title:"Requirements",url:"requirements"}],title:"WLAN Poller",type:"markdown",url:"wlan-poller-wlan-poller"},{content:"wlan-poller/wlanpoller-install.html",nav:[{tag:"h1",title:"Installation/Configuration instructions",url:"installationconfiguration-instructions"},{tag:"h2",title:"Download & Run the Application",url:"download--run-the-application"}],title:"General Installation and Configuration",type:"markdown",url:"general-installation-and-configuration"},{content:"wlan-poller/wlanpoller-flash.html",nav:[{tag:"h1",title:"Following Cisco Catalyst APs affected from Flash Issues",url:"following-cisco-catalyst-aps-affected-from-flash-issues"},{tag:"h2",title:"Introduction",url:"introduction"},{tag:"h2",title:"WLAN Poller Logic",url:"wlan-poller-logic"},{tag:"h2",title:"Script OutPut",url:"script-output"}],title:"IOS Flash Monitoring",type:"markdown",url:"ios-flash-monitoring"},{content:"wlan-poller/wlanpoller-win.html",nav:[{tag:"h1",title:"How to install WlanPoller on Windows",url:"how-to-install-wlanpoller-on-windows"},{tag:"h2",title:"Download & Run the Application",url:"download--run-the-application"}],title:"Windows Install",type:"markdown",url:"windows-install"}],title:"WLAN Poller",url:"wlan-poller"},{items:[{content:"wireless-detector/wireless-detector.html",nav:[{tag:"h1",title:"Wireless Detector",url:"wireless-detector"},{tag:"h1",title:"Introduction",url:"introduction"},{tag:"h2",title:"Features",url:"features"},{tag:"h1",title:" Install Steps",url:"-install-steps"},{tag:"h1",title:" Configuration",url:"-configuration"},{tag:"h1",title:" Report Generation Mode.",url:"-report-generation-mode"},{tag:"h2",title:" Executing the Script",url:"-executing-the-script"},{tag:"h2",title:"Updating the script",url:"updating-the-script"},{tag:"h2",title:" Email Report Configuration",url:"-email-report-configuration"},{tag:"h2",title:" Email Reports",url:"-email-reports"},{tag:"h2",title:" Example Config",url:"-example-config"}],title:"Wireless Detector",type:"markdown",url:"wireless-detector-wireless-detector"},{content:"wireless-detector/co_del.html",nav:[],title:"Client Delete Reasons",type:"markdown",url:"client-delete-reasons"}],title:"Wireless Detector",url:"wireless-detector"},{items:[{content:"translator/translator.html",nav:[{tag:"h1",title:"AireOS to Meraki Translator",url:"aireos-to-meraki-translator"},{tag:"h2",title:"Download",url:"download"},{tag:"h2",title:"Table of Contents",url:"table-of-contents"},{tag:"h2",title:"What is this tool? ",url:"what-is-this-tool"},{tag:"h2",title:"Overwiew ",url:"overwiew"},{tag:"h2",title:"What is not done? ",url:"what-is-not-done"},{tag:"h2",title:"How to Use ",url:"how-to-use"}],title:"AireOS Meraki Translator",type:"markdown",url:"aireos-meraki-translator-aireos-meraki-translator"}],title:"AireOS Meraki Translator",url:"aireos-meraki-translator"},{items:[{content:"9800-scripts/guestshell.html",nav:[{tag:"h1",title:"Guestshell:",url:"guestshell"},{tag:"h2",title:"Requirements",url:"requirements"},{tag:"h1",title:"Guestshell scripts and use cases:",url:"guestshell-scripts-and-use-cases"},{tag:"h2",title:"Efficient Client Troubleshooting​",url:"efficient-client-troubleshooting"},{tag:"h2",title:"Uninterrupted Embedded Packet Capture​",url:"uninterrupted-embedded-packet-capture"},{tag:"h2",title:"Automated Archive request and export​",url:"automated-archive-request-and-export"},{tag:"h2",title:"KPI Collector​​",url:"kpi-collector"}],title:"9800 Guestshell/EEM scripts",type:"markdown",url:"9800-guestshelleem-scripts-9800-guestshelleem-scripts"}],title:"9800 Guestshell/EEM scripts",url:"9800-guestshelleem-scripts"},{items:[{content:"wifi-hawk/wifi_hawk.html",nav:[{tag:"h2",title:"Important Note",url:"important-note"},{tag:"h2",title:"Key  Features",url:"key--features"},{tag:"h2",title:"Requirements",url:"requirements"}],title:"WiFi Hawk",type:"markdown",url:"wifi-hawk"},{content:"wifi-hawk/how_to_use.html",nav:[{tag:"h1",title:"WiFi Hawk How to Use",url:"wifi-hawk-how-to-use"},{tag:"h2",title:"Installation",url:"installation"},{tag:"h2",title:"Files Supported",url:"files-supported"},{tag:"h2",title:"Processing File",url:"processing-file"},{tag:"h2",title:"Using the Report",url:"using-the-report"},{tag:"h2",title:"BSSIDs",url:"bssids"},{tag:"h2",title:"Clients",url:"clients"}],title:"How to Use",type:"markdown",url:"how-to-use"},{content:"wifi-hawk/features.html",nav:[{tag:"h1",title:"WiFi Hawk Features",url:"wifi-hawk-features"},{tag:"h2",title:"Quick Index view",url:"quick-index-view"},{tag:"h2",title:"Event Flow",url:"event-flow"},{tag:"h2",title:"Histograms - Client",url:"histograms---client"},{tag:"h2",title:"Histograms - AP",url:"histograms---ap"},{tag:"h2",title:"Detecting easy to miss problems",url:"detecting-easy-to-miss-problems"},{tag:"h2",title:"Sleeping Patterns",url:"sleeping-patterns"},{tag:"h2",title:"Client Probing",url:"client-probing"},{tag:"h2",title:"Client High Retries",url:"client-high-retries"},{tag:"h2",title:"Client  Bi-directional traffic",url:"client--bi-directional-traffic"},{tag:"h2",title:"Protocol Errors",url:"protocol-errors"},{tag:"h2",title:"Easily detect Radio Hangs",url:"easily-detect-radio-hangs"},{tag:"h2",title:"Malformed beacons",url:"malformed-beacons"},{tag:"h2",title:"Association Mismatch",url:"association-mismatch"},{tag:"h2",title:"Data rates vs SNR",url:"data-rates-vs-snr"},{tag:"h2",title:"Collapsed view of repetitive frames",url:"collapsed-view-of-repetitive-frames"},{tag:"h2",title:"Interesting action frames highlighted",url:"interesting-action-frames-highlighted"},{tag:"h2",title:"SAE Support",url:"sae-support"},{tag:"h2",title:"PMKID count sent on association/reassociation requests",url:"pmkid-count-sent-on-associationreassociation-requests"},{tag:"h2",title:"Per TID bidirectional traffic notification",url:"per-tid-bidirectional-traffic-notification"},{tag:"h2",title:"Detection of unprotected Action frames when PMF is in use",url:"detection-of-unprotected-action-frames-when-pmf-is-in-use"},{tag:"h2",title:"Radar Event",url:"radar-event"},{tag:"h2",title:"EAP Identity displayed",url:"eap-identity-displayed"}],title:"Features",type:"markdown",url:"features"},{content:"wifi-hawk/changes.html",nav:[{tag:"h1",title:"WiFi Hawk Changes",url:"wifi-hawk-changes"},{tag:"h2",title:"v0.18",url:"v018"},{tag:"h2",title:"v0.17",url:"v017"},{tag:"h2",title:"v0.16",url:"v016"},{tag:"h2",title:"v0.15",url:"v015"},{tag:"h2",title:"v0.14",url:"v014"},{tag:"h2",title:"v.0.13",url:"v013"},{tag:"h2",title:"v.0.12",url:"v012"},{tag:"h2",title:"v.0.11",url:"v011"},{tag:"h2",title:"v.0.10",url:"v010"},{tag:"h2",title:"v.0.9",url:"v09"},{tag:"h2",title:"v.0.8",url:"v08"},{tag:"h2",title:"v.0.7",url:"v07"},{tag:"h2",title:"v.0.6",url:"v06"},{tag:"h2",title:"v.0.5",url:"v05"},{tag:"h2",title:"v.0.4",url:"v04"},{tag:"h2",title:"v.0.3",url:"v03"}],title:"Change Log",type:"markdown",url:"change-log"},{content:"wifi-hawk/file_support.html",nav:[{tag:"h2",title:"WiFi Hawk File Types supported",url:"wifi-hawk-file-types-supported"},{tag:"h2",title:"File formats currently not supported",url:"file-formats-currently-not-supported"}],title:"File Type Support",type:"markdown",url:"file-type-support"}],title:"WiFi Hawk - Wireless Captures Analysis",url:"wifi-hawk-wireless-captures-analysis"},{items:[{content:"csae/csae.html",nav:[{tag:"h2",title:"What is Cisco Support Assistant Extension (CSAE)?",url:"what-is-cisco-support-assistant-extension-csae"},{tag:"h2",title:"How do I download the Cisco Support Assistant Extension(CSAE)?",url:"how-do-i-download-the-cisco-support-assistant-extensioncsae"},{tag:"h2",title:"Key Features of the Cisco Support Assistant Extension",url:"key-features-of-the-cisco-support-assistant-extension"}],title:"CSAE",type:"markdown",url:"csae"}],title:"Cisco Support Assistant Extension (CSAE)",url:"cisco-support-assistant-extension-csae"},{items:[{content:"kpi-dashboard/KPIDashboard.html",nav:[{tag:"h1",title:"KPI Dashboard",url:"kpi-dashboard"},{tag:"h2",title:"Installation Prerequisites",url:"installation-prerequisites"},{tag:"h2",title:"Installation Steps",url:"installation-steps"},{tag:"h2",title:"Modify setup_config.yaml",url:"modify-setup_configyaml"},{tag:"h2",title:"SSH2Influx: adding more WLCs and generating encrypted credentials",url:"ssh2influx-adding-more-wlcs-and-generating-encrypted-credentials"},{tag:"h2",title:"Setup Telemetry on WLC",url:"setup-telemetry-on-wlc"},{tag:"h2",title:"Setup Grafana email address for alerts",url:"setup-grafana-email-address-for-alerts"}],title:"KPI Dashboard",type:"markdown",url:"kpi-dashboard-kpi-dashboard"},{content:"kpi-dashboard/grafana_email_alert.html",nav:[{tag:"h1",title:"Setup Grafana email address for alerts",url:"setup-grafana-email-address-for-alerts"},{tag:"h2",title:"There are two alerts configured:",url:"there-are-two-alerts-configured"},{tag:"h2",title:"To update Grafana email address for alerts, do the following:",url:"to-update-grafana-email-address-for-alerts-do-the-following"},{tag:"h2",title:"To change default credentials do the following:",url:"to-change-default-credentials-do-the-following"}],title:"Configuring Email Alerts",type:"markdown",url:"configuring-email-alerts"},{content:"kpi-dashboard/setup_telemetry.html",nav:[{tag:"h1",title:"Setup Telemetry on WLC",url:"setup-telemetry-on-wlc"}],title:"Configuring Telemetry on WLC",type:"markdown",url:"configuring-telemetry-on-wlc"}],title:"KPI Dashboard",url:"kpi-dashboard"},{items:[{content:"wlcca.html",nav:[{tag:"h1",title:"Wireless Lan Config Analyzer",url:"wireless-lan-config-analyzer"},{tag:"h2",title:"This tool is deprecated. Please migrate to  WCAE",url:"this-tool-is-deprecated-please-migrate-to--wcae"},{tag:"h1",title:"What is WLCCA?",url:"what-is-wlcca"},{tag:"h1",title:"What is needed?",url:"what-is-needed"},{tag:"h1",title:"How to use it",url:"how-to-use-it"},{tag:"h2",title:"Load Files",url:"load-files"}],title:"Wireless Config Analyzer",type:"markdown",url:"wireless-config-analyzer"},{content:"wlcca-checks.html",nav:[{tag:"h1",title:"WLCCA Config Checks and Messages",url:"wlcca-config-checks-and-messages"},{tag:"h2",title:"Parsing - 10xxx",url:"parsing---10xxx"},{tag:"h2",title:"Access Points - 20xxx",url:"access-points---20xxx"},{tag:"h2",title:"General - 30xxx",url:"general---30xxx"},{tag:"h2",title:"Voice - 40xxx",url:"voice---40xxx"},{tag:"h2",title:"Mobility - 50xxx",url:"mobility---50xxx"},{tag:"h2",title:"Radio Frequency - 60xxx",url:"radio-frequency---60xxx"},{tag:"h2",title:"Mesh - 70xxx",url:"mesh---70xxx"},{tag:"h2",title:"Spectralink - 80xxx",url:"spectralink---80xxx"},{tag:"h2",title:"Vocera - 90xxx",url:"vocera---90xxx"},{tag:"h2",title:"Security",url:"security"}],title:"Config Checks and Messages",type:"markdown",url:"config-checks-and-messages"},{content:"wlcca-features.html",nav:[{tag:"h1",title:"Features",url:"features"},{tag:"h2",title:"Config Checks",url:"config-checks"},{tag:"h2",title:"Config Visualization",url:"config-visualization"},{tag:"h2",title:"AP Data",url:"ap-data"},{tag:"h2",title:"Compare Config Sets",url:"compare-config-sets"}],title:"Features",type:"markdown",url:"wlcca-features"},{content:"wlcca-rf.html",nav:[{tag:"h1",title:"RF analysis Tools",url:"rf-analysis-tools"},{tag:"h2",title:"Nearby Data",url:"nearby-data"},{tag:"h2",title:"RF Stats Summary",url:"rf-stats-summary"},{tag:"h1",title:"RF Stats per AP group and Flex group",url:"rf-stats-per-ap-group-and-flex-group"}],title:"RF Analysis",type:"markdown",url:"rf-analysis"},{content:"wlcca-rfhealth.html",nav:[{tag:"h1",title:"RF Health",url:"rf-health"},{tag:"h2",title:"Main objectives",url:"main-objectives"},{tag:"h2",title:"Worst metric selection",url:"worst-metric-selection"},{tag:"h2",title:"Data Summarization",url:"data-summarization"},{tag:"h2",title:"RF Health indicators",url:"rf-health-indicators"}],title:"RF Health",type:"markdown",url:"wlcca-rf-health"},{content:"wlcca-support.html",nav:[{tag:"h1",title:"Support",url:"support"}],title:"Support",type:"markdown",url:"wlcca-support"}],title:"WLCCA",url:"wlcca"},{items:[{content:"9800/9800-elk.html",nav:[{tag:"h2",title:"Download",url:"download"},{tag:"h2",title:"Overview",url:"overview"},{tag:"h2",title:"Ingesting the controller traces",url:"ingesting-the-controller-traces"},{tag:"h2",title:"TCL scripting",url:"tcl-scripting"},{tag:"h2",title:"Logstash plugin",url:"logstash-plugin"}],title:"Overview",type:"markdown",url:"9800-traces-to-elk-stack-overview"},{content:"9800/9800-elk-sample.html",nav:[{tag:"h2",title:"Sample dashboard output",url:"sample-dashboard-output"}],title:"Sample Output",type:"markdown",url:"sample-output"},{content:"9800/9800-support.html",nav:[{tag:"h1",title:"Support",url:"support"}],title:"Support",type:"markdown",url:"9800-traces-to-elk-stack-support"}],title:"9800 Traces to ELK stack",url:"9800-traces-to-elk-stack"},{items:[{content:"9800/9800-pipeline.html",nav:[],title:"Overview",type:"markdown",url:"9800-telemetry-pipeline-overview"},{content:"9800/9800-pipeline-install.html",nav:[{tag:"h1",title:"Installation",url:"installation"},{tag:"h2",title:"Requirements",url:"requirements"},{tag:"h2",title:"Setup",url:"setup"},{tag:"h2",title:"Accessing each container",url:"accessing-each-container"},{tag:"h2",title:"Real time logging of raw data",url:"real-time-logging-of-raw-data"},{tag:"h2",title:"Updating pipeline configuration",url:"updating-pipeline-configuration"},{tag:"h2",title:"Pipeline filters",url:"pipeline-filters"},{tag:"h2",title:"Creating graph",url:"creating-graph"},{tag:"h2",title:"Changing controller config data from Dashboard",url:"changing-controller-config-data-from-dashboard"}],title:"Sample Output",type:"markdown",url:"9800-telemetry-pipeline-sample-output"},{content:"9800/9800-support.html",nav:[{tag:"h1",title:"Support",url:"support"}],title:"Support",type:"markdown",url:"9800-telemetry-pipeline-support"}],title:"9800 Telemetry Pipeline",url:"9800-telemetry-pipeline"}],meta:{access_control:"public",access_control_profile_id_whitelist:null,access_control_role_based_allowlist:null,additionalTags:"",branch:"master",categories:"Networking,Tools",devCenter:"",docTypes:"Tool",id:1959,indexed:!0,location:"https://pubhub.devnetcloud.com/media/wireless-troubleshooting-tools/docs/",name:"Wireless Troubleshooting Tools",products:"",profile_id_whitelist:null,project_id:1959,project_type:"external_doc",role_allowlist:null,state:"live",topics:"",type:"external_doc",url_path:"/docs/wireless-troubleshooting-tools/",version_group:"",url:"/docs/wireless-troubleshooting-tools/",description:"Learn how to use the Wireless Troubleshooting tools to perform Wireless networks troubleshooting and RF analysis."}},url:"/docs/wireless-troubleshooting-tools/client-delete-reasons/",html:document.querySelector("pubhub-content").innerHTML})},!1)</script>
+  </body>
+</html>

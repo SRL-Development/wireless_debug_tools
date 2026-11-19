@@ -1,0 +1,984 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-10",
+  "source_note": "离线规则库种子。只存索引、摘要、官方链接、适用版本与核对日期；不整篇内置厂商文档。每条结论必须可回查到 doc_refs；verify_status=needs-field-check 的条目不得直接用于自动决策。",
+  "counts": {
+    "vendors_rows": 14,
+    "rules": 26,
+    "official_doc_refs": 11,
+    "needs_field_check": 3
+  },
+  "categories": [
+    "packet",
+    "log",
+    "config",
+    "compat"
+  ],
+  "rules": [
+    {
+      "id": "WLC-GEN-001",
+      "category": "packet",
+      "scope": "CAPWAP / AP 上线",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "AP 无法加入控制器，或卡在 Discovery / Join 阶段",
+      "evidence": [
+        "UDP 5246 / 5247 报文缺失或单向",
+        "Discovery Request 无 Response",
+        "DTLS 握手超时或证书校验失败",
+        "AP 获取不到管理 IP / Option 43 或 DNS 未配置"
+      ],
+      "detection": "按 AP MAC 建会话时间轴，检查 Discovery → Response → DTLS → Join → Configuration 五阶段是否齐全；缺哪一段就定位到该阶段",
+      "severity": "critical",
+      "conclusion": "AP 到控制器的控制通道不通，属网络层或管理访问配置问题，而非射频问题",
+      "remediation": [
+        "核对 AP 的 DHCP 地址与 ARP 表",
+        "核对控制器管理接口是否放行 CAPWAP（FortiGate 为 Security Fabric Connection）",
+        "核对 ACL / 防火墙 / 中间设备是否丢弃 UDP 5246、5247",
+        "核对 DTLS 证书、系统时间与版本兼容"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet · FortiAP connection issues（CAPWAP / cw_acd / sniff 转 PCAP）",
+          "url": "https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575",
+          "version": "FortiAP 7.6.6",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "把抓包结论落到图纸：AP 离线时该 AP 不参与热力图计算，并在图层上标注"
+    },
+    {
+      "id": "WLC-GEN-002",
+      "category": "log",
+      "scope": "AP 反复离线",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "单台或全体 AP 间歇性掉线重连",
+      "evidence": [
+        "控制消息达到最大重传次数",
+        "心跳 / echo 超时",
+        "上行交换机端口错包、PoE 掉电",
+        "控制器守护进程崩溃日志"
+      ],
+      "detection": "统计单位时间内的 AP down/up 事件与重连间隔；按同一上联交换机 / 同一 PoE 供电设备聚合，判断是否共因",
+      "severity": "high",
+      "conclusion": "控制面保活失败；若多 AP 同时发生且共享上行，则优先怀疑上行链路或控制器进程",
+      "remediation": [
+        "检查上联端口 CRC / 错包与 PoE 预算",
+        "读取控制器 WTP 状态的 last failure 字段",
+        "读取守护进程崩溃日志",
+        "按官方流程重启控制面进程（注意会中断全部 AP）"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet · FortiAP connection issues（CAPWAP / cw_acd / sniff 转 PCAP）",
+          "url": "https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575",
+          "version": "FortiAP 7.6.6",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "FortiGate 侧对应 diagnose wireless-controller wlac -c wtp 的 last failure : 8"
+    },
+    {
+      "id": "WLC-GEN-003",
+      "category": "packet",
+      "scope": "客户端 DHCP",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "终端已关联但拿不到 IP，或反复 169.254 地址",
+      "evidence": [
+        "DHCP Discover 无 Offer",
+        "客户端在认证后被删除，原因含 DHCP_FAILURE / MN_DHCP_TIMEOUT",
+        "VLAN 未在控制器或上联交换机创建",
+        "地址池耗尽"
+      ],
+      "detection": "在客户端时间轴上关联 Association → 802.1X → DHCP 四步；若 DHCP 无响应则检查 VLAN/DHCP 可达性，而非空口",
+      "severity": "high",
+      "conclusion": "地址分配链路故障，属于配置 / 网络层问题",
+      "remediation": [
+        "核对 WLAN/Policy 绑定的 VLAN 是否存在并放行",
+        "核对 DHCP 池容量与中继",
+        "核对客户端隔离 / ACL 是否误拦 DHCP"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco DevNet · Client Delete Reasons（9800 客户端删除原因字典）",
+          "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+          "version": "IOS XE 17.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Cisco · 收集 Catalyst 9800 WLC 的记录与调试资料（show tech wireless / RA trace / 嵌入式抓包）",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215523-quick-start-guide-on-what-logs-and-debug.html",
+          "version": "Catalyst 9800",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "Cisco 9800 可用 Wireshark 过滤式 ip.addr==<client-ip> || eapol || bootp 复核"
+    },
+    {
+      "id": "WLC-GEN-004",
+      "category": "packet",
+      "scope": "802.1X / EAPOL",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "终端卡在认证、反复重关联或提示密码错误",
+      "evidence": [
+        "EAPOL 四步握手不完整",
+        "EAP timeout / EAP failure",
+        "RADIUS 无响应或 Access-Reject",
+        "服务器证书过期 / 时间不同步"
+      ],
+      "detection": "区分「空口丢 EAPOL」与「AAA 侧拒绝」：抓包看 EAPOL 是否到达，控制器日志看 RADIUS 结果码；命中 EAP_TIMEOUT / 8021X_FAILURE 类原因码",
+      "severity": "high",
+      "conclusion": "认证链路失败，优先核查 AAA 服务器与证书，不调整射频参数",
+      "remediation": [
+        "核对 RADIUS 可达性、共享密钥与策略",
+        "核对证书链有效期与设备时间 / NTP",
+        "核对 WPA3/PMF/802.1X 组合与终端能力"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco DevNet · Client Delete Reasons（9800 客户端删除原因字典）",
+          "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+          "version": "IOS XE 17.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "随机 MAC（iOS 14 / Android 10）会破坏基于 MAC 的 iPSK 等策略，需纳入提示"
+    },
+    {
+      "id": "WLC-GEN-005",
+      "category": "packet",
+      "scope": "Deauth / Disassoc",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "终端无规律掉线，或大量 deauth 帧",
+      "evidence": [
+        "802.11 reason code 分布",
+        "低 RSSI 触发的主动踢除",
+        "802.11w / PMF SA Query 超时",
+        "Beacon loss / AP radio reset"
+      ],
+      "detection": "按 reason code 聚合计数，区分「终端主动」「AP 主动」「疑似伪造」；与 AP 射频复位、信道切换事件做时间对齐",
+      "severity": "high",
+      "conclusion": "掉线原因可归因到具体 reason code 与触发方，避免笼统归为「信号差」",
+      "remediation": [
+        "低 RSSI 门限 / 802.11v 参数复核",
+        "PMF 与终端兼容性复核",
+        "检查 AP 射频复位与 DFS 信道切换频率"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco DevNet · Client Delete Reasons（9800 客户端删除原因字典）",
+          "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+          "version": "IOS XE 17.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "reason code 字典应做成带版本范围的常量表，不随 UI 文案变化"
+    },
+    {
+      "id": "WLC-GEN-006",
+      "category": "packet",
+      "scope": "空口重传 / 隐藏节点",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "速率低、时延抖动大、重传率异常",
+      "evidence": [
+        "802.11 Retry 位比例高",
+        "低 MCS / 低 RSSI / 低 SNR",
+        "信道利用率与非 Wi-Fi 干扰抬升",
+        "多 AP 同信道冲突"
+      ],
+      "detection": "把重传率与 SINR 图层、干扰源位置做空间叠加；区分「覆盖不足」与「同信道竞争」两类",
+      "severity": "medium",
+      "conclusion": "链路质量问题需按空间位置归因，不能只调发射功率",
+      "remediation": [
+        "先按干扰引擎给信道建议",
+        "再评估 AP 位置 / 功率 / 频段引导",
+        "复测 RSSI、SNR、MCS 与重传率"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco DevNet · Client Delete Reasons（9800 客户端删除原因字典）",
+          "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+          "version": "IOS XE 17.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Cisco Catalyst 9800 Configuration Guide · Streaming Telemetry 排错命令集",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-6/config-guide/b_wl_17_6_cg/streaming-telemetry-on-Cisco-Catalyst-9800-series-wireless-controller.html",
+          "version": "IOS XE 17.6.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "与方案书第 6 节热力图、第 15 节 SSID 门限、干扰页共用同一份指标字典"
+    },
+    {
+      "id": "WLC-GEN-007",
+      "category": "config",
+      "scope": "漫游",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "跨 AP 移动时业务中断、VoWiFi 掉话、AGV 卡滞",
+      "evidence": [
+        "802.11k/v/r 配置不一致",
+        "跨 SSID / 跨 VLAN 漫游后需重新 DHCP",
+        "SA Query 超时",
+        "重叠区 RSSI 低于门限"
+      ],
+      "detection": "结合图纸覆盖热力图计算相邻 AP 重叠区是否达到该 SSID 的 min_rssi；叠加漫游事件与认证耗时",
+      "severity": "high",
+      "conclusion": "漫游失败多为「覆盖重叠不足 + 快速漫游参数不一致」的复合问题",
+      "remediation": [
+        "按 SSID 校验 k/v/r 与 WMM/DSCP 配置",
+        "调整 AP 间距 / 功率保证重叠区",
+        "语音与 AGV 类 SSID 单独设门限"
+      ],
+      "doc_refs": [],
+      "verify_status": "needs-field-check",
+      "priority": "P2",
+      "note": "官方参数取值需按厂商版本文档核实后再写入规则，当前为方法学条目"
+    },
+    {
+      "id": "WLC-GEN-008",
+      "category": "config",
+      "scope": "配置漂移",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "同一园区两台控制器 / 两组 AP 表现不一致，或变更后出现新问题",
+      "evidence": [
+        "两次配置快照的结构化 diff",
+        "无对应工单的变更记录",
+        "主备控制器配置不一致"
+      ],
+      "detection": "把配置快照归一化为「对象 → 属性」键值表后做 diff；按变更时间与故障时间轴对齐",
+      "severity": "medium",
+      "conclusion": "给出可执行的最小差异集，并标注哪些差异会改变射频或认证行为",
+      "remediation": [
+        "先生成变更清单与回滚清单，人工审批后再执行",
+        "工具不自动下发配置"
+      ],
+      "doc_refs": [],
+      "verify_status": "needs-field-check",
+      "priority": "P2",
+      "note": "与方案书第 8 节「可回滚变更清单」共用同一数据结构"
+    },
+    {
+      "id": "WLC-GEN-009",
+      "category": "config",
+      "scope": "时间 / 证书 / 许可",
+      "vendors": [
+        "*"
+      ],
+      "symptom": "DTLS / 802.1X 突然大面积失败，或 AP 授权数受限",
+      "evidence": [
+        "控制器与 AP / AAA 时钟偏差",
+        "证书过期",
+        "许可到期或资源不足告警"
+      ],
+      "detection": "把 NTP 状态、证书有效期、许可剩余天数作为每日基线巡检项，提前 N 天预警",
+      "severity": "high",
+      "conclusion": "基础设施类问题，常被误判为空口或终端问题",
+      "remediation": [
+        "核对 NTP 与证书",
+        "核对许可资源与到期时间"
+      ],
+      "doc_refs": [
+        {
+          "title": "Huawei · WLAN AC AirEngine X700 Log Reference（日志含义 / 可能原因 / 处理步骤）",
+          "url": "https://support.huawei.cn/enterprise/zh/doc/EDOC1100459361/9d0ee50f",
+          "version": "V600R025C00",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "华为 Log Reference 的 hwApServiceInterruptAlertTrap 明确列出「脱管 / 许可到期 / 资源不存在」三种可能原因"
+    },
+    {
+      "id": "C9800-LOG-001",
+      "category": "log",
+      "scope": "客户端删除原因字典",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "9800 上客户端反复被删除，syslog 只给出内部原因码",
+      "evidence": [
+        "CO_CLIENT_DELETE_REASON_* / MN_* 原因码",
+        "RA trace 中对应事件段",
+        "show logging profile wireless 的 always-on 记录"
+      ],
+      "detection": "把官方 Client Delete Reasons 表编译为「原因码 → 是否正常 → 建议动作 → 需补充的证据」查表规则，附原文引用",
+      "severity": "medium",
+      "conclusion": "把不可读的内部码翻译为排障动作，并区分「正常行为」与「需介入」",
+      "remediation": [
+        "按原因码决定是否需要 AAA / DHCP / 空口抓包补充证据",
+        "高频原因码按 SSID、AP、时间段聚合"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco DevNet · Client Delete Reasons（9800 客户端删除原因字典）",
+          "url": "https://developer.cisco.com/docs/wireless-troubleshooting-tools/client-delete-reasons",
+          "version": "IOS XE 17.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Cisco · 收集 Catalyst 9800 WLC 的记录与调试资料（show tech wireless / RA trace / 嵌入式抓包）",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215523-quick-start-guide-on-what-logs-and-debug.html",
+          "version": "Catalyst 9800",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "官方表明确标注 Normal 与建议动作（如 DHCP_FAILURE → 查 DHCP 并收集 RA trace）"
+    },
+    {
+      "id": "C9800-PKT-001",
+      "category": "packet",
+      "scope": "9800 证据采集",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "现场有故障但缺少可用证据，事后无法复现",
+      "evidence": [
+        "show tech-support wireless",
+        "debug wireless mac（Radioactive Trace）",
+        "show logging profile wireless filter mac ... to-file always-on-",
+        "GUI Troubleshooting > Packet Capture / monitor capture"
+      ],
+      "detection": "按「先 always-on 历史 → 再 RA trace 复现 → 最后嵌入式抓包」的取证阶梯，避免一上来全量 debug 拖垮控制器",
+      "severity": "info",
+      "conclusion": "形成可复用的取证 SOP，并把输出文件归一化为统一证据格式",
+      "remediation": [
+        "复现前记录 show clock 建立时间基准",
+        "复现后及时关闭 debug / 清除条件",
+        "大客户端量时增大抓包缓冲（官方示例 100 MB）"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco · 收集 Catalyst 9800 WLC 的记录与调试资料（show tech wireless / RA trace / 嵌入式抓包）",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215523-quick-start-guide-on-what-logs-and-debug.html",
+          "version": "Catalyst 9800",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Cisco Catalyst 9800 Configuration Guide · Streaming Telemetry 排错命令集",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-6/config-guide/b_wl_17_6_cg/streaming-telemetry-on-Cisco-Catalyst-9800-series-wireless-controller.html",
+          "version": "IOS XE 17.6.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "9800 的 always-on trace 可回溯数小时至数天，适合事后复盘"
+    },
+    {
+      "id": "C9800-CFG-001",
+      "category": "config",
+      "scope": "Profile / Tag 引用完整性",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "SSID 可见但连不上、连上无 IP、或 AP 未按预期广播 WLAN",
+      "evidence": [
+        "WLAN Profile ↔ Policy Profile ↔ Policy Tag / Site Tag / RF Tag 引用",
+        "AP 是否被打了正确 Tag",
+        "Policy Profile 中的 VLAN 是否存在"
+      ],
+      "detection": "构建配置对象的引用图，检测悬空引用、未绑定 Tag 的 AP、以及 VLAN 在控制器上不存在三类问题",
+      "severity": "critical",
+      "conclusion": "配置引用断裂，属确定性错误，可直接给出修复对象清单",
+      "remediation": [
+        "补齐引用或修正 Tag 绑定",
+        "核对 VLAN 与 SVI",
+        "修改前保存快照并生成回滚清单"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco · 收集 Catalyst 9800 WLC 的记录与调试资料（show tech wireless / RA trace / 嵌入式抓包）",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215523-quick-start-guide-on-what-logs-and-debug.html",
+          "version": "Catalyst 9800",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "官方排错文档把「No valid VLAN defined in policy profile」「WLAN/policy profile 变更导致断连」列为主要场景"
+    },
+    {
+      "id": "C9800-CFG-002",
+      "category": "config",
+      "scope": "AAA 下发属性一致性",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "部分用户认证成功但无网络访问，或 VLAN 分配异常",
+      "evidence": [
+        "RADIUS 下发的 ACL 在 WLC 上不存在",
+        "RADIUS 下发的 VLAN 在 WLC 上不存在",
+        "AAA override 与本地策略冲突"
+      ],
+      "detection": "读取 RADIUS 实时日志的授权属性，与控制器本地对象做存在性校验",
+      "severity": "high",
+      "conclusion": "AAA 与控制器本地配置不一致，不是认证失败",
+      "remediation": [
+        "在 WLC 上补齐 ACL / VLAN",
+        "核对 AAA override 优先级"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco · 收集 Catalyst 9800 WLC 的记录与调试资料（show tech wireless / RA trace / 嵌入式抓包）",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/215523-quick-start-guide-on-what-logs-and-debug.html",
+          "version": "Catalyst 9800",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "官方 9800 客户端连接问题文档明确列出这两类场景"
+    },
+    {
+      "id": "C9800-CFG-003",
+      "category": "compat",
+      "scope": "版本 / 型号兼容",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "新装 Wi-Fi 7 AP 无法上线，或 6 GHz / MLO 不生效",
+      "evidence": [
+        "控制器 IOS XE 版本",
+        "AP 型号",
+        "型号库 min_controller_version"
+      ],
+      "detection": "把控制器实读版本与第 14 节兼容矩阵比对，低于阈值则告警并禁用 6 GHz / MLO 图层",
+      "severity": "high",
+      "conclusion": "版本不满足，属兼容性阻断，不是配置错误",
+      "remediation": [
+        "按官方推荐版本升级控制器",
+        "升级前禁用依赖新特性的规划图层"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco Catalyst 9800 Configuration Guide · Streaming Telemetry 排错命令集",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-6/config-guide/b_wl_17_6_cg/streaming-telemetry-on-Cisco-Catalyst-9800-series-wireless-controller.html",
+          "version": "IOS XE 17.6.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "Cisco 917x 系列需 IOS XE 17.15.2+；官方当前推荐 17.18.4a（见方案书 14.6）"
+    },
+    {
+      "id": "C9800-CFG-004",
+      "category": "config",
+      "scope": "NETCONF/遥测采集配置",
+      "vendors": [
+        "Cisco"
+      ],
+      "symptom": "工具拿不到 9800 数据，或遥测订阅无数据",
+      "evidence": [
+        "netconf-yang 未启用 / SSH 830 未放行",
+        "AAA 未配置本地认证",
+        "telemetry ietf subscription 状态异常",
+        "pubd 进程异常"
+      ],
+      "detection": "按官方遥测排错命令清单逐项检查：show telemetry ietf subscription all / receiver / connection、show platform software yang-management process",
+      "severity": "medium",
+      "conclusion": "采集通道未就绪，需先在控制器侧开启只读能力",
+      "remediation": [
+        "启用 netconf-yang 与 AAA 本地登录",
+        "核对订阅、接收者与连接状态",
+        "必要时收集 request platform software trace archive"
+      ],
+      "doc_refs": [
+        {
+          "title": "Cisco Catalyst 9800 Configuration Guide · Streaming Telemetry 排错命令集",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-6/config-guide/b_wl_17_6_cg/streaming-telemetry-on-Cisco-Catalyst-9800-series-wireless-controller.html",
+          "version": "IOS XE 17.6.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "官方提醒：9800 的 NETCONF trustpoint 只支持 RSA 密钥，EC 密钥会导致 ncsshd 崩溃"
+    },
+    {
+      "id": "FGT-CAPWAP-001",
+      "category": "packet",
+      "scope": "FortiAP 不上线",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "FortiAP 显示 offline / down",
+      "evidence": [
+        "get system arp / DHCP 监控中无 AP 地址",
+        "管理接口未启用 Security Fabric Connection",
+        "CAPWAP 5246 无响应",
+        "cw_acd 进程异常"
+      ],
+      "detection": "按官方五步：ARP/DHCP → WTP last failure → SSH 到 AP → sniff 5246 → wtp_filter + cw_acd debug",
+      "severity": "critical",
+      "conclusion": "逐层定位到地址分配、管理访问、控制进程或链路中的具体一层",
+      "remediation": [
+        "开启/扩容 DHCP",
+        "接口启用 Security Fabric Connection",
+        "必要时按官方流程重启 cw_acd（会短暂中断全部 AP）"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet · FortiAP connection issues（CAPWAP / cw_acd / sniff 转 PCAP）",
+          "url": "https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575",
+          "version": "FortiAP 7.6.6",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet 中文一本通 · 常用排错命令（wireless-controller wlac / sta_filter / wtp_filter）",
+          "url": "https://support.fortinet.com.cn/troubleshooting/diagnostics_cli",
+          "version": "FortiOS 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "FortiGate 自 6.2 起 CAPWAP 访问归入 Security Fabric Connection；6.0.x 之前是独立选项"
+    },
+    {
+      "id": "FGT-LOG-001",
+      "category": "log",
+      "scope": "WTP 失败原因码",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "AP 显示 down 但无明确原因",
+      "evidence": [
+        "diagnose wireless-controller wlac -c wtp 的 last failure / last failure param / last failure time",
+        "示例 last failure : 8 表示控制消息达到最大重传次数"
+      ],
+      "detection": "把 last failure 码与时间戳映射到官方 KB 的原因说明，并与 AP 掉线事件时间轴对齐",
+      "severity": "high",
+      "conclusion": "把不可读数字翻译为具体失败阶段",
+      "remediation": [
+        "按失败阶段检查链路 / 认证 / 版本",
+        "收集 cw_acd debug 后提交工单"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet 中文一本通 · 常用排错命令（wireless-controller wlac / sta_filter / wtp_filter）",
+          "url": "https://support.fortinet.com.cn/troubleshooting/diagnostics_cli",
+          "version": "FortiOS 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "原因码表需按 FortiOS 分支维护，不同版本取值可能不同"
+    },
+    {
+      "id": "FGT-PKT-001",
+      "category": "packet",
+      "scope": "FortiGate 抓包导出",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "需要确认 CAPWAP 究竟停在哪个阶段",
+      "evidence": [
+        "diagnose sniff packet \"port 5246\" 6 0 l（verbose 可转 PCAP）",
+        "AP 侧 diag_sniffer any \"port 5246 or port 5247\"",
+        "关联成功的 Discovery / Response / DTLS / Join / Configuration 序列"
+      ],
+      "detection": "把 PCAP 解析为阶段序列并标注缺失阶段；DTLS 响应慢或缺失时提示证书/配置方向",
+      "severity": "info",
+      "conclusion": "给出可复核的报文级证据，而不是只看 UI 状态",
+      "remediation": [
+        "同时从 FortiGate 与 AP 两侧抓包对比",
+        "抓包 3–5 分钟即可停止，避免长时间开销"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet · FortiAP connection issues（CAPWAP / cw_acd / sniff 转 PCAP）",
+          "url": "https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575",
+          "version": "FortiAP 7.6.6",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "官方明确给出可转换为 PCAP 的 verbose 抓包语法"
+    },
+    {
+      "id": "FGT-LOG-002",
+      "category": "log",
+      "scope": "客户端级实时 debug",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "某台终端连不上或频繁掉线，但整体指标正常",
+      "evidence": [
+        "diagnose wireless-controller wlac -d sta",
+        "sta_filter <MAC> 后 IEEE 802.11 mgmt::disassoc / STA del 事件",
+        "cw_acd 时间戳日志"
+      ],
+      "detection": "按客户端 MAC 生成关联 → 认证 → disassoc → 删除的生命周期时间轴，定位被删除的直接原因",
+      "severity": "high",
+      "conclusion": "单终端问题定位到认证、 disassoc 或 STA 删除事件",
+      "remediation": [
+        "按事件原因核查终端 / SSID 安全配置",
+        "必要时开 wtp_filter 看 AP 侧"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet FortiGate Administration Guide · Checking wireless information",
+          "url": "https://docs.fortinet.com/document/fortigate/7.0.0/administration-guide/541855/checking-wireless-information",
+          "version": "FortiOS 7.0.0",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet 中文一本通 · 常用排错命令（wireless-controller wlac / sta_filter / wtp_filter）",
+          "url": "https://support.fortinet.com.cn/troubleshooting/diagnostics_cli",
+          "version": "FortiOS 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "与现有「现场连接」页的终端时间轴可直接对接，替换模拟数据"
+    },
+    {
+      "id": "FGT-CFG-001",
+      "category": "config",
+      "scope": "VAP / SSID / 接口引用",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "SSID 未广播、广播在错误 AP 组，或终端进了错误 VLAN",
+      "evidence": [
+        "diagnose wireless-controller wlac -c vap（MAC / BSSID / SSID / 接口名 / AP IP）",
+        "show wireless-controller wtp / vap / wtp-profile",
+        "接口 VLAN 与 DHCP 配置"
+      ],
+      "detection": "构建「SSID → VAP → wtp-profile → AP 组 → 接口/VLAN」引用图，检测悬空引用与不广播该 SSID 的 AP",
+      "severity": "high",
+      "conclusion": "配置引用错误，可直接列出需修正的对象",
+      "remediation": [
+        "修正 VAP 与 wtp-profile 绑定",
+        "核对接口 VLAN 与 DHCP",
+        "把实读结果回写 SSID 模块的 AP 绑定（方案书第 15 节）"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet 中文一本通 · 常用排错命令（wireless-controller wlac / sta_filter / wtp_filter）",
+          "url": "https://support.fortinet.com.cn/troubleshooting/diagnostics_cli",
+          "version": "FortiOS 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet FortiGate Administration Guide · Checking wireless information",
+          "url": "https://docs.fortinet.com/document/fortigate/7.0.0/administration-guide/541855/checking-wireless-information",
+          "version": "FortiOS 7.0.0",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "这是替换「SSID → AP 绑定」模拟数据最直接的实读来源"
+    },
+    {
+      "id": "FGT-CRASH-001",
+      "category": "log",
+      "scope": "控制面进程崩溃",
+      "vendors": [
+        "Fortinet"
+      ],
+      "symptom": "全部 AP 同时掉线，重启后恢复一段时间又复发",
+      "evidence": [
+        "diagnose debug crashlog read",
+        "cw_acd 崩溃记录",
+        "FortiAP 侧 /var/log/messages 与 dmesg"
+      ],
+      "detection": "把崩溃时间与全体 AP 掉线事件做相关性检查；若高相关则优先判定为软件缺陷而非网络",
+      "severity": "critical",
+      "conclusion": "需厂商工单 / 版本升级，不应通过调射频参数「修复」",
+      "remediation": [
+        "导出崩溃日志与配置文件",
+        "核对官方已知问题与推荐版本",
+        "提交工单"
+      ],
+      "doc_refs": [
+        {
+          "title": "Fortinet · FortiAP connection issues（CAPWAP / cw_acd / sniff 转 PCAP）",
+          "url": "https://docs.fortinet.com/document/fortiap/7.6.6/fortiwifi-and-fortiap-configuration-guide/266575",
+          "version": "FortiAP 7.6.6",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Fortinet Community · Managed FortiAP showing as offline/down",
+          "url": "https://community.fortinet.com/fortigate-3/troubleshooting-tip-managed-fortiap-showing-as-offline-down-114487",
+          "version": "FortiGate / FortiAP",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "官方把「controller daemon crashes → crashlog」列为 AP 连接问题的独立分支"
+    },
+    {
+      "id": "RKZ-API-001",
+      "category": "config",
+      "scope": "SmartZone API 接入",
+      "vendors": [
+        "RUCKUS"
+      ],
+      "symptom": "REST 接口返回私有错误码，或升级后工具失效",
+      "evidence": [
+        "serviceTicket 获取失败 / 过期",
+        "105 Unsupported API version",
+        "152 备集群不允许操作",
+        "API 版本矩阵与 SZ 大版本不匹配"
+      ],
+      "detection": "接入前先读控制器版本并对照 API 版本矩阵；把私有错误码编译为查表规则",
+      "severity": "medium",
+      "conclusion": "采集通道或 API 版本不匹配，属工具侧适配问题",
+      "remediation": [
+        "改用 https://{host}:8443/wsg/api/public 前缀",
+        "按矩阵选择 API 版本",
+        "主集群节点执行写类操作"
+      ],
+      "doc_refs": [
+        {
+          "title": "RUCKUS · Virtual SmartZone High Scale Public API Reference Guide",
+          "url": "https://docs.ruckuswireless.com/smartzone/6.0.0/vszh-public-api-reference-guide-600.html",
+          "version": "6.0 / 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "官方提供设备内置 OpenAPI 文档 /wsg/apiDoc/openapi，可自动生成字段映射"
+    },
+    {
+      "id": "RKZ-LOG-001",
+      "category": "log",
+      "scope": "告警与事件码",
+      "vendors": [
+        "RUCKUS"
+      ],
+      "symptom": "控制器告警刷屏或告警含义不明",
+      "evidence": [
+        "Alarm and Event Reference Guide 告警码",
+        "SNMP Reference Guide trap",
+        "Troubleshooting and Diagnostics 所述采集流程"
+      ],
+      "detection": "按官方告警码表建立「码 → 级别 → 可能原因 → 建议动作」映射，并关联 AP / WLAN 对象",
+      "severity": "medium",
+      "conclusion": "把厂商告警翻译为统一事件对象，进入统一时间轴",
+      "remediation": [
+        "按官方诊断流程补充证据",
+        "按告警级别与频率抑制误报"
+      ],
+      "doc_refs": [
+        {
+          "title": "RUCKUS · Virtual SmartZone High Scale Public API Reference Guide",
+          "url": "https://docs.ruckuswireless.com/smartzone/6.0.0/vszh-public-api-reference-guide-600.html",
+          "version": "6.0 / 7.x",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P2",
+      "note": "官方每个 SZ 版本都配套 Alarm and Event / SNMP / Command / Troubleshooting 四本参考，按版本锁引用"
+    },
+    {
+      "id": "RKZ-CFG-001",
+      "category": "compat",
+      "scope": "旧 AP 与控制器版本",
+      "vendors": [
+        "RUCKUS"
+      ],
+      "symptom": "老 AP 升级后无法注册，或新控制器纳管不了旧 AP",
+      "evidence": [
+        "ZD / AP 版本不一致",
+        "9.8.3.0.58 为 7962/7762/7025 最后推荐版",
+        "9.9 后不支持 7962/7762，9.10 后不支持 7025"
+      ],
+      "detection": "以型号库的 lifecycle 与 min/max 版本字段做上线前校验",
+      "severity": "high",
+      "conclusion": "固件上限约束，属规划阶段阻断项",
+      "remediation": [
+        "冻结控制器版本或替换 AP",
+        "在型号库中标注上限并留痕"
+      ],
+      "doc_refs": [],
+      "verify_status": "needs-field-check",
+      "priority": "P3",
+      "note": "沿用方案书第 14.9 节老旧型号策略；具体版本上限需现场铭牌与读数复核"
+    },
+    {
+      "id": "HW-LOG-001",
+      "category": "log",
+      "scope": "日志参考规则化",
+      "vendors": [
+        "Huawei"
+      ],
+      "symptom": "AC 上报告警但缺少处理指引",
+      "evidence": [
+        "WLAN Log Reference 的「日志含义 / 参数 / 可能原因 / 处理步骤」四段式结构",
+        "示例 WLAN/4/hwApServiceInterruptAlertTrap_active（脱管 / 许可到期 / 资源不足）"
+      ],
+      "detection": "把官方四段式直接编译为规则：命中告警 ID → 展开可能原因清单 → 按处理步骤生成核查动作",
+      "severity": "medium",
+      "conclusion": "厂商日志自带处理步骤，是官方文档融合成本最低的切入口",
+      "remediation": [
+        "按官方步骤逐项核查",
+        "把「联系技术支持」类步骤标记为需外部工单"
+      ],
+      "doc_refs": [
+        {
+          "title": "Huawei · WLAN AC AirEngine X700 Log Reference（日志含义 / 可能原因 / 处理步骤）",
+          "url": "https://support.huawei.cn/enterprise/zh/doc/EDOC1100459361/9d0ee50f",
+          "version": "V600R025C00",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Huawei · WLAN Troubleshooting Guide (V600) · 诊断信息收集",
+          "url": "https://support.huawei.com/enterprise/en/doc/EDOC1100372040/1d67b7ce/EN-US_TOPIC_0000002450387788",
+          "version": "V600",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "建议优先拿华为 Log Reference 做「文档 → 规则」自动生成器的样板"
+    },
+    {
+      "id": "HW-API-001",
+      "category": "config",
+      "scope": "北向告警与诊断收集",
+      "vendors": [
+        "Huawei"
+      ],
+      "symptom": "需要批量获取多站点告警与设备诊断包",
+      "evidence": [
+        "NCE 北向 RESTCONF /restconf/v1/data/ietf-alarms:alarms/alarm-list（分页、告警级别、时间范围）",
+        "CampusInsight /rest/fault/v1/current-alarms + X-Auth-Token",
+        "display diagnostic-information 一键诊断包"
+      ],
+      "detection": "按站点/设备拉取当前与历史告警，转成统一事件对象；诊断包按设备归档并保留 7 天默认留存约束",
+      "severity": "info",
+      "conclusion": "建立可批量、可回溯的告警与诊断证据入口",
+      "remediation": [
+        "注意历史告警默认只查最近 3 天，需显式指定时间范围",
+        "WAC 诊断日志不支持自动收集，需手动触发"
+      ],
+      "doc_refs": [
+        {
+          "title": "Huawei · iMaster NCE-Campus 北向告警接口（查询当前/历史告警）",
+          "url": "https://support.huawei.cn/enterprise/zh/doc/EDOC1100458566/ca8ec7de",
+          "version": "V300R024C10",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        },
+        {
+          "title": "Huawei · WLAN Troubleshooting Guide (V600) · 诊断信息收集",
+          "url": "https://support.huawei.com/enterprise/en/doc/EDOC1100372040/1d67b7ce/EN-US_TOPIC_0000002450387788",
+          "version": "V600",
+          "accessed": "2026-11-10",
+          "status": "official-doc"
+        }
+      ],
+      "verify_status": "official-doc",
+      "priority": "P1",
+      "note": "官方明确：WAC 诊断日志无法自动采集，且接口有并发数 2 的限制"
+    }
+  ],
+  "vendor_matrix_file": "wlc-vendor-adapters.csv"
+}
