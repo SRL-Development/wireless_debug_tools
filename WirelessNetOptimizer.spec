@@ -1,11 +1,16 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from pathlib import Path
+
+ROOT = Path(SPECPATH)
+APP_DIR = ROOT / 'wireless_app'
 
 a = Analysis(
-    ['wireless_app/app.py'],
-    pathex=[],
+    [str(APP_DIR / 'app.py')],
+    pathex=[str(APP_DIR)],
     binaries=[],
-    datas=[('C:/Users/Administrator/WorkBuddy/2026-11-08-18-56-25/wireless_app/web', 'wireless_app/web'), ('C:/Users/Administrator/WorkBuddy/2026-11-08-18-56-25/wireless_app/data', 'wireless_app/data')],
+    datas=[(str(APP_DIR / 'web'), 'wireless_app/web'),
+           (str(APP_DIR / 'data'), 'wireless_app/data')],
     hiddenimports=['wlan_scan', 'air_quality', 'roam_monitor', 'survey', 'extras', 'desktop'],
     hookspath=[],
     hooksconfig={},

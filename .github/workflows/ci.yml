@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+      - name: Install development dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Run quality checks
+        shell: pwsh
+        run: ./scripts/check.ps1
+
+  build:
+    needs: test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install build dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Build Windows executable
+        shell: pwsh
+        run: ./scripts/build.ps1
+      - name: Upload executable
+        uses: actions/upload-artifact@v7
+        with:
+          name: WirelessNetOptimizer-windows
+          path: dist/WirelessNetOptimizer.exe
+          if-no-files-found: error
+          retention-days: 14

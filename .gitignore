@@ -1,11 +1,20 @@
 # 本地构建与验收产物（含隔离 APPDATA、Chrome 配置缓存、真实扫描数据、截图）
 .build_wn/
 .workbuddy/
+build/
+dist/
+*.zip
 
 # Python 缓存
 __pycache__/
 *.py[cod]
 *.pyo
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # 运行时用户数据（防止本地调试残留入库）
 **/WirelessNetOptimizer/air_history.jsonl
@@ -24,3 +33,4 @@ __pycache__/
 Thumbs.db
 desktop.ini
 *.log
+*.tmp

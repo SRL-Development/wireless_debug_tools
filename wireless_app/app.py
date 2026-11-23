@@ -27,16 +27,25 @@ import random
 import base64
 import socket
 import hashlib
+import secrets
 import subprocess
 import threading
 import webbrowser
 import argparse
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
+from http.cookies import SimpleCookie
 from urllib.parse import urlparse, parse_qs, unquote
+from version import VERSION
 
-VERSION = "0.14.0-beta"
 APP_NAME = "WirelessNetOptimizer"
 DEFAULT_PORT = 8765
+SESSION_COOKIE = "wno_session"
+SESSION_TOKEN = secrets.token_urlsafe(32)
+DEFAULT_POST_LIMIT = 4 * 1024 * 1024
+POST_LIMITS = {
+    "/api/floorplan": 28 * 1024 * 1024,      # 20 MB 图片经 base64 + JSON 后约 27 MB
+    "/api/backup/import": 82 * 1024 * 1024,  # 60 MB zip 经 base64 + JSON 后约 81 MB
+}
 
 # ---------------- 路径 ----------------
 if getattr(sys, "frozen", False):
@@ -82,6 +91,15 @@ BAND_PARAM = {
     "5": (52.0, 3.2),
     "6": (54.0, 3.3),
 }
+AP_MOUNT_LOSS = {
+    "ceiling": 0.0,      # 吸顶：全向覆盖基准
+    "wall": 2.5,        # 侧挂 / 壁挂：背墙与方向图折损
+    "pendant": 0.5,     # 吊杆 / 下吊
+    "pole": 1.5,        # 立杆 / 抱杆
+    "desktop": 3.0,     # 桌面 / 货架：周边遮挡
+    "cabinet": 6.0,     # 机柜内部：金属与设备遮挡
+}
+CLIENT_HEIGHT_M = 1.2
 
 # ---------------- SSID 配置（全局分析维度） ----------------
 # 每个 SSID 决定：参与计算的 AP 集合、频段、最小接入 RSSI、VLAN 与安全套件。
@@ -105,6 +123,7 @@ DEFAULT_SSIDS = [
 ]
 SSID_FILE = os.path.join(USER_DIR, "ssids.json")
 SSID_STATE = {"active_id": "", "list": [], "auto_local": True}
+SSID_LOCK = threading.RLock()
 
 
 def _ssid_defaults():
@@ -112,39 +131,48 @@ def _ssid_defaults():
 
 
 def load_ssids():
-    os.makedirs(USER_DIR, exist_ok=True)
-    state = {"active_id": DEFAULT_SSIDS[0]["id"], "list": _ssid_defaults(), "auto_local": True}
-    try:
-        with open(SSID_FILE, "r", encoding="utf-8") as f:
-            saved = json.load(f)
-        if isinstance(saved, dict) and saved.get("list"):
-            state["list"] = saved["list"]
-            state["active_id"] = saved.get("active_id") or state["list"][0]["id"]
-            state["auto_local"] = bool(saved.get("auto_local", True))
-    except Exception:
-        pass
-    if state["active_id"] not in [s.get("id") for s in state["list"]]:
-        state["active_id"] = state["list"][0]["id"]
-    SSID_STATE.update(state)
-    return state
+    with SSID_LOCK:
+        os.makedirs(USER_DIR, exist_ok=True)
+        state = {"active_id": DEFAULT_SSIDS[0]["id"], "list": _ssid_defaults(), "auto_local": True}
+        try:
+            with open(SSID_FILE, "r", encoding="utf-8") as f:
+                saved = json.load(f)
+            if isinstance(saved, dict) and saved.get("list"):
+                state["list"] = saved["list"]
+                state["active_id"] = saved.get("active_id") or state["list"][0]["id"]
+                state["auto_local"] = bool(saved.get("auto_local", True))
+        except Exception:
+            pass
+        if state["active_id"] not in [s.get("id") for s in state["list"]]:
+            state["active_id"] = state["list"][0]["id"]
+        SSID_STATE.update(state)
+        return state
 
 
 def save_ssids():
-    with open(SSID_FILE, "w", encoding="utf-8") as f:
-        json.dump(SSID_STATE, f, ensure_ascii=False, indent=1)
+    with SSID_LOCK:
+        os.makedirs(USER_DIR, exist_ok=True)
+        tmp = SSID_FILE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(SSID_STATE, f, ensure_ascii=False, indent=1)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, SSID_FILE)
 
 
 def ssid_get(sid=None, name=None):
-    for s in SSID_STATE["list"]:
-        if sid and str(s.get("id")) == str(sid):
-            return s
-        if name and s.get("name") == name:
-            return s
-    return None
+    with SSID_LOCK:
+        for s in SSID_STATE["list"]:
+            if sid and str(s.get("id")) == str(sid):
+                return s
+            if name and s.get("name") == name:
+                return s
+        return None
 
 
 def ssid_active():
-    return ssid_get(SSID_STATE["active_id"]) or (SSID_STATE["list"][0] if SSID_STATE["list"] else None)
+    with SSID_LOCK:
+        return ssid_get(SSID_STATE["active_id"]) or (SSID_STATE["list"][0] if SSID_STATE["list"] else None)
 
 
 def ssid_filter_aps(aps, ssid):
@@ -166,8 +194,10 @@ def ssid_band(ssid, fallback="2.4"):
 
 
 def ssid_public():
-    return {"ssids": SSID_STATE["list"], "active_id": SSID_STATE["active_id"],
-            "active": ssid_active(), "auto_local": bool(SSID_STATE.get("auto_local", True))}
+    with SSID_LOCK:
+        out = {"ssids": SSID_STATE["list"], "active_id": SSID_STATE["active_id"],
+               "active": ssid_active(), "auto_local": bool(SSID_STATE.get("auto_local", True))}
+        return json.loads(json.dumps(out, ensure_ascii=False))
 
 
 load_ssids()
@@ -377,25 +407,26 @@ def wlan_use_ssid(req):
                src.get("signal_pct") if src.get("signal_pct") is not None else "-",
                src.get("rssi_dbm") if src.get("rssi_dbm") is not None else "-",
                scan["checked_at"]))
-    existing = ssid_get(name=name)
-    created = existing is None
-    if created:
-        sid = "ssid-local-" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
-        SSID_STATE["list"].append(dict(
-            id=sid, name=name, purpose="本机当前 Wi-Fi", band=band,
-            security=src.get("auth") or "本机读取（未标注）",
-            vlan=int(req.get("vlan") or 0), broadcast=True, enabled=True,
-            min_rssi=float(req.get("min_rssi") or -70), max_clients=60,
-            ap_ids=[], source="local", local=local_meta, note=note))
-    else:
-        sid = existing["id"]
-        existing.update(source="local", local=local_meta, note=note)
-        if not existing.get("band_locked"):
-            existing["band"] = band
-    SSID_STATE["active_id"] = sid
-    save_ssids()
-    return {"state": ssid_public(), "local": scan, "created": created,
-            "ssid": ssid_get(sid)}
+    with SSID_LOCK:
+        existing = ssid_get(name=name)
+        created = existing is None
+        if created:
+            sid = "ssid-local-" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
+            SSID_STATE["list"].append(dict(
+                id=sid, name=name, purpose="本机当前 Wi-Fi", band=band,
+                security=src.get("auth") or "本机读取（未标注）",
+                vlan=int(req.get("vlan") or 0), broadcast=True, enabled=True,
+                min_rssi=float(req.get("min_rssi") or -70), max_clients=60,
+                ap_ids=[], source="local", local=local_meta, note=note))
+        else:
+            sid = existing["id"]
+            existing.update(source="local", local=local_meta, note=note)
+            if not existing.get("band_locked"):
+                existing["band"] = band
+        SSID_STATE["active_id"] = sid
+        save_ssids()
+        return {"state": ssid_public(), "local": scan, "created": created,
+                "ssid": ssid_get(sid)}
 
 # 非 Wi-Fi / 邻区干扰源库：kind, 频段, 中心频率 MHz, 带宽 MHz, 1m 处等效 dBm, 占空比, 处置建议
 INTERFERER_LIBRARY = [
@@ -495,22 +526,40 @@ def prep_aps(aps, band):
             continue
         tx = float(a.get("tx_power", 20))
         gain = float(a.get("gain", 3))
-        out.append((x, y, tx, gain))
+        try:
+            height_m = max(1.5, min(30.0, float(a.get("height_m", 4.5))))
+        except (TypeError, ValueError):
+            height_m = 4.5
+        mounting = str(a.get("mounting", "ceiling"))
+        mount_loss = AP_MOUNT_LOSS.get(mounting, AP_MOUNT_LOSS["ceiling"])
+        out.append((x, y, tx, gain, height_m, mount_loss, mounting))
     return out
 
 
-def predict_at(px, py, ap, walls, pl0, n, ppm):
+def _ap_distance_m(px, py, ap, ppm_x, ppm_y=None):
+    """终端参考高度 1.2 m 下，按 X/Y 独立比例尺计算 AP 三维距离。"""
+    sx = max(float(ppm_x), 0.01)
+    sy = max(float(ppm_y if ppm_y is not None else ppm_x), 0.01)
+    horizontal = math.hypot((px - ap[0]) / sx, (py - ap[1]) / sy)
+    height_m = ap[4] if len(ap) > 4 else 4.5
+    return max(math.hypot(horizontal, max(0.0, height_m - CLIENT_HEIGHT_M)), 1.0)
+
+
+def predict_at(px, py, ap, walls, pl0, n, ppm, ppm_y=None):
     """传播先验。AP 近场（< 3 m）的墙体损耗按比例折减：
     AP 贴墙 / 挂墙安装时，射线在极短距离内可能穿过多段墙，累加出 30~42 dB 的
     虚假黑洞；实际近场由直射与绕射主导。3 m 以外恢复完整墙损。"""
-    d_px = math.hypot(px - ap[0], py - ap[1])
-    d_m = max(d_px / max(ppm, 0.01), 1.0)
+    ppm_x = max(float(ppm), 0.01)
+    ppm_y = max(float(ppm_y if ppm_y is not None else ppm), 0.01)
+    horizontal_m = math.hypot((px - ap[0]) / ppm_x, (py - ap[1]) / ppm_y)
+    d_m = _ap_distance_m(px, py, ap, ppm_x, ppm_y)
     pl = pl0 + 10.0 * n * math.log10(d_m)
     wl = wall_loss_for(px, py, ap[0], ap[1], walls)
     if wl:
-        near_scale = 0.35 + 0.65 * min(1.0, d_px / (3.0 * max(ppm, 0.01)))
+        near_scale = 0.35 + 0.65 * min(1.0, horizontal_m / 3.0)
         pl += wl * near_scale
-    return ap[2] + ap[3] - pl
+    mount_loss = ap[5] if len(ap) > 5 else 0.0
+    return ap[2] + ap[3] - mount_loss - pl
 
 
 def heatmap_engine(req):
@@ -519,6 +568,9 @@ def heatmap_engine(req):
     cols = max(20, min(200, int(req.get("cols", 120))))
     rows = max(15, min(160, int(req.get("rows", 84))))
     ppm = max(0.5, float(req.get("ppm", 8.0)))
+    ppm_x = max(0.5, float(req.get("ppm_x", ppm)))
+    ppm_y = max(0.5, float(req.get("ppm_y", ppm)))
+    ppm_effective = math.sqrt(ppm_x * ppm_y)
     band = str(req.get("band", "2.4"))
     # SSID 是全局分析维度：决定参与计算的 AP 集合、生效频段与走测打点归属
     ssid = ssid_get(req.get("ssid_id")) or ssid_get(name=req.get("ssid"))
@@ -538,7 +590,7 @@ def heatmap_engine(req):
     noise = float(req.get("noise", -95))
     walls = prep_walls(req.get("walls"))
     aps = prep_aps(ssid_filter_aps(req.get("aps"), ssid), band)
-    interferers = prep_interferers(req.get("interferers"), band, ppm)
+    interferers = prep_interferers(req.get("interferers"), band, ppm_effective)
     cov_thr = float((ssid or {}).get("min_rssi", -67))
     samples = []
     for s in req.get("samples") or []:
@@ -555,7 +607,7 @@ def heatmap_engine(req):
     use_res = bool(req.get("use_residuals", True))
     residuals = []
     for (sx, sy, rssi) in samples:
-        pred = max(predict_at(sx, sy, a, walls, pl0, n, ppm) for a in aps) if aps else -95.0
+        pred = max(predict_at(sx, sy, a, walls, pl0, n, ppm_x, ppm_y) for a in aps) if aps else -95.0
         residuals.append((sx, sy, rssi - pred))
 
     # 稳健化：残差是「当前 AP 布局」下的校准量，不是固定的空间偏移场。
@@ -583,7 +635,7 @@ def heatmap_engine(req):
     if len(pool) >= 3 and aps:
         errs = []
         for i, (sx, sy, meas) in enumerate(samples):
-            pred = max(predict_at(sx, sy, a, walls, pl0, n, ppm) for a in aps) if aps else -95.0
+            pred = max(predict_at(sx, sy, a, walls, pl0, n, ppm_x, ppm_y) for a in aps) if aps else -95.0
             num = den = 0.0
             for j, (rx, ry, res, rel) in enumerate(pool):
                 if i == j:
@@ -606,7 +658,7 @@ def heatmap_engine(req):
             px = (c + 0.5) * cell_w
             best, second, best_idx = -110.0, -110.0, -1
             for idx, a in enumerate(aps):
-                v = predict_at(px, py, a, walls, pl0, n, ppm)
+                v = predict_at(px, py, a, walls, pl0, n, ppm_x, ppm_y)
                 if v > best:
                     second, best, best_idx = best, v, idx
                 elif v > second:
@@ -628,12 +680,12 @@ def heatmap_engine(req):
                 corr = max(-8.0, min(8.0, num / den if den else 0.0))
                 # 近场保护：AP 3 m 内校正渐入，AP 脚下完全由传播模型决定。
                 # 近场本来就是自由空间直射主导，实测校准只应用于中远场阴影衰落。
-                d_ap = min(math.hypot(px - a[0], py - a[1]) for a in aps)
-                w_near = min(1.0, (d_ap / (3.0 * ppm)) ** 2)
+                d_ap = min(_ap_distance_m(px, py, a, ppm_x, ppm_y) for a in aps)
+                w_near = min(1.0, (d_ap / 3.0) ** 2)
                 best = raw_best + corr * w_near
-                conf = 0.40 + 0.60 * math.exp(-math.sqrt(dmin2) / (9.0 * ppm)) if residuals else 0.40
+                conf = 0.40 + 0.60 * math.exp(-math.sqrt(dmin2) / (9.0 * ppm_effective)) if residuals else 0.40
             val = round(best, 1)
-            eff_noise = noise_at(px, py, noise, interferers, ppm) if interferers else noise
+            eff_noise = noise_at(px, py, noise, interferers, ppm_effective) if interferers else noise
             sinr = best - eff_noise
             rssi_grid.append(val)
             conf_grid.append(round(conf, 2))
@@ -673,8 +725,9 @@ def heatmap_engine(req):
         "residual_median_db": round(res_median, 1),
         "nearfield_guard_m": 3.0,
         "band": band, "noise_dbm": noise, "ppm": ppm,
+        "ppm_x": round(ppm_x, 2), "ppm_y": round(ppm_y, 2),
         "path_loss_n": round(n, 2), "pl0_db": round(pl0, 1),
-        "model": ("ITU-R P.1238 简化 + 多墙衰减" +
+        "model": ("ITU-R P.1238 简化 + 多墙衰减 + AP 三维高度/安装方式" +
                   ("（实测校准 n=%.2f / PL0=%.1f）" % (n, pl0)
                    if abs(n - n_def) > 1e-6 or abs(pl0 - pl0_def) > 1e-6 else "") +
                   (" + 实测残差稳健校正（近场保护 3 m）" if use_res else "（残差校正已关闭）") +
@@ -1429,6 +1482,7 @@ def wlc_analyze(text, vendor=""):
 # 全程只读：WlanScan 触发一次被动+主动扫描，不连接、不改配置、不上传。
 AIR = {"last": None, "at": 0.0, "busy": False, "error": ""}
 AIR_TTL = 25.0     # 秒，避免前端连续刷新反复扫描
+AIR_SCAN_LOCK = threading.Lock()
 
 
 def air_scan(force=True, wait=5.0, point=""):
@@ -1438,7 +1492,7 @@ def air_scan(force=True, wait=5.0, point=""):
         out["cached"] = True
         out["age_sec"] = round(now - AIR["at"], 1)
         return out
-    if AIR["busy"]:
+    if not AIR_SCAN_LOCK.acquire(blocking=False):
         return {"ok": False, "error": "上一次扫描还在进行，请稍候", "cached": True,
                 "bss": [], "analysis": None}
     AIR["busy"] = True
@@ -1476,44 +1530,46 @@ def air_scan(force=True, wait=5.0, point=""):
         return {"ok": False, "error": "扫描异常：%s" % e, "bss": [], "analysis": None}
     finally:
         AIR["busy"] = False
+        AIR_SCAN_LOCK.release()
 
 
 def air_import(names):
     """把扫到的 SSID 批量加入 SSID 列表（已存在则跳过）。"""
-    created, existed, skipped = [], [], []
-    for raw in (names or []):
-        name = str(raw or "").strip()
-        if not name:
-            continue
-        if len(name) > 32:
-            skipped.append(name[:32])
-            continue
-        if ssid_get(name=name):
-            existed.append(name)
-            continue
-        sid = "ssid-scan-" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
-        bands = set()
-        rssi = None
-        sec = ""
-        for b in (AIR["last"] or {}).get("bss", []):
-            if b.get("ssid") == name and not b.get("hidden"):
-                if b.get("band"):
-                    bands.add(b["band"])
-                if b.get("rssi") is not None and (rssi is None or b["rssi"] > rssi):
-                    rssi = b["rssi"]
-                sec = sec or (b.get("security") or "")
-        band = "双频" if len(bands) > 1 else (next(iter(bands)) if bands else "双频")
-        SSID_STATE["list"].append(dict(
-            id=sid, name=name, purpose="空口扫描导入", band=band,
-            security=sec or "扫描读取（未标注）", vlan=0, broadcast=True, enabled=True,
-            min_rssi=-70, max_clients=60, ap_ids=[], source="scan",
-            note="由真实空口扫描导入：本次采集点最强 RSSI %s dBm；如需按现网设计值使用请手工修订。"
-                 % (rssi if rssi is not None else "-")))
-        created.append(name)
-    if created:
-        save_ssids()
-    return {"created": created, "existed": existed, "skipped": skipped,
-            "state": ssid_public()}
+    with SSID_LOCK:
+        created, existed, skipped = [], [], []
+        for raw in (names or []):
+            name = str(raw or "").strip()
+            if not name:
+                continue
+            if len(name) > 32:
+                skipped.append(name[:32])
+                continue
+            if ssid_get(name=name):
+                existed.append(name)
+                continue
+            sid = "ssid-scan-" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
+            bands = set()
+            rssi = None
+            sec = ""
+            for b in (AIR["last"] or {}).get("bss", []):
+                if b.get("ssid") == name and not b.get("hidden"):
+                    if b.get("band"):
+                        bands.add(b["band"])
+                    if b.get("rssi") is not None and (rssi is None or b["rssi"] > rssi):
+                        rssi = b["rssi"]
+                    sec = sec or (b.get("security") or "")
+            band = "双频" if len(bands) > 1 else (next(iter(bands)) if bands else "双频")
+            SSID_STATE["list"].append(dict(
+                id=sid, name=name, purpose="空口扫描导入", band=band,
+                security=sec or "扫描读取（未标注）", vlan=0, broadcast=True, enabled=True,
+                min_rssi=-70, max_clients=60, ap_ids=[], source="scan",
+                note="由真实空口扫描导入：本次采集点最强 RSSI %s dBm；如需按现网设计值使用请手工修订。"
+                     % (rssi if rssi is not None else "-")))
+            created.append(name)
+        if created:
+            save_ssids()
+        return {"created": created, "existed": existed, "skipped": skipped,
+                "state": ssid_public()}
 
 
 # ---------------- 移动漫游监测（只读轮询，真实数据） ----------------
@@ -1701,13 +1757,15 @@ def survey_calibrate(req):
         band = "2.4"
     pl0_def, n_def = BAND_PARAM[band]
     ppm = max(0.5, float(req.get("ppm") or 10.0))
+    ppm_x = max(0.5, float(req.get("ppm_x") or ppm))
+    ppm_y = max(0.5, float(req.get("ppm_y") or ppm))
     walls = prep_walls(req.get("walls"))
     aps = prep_aps(req.get("aps"), band)
     if not aps:
         return {"ok": False, "error": "图纸上没有可用 AP，请先在「热力图」工作台放置 AP 并保存，或把 AP 列表传过来"}
 
     def predict_fn(n, pl0):
-        return [max(predict_at(float(p["x"]), float(p["y"]), a, walls, pl0, n, ppm) for a in aps)
+        return [max(predict_at(float(p["x"]), float(p["y"]), a, walls, pl0, n, ppm_x, ppm_y) for a in aps)
                 for p in pts]
 
     out = SV.calibrate(pts, predict_fn, n_def, pl0_def)
@@ -1922,6 +1980,11 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "DENY")
+        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header("Permissions-Policy", "camera=(), microphone=(), geolocation=()")
+        self.send_header("Content-Security-Policy", "frame-ancestors 'none'; base-uri 'none'; object-src 'none'")
         for k, v in (extra or {}).items():
             self.send_header(k, v)
         self.end_headers()
@@ -1933,24 +1996,49 @@ class Handler(BaseHTTPRequestHandler):
     def _json(self, obj, code=200):
         self._send(code, json.dumps(obj, ensure_ascii=False, separators=(",", ":")))
 
-    def _file(self, path):
+    def _file(self, path, extra=None):
         if not os.path.isfile(path):
             return self._send(404, "Not Found: " + os.path.basename(path), "text/plain; charset=utf-8")
         ext = os.path.splitext(path)[1].lower()
         with open(path, "rb") as f:
-            self._send(200, f.read(), MIME.get(ext, "application/octet-stream"))
+            self._send(200, f.read(), MIME.get(ext, "application/octet-stream"), extra)
 
     def _safe_name(self, name):
         name = os.path.basename(str(name or "")).replace("..", "")
         return "".join(c for c in name if c not in '\\/:*?"<>|')[:80]
 
+    def _trusted_host(self):
+        host = str(self.headers.get("Host") or "").strip().lower()
+        hostname = host.rsplit(":", 1)[0] if ":" in host else host
+        return bool(host) and hostname in ("127.0.0.1", "localhost")
+
+    def _valid_session(self):
+        if not self._trusted_host():
+            return False
+        host = str(self.headers.get("Host") or "").strip().lower()
+        origin = str(self.headers.get("Origin") or "").strip().lower().rstrip("/")
+        if origin and origin != "http://" + host:
+            return False
+        try:
+            cookie = SimpleCookie()
+            cookie.load(self.headers.get("Cookie") or "")
+            supplied = cookie.get(SESSION_COOKIE)
+            return bool(supplied) and secrets.compare_digest(supplied.value, SESSION_TOKEN)
+        except Exception:
+            return False
+
     def do_GET(self):
+        if not self._trusted_host():
+            return self._send(421, "Untrusted Host", "text/plain; charset=utf-8")
         u = urlparse(self.path)
         p = unquote(u.path)
         q = parse_qs(u.query)
         try:
             if p in ("/", "/index.html"):
-                return self._file(os.path.join(WEB_DIR, "index.html"))
+                return self._file(os.path.join(WEB_DIR, "index.html"), {
+                    "Set-Cookie": "%s=%s; Path=/; HttpOnly; SameSite=Strict" %
+                                  (SESSION_COOKIE, SESSION_TOKEN)
+                })
             if p.startswith("/static/"):
                 return self._file(os.path.join(WEB_DIR, self._safe_name(p[len("/static/"):])))
             if p == "/plan.html":
@@ -2094,9 +2182,22 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         u = urlparse(self.path)
         p = unquote(u.path)
+        if not self._valid_session():
+            return self._json({"error": "forbidden: invalid local session"}, 403)
+        ctype = str(self.headers.get("Content-Type") or "").split(";", 1)[0].strip().lower()
+        if ctype != "application/json":
+            return self._json({"error": "Content-Type must be application/json"}, 415)
         try:
-            length = int(self.headers.get("Content-Length", 0))
+            length = int(self.headers.get("Content-Length", -1))
+            if length < 0:
+                return self._json({"error": "Content-Length required"}, 411)
+            limit = POST_LIMITS.get(p, DEFAULT_POST_LIMIT)
+            if length > limit:
+                self.close_connection = True
+                return self._json({"error": "request body too large", "limit": limit}, 413)
             raw = self.rfile.read(length) if length else b"{}"
+            if len(raw) != length:
+                return self._json({"error": "incomplete request body"}, 400)
             req = json.loads(raw.decode("utf-8") or "{}")
         except Exception as ex:
             return self._json({"error": "invalid JSON: %s" % ex}, 400)
@@ -2189,54 +2290,59 @@ class Handler(BaseHTTPRequestHandler):
                     return self._json(out, 400)
                 return self._json(out)
             if p == "/api/wlan/auto":
-                SSID_STATE["auto_local"] = bool(req.get("enabled", True))
-                save_ssids()
-                return self._json(ssid_public())
+                with SSID_LOCK:
+                    SSID_STATE["auto_local"] = bool(req.get("enabled", True))
+                    save_ssids()
+                    return self._json(ssid_public())
             if p == "/api/ssid/select":
-                sid = str(req.get("id", ""))
-                if not ssid_get(sid):
-                    return self._json({"error": "SSID 不存在"}, 404)
-                SSID_STATE["active_id"] = sid
-                save_ssids()
-                return self._json(ssid_public())
-            if p == "/api/ssid/save":
-                item = dict(req.get("ssid") or {})
-                name = str(item.get("name", "")).strip()
-                if not name:
-                    return self._json({"error": "SSID 名称不能为空"}, 400)
-                if any(s.get("name") == name and str(s.get("id")) != str(item.get("id", ""))
-                       for s in SSID_STATE["list"]):
-                    return self._json({"error": "SSID 名称重复"}, 400)
-                sid = str(item.get("id") or ("ssid-%d" % int(time.time() * 1000)))
-                item.update(id=sid, name=name,
-                            band=item.get("band") if item.get("band") in ("双频", "2.4", "5", "6") else "双频",
-                            vlan=int(item.get("vlan") or 0),
-                            min_rssi=float(item.get("min_rssi") or -70),
-                            max_clients=int(item.get("max_clients") or 60),
-                            ap_ids=[int(x) for x in (item.get("ap_ids") or []) if str(x).isdigit()],
-                            broadcast=bool(item.get("broadcast", True)),
-                            enabled=bool(item.get("enabled", True)))
-                idx = next((i for i, s in enumerate(SSID_STATE["list"]) if str(s.get("id")) == sid), -1)
-                if idx >= 0:
-                    SSID_STATE["list"][idx] = item
-                else:
-                    SSID_STATE["list"].append(item)
+                with SSID_LOCK:
+                    sid = str(req.get("id", ""))
+                    if not ssid_get(sid):
+                        return self._json({"error": "SSID 不存在"}, 404)
                     SSID_STATE["active_id"] = sid
-                save_ssids()
-                return self._json(ssid_public())
+                    save_ssids()
+                    return self._json(ssid_public())
+            if p == "/api/ssid/save":
+                with SSID_LOCK:
+                    item = dict(req.get("ssid") or {})
+                    name = str(item.get("name", "")).strip()
+                    if not name:
+                        return self._json({"error": "SSID 名称不能为空"}, 400)
+                    if any(s.get("name") == name and str(s.get("id")) != str(item.get("id", ""))
+                           for s in SSID_STATE["list"]):
+                        return self._json({"error": "SSID 名称重复"}, 400)
+                    sid = str(item.get("id") or ("ssid-%d" % int(time.time() * 1000)))
+                    item.update(id=sid, name=name,
+                                band=item.get("band") if item.get("band") in ("双频", "2.4", "5", "6") else "双频",
+                                vlan=int(item.get("vlan") or 0),
+                                min_rssi=float(item.get("min_rssi") or -70),
+                                max_clients=int(item.get("max_clients") or 60),
+                                ap_ids=[int(x) for x in (item.get("ap_ids") or []) if str(x).isdigit()],
+                                broadcast=bool(item.get("broadcast", True)),
+                                enabled=bool(item.get("enabled", True)))
+                    idx = next((i for i, s in enumerate(SSID_STATE["list"]) if str(s.get("id")) == sid), -1)
+                    if idx >= 0:
+                        SSID_STATE["list"][idx] = item
+                    else:
+                        SSID_STATE["list"].append(item)
+                        SSID_STATE["active_id"] = sid
+                    save_ssids()
+                    return self._json(ssid_public())
             if p == "/api/ssid/delete":
-                sid = str(req.get("id", ""))
-                if len(SSID_STATE["list"]) <= 1:
-                    return self._json({"error": "至少保留一个 SSID"}, 400)
-                SSID_STATE["list"] = [s for s in SSID_STATE["list"] if str(s.get("id")) != sid]
-                if SSID_STATE["active_id"] == sid:
-                    SSID_STATE["active_id"] = SSID_STATE["list"][0]["id"]
-                save_ssids()
-                return self._json(ssid_public())
+                with SSID_LOCK:
+                    sid = str(req.get("id", ""))
+                    if len(SSID_STATE["list"]) <= 1:
+                        return self._json({"error": "至少保留一个 SSID"}, 400)
+                    SSID_STATE["list"] = [s for s in SSID_STATE["list"] if str(s.get("id")) != sid]
+                    if SSID_STATE["active_id"] == sid:
+                        SSID_STATE["active_id"] = SSID_STATE["list"][0]["id"]
+                    save_ssids()
+                    return self._json(ssid_public())
             if p == "/api/ssid/reset":
-                SSID_STATE.update(active_id=DEFAULT_SSIDS[0]["id"], list=_ssid_defaults())
-                save_ssids()
-                return self._json(ssid_public())
+                with SSID_LOCK:
+                    SSID_STATE.update(active_id=DEFAULT_SSIDS[0]["id"], list=_ssid_defaults())
+                    save_ssids()
+                    return self._json(ssid_public())
             if p == "/api/live/config":
                 return self._json(live_configure(req.get("aps"), req.get("ppm", 10), req.get("n_clients", 36)))
             if p == "/api/live/pause":

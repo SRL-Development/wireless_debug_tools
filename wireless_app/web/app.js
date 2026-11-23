@@ -452,7 +452,7 @@ function dl(blob, name) {
 /* ====================================================================
    热力图
 ==================================================================== */
-let HS = { aps: [], walls: [], samples: [], ppm: 10, band: "2.4", userBand: "2.4", noise: -95, grid: "m",
+let HS = { aps: [], walls: [], samples: [], ppm: 10, ppmX: 10, ppmY: 10, band: "2.4", userBand: "2.4", noise: -95, grid: "m",
   floor: "demo", tool: "select", heat: null, drag: null, nextId: 1, dirty: false };
 /* SK = 现场草图的矢量数据。房间 / 隔墙 / 门洞 / 标注都是可编辑对象，
    渲染到 bg 层，墙体同时映射进 HS.walls 参与传播模型计算。 */
@@ -487,7 +487,6 @@ function previewHeat() {
   const cols = 64, rows = 45;
   const c = document.createElement("canvas"); c.width = cols; c.height = rows;
   const cx = c.getContext("2d"), im = cx.createImageData(cols, rows);
-  const ppm = Math.max(HS.ppm, .5);
   for (let r = 0; r < rows; r++) {
     const py = (r + .5) * H / rows;
     for (let cc = 0; cc < cols; cc++) {
@@ -495,8 +494,9 @@ function previewHeat() {
       let best = -110;
       for (let k = 0; k < aps.length; k++) {
         const a = aps[k];
-        const d = Math.max(Math.hypot(px - a.x, py - a.y) / ppm, 1);
-        const v = ((+a.tx_power || 20) + (+a.gain || 3)) - (p[0] + 10 * p[1] * Math.log10(d));
+        const d = apDistanceMeters(px, py, a);
+        const v = ((+a.tx_power || 20) + (+a.gain || 3)) - apMountLoss(a.mounting) -
+          (p[0] + 10 * p[1] * Math.log10(d));
         if (v > best) best = v;
       }
       const col = colorOf(best), i = (r * cols + cc) * 4;
@@ -543,7 +543,14 @@ function initHeat() {
   });
   edit.addEventListener("mouseleave", () => { if (SK.hover) { SK.hover = null; drawEdit(); } });
   ["laps", "lwalls", "lsamples", "llive"].forEach(id => $("#" + id).addEventListener("change", drawEdit));
-  $("#hppm").addEventListener("change", e => { HS.ppm = Math.max(.5, +e.target.value || 10); e.target.value = HS.ppm; drawFloorIfDemo(); markDirty(); });
+  $("#hppm").addEventListener("change", e => {
+    HS.ppm = Math.max(.5, +e.target.value || 10); HS.ppmX = HS.ppmY = HS.ppm; e.target.value = HS.ppm;
+    if (HS.floor === "sketch") {
+      SK.width_m = skClampDim(920 / HS.ppm); SK.length_m = skClampDim(620 / HS.ppm);
+      skSyncDimControls(); skApplyDimText();
+    }
+    drawFloorIfDemo(); markDirty();
+  });
   $("#hband").addEventListener("change", e => { HS.band = e.target.value; HS.userBand = HS.band; markDirty(); });
   $("#hnoise").addEventListener("change", e => { HS.noise = +e.target.value || -95; markDirty(); });
   $("#hgrid").addEventListener("change", e => { HS.grid = e.target.value; markDirty(); });
@@ -573,8 +580,30 @@ function initHeat() {
     skSetTool(b.dataset.sktool);
   });
   $("#skmaterial").addEventListener("change", e => skApplyMaterial(e.target.value));
-  $("#skwidthm").addEventListener("change", skApplyDim);
-  $("#skdimapply").addEventListener("click", skApplyDim);
+  [["skwidthm", "skwidthrange"], ["sklengthm", "sklengthrange"]].forEach(([inputId, rangeId]) => {
+    $("#" + inputId).addEventListener("input", e => {
+      const range = $("#" + rangeId), m = skClampDim(e.target.value);
+      if (range) { range.max = Math.max(300, Math.ceil(m / 50) * 50); range.value = m; }
+    });
+    $("#" + inputId).addEventListener("change", () => skApplyDims());
+    $("#" + rangeId).addEventListener("input", e => {
+      $("#" + inputId).value = e.target.value;
+      skApplyDims(+$("#skwidthm").value, +$("#sklengthm").value, { quiet: true, debounce: true });
+    });
+    $("#" + rangeId).addEventListener("change", () => skApplyDims());
+  });
+  $("#skdimapply").addEventListener("click", () => skApplyDims());
+  $$('[data-skdim]').forEach(b => b.addEventListener("click", () => {
+    const d = b.dataset.skdim.split(",").map(Number); skApplyDims(d[0], d[1]);
+  }));
+  $("#skdimrandom").addEventListener("click", () => {
+    const randomWidth = 30 + Math.floor(Math.random() * 43) * 5; // 30–240 m
+    const randomLength = 20 + Math.floor(Math.random() * 29) * 5; // 20–160 m
+    skApplyDims(randomWidth, randomLength, { random: true });
+  });
+  $("#skheightm").addEventListener("change", () => skApplyInstallDefaults(false));
+  $("#skmount").addEventListener("change", () => skApplyInstallDefaults(false));
+  $("#skapapplyall").addEventListener("click", () => skApplyInstallDefaults(true));
   $("#skgrid").addEventListener("change", e => { SK.showGrid = e.target.checked; drawFloor(); });
   $("#sksnap").addEventListener("change", e => { SK.snap = e.target.checked; });
   $("#skortho").addEventListener("change", e => { SK.ortho = e.target.checked; });
@@ -635,8 +664,8 @@ function buildDemo() {
   function sampleModel(x, y) {
     let best = -110;
     HS.aps.forEach(a => {
-      const d = Math.max(Math.hypot(x - a.x, y - a.y) / HS.ppm, 1);
-      const v = (a.tx_power + a.gain) - (46 + 30 * Math.log10(d)) - 5;
+      const d = apDistanceMeters(x, y, a);
+      const v = (a.tx_power + a.gain) - apMountLoss(a.mounting) - (46 + 30 * Math.log10(d)) - 5;
       if (v > best) best = v;
     });
     return best;
@@ -648,7 +677,7 @@ function buildDemo() {
     [520, 350], [740, 350], [920, 350],
   ];
   spots.forEach(([x, y]) => HS.samples.push({ x, y, rssi: Math.round(sampleModel(x, y) + (rnd() - .5) * 5) }));
-  HS.ppm = 10; HS.floor = "demo"; HS.heat = null; HS.dirty = true;
+  HS.ppm = 10; HS.ppmX = HS.ppmY = 10; HS.floor = "demo"; HS.heat = null; HS.dirty = true;
   $("#hppm").value = 10; $("#floorinfo").textContent = "示例楼层";
   drawFloor(); hc.clearRect(0, 0, W, H); drawEdit(); renderAPList();
   $("#hmetrics").innerHTML = '<div class="tiny muted">示例楼层已就绪（6 AP / ' + HS.walls.length + ' 段墙 / ' + HS.samples.length + ' 个实测点）。点「计算热力图」。</div>';
@@ -684,10 +713,11 @@ function drawDemoFloor() {
   c.textAlign = "left"; c.font = "11px Consolas,monospace"; c.fillStyle = "#b0bac7";
   c.fillText("示例楼层 · 100 m × 70 m（示意）", 42, 28);
   c.fillText("N ↑", 928, 28);
-  // 比例尺
-  c.strokeStyle = "#64748b"; c.lineWidth = 2; c.beginPath(); c.moveTo(50, 680); c.lineTo(50 + 10 * HS.ppm, 680); c.stroke();
-  c.beginPath(); c.moveTo(50, 675); c.lineTo(50, 685); c.moveTo(50 + 10 * HS.ppm, 675); c.lineTo(50 + 10 * HS.ppm, 685); c.stroke();
-  c.fillStyle = "#64748b"; c.font = "11px Consolas,monospace"; c.fillText("10 m", 50 + 10 * HS.ppm + 8, 684);
+  // 比例尺：按当前尺度自动选择易读的 1/2/5/10/20/50/100 m 等刻度
+  const meters = niceScaleMeters(HS.ppm), scalePx = meters * HS.ppm;
+  c.strokeStyle = "#64748b"; c.lineWidth = 2; c.beginPath(); c.moveTo(50, 680); c.lineTo(50 + scalePx, 680); c.stroke();
+  c.beginPath(); c.moveTo(50, 675); c.lineTo(50, 685); c.moveTo(50 + scalePx, 675); c.lineTo(50 + scalePx, 685); c.stroke();
+  c.fillStyle = "#64748b"; c.font = "11px Consolas,monospace"; c.fillText(meters + " m", 50 + scalePx + 8, 684);
 }
 
 /* ====================================================================
@@ -702,18 +732,71 @@ function skDefault() {
   return {
     name: "现场草图", rooms: [], walls: [], doors: [], labels: [],
     grid: 20, snap: true, showGrid: true, ortho: true,
-    width_m: 40, door_w_m: 0.9, material: "drywall",
+    width_m: 40, length_m: 27, install_height_m: 4.5, mounting: "ceiling",
+    door_w_m: 0.9, material: "drywall",
     tool: "off", nextId: 1, sel: null, drag: null, hover: null, snapHint: null, undo: [], redo: []
   };
+}
+function skClampDim(v) {
+  const n = Number(v);
+  return Math.round(Math.max(5, Math.min(1000, isFinite(n) ? n : 40)) * 10) / 10;
+}
+function skClampWidth(v) { return skClampDim(v); } // 兼容旧项目与既有调用
+function skClampHeight(v) {
+  const n = Number(v);
+  return Math.round(Math.max(1.5, Math.min(30, isFinite(n) ? n : 4.5)) * 10) / 10;
+}
+function hsScaleX() { return Math.max(.01, Number(HS.ppmX) || Number(HS.ppm) || 10); }
+function hsScaleY() { return Math.max(.01, Number(HS.ppmY) || Number(HS.ppm) || 10); }
+function skUpdateScale() {
+  HS.ppmX = Math.round(920 / skClampDim(SK.width_m) * 100) / 100;
+  HS.ppmY = Math.round(620 / skClampDim(SK.length_m) * 100) / 100;
+  HS.ppm = Math.round(Math.sqrt(HS.ppmX * HS.ppmY) * 100) / 100;
+  const input = $("#hppm"); if (input) input.value = HS.ppm;
+}
+function physicalDistance(x1, y1, x2, y2) {
+  return Math.hypot((x2 - x1) / hsScaleX(), (y2 - y1) / hsScaleY());
+}
+function pixelsPerMeterAlong(dx, dy) {
+  const px = Math.hypot(dx, dy), m = physicalDistance(0, 0, dx, dy);
+  return m > 0 ? px / m : HS.ppm;
+}
+function niceScaleMeters(ppm) {
+  const p = Math.max(.01, Number(ppm) || 10), maxPx = 180;
+  const values = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000];
+  let best = values[0];
+  values.forEach(v => { if (v * p <= maxPx) best = v; });
+  return best;
+}
+function skSyncDimControls() {
+  const w = skClampDim(SK.width_m), l = skClampDim(SK.length_m);
+  [["skwidthm", "skwidthrange", w], ["sklengthm", "sklengthrange", l]].forEach(([inputId, rangeId, m]) => {
+    const input = $("#" + inputId), range = $("#" + rangeId);
+    if (input) input.value = m;
+    if (range) {
+      range.max = Math.max(300, Math.ceil(m / 50) * 50); range.value = m;
+      range.setAttribute("aria-valuetext", m + " 米");
+    }
+  });
+  const h = $("#skheightm"), mt = $("#skmount");
+  if (h) h.value = skClampHeight(SK.install_height_m);
+  if (mt) mt.value = AP_MOUNTS[SK.mounting] ? SK.mounting : "ceiling";
+  skUpdateMountTip();
+  $$('[data-skdim]').forEach(b => b.classList.toggle("on", b.dataset.skdim === w + "," + l));
 }
 function skSerialize() {
   return { name: SK.name, rooms: SK.rooms, walls: SK.walls, doors: SK.doors, labels: SK.labels,
     grid: SK.grid, snap: SK.snap, showGrid: SK.showGrid, ortho: SK.ortho,
-    width_m: SK.width_m, door_w_m: SK.door_w_m, material: SK.material, nextId: SK.nextId };
+    width_m: SK.width_m, length_m: SK.length_m, install_height_m: SK.install_height_m,
+    mounting: SK.mounting, door_w_m: SK.door_w_m, material: SK.material, nextId: SK.nextId };
 }
 function skRestore(o) {
   const d = skDefault();
   if (o) Object.keys(d).forEach(k => { if (o[k] !== undefined && ["tool", "sel", "drag", "undo", "redo"].indexOf(k) < 0) d[k] = o[k]; });
+  d.width_m = skClampDim(d.width_m);
+  d.length_m = skClampDim(o && o.length_m !== undefined ? o.length_m : d.width_m * 620 / 920);
+  d.install_height_m = skClampHeight(d.install_height_m);
+  if (!AP_MOUNTS[d.mounting]) d.mounting = "ceiling";
   d.nextId = Math.max(1, ...[].concat(d.rooms, d.walls, d.doors, d.labels).map(x => (x && x.id) || 0)) + 1;
   SK = d;
 }
@@ -829,7 +912,7 @@ function skAllWalls() {
 function skSplitByDoors(w, doors) {
   const dx = w.x2 - w.x1, dy = w.y2 - w.y1, L = Math.hypot(dx, dy);
   if (L < 2) return [];
-  const half = Math.max(5, (SK.door_w_m || .9) * HS.ppm / 2);
+  const half = Math.max(5, (SK.door_w_m || .9) * pixelsPerMeterAlong(dx, dy) / 2);
   const cuts = [];
   (doors || []).forEach(d => {
     const t = ((d.x - w.x1) * dx + (d.y - w.y1) * dy) / (L * L);
@@ -866,12 +949,11 @@ function skEnter(kind) {
   SK.rooms = t.rooms; SK.walls = t.walls; SK.doors = t.doors; SK.labels = t.labels;
   SK.nextId = Math.max(1, ...[].concat(SK.rooms, SK.walls, SK.doors, SK.labels).map(x => x.id || 0)) + 1;
   HS.floor = "sketch"; HS.aps = []; HS.samples = []; HS.walls = []; HS.heat = null;
-  HS.ppm = Math.round(920 / (SK.width_m || 40) * 100) / 100;
-  $("#hppm").value = HS.ppm; hc.clearRect(0, 0, W, H);
+  skUpdateScale(); hc.clearRect(0, 0, W, H);
   $("#floorinfo").textContent = "绘制草图 · " + nm;
   $("#stagehint").style.display = "none";
   const p = $("#skpanel"); if (p) p.open = true;
-  const wn = $("#skwidthm"); if (wn) wn.value = SK.width_m;
+  skSyncDimControls();
   const mn = $("#skmaterial"); if (mn) mn.value = SK.material;
   skSetTool("room");
   skSyncWalls(); drawFloor(); drawEdit(); renderAPList(); skUpdateInfo(); skApplyDimText(); markDirty();
@@ -883,23 +965,30 @@ function skResume() {
   HS.floor = "sketch";
   $("#floorinfo").textContent = "绘制草图 · " + SK.name;
   const p = $("#skpanel"); if (p) p.open = true;
-  const wn = $("#skwidthm"); if (wn) wn.value = SK.width_m;
+  skSyncDimControls();
   skSetTool("room"); skSyncWalls(); drawFloor(); drawEdit(); renderAPList();
   skUpdateInfo(); skApplyDimText(); skSyncToSurvey(false);
   toast("已回到草图编辑，可继续增删房间与隔墙");
 }
 function skApplyDimText() {
   const el = $("#skdimhint");
-  if (el) el.innerHTML = "外框 920 px ≈ <b>" + SK.width_m + " m</b> 宽 · 620 px ≈ <b>" + (620 / HS.ppm).toFixed(1) +
-    " m</b> 高 · 比例尺 <b>" + HS.ppm + " px/m</b>（可用「比例尺标定」精修）";
+  if (el) el.innerHTML = "外框约 <b>" + SK.width_m + " m</b> 宽 × <b>" + SK.length_m +
+    " m</b> 长 · X/Y 比例尺 <b>" + hsScaleX().toFixed(2) + " / " + hsScaleY().toFixed(2) +
+    " px/m</b><br>默认 AP：" + skClampHeight(SK.install_height_m) + " m · " + esc(apMountProfile(SK.mounting).label) +
+    "；每台 AP 仍可单独修改。";
 }
-function skApplyDim() {
-  const m = Math.max(2, +$("#skwidthm").value || 40);
-  SK.width_m = m; HS.ppm = Math.round(920 / m * 100) / 100;
-  $("#hppm").value = HS.ppm;
-  skApplyDimText(); skSyncWalls(); drawFloor(); drawEdit(); markDirty(); skSyncToSurvey(false);
-  toast("比例尺已按实际宽度更新：" + HS.ppm + " px/m");
+function skApplyDims(width, length, options) {
+  const opts = options || {};
+  const w = skClampDim(typeof width === "number" ? width : +$("#skwidthm").value);
+  const l = skClampDim(typeof length === "number" ? length : +$("#sklengthm").value);
+  SK.width_m = w; SK.length_m = l; skUpdateScale();
+  skSyncDimControls(); skApplyDimText(); skSyncWalls(); drawFloor(); drawEdit(); markDirty();
+  clearTimeout(SK_SYNC_T);
+  if (opts.debounce) SK_SYNC_T = setTimeout(() => skSyncToSurvey(false), 500);
+  else skSyncToSurvey(false);
+  if (!opts.quiet) toast((opts.random ? "已生成随机尺寸：" : "厂房尺寸已更新：") + w + " × " + l + " m");
 }
+function skApplyDim(value, options) { skApplyDims(value, SK.length_m, options); }
 function skUpdateInfo() {
   const el = $("#skinfo");
   if (el) el.textContent = SK.rooms.length + " 区域 / " + SK.walls.length + " 隔墙 / " + SK.doors.length + " 门洞 / " + SK.labels.length + " 标注";
@@ -1058,11 +1147,12 @@ function drawSketch() {
     c.lineCap = "round"; c.beginPath(); c.moveTo(w.x1, w.y1); c.lineTo(w.x2, w.y2); c.stroke();
   });
   // 门洞：擦掉墙线 + 门扇弧线，表示信号可穿过的开口
-  const half = Math.max(5, (SK.door_w_m || .9) * HS.ppm / 2);
+  const halfDefault = Math.max(5, (SK.door_w_m || .9) * HS.ppm / 2);
   SK.doors.forEach(d => {
     let best = null, bd = 1e9;
     walls.forEach(w => { const q = distToSeg(d, w); if (q < bd) { bd = q; best = w; } });
     const ang = best ? Math.atan2(best.y2 - best.y1, best.x2 - best.x1) : 0;
+    const half = best ? Math.max(5, (SK.door_w_m || .9) * pixelsPerMeterAlong(best.x2 - best.x1, best.y2 - best.y1) / 2) : halfDefault;
     c.save(); c.translate(d.x, d.y); c.rotate(ang);
     c.fillStyle = "#fdfefe"; c.fillRect(-half, -6, half * 2, 12);
     c.strokeStyle = "#94a3b8"; c.lineWidth = 1.4; c.setLineDash([3, 3]);
@@ -1079,9 +1169,9 @@ function drawSketch() {
   SK.labels.forEach(l => { c.font = "600 13px 'Microsoft YaHei',sans-serif"; c.fillStyle = "#7f8ea3"; c.fillText(l.text, l.x, l.y); });
   c.textBaseline = "alphabetic"; c.textAlign = "left";
   c.font = "600 12px 'Microsoft YaHei',sans-serif"; c.fillStyle = "#94a3b8";
-  c.fillText("现场草图 · " + SK.name + " · 约 " + SK.width_m + " m × " + (620 / HS.ppm).toFixed(1) + " m（示意，非测绘）", 42, 26);
+  c.fillText("现场草图 · " + SK.name + " · 约 " + SK.width_m + " m × " + SK.length_m + " m（示意，非测绘）", 42, 26);
   c.textAlign = "right"; c.fillText("N ↑", 958, 26); c.textAlign = "left";
-  const meters = HS.ppm > 30 ? 5 : 10, px = meters * HS.ppm;
+  const meters = niceScaleMeters(hsScaleX()), px = meters * hsScaleX();
   c.strokeStyle = "#64748b"; c.lineWidth = 2;
   c.beginPath(); c.moveTo(50, 680); c.lineTo(50 + px, 680);
   c.moveTo(50, 675); c.lineTo(50, 685); c.moveTo(50 + px, 675); c.lineTo(50 + px, 685); c.stroke();
@@ -1231,7 +1321,10 @@ function dxfParse(text) {
     layer: s.layer
   }));
   if (segs.length > 1500) errors.push("线段超过 1500 条，仅导入前 1500 条；建议先在 CAD 里清理标注与填充图层");
+  let length_m = bh * unit;
+  if (!isFinite(length_m) || length_m < 2 || length_m > 2000) length_m = width_m * bh / bw;
   return { segments: mapped, layers, errors, skipped, width_m: Math.round(width_m * 10) / 10,
+    length_m: Math.round(length_m * 10) / 10,
     unit_name: (insunits === 6 ? "m" : insunits === 4 ? "mm" : insunits === 1 ? "in" : "DXF 单位"),
     bbox: { minx, miny, maxx, maxy } };
 }
@@ -1243,25 +1336,25 @@ function dxfApply(text, filename) {
   }
   SK = skDefault();
   SK.name = "DXF · " + String(filename || "图纸").replace(/\.dxf$/i, "").slice(0, 24);
-  SK.width_m = r.width_m;
+  SK.width_m = skClampWidth(r.width_m);
+  SK.length_m = skClampDim(r.length_m);
   SK.walls = r.segments.map(s => ({ id: SK.nextId++, x1: s.x1, y1: s.y1, x2: s.x2, y2: s.y2,
     material: dxfMaterial(s.layer), layer: s.layer }));
   SK.labels = [{ id: SK.nextId++, x: 500, y: 30,
     text: "DXF 导入 · " + Object.keys(r.layers).length + " 个图层 · 墙体材质为推断值，请人工核对" }];
   HS.floor = "sketch"; HS.aps = []; HS.samples = []; HS.walls = []; HS.heat = null;
-  HS.ppm = Math.round(920 / (SK.width_m || 40) * 100) / 100;
-  $("#hppm").value = HS.ppm; hc.clearRect(0, 0, W, H);
+  skUpdateScale(); hc.clearRect(0, 0, W, H);
   $("#floorinfo").textContent = "DXF 草图 · " + SK.name;
   $("#stagehint").style.display = "none";
   const p = $("#skpanel"); if (p) p.open = true;
-  const wn = $("#skwidthm"); if (wn) wn.value = SK.width_m;
+  skSyncDimControls();
   const mn = $("#skmaterial"); if (mn) mn.value = SK.material;
   skSetTool("pick");
   skSyncWalls(); drawFloor(); drawEdit(); renderAPList(); skUpdateInfo(); skApplyDimText(); markDirty();
   skSyncToSurvey(false);
   const info = $("#dxfinfo");
   if (info) info.innerHTML = "已导入 <b>" + SK.walls.length + "</b> 段墙 · " + Object.keys(r.layers).length +
-    " 图层 · 外框约 <b>" + SK.width_m + " m</b>（" + esc(r.unit_name || "DXF 单位") + "）" +
+    " 图层 · 外框约 <b>" + SK.width_m + " × " + SK.length_m + " m</b>（" + esc(r.unit_name || "DXF 单位") + "）" +
     (r.skipped ? " · 已跳过 " + r.skipped + " 个柱 / 设备 / 门弧符号（非墙体）" : "") +
     (r.errors.length ? "<br><span style='color:var(--warn)'>" + esc(r.errors.join("；")) + "</span>" : "");
   toast("DXF 已导入 " + SK.walls.length + " 段墙；请用「选择 / 改名」逐段核对材质，或删除标注线与开门洞");
@@ -1373,8 +1466,7 @@ function imgApplyWalls() {
   SK.labels = [{ id: SK.nextId++, x: 500, y: 26,
     text: "图片自动识别 · 候选墙 " + SK.walls.length + " 段（材质均为石膏板推断值，请逐段核对）" }];
   HS.floor = "sketch"; HS.aps = []; HS.samples = []; HS.walls = []; HS.heat = null;
-  HS.ppm = Math.round(920 / (SK.width_m || 40) * 100) / 100;
-  $("#hppm").value = HS.ppm; hc.clearRect(0, 0, W, H);
+  skUpdateScale(); hc.clearRect(0, 0, W, H);
   $("#floorinfo").textContent = "图片候选墙 · " + SK.walls.length + " 段";
   $("#stagehint").style.display = "none";
   const p = $("#skpanel"); if (p) p.open = true;
@@ -1412,6 +1504,44 @@ function apMeta(a) {
   if (!r) return { text: "未收录 · 通用 SNMP v2c 降级", cls: "t-pend" };
   return { text: r.vendor + " · " + r.wifi_gen + " · " + r.lifecycle + " · " + r.capability_tier, cls: (r.lifecycle.indexOf("EOL") >= 0 || r.lifecycle.indexOf("历史") >= 0) ? "t-eol" : "t-ok" };
 }
+const AP_MOUNTS = {
+  ceiling: { label: "吸顶安装", short: "吸顶", loss: 0, tip: "办公室、低层厂房；全向覆盖最均衡" },
+  wall: { label: "侧挂 / 壁挂", short: "侧挂", loss: 2.5, tip: "走廊、墙边场景；背墙方向按 2.5 dB 等效损耗" },
+  pendant: { label: "吊杆 / 下吊", short: "吊杆", loss: 0.5, tip: "高顶厂房、仓库；降低 AP 到作业面的距离" },
+  pole: { label: "立杆 / 抱杆", short: "抱杆", loss: 1.5, tip: "室外、开阔区或设备密集区；按 1.5 dB 安装损耗" },
+  desktop: { label: "桌面 / 货架", short: "桌面", loss: 3, tip: "临时布点；遮挡较多，按 3 dB 等效损耗" },
+  cabinet: { label: "机柜内部", short: "机柜", loss: 6, tip: "金属与设备遮挡明显，仅建议作为特殊场景估算" }
+};
+function apMountProfile(value) { return AP_MOUNTS[value] || AP_MOUNTS.ceiling; }
+function apMountLoss(value) { return apMountProfile(value).loss; }
+function normalizeAP(a) {
+  a.height_m = skClampHeight(a.height_m == null ? SK.install_height_m : a.height_m);
+  if (!AP_MOUNTS[a.mounting]) a.mounting = SK.mounting && AP_MOUNTS[SK.mounting] ? SK.mounting : "ceiling";
+  return a;
+}
+function apDistanceMeters(px, py, a) {
+  const horizontal = physicalDistance(px, py, +a.x || 0, +a.y || 0);
+  const dz = Math.max(0, skClampHeight(a.height_m) - 1.2);
+  return Math.max(1, Math.hypot(horizontal, dz));
+}
+function mountOptions(selected) {
+  return Object.keys(AP_MOUNTS).map(k => '<option value="' + k + '"' + (k === selected ? " selected" : "") + '>' + esc(AP_MOUNTS[k].label) + '</option>').join("");
+}
+function skUpdateMountTip() {
+  const el = $("#skmounttip"), mt = $("#skmount"); if (!el) return;
+  const p = apMountProfile(mt ? mt.value : SK.mounting);
+  el.textContent = p.tip + "；模型附加 " + p.loss + " dB，终端参考高度 1.2 m。";
+}
+function skApplyInstallDefaults(applyAll) {
+  SK.install_height_m = skClampHeight(+$("#skheightm").value);
+  SK.mounting = AP_MOUNTS[$("#skmount").value] ? $("#skmount").value : "ceiling";
+  skSyncDimControls(); skApplyDimText();
+  if (applyAll) {
+    HS.aps.forEach(a => { a.height_m = SK.install_height_m; a.mounting = SK.mounting; });
+    renderAPList(); drawEdit(); markDirty();
+    toast("已将 " + SK.install_height_m + " m · " + apMountProfile(SK.mounting).label + " 应用到全部 " + HS.aps.length + " 台 AP");
+  }
+}
 function inferParams(model) {
   const r = findModel(model);
   let tx = 20, gain = 4, only24 = false;
@@ -1430,9 +1560,11 @@ function addAP(x, y, model) {
   const pool = HS.band === "2.4" ? CH_24 : CH_5;
   HS.aps.push({ id: HS.nextId++, x: Math.round(x), y: Math.round(y), model: m,
     tx_power: p.tx_power, gain: p.gain, band: p.band, enabled: true,
+    height_m: skClampHeight(SK.install_height_m), mounting: AP_MOUNTS[SK.mounting] ? SK.mounting : "ceiling",
     channel: pool[HS.aps.length % pool.length] });
 }
 function renderAPList() {
+  HS.aps.forEach(normalizeAP);
   $("#apcount").textContent = HS.aps.length + " 台 / " + HS.samples.length + " 打点";
   const dl = $("#apmodels");
   if (!dl) {
@@ -1450,7 +1582,10 @@ function renderAPList() {
     '<div class="row tiny" style="gap:5px"><span>功率</span><input type="number" data-f="tx_power" data-id="' + a.id + '" value="' + a.tx_power + '" style="width:52px;padding:3px 5px;font-size:11px">' +
     '<span>增益</span><input type="number" data-f="gain" data-id="' + a.id + '" value="' + a.gain + '" style="width:46px;padding:3px 5px;font-size:11px">' +
     '<span>信道</span><input type="number" data-f="channel" data-id="' + a.id + '" value="' + (a.channel || 1) + '" style="width:48px;padding:3px 5px;font-size:11px">' +
-    '<label style="display:flex;align-items:center;gap:3px;cursor:pointer"><input type="checkbox" data-f="only24" data-id="' + a.id + '" ' + (a.band === "2.4" ? "checked" : "") + ' style="width:auto">仅2.4G</label></div></div>').join("") : '<div class="tiny muted">暂无 AP，用「放置 AP」工具或下方按钮添加。</div>';
+    '<label style="display:flex;align-items:center;gap:3px;cursor:pointer"><input type="checkbox" data-f="only24" data-id="' + a.id + '" ' + (a.band === "2.4" ? "checked" : "") + ' style="width:auto">仅2.4G</label></div>' +
+    '<div class="ap-install"><label>安装方式<select data-f="mounting" data-id="' + a.id + '">' + mountOptions(a.mounting) + '</select></label>' +
+    '<label>离地高度 (m)<input type="number" min="1.5" max="30" step="0.1" data-f="height_m" data-id="' + a.id + '" value="' + a.height_m + '"></label></div>' +
+    '<div class="tiny muted" style="margin-top:4px">' + esc(apMountProfile(a.mounting).tip) + ' · 附加 ' + apMountLoss(a.mounting) + ' dB</div></div>').join("") : '<div class="tiny muted">暂无 AP，用「放置 AP」工具或下方按钮添加。</div>';
   $$("#aplist [data-del]").forEach(b => b.addEventListener("click", () => {
     HS.aps = HS.aps.filter(a => a.id !== +b.dataset.del); drawEdit(); renderAPList(); markDirty();
   }));
@@ -1459,6 +1594,8 @@ function renderAPList() {
     const f = el.dataset.f;
     if (f === "model") { a.model = el.value; const p = inferParams(a.model); a.tx_power = p.tx_power; a.gain = p.gain; a.band = p.band; renderAPList(); }
     else if (f === "only24") a.band = el.checked ? "2.4" : "5";
+    else if (f === "mounting") { a.mounting = AP_MOUNTS[el.value] ? el.value : "ceiling"; renderAPList(); }
+    else if (f === "height_m") a.height_m = skClampHeight(el.value);
     else a[f] = +el.value;
     markDirty(); drawEdit();
   }));
@@ -1548,9 +1685,23 @@ function onUp(e) {
   } else if (HS.tool === "ruler" && len > 20) {
     const m = parseFloat(prompt("这条线的实际长度是多少米？", "10"));
     if (m > 0) {
-      HS.ppm = Math.round(len / m * 100) / 100;
-      $("#hppm").value = HS.ppm; drawFloorIfDemo(); changed = true;
-      toast("比例尺已标定：" + HS.ppm.toFixed(2) + " 像素/米");
+      if (HS.floor === "sketch") {
+        const dx = Math.abs(d.cur.x - d.start.x), dy = Math.abs(d.cur.y - d.start.y);
+        if (dx >= dy * 2) SK.width_m = skClampDim(920 / (dx / m));
+        else if (dy >= dx * 2) SK.length_m = skClampDim(620 / (dy / m));
+        else {
+          const current = physicalDistance(d.start.x, d.start.y, d.cur.x, d.cur.y);
+          const factor = current > 0 ? m / current : 1;
+          SK.width_m = skClampDim(SK.width_m * factor); SK.length_m = skClampDim(SK.length_m * factor);
+        }
+        skUpdateScale();
+        skSyncDimControls(); skApplyDimText(); skSyncWalls(); drawFloor(); skSyncToSurvey(false);
+      } else {
+        HS.ppm = Math.round(len / m * 100) / 100; HS.ppmX = HS.ppmY = HS.ppm;
+        $("#hppm").value = HS.ppm; drawFloorIfDemo();
+      }
+      changed = true;
+      toast("比例尺已标定：X " + hsScaleX().toFixed(2) + " / Y " + hsScaleY().toFixed(2) + " 像素/米");
     }
   }
   if (d.ap) renderAPList();
@@ -1575,10 +1726,9 @@ function drawEdit() {
       if (SK.tool === "room") ec.strokeRect(Math.min(a.x, b.x), Math.min(a.y, b.y), Math.abs(b.x - a.x), Math.abs(b.y - a.y));
       else { ec.beginPath(); ec.moveTo(a.x, a.y); ec.lineTo(b.x, b.y); ec.stroke(); }
       ec.setLineDash([]);
-      const ppm = Math.max(HS.ppm, .5);
       const txt = SK.tool === "room"
-        ? (Math.abs(b.x - a.x) / ppm).toFixed(1) + " × " + (Math.abs(b.y - a.y) / ppm).toFixed(1) + " m"
-        : (Math.hypot(b.x - a.x, b.y - a.y) / ppm).toFixed(1) + " m · " +
+        ? (Math.abs(b.x - a.x) / hsScaleX()).toFixed(1) + " × " + (Math.abs(b.y - a.y) / hsScaleY()).toFixed(1) + " m"
+        : physicalDistance(a.x, a.y, b.x, b.y).toFixed(1) + " m · " +
           Math.round(Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI) + "°";
       drawMeasureTag(ec, b.x, b.y, txt);
     }
@@ -1597,7 +1747,7 @@ function drawEdit() {
         k = Math.max(.06, Math.min(.94, k));
         const px = w.x1 + k * dx, py = w.y1 + k * dy;
         const len = Math.hypot(dx, dy) || 1, ux = dx / len, uy = dy / len;
-        const half = Math.max(5, (SK.door_w_m || .9) * HS.ppm / 2);
+        const half = Math.max(5, (SK.door_w_m || .9) * pixelsPerMeterAlong(dx, dy) / 2);
         ec.save();
         ec.strokeStyle = "#1f6feb"; ec.lineWidth = 4; ec.globalAlpha = .7;
         ec.beginPath(); ec.moveTo(w.x1, w.y1); ec.lineTo(w.x2, w.y2); ec.stroke();
@@ -1617,11 +1767,11 @@ function drawEdit() {
   if (HS.drag && ["wall", "ruler"].indexOf(HS.tool) >= 0) {
     ec.strokeStyle = HS.tool === "ruler" ? "#1f6feb" : "#ef6c5a"; ec.lineWidth = 2.5; ec.setLineDash([7, 5]);
     ec.beginPath(); ec.moveTo(HS.drag.start.x, HS.drag.start.y); ec.lineTo(HS.drag.cur.x, HS.drag.cur.y); ec.stroke(); ec.setLineDash([]);
-    const a = HS.drag.start, b = HS.drag.cur, ppm = Math.max(HS.ppm, .5);
-    const len = Math.hypot(b.x - a.x, b.y - a.y);
+    const a = HS.drag.start, b = HS.drag.cur;
+    const len = physicalDistance(a.x, a.y, b.x, b.y);
     drawMeasureTag(ec, b.x, b.y, HS.tool === "ruler"
-      ? (len / ppm).toFixed(1) + " m（松手后输入实际长度）"
-      : (len / ppm).toFixed(1) + " m · " + Math.round(Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI) + "°");
+      ? len.toFixed(1) + " m（松手后输入实际长度）"
+      : len.toFixed(1) + " m · " + Math.round(Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI) + "°");
   }
   if ($("#lsamples").checked) HS.samples.forEach(s => {
     ec.fillStyle = "rgba(255,255,255,.92)"; ec.strokeStyle = "#334155"; ec.lineWidth = 1.5;
@@ -1635,6 +1785,8 @@ function drawEdit() {
     ec.beginPath(); ec.arc(a.x, a.y, 5, 0, 7); ec.fillStyle = col; ec.fill();
     ec.font = "bold 11px Consolas,monospace"; ec.fillStyle = "#1b2430"; ec.textAlign = "center";
     ec.fillText("AP-" + a.id, a.x, a.y - 19);
+    ec.font = "9px 'Microsoft YaHei',sans-serif"; ec.fillStyle = "#64748b";
+    ec.fillText(apMountProfile(a.mounting).short + " · " + skClampHeight(a.height_m) + "m", a.x, a.y + 27);
     if (a.enabled === false) { ec.strokeStyle = "#c7372f"; ec.beginPath(); ec.moveTo(a.x - 10, a.y - 10); ec.lineTo(a.x + 10, a.y + 10); ec.stroke(); }
   });
   if ($("#llive").checked && LIVE_STATE.clients.length) {
@@ -1685,7 +1837,8 @@ async function runHeat() {
   const g = { s: [80, 56], m: [120, 84], l: [160, 112] }[HS.grid];
   try {
     const r = await api("/api/heatmap", {
-      width: W, height: H, cols: g[0], rows: g[1], ppm: HS.ppm, band: HS.band, noise: HS.noise,
+      width: W, height: H, cols: g[0], rows: g[1], ppm: HS.ppm,
+      ppm_x: hsScaleX(), ppm_y: hsScaleY(), band: HS.band, noise: HS.noise,
       aps: HS.aps, walls: HS.walls, samples: HS.samples,
       ssid_id: SSID_STATE.active_id,
       use_residuals: $("#hresid").checked,
@@ -1928,7 +2081,10 @@ async function saveProject() {
   const name = prompt("项目名称：", "园区A座-3F-" + new Date().toISOString().slice(0, 10));
   if (!name) return;
   try {
-    await api("/api/project/save", { name, payload: { aps: HS.aps, walls: HS.walls, samples: HS.samples, ppm: HS.ppm, band: HS.userBand || HS.band, noise: HS.noise, floor: HS.floor, sketch: HS.floor === "sketch" ? skSerialize() : null, ssid_id: SSID_STATE.active_id, saved_at: new Date().toISOString() } });
+    await api("/api/project/save", { name, payload: { aps: HS.aps, walls: HS.walls, samples: HS.samples,
+      ppm: HS.ppm, ppm_x: hsScaleX(), ppm_y: hsScaleY(), band: HS.userBand || HS.band, noise: HS.noise,
+      floor: HS.floor, sketch: HS.floor === "sketch" ? skSerialize() : null,
+      ssid_id: SSID_STATE.active_id, saved_at: new Date().toISOString() } });
     toast("项目已保存：" + name);
   } catch (e) { toast("保存失败：" + e.message); }
 }
@@ -1940,7 +2096,8 @@ async function loadProject() {
     if (!name) return;
     const p = await api("/api/project/load?name=" + encodeURIComponent(name));
     HS.aps = p.aps || []; HS.walls = p.walls || []; HS.samples = p.samples || [];
-    HS.ppm = p.ppm || 10; HS.userBand = p.band || "2.4"; HS.noise = p.noise || -95; HS.floor = p.floor || "demo";
+    HS.ppm = p.ppm || 10; HS.ppmX = p.ppm_x || HS.ppm; HS.ppmY = p.ppm_y || HS.ppm;
+    HS.userBand = p.band || "2.4"; HS.noise = p.noise || -95; HS.floor = p.floor || "demo";
     if (p.ssid_id && p.ssid_id !== SSID_STATE.active_id) {
       try { SSID_STATE = await api("/api/ssid/select", { id: p.ssid_id }); renderGlobalSSID(); renderSSIDPage(); }
       catch (e) { /* 项目里的 SSID 已被删除时沿用当前选择 */ }
@@ -1948,11 +2105,12 @@ async function loadProject() {
     applySSIDToUI(true);   // 由 SSID 决定是否锁定频段，避免项目频段与分析对象冲突
     HS.nextId = Math.max(0, ...HS.aps.map(a => a.id)) + 1; HS.heat = null;
     $("#hppm").value = HS.ppm; $("#hnoise").value = HS.noise;
-    if (p.sketch) { skRestore(p.sketch); HS.floor = "sketch"; }
+    if (p.sketch) { skRestore(p.sketch); HS.floor = "sketch"; skUpdateScale(); }
+    HS.aps.forEach(normalizeAP);
     $("#floorinfo").textContent = HS.floor === "sketch" ? ("绘制草图 · " + SK.name)
       : HS.floor === "demo" ? "示例楼层" : "已上传图纸";
     if (HS.floor === "sketch") {
-      const wn = $("#skwidthm"); if (wn) wn.value = SK.width_m;
+      skSyncDimControls();
       skSetTool("off"); skApplyDimText(); skUpdateInfo();
       skSyncWalls(); drawFloor(); skSyncToSurvey(false);
     } else if (HS.floor === "demo") drawFloor();
@@ -3520,7 +3678,8 @@ async function svCalib() {
   const btn = $("#svcalib"); btn.disabled = true; btn.textContent = "校准中…";
   $("#svcalibout").innerHTML = '<span class="muted">正在用实测点搜索路径损耗指数…</span>';
   try {
-    const r = await api("/api/survey/calibrate", { aps: HS.aps, walls: HS.walls, ppm: HS.ppm, band: HS.band });
+    const r = await api("/api/survey/calibrate", { aps: HS.aps, walls: HS.walls, ppm: HS.ppm,
+      ppm_x: hsScaleX(), ppm_y: hsScaleY(), band: HS.band });
     svRenderCalib(r);
     toast(r.ok ? "校准完成：n = " + r.n_fit : ("校准未完成：" + (r.error || "")));
   } catch (e) { toast("校准失败：" + e.message); $("#svcalibout").innerHTML = '<span style="color:var(--bad)">' + esc(e.message) + "</span>"; }

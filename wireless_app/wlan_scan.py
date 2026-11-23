@@ -46,12 +46,20 @@ class WLAN_RATE_SET(ctypes.Structure):
                 ("usRateSet", ctypes.c_ushort * 126)]
 
 
-class DOT11_BSS_ENTRY(ctypes.Structure):
+class WLAN_BSS_ENTRY(ctypes.Structure):
+    """wlanapi.h WLAN_BSS_ENTRY.
+
+    Keep the declaration complete and derive offsets from ctypes. The previous
+    hand-maintained offsets accidentally read dot11BssPhyType as link quality
+    and shifted the beacon/capability fields.
+    """
     _fields_ = [
         ("dot11Ssid", DOT11_SSID),
+        ("uPhyId", wt.ULONG),
         ("dot11Bssid", DOT11_MAC_ADDRESS),
         ("dot11BssType", ctypes.c_uint),
-        ("dot11PhyType", ctypes.c_uint),
+        ("dot11BssPhyType", ctypes.c_uint),
+        ("lRssi", wt.LONG),
         ("uLinkQuality", wt.ULONG),
         ("bInRegDomain", wt.BOOLEAN),
         ("usBeaconPeriod", ctypes.c_ushort),
@@ -62,7 +70,6 @@ class DOT11_BSS_ENTRY(ctypes.Structure):
         ("wlanRateSet", WLAN_RATE_SET),
         ("ulIeOffset", wt.ULONG),               # 相对本结构起点
         ("ulIeSize", wt.ULONG),
-        ("lRssi", ctypes.c_long),               # dBm，Win10+ 有该字段
     ]
 
 
@@ -71,23 +78,19 @@ class WLAN_BSS_LIST(ctypes.Structure):
                 ("dwNumberOfItems", wt.ULONG)]
 
 
-# WLAN_BSS_ENTRY 字段偏移（x64，依据 wlanapi.h 公开布局；不使用 ctypes 结构体，
-# 因为不同 Windows 版本是否追加 lRssi 会改变步长，用 dwTotalSize 推算更稳）
-OFF_SSID_LEN = 0
-OFF_SSID = 4
-OFF_BSSID = 40
-OFF_BSS_TYPE = 48
-OFF_LINK_QUALITY = 52
-OFF_RSSI = 56            # LONG，Windows 10/11 实测存在
-OFF_BEACON_PERIOD = 60
-OFF_TIMESTAMP = 64
-OFF_HOST_TIMESTAMP = 72
-OFF_CAPABILITY = 80
-OFF_FREQ_KHZ = 92
-OFF_IE_OFFSET = 352
-OFF_IE_SIZE = 356
-BSS_ENTRY_SIZE = 360     # 实测步长：字段 352 + IE offset/size 各 4
-IE_REGION_BASE = 8       # IE 区在条目数组之后，ulIeOffset 相对条目数组起点
+# 从官方结构声明派生偏移，避免字段顺序或对齐规则被手工常量掩盖。
+OFF_SSID_LEN = WLAN_BSS_ENTRY.dot11Ssid.offset + DOT11_SSID.uSSIDLength.offset
+OFF_SSID = WLAN_BSS_ENTRY.dot11Ssid.offset + DOT11_SSID.ucSSID.offset
+OFF_BSSID = WLAN_BSS_ENTRY.dot11Bssid.offset
+OFF_LINK_QUALITY = WLAN_BSS_ENTRY.uLinkQuality.offset
+OFF_RSSI = WLAN_BSS_ENTRY.lRssi.offset
+OFF_BEACON_PERIOD = WLAN_BSS_ENTRY.usBeaconPeriod.offset
+OFF_CAPABILITY = WLAN_BSS_ENTRY.usCapabilityInformation.offset
+OFF_FREQ_KHZ = WLAN_BSS_ENTRY.ulChCenterFrequency.offset
+OFF_IE_OFFSET = WLAN_BSS_ENTRY.ulIeOffset.offset
+OFF_IE_SIZE = WLAN_BSS_ENTRY.ulIeSize.offset
+BSS_ENTRY_SIZE = ctypes.sizeof(WLAN_BSS_ENTRY)
+MAX_IE_BLOB = 2324       # wlanapi.h 对单个 IE blob 的公开上限
 
 PHY_MAP = {1: "FHSS", 2: "DSSS", 3: "IR", 4: "OFDM", 5: "HR-DSSS",
            6: "ERP", 7: "802.11n(HT)", 8: "802.11ac(VHT)",
@@ -464,11 +467,14 @@ def scan_bss(wait_seconds=4.5, trigger=True):
                 lst = ctypes.cast(pList, ctypes.POINTER(WLAN_BSS_LIST)).contents
                 total = int(lst.dwNumberOfItems)
                 total_size = int(lst.dwTotalSize)
-                base_addr = ctypes.addressof(lst)
                 stride = BSS_ENTRY_SIZE
                 data_all = ctypes.string_at(pList.value, total_size) if total_size else b""
+                # 驱动返回的计数和 IE 内容都属于外部输入，先约束到实际缓冲区。
+                max_entries = max(0, (len(data_all) - 8) // stride)
+                total = min(total, max_entries)
                 for i in range(total):
-                    eb = ctypes.string_at(base_addr + 8 + i * stride, stride)
+                    entry_start = 8 + i * stride
+                    eb = data_all[entry_start:entry_start + stride]
                     ssid_len = min(_u32(eb, OFF_SSID_LEN), 32)
                     raw = eb[OFF_SSID:OFF_SSID + ssid_len] if ssid_len else b""
                     ssid = raw.decode("utf-8", "ignore").strip("\x00")
@@ -476,10 +482,11 @@ def scan_bss(wait_seconds=4.5, trigger=True):
                     ie_rel = _u32(eb, OFF_IE_OFFSET)
                     ie_len = _u32(eb, OFF_IE_SIZE)
                     ie = b""
-                    if ie_len and ie_rel:
-                        ie_abs = (8 + i * stride) + ie_rel   # ulIeOffset 相对本条目起点
-                        if ie_abs + min(ie_len, 1600) <= len(data_all):
-                            ie = data_all[ie_abs:ie_abs + min(ie_len, 1600)]
+                    if ie_len and ie_rel >= stride:
+                        ie_abs = entry_start + ie_rel   # ulIeOffset 相对本条目起点
+                        safe_len = min(ie_len, MAX_IE_BLOB)
+                        if ie_abs + safe_len <= len(data_all):
+                            ie = data_all[ie_abs:ie_abs + safe_len]
                     ies = _parse_ies(ie)
                     freq = _u32(eb, OFF_FREQ_KHZ)
                     ch = _freq_to_channel(freq)

@@ -230,9 +230,27 @@
               <option value="metal">金属/机房屏蔽 · 20 dB</option>
             </select>
           </div>
-          <div class="field"><label class="f">外框实际宽度（米）</label>
-            <div class="row" style="gap:6px"><input type="number" id="skwidthm" value="40" min="2" step="1" style="flex:1"><button class="btn ghost sm" id="skdimapply">应用</button></div>
+          <div class="field"><label class="f">厂房估算尺寸（米，可分别调整）</label>
+            <div class="skdim-fields">
+              <label><span>宽度</span><input type="number" id="skwidthm" value="40" min="5" max="1000" step="1"></label>
+              <label><span>长度</span><input type="number" id="sklengthm" value="27" min="5" max="1000" step="1"></label>
+            </div>
+            <label class="skdim-slider"><span>宽度</span><input type="range" id="skwidthrange" value="40" min="5" max="300" step="5" aria-label="厂房估算宽度"></label>
+            <label class="skdim-slider"><span>长度</span><input type="range" id="sklengthrange" value="27" min="5" max="300" step="5" aria-label="厂房估算长度"></label>
+            <button class="btn ghost sm" id="skdimapply" style="width:100%;margin-top:5px">应用宽度与长度</button>
+            <div class="skdim-presets" style="margin-top:7px">
+              <button type="button" data-skdim="20,15">20×15</button><button type="button" data-skdim="40,27">40×27</button><button type="button" data-skdim="80,50">80×50</button>
+              <button type="button" data-skdim="120,80">120×80</button><button type="button" data-skdim="200,120">200×120</button><button type="button" id="skdimrandom">随机尺寸</button>
+            </div>
             <div class="tiny muted" id="skdimhint" style="margin-top:5px;line-height:1.6"></div>
+          </div>
+          <div class="field"><label class="f">新 AP 默认安装参数</label>
+            <div class="skdim-fields">
+              <label><span>离地高度</span><input type="number" id="skheightm" value="4.5" min="1.5" max="30" step="0.1"></label>
+              <label><span>安装方式</span><select id="skmount"><option value="ceiling">吸顶安装</option><option value="wall">侧挂 / 壁挂</option><option value="pendant">吊杆 / 下吊</option><option value="pole">立杆 / 抱杆</option><option value="desktop">桌面 / 货架</option><option value="cabinet">机柜内部</option></select></label>
+            </div>
+            <button class="btn ghost sm" id="skapapplyall" style="width:100%;margin-top:6px">将默认参数应用到全部 AP</button>
+            <div class="tiny muted" id="skmounttip" style="margin-top:5px;line-height:1.55">吸顶适合办公室及低层厂房；安装高度按 AP 离地高度计算。</div>
           </div>
           <div class="field"><label class="f">网格与吸附</label>
             <div class="row tiny" style="gap:10px;flex-wrap:wrap">
@@ -256,7 +274,7 @@
           <div class="row" style="gap:5px;flex-wrap:wrap">
             <button class="btn ghost sm" id="sksync">同步到勘测页</button><button class="btn ghost sm" id="skexp">导出草图 PNG</button>
           </div>
-          <div class="note tiny" style="margin-top:8px;line-height:1.7">草图的墙直接参与传播模型：相邻房间共边自动去重，门洞按宽度把墙拆成两段让信号穿过。填「外框实际宽度」自动换算像素/米，也可用「比例尺标定」沿已知长度精修。</div>
+          <div class="note tiny" style="margin-top:8px;line-height:1.7">宽度与长度分别换算 X/Y 距离；AP 高度按终端参考高度 1.2 m 计算三维传播距离，吸顶、侧挂、吊杆、抱杆、桌面及机柜安装会采用不同方向损耗。前期可用预设或随机尺寸，实测后再输入准确尺寸或用「比例尺标定」精修。</div>
         </div>
       </details>
       <div class="panel">
@@ -343,13 +361,13 @@
       </div>
       <div class="panel">
         <h4>AP 清单 <em id="apcount">0 台</em></h4>
-        <div id="aplist" style="max-height:230px;overflow:auto"></div>
+        <div id="aplist" style="max-height:420px;overflow:auto"></div>
         <div class="row" style="margin-top:7px"><button class="btn ghost sm" id="haddap">＋ 添加 AP</button><button class="btn ghost sm" id="hclearsamp">清除打点</button></div>
       </div>
       <div class="panel">
         <h4>算法与证据</h4>
         <ul class="clean tiny">
-          <li>ITU-R P.1238 室内路径损耗 + 逐射线多墙衰减</li>
+          <li>ITU-R P.1238 室内路径损耗 + X/Y 独立尺度 + AP 三维高度 / 安装方式 + 逐射线多墙衰减</li>
           <li>实测打点残差稳健校正（中位偏差 + Huber 限幅 ±10 dB，失配点降权）</li>
           <li>AP 近场 3 m 保护：由传播模型主导，旧打点不会在 AP 脚下造成假盲区</li>
           <li>留一交叉验证 RMSE，衡量模型准确度</li>
@@ -1056,8 +1074,9 @@
     <div class="card"><h3>没有图纸？直接画现场草图</h3><ul class="clean">
       <li><b>起手</b>：热力图页左侧「1 · 图纸」选一个模板（空白楼层 / 走廊+6 房间 / 开放办公 / 单间 / L 形），点「绘制草图」；不想从头画可直接用模板，之后随时增删</li>
       <li><b>画</b>：展开「1b · 草图编辑」，用「画房间」拖拽勾出区域（自动生成 4 面墙）、「画隔墙」补隔断、「开门洞」在墙上点一下开 0.9 m 通口、「加标注」写房间名；网格吸附与正交可关，支持撤销 / 重做 / 改名 / 改材质</li>
-      <li><b>定尺寸</b>：填「外框实际宽度（米）」自动换算像素/米（默认 40 m 宽 ≈ 23 px/m），也可用「比例尺标定」沿已知长度的走廊拖线精修；比例尺直接决定传播模型的距离衰减</li>
-      <li><b>算得准</b>：草图的墙会进入 ITU-R P.1238 多墙衰减模型，相邻房间共边自动去重（不会重复扣 dB），门洞按宽度把墙拆成两段让信号穿过；材质对应 3–20 dB 损耗</li>
+      <li><b>定尺寸</b>：宽度和长度可分别手工输入、拖动滑杆、选择常用尺寸或随机生成；程序自动维护 X/Y 两个比例尺，也可沿已知长度用「比例尺标定」精修</li>
+      <li><b>定安装</b>：先设置新 AP 默认离地高度和安装方式，也可在右侧 AP 清单逐台调整吸顶、侧挂、吊杆、抱杆、桌面或机柜安装；一键可把默认参数应用到全部 AP</li>
+      <li><b>算得准</b>：模型按终端参考高度 1.2 m 计算三维距离，并叠加安装方式方向损耗；草图墙进入 ITU-R P.1238 多墙模型，相邻共边自动去重，门洞会切开墙段让信号穿过</li>
       <li><b>勘测联动</b>：草图自动同步成「现场勘测」页的底图，两页同为 1000×700 坐标系，点击打点位置与 AP 坐标严格对齐；也可点「同步到勘测页」手动刷新</li>
       <li><b>收尾</b>：点「完成 / 返回布点」后即可放置 AP、录入实测点、计算热力图；「保存项目」会把矢量草图一并存下，下次加载仍可继续编辑；「导出草图 PNG」可贴进报告</li>
       <li><b>边界</b>：这是示意草图，不是测绘成果，没有真实地理坐标；墙体材质与厚度是人工估计，结论仍需现场实测打点校正</li>

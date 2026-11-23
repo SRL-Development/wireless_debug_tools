@@ -17,6 +17,7 @@ import json
 import time
 import zipfile
 import subprocess
+import threading
 from xml.sax.saxutils import escape as _x
 
 PLATFORM_WIN = os.name == "nt"
@@ -326,49 +327,54 @@ class History:
 
     def __init__(self, user_dir, max_items=3000):
         self.path = os.path.join(user_dir, "air_history.jsonl")
-        self.max_items = max_items
+        self.max_items = max(1, int(max_items))
+        self._lock = threading.RLock()
         os.makedirs(user_dir, exist_ok=True)
 
-    def _read(self):
-        items = []
-        if not os.path.isfile(self.path):
-            return items
-        try:
-            with open(self.path, "r", encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    try:
-                        o = json.loads(line)
-                        if isinstance(o, dict):
-                            items.append(o)
-                    except Exception:
-                        pass
-        except Exception:
-            pass
-        return items[-self.max_items:]
+    def _read(self, trim=True):
+        with self._lock:
+            items = []
+            if not os.path.isfile(self.path):
+                return items
+            try:
+                with open(self.path, "r", encoding="utf-8") as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        try:
+                            o = json.loads(line)
+                            if isinstance(o, dict):
+                                items.append(o)
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+            return items[-self.max_items:] if trim else items
 
     def append(self, rec):
         row = {k: rec.get(k) for k in self.FIELDS}
         row["t"] = row.get("t") or time.time()
         row["at"] = row.get("at") or _now(row["t"])
-        try:
-            with open(self.path, "a", encoding="utf-8") as f:
-                f.write(json.dumps(row, ensure_ascii=False) + "\n")
-            items = self._read()
-            if len(items) >= self.max_items + 200:
-                self._write(items[-self.max_items:])
-        except Exception:
-            pass
+        with self._lock:
+            try:
+                with open(self.path, "a", encoding="utf-8") as f:
+                    f.write(json.dumps(row, ensure_ascii=False) + "\n")
+                # _read() 默认会截断到 max_items；滚动判断必须读取实际行数。
+                items = self._read(trim=False)
+                if len(items) >= self.max_items + 200:
+                    self._write(items[-self.max_items:])
+            except Exception:
+                pass
         return row
 
     def _write(self, items):
-        tmp = self.path + ".tmp"
-        with open(tmp, "w", encoding="utf-8") as f:
-            for it in items:
-                f.write(json.dumps(it, ensure_ascii=False) + "\n")
-        os.replace(tmp, self.path)
+        with self._lock:
+            tmp = self.path + ".tmp"
+            with open(tmp, "w", encoding="utf-8") as f:
+                for it in items:
+                    f.write(json.dumps(it, ensure_ascii=False) + "\n")
+            os.replace(tmp, self.path)
 
     def state(self, limit=400):
         items = self._read()
@@ -405,11 +411,12 @@ class History:
                           "radios": _delta(first, last, "radio_total")}}
 
     def clear(self):
-        try:
-            if os.path.isfile(self.path):
-                os.remove(self.path)
-        except Exception:
-            pass
+        with self._lock:
+            try:
+                if os.path.isfile(self.path):
+                    os.remove(self.path)
+            except Exception:
+                pass
         return {"ok": True, "total": 0, "items": [], "by_hour": {}}
 
     def csv_bytes(self):
