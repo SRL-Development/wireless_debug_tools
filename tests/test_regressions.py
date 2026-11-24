@@ -85,6 +85,17 @@ class PropagationGeometryTests(unittest.TestCase):
         self.assertGreater(along_y, along_x)
 
 
+class GuiLoggingTests(unittest.TestCase):
+    def test_log_falls_back_to_file_without_console(self):
+        import app
+        from unittest import mock
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(app, "USER_DIR", tmp), mock.patch.object(app.sys, "stdout", None):
+                app.log("GUI", "started")
+            self.assertEqual("GUI started\n", (Path(tmp) / "app.log").read_text(encoding="utf-8"))
+
+
 class LocalHttpSecurityTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

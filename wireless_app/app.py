@@ -65,11 +65,21 @@ def ensure_dirs():
 
 
 def log(*a):
+    """GUI 打包时没有 stdout：终端运行写控制台，安装版写用户日志。"""
+    stream = getattr(sys, "stdout", None)
+    if stream is not None:
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+        print(*a, flush=True, file=stream)
+        return
     try:
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        os.makedirs(USER_DIR, exist_ok=True)
+        with open(os.path.join(USER_DIR, "app.log"), "a", encoding="utf-8") as f:
+            f.write(" ".join(str(x) for x in a) + "\n")
     except Exception:
         pass
-    print(*a, flush=True)
 
 
 # ---------------- 型号库 ----------------
@@ -2397,7 +2407,7 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"error": "unknown endpoint"}, 404)
         except Exception as ex:
             import traceback
-            traceback.print_exc()
+            log(traceback.format_exc())
             return self._json({"error": "%s: %s" % (type(ex).__name__, ex)}, 500)
 
 

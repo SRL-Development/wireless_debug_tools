@@ -54,6 +54,7 @@ python -m pip install -r requirements-dev.txt
 ```
 
 安装包输出为 `dist/WirelessNetOptimizer-Setup.exe`，默认按当前用户安装，包含开始菜单、可选桌面快捷方式和卸载入口。卸载时会保留 `%APPDATA%/WirelessNetOptimizer` 中的项目与勘测数据。
+安装后的主程序使用 Windows GUI 子系统，启动时不会显示 CMD 窗口；无控制台环境下的运行日志保存在 `%APPDATA%/WirelessNetOptimizer/app.log`。
 
 ## 目录结构
 
